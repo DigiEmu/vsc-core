@@ -176,8 +176,14 @@ copyFile(artifacts.chainSvg,  sealDest.chain);
 // Copy report
 copyFile(artifacts.chainReport, path.join(SHOWCASE, "assets", "reports", "chain-report.md"));
 
-// Copy gallery
+// Copy gallery + all SVGs it references (bare filenames → same directory)
 copyFile(artifacts.galleryHtml, path.join(SHOWCASE, "assets", "gallery", "gallery.html"));
+try {
+  const galleryDir = path.join(SHOWCASE, "assets", "gallery");
+  fs.readdirSync(OUT)
+    .filter(n => n.endsWith(".svg") && !n.includes("pdf"))
+    .forEach(n => copyFile(path.join(OUT, n), path.join(galleryDir, n)));
+} catch { /* best-effort */ }
 
 // ── Calculate metrics from token JSON (source of truth) ──────────────────────
 

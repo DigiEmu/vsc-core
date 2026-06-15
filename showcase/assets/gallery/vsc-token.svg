@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1100"
+  height="1280"
+  viewBox="0 0 1100 1280"
+>
+  <defs>
+    <style>
+      .bg { fill: #f8f8f6; }
+      .line-strong { stroke: #111; stroke-width: 2.2; fill: none; }
+      .line-mid { stroke: #9a9a9a; stroke-width: 1.1; fill: none; }
+      .line-soft { stroke: #d0d0d0; stroke-width: 1; fill: none; }
+      .text-title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 28px;
+        letter-spacing: 8px;
+        fill: #111;
+      }
+      .text-subtitle {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        letter-spacing: 4px;
+        fill: #444;
+      }
+      .text-small {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        fill: #333;
+      }
+      .text-medium {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        fill: #222;
+      }
+      .text-meta {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        letter-spacing: 2px;
+        fill: #444;
+      }
+      .text-id {
+        font-family: 'Courier New', monospace;
+        font-size: 14px;
+        letter-spacing: 2px;
+        fill: #111;
+      }
+      .text-core-big {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 60px;
+        font-weight: 600;
+        fill: #111;
+      }
+      .text-core-small {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        letter-spacing: 2px;
+        fill: #333;
+      }
+      .label-box {
+        fill: #fcfcfc;
+        stroke: #bdbdbd;
+        stroke-width: 1.2;
+      }
+      .marker-fill { fill: #111; }
+      .marker-open { fill: #fff; stroke: #111; stroke-width: 1.6; }
+      .hash-fill { fill: #111; }
+      .hash-open { fill: none; stroke: #666; stroke-width: 1.1; }
+      .point { fill: #111; }
+      .point-soft { fill: #444; opacity: 0.8; }
+      .guide { stroke: #c7c7c7; stroke-width: 1; fill: none; stroke-dasharray: 3 6; }
+      .crosshair { stroke: #cfcfcf; stroke-width: 1; stroke-dasharray: 2 6; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1100" height="1280" />
+
+  <text x="550" y="86" text-anchor="middle" class="text-title">VSC TEXT TOKEN</text>
+  <text x="550" y="118" text-anchor="middle" class="text-subtitle">MACHINE READABLE • BASELINE 0 • SPARSE DELTA • SHA-256</text>
+
+  <line x1="400" y1="134" x2="700" y2="134" class="line-soft" />
+
+  <line x1="550" y1="171" x2="550" y2="193" class="line-strong" />
+  <polygon points="541,193 559,193 550,213" fill="#111" />
+  <text x="550" y="161" text-anchor="middle" class="text-meta">START</text>
+
+  <circle cx="550" cy="555" r="360" class="line-strong" />
+  <circle cx="550" cy="555" r="340" class="line-mid" />
+
+  <circle cx="550" cy="555" r="78" class="line-soft" />
+<circle cx="550" cy="555" r="106" class="line-soft" />
+<circle cx="550" cy="555" r="134" class="line-soft" />
+<circle cx="550" cy="555" r="162" class="line-soft" />
+<circle cx="550" cy="555" r="190" class="line-soft" />
+<circle cx="550" cy="555" r="218" class="line-soft" />
+<circle cx="550" cy="555" r="246" class="line-soft" />
+<circle cx="550" cy="555" r="274" class="line-soft" />
+<circle cx="550" cy="555" r="302" class="line-soft" />
+<circle cx="550" cy="555" r="330" class="line-soft" />
+<circle cx="550" cy="555" r="358" class="line-soft" />
+<circle cx="550" cy="555" r="386" class="line-soft" />
+
+  <line x1="550" y1="195" x2="550" y2="915" class="crosshair" />
+  <line x1="190" y1="555" x2="910" y2="555" class="crosshair" />
+  <line x1="298" y1="303" x2="802" y2="807" class="crosshair" />
+  <line x1="802" y1="303" x2="298" y2="807" class="crosshair" />
+
+  
+    <circle cx="550" cy="193" r="20" class="marker-open" />
+    <text x="550" y="199" text-anchor="middle" class="text-medium">1</text>
+  
+
+    <circle cx="863.5011961699668" cy="374" r="20" class="marker-open" />
+    <text x="863.5011961699668" y="380" text-anchor="middle" class="text-medium">2</text>
+  
+
+    <circle cx="863.5011961699668" cy="736" r="20" class="marker-open" />
+    <text x="863.5011961699668" y="742" text-anchor="middle" class="text-medium">3</text>
+  
+
+    <circle cx="550" cy="917" r="20" class="marker-open" />
+    <text x="550" y="923" text-anchor="middle" class="text-medium">4</text>
+  
+
+    <circle cx="236.4988038300333" cy="736.0000000000001" r="20" class="marker-open" />
+    <text x="236.4988038300333" y="742.0000000000001" text-anchor="middle" class="text-medium">5</text>
+  
+
+    <circle cx="236.49880383003324" cy="374" r="20" class="marker-open" />
+    <text x="236.49880383003324" y="380" text-anchor="middle" class="text-medium">6</text>
+  
+
+  <circle cx="550" cy="161" r="1.9" class="hash-fill" />
+<circle cx="589.2068561318243" cy="156.92610933112127" r="2.9" class="hash-open" />
+<circle cx="626.8655868743546" cy="168.57059952112724" r="2.9" class="hash-open" />
+<circle cx="662.6304547747313" cy="183.70714973590293" r="2.9" class="hash-open" />
+<circle cx="698.4811717576549" cy="196.53474138562075" r="1.9" class="hash-fill" />
+<circle cx="738.5586947303991" cy="202.231494260658" r="2.9" class="hash-open" />
+<circle cx="765.5612504116057" cy="232.38979042661242" r="1.9" class="hash-fill" />
+<circle cx="799.9509539604763" cy="250.43388137508168" r="2.9" class="hash-open" />
+<circle cx="832.842712474619" cy="272.15728752538104" r="1.9" class="hash-fill" />
+<circle cx="854.5661186249183" cy="305.04904603952366" r="2.9" class="hash-open" />
+<circle cx="877.5990272472028" cy="336.10532819027674" r="2.9" class="hash-open" />
+<circle cx="902.768505739342" cy="366.4413052696009" r="1.9" class="hash-fill" />
+<circle cx="908.4652586143793" cy="406.5188282423452" r="1.9" class="hash-fill" />
+<circle cx="921.2928502640971" cy="442.36954522526867" r="2.9" class="hash-open" />
+<circle cx="936.4294004788728" cy="478.13441312564544" r="2.9" class="hash-open" />
+<circle cx="936.1316739488125" cy="516.9693495521304" r="2.9" class="hash-open" />
+<circle cx="938" cy="555" r="1.9" class="hash-fill" />
+<circle cx="948.0738906688788" cy="594.2068561318243" r="2.9" class="hash-open" />
+<circle cx="942.3141121612922" cy="633.0361288064513" r="1.9" class="hash-fill" />
+<circle cx="921.2928502640971" cy="667.6304547747313" r="1.9" class="hash-fill" />
+<circle cx="908.4652586143793" cy="703.4811717576548" r="1.9" class="hash-fill" />
+<circle cx="897.4769781532518" cy="740.7303143094431" r="2.9" class="hash-open" />
+<circle cx="882.5878449210181" cy="777.2280932078409" r="1.9" class="hash-fill" />
+<circle cx="854.5661186249184" cy="804.9509539604762" r="1.9" class="hash-fill" />
+<circle cx="828.6000717874997" cy="833.6000717874997" r="2.9" class="hash-open" />
+<circle cx="803.7573136654582" cy="864.2041813450949" r="1.9" class="hash-fill" />
+<circle cx="765.5612504116057" cy="877.6102095733876" r="2.9" class="hash-open" />
+<circle cx="735.7303143094432" cy="902.4769781532518" r="1.9" class="hash-fill" />
+<circle cx="698.4811717576549" cy="913.4652586143793" r="2.9" class="hash-open" />
+<circle cx="662.6304547747313" cy="926.2928502640971" r="2.9" class="hash-open" />
+<circle cx="626.8655868743547" cy="941.4294004788728" r="2.9" class="hash-open" />
+<circle cx="588.618753289847" cy="947.1027823088455" r="1.9" class="hash-fill" />
+<circle cx="550" cy="955" r="1.9" class="hash-fill" />
+<circle cx="510.7931438681757" cy="953.0738906688788" r="1.9" class="hash-fill" />
+<circle cx="474.3049550577422" cy="935.5446887964533" r="2.9" class="hash-open" />
+<circle cx="433.8861290982151" cy="937.7761342928836" r="1.9" class="hash-fill" />
+<circle cx="396.9266270539641" cy="924.5518130045148" r="1.9" class="hash-fill" />
+<circle cx="367.09806611151294" cy="897.1854505671618" r="2.9" class="hash-open" />
+<circle cx="334.43874958839444" cy="877.6102095733876" r="2.9" class="hash-open" />
+<circle cx="300.0490460395237" cy="859.5661186249184" r="2.9" class="hash-open" />
+<circle cx="275.64256889961956" cy="829.3574311003804" r="1.9" class="hash-fill" />
+<circle cx="250.07194409525817" cy="801.1445942554946" r="2.9" class="hash-open" />
+<circle cx="227.38979042661242" cy="770.5612504116057" r="1.9" class="hash-fill" />
+<circle cx="202.52302184674818" cy="740.7303143094432" r="2.9" class="hash-open" />
+<circle cx="185.99146419055313" cy="705.7772723518456" r="2.9" class="hash-open" />
+<circle cx="167.2238657071165" cy="671.1138709017849" r="2.9" class="hash-open" />
+<circle cx="157.6858878387078" cy="633.0361288064514" r="2.9" class="hash-open" />
+<circle cx="151.9261093311212" cy="594.2068561318241" r="1.9" class="hash-fill" />
+<circle cx="150" cy="555" r="1.9" class="hash-fill" />
+<circle cx="163.86832605118758" cy="516.9693495521307" r="1.9" class="hash-fill" />
+<circle cx="163.57059952112724" cy="478.13441312564544" r="2.9" class="hash-open" />
+<circle cx="178.70714973590293" cy="442.36954522526867" r="1.9" class="hash-fill" />
+<circle cx="185.99146419055307" cy="404.22272764815455" r="1.9" class="hash-fill" />
+<circle cx="202.52302184674812" cy="369.2696856905569" r="1.9" class="hash-fill" />
+<circle cx="222.4009727527971" cy="336.10532819027685" r="2.9" class="hash-open" />
+<circle cx="240.79581865490525" cy="301.24268633454176" r="2.9" class="hash-open" />
+<circle cx="275.6425688996195" cy="280.64256889961956" r="1.9" class="hash-fill" />
+<circle cx="300.0490460395235" cy="250.43388137508174" r="2.9" class="hash-open" />
+<circle cx="331.10532819027674" cy="227.4009727527972" r="2.9" class="hash-open" />
+<circle cx="364.2696856905568" cy="207.52302184674818" r="1.9" class="hash-fill" />
+<circle cx="401.51882824234497" cy="196.5347413856208" r="1.9" class="hash-fill" />
+<circle cx="435.6278371617418" cy="177.9655077215097" r="2.9" class="hash-open" />
+<circle cx="471.9638711935485" cy="162.68588783870786" r="2.9" class="hash-open" />
+<circle cx="511.96934955213055" cy="168.86832605118758" r="2.9" class="hash-open" />
+
+  <circle cx="550" cy="555" r="78" class="line-strong" />
+  <circle cx="550" cy="555" r="60" class="line-mid" />
+  <text x="550" y="575" text-anchor="middle" class="text-core-big">0</text>
+  <text x="550" y="603" text-anchor="middle" class="text-core-small">GENESIS</text>
+
+  
+        <line x1="478.7639599228602" y1="510.4867818044108" x2="460.1069018074188" y2="498.82855799128026" class="guide" />
+        <circle cx="460.1069018074188" cy="498.82855799128026" r="5.2" class="point-soft" />
+      
+
+        <line x1="542.6789176091967" y1="471.3196453602934" x2="538.3211304718138" y2="421.50991045570606" class="line-soft" />
+        <circle cx="538.3211304718138" cy="421.50991045570606" r="3.2" class="point" />
+      
+
+        <line x1="610.4245432284467" y1="496.6486968814442" x2="666.5330476548614" y2="442.46534398564245" class="line-soft" />
+        <circle cx="666.5330476548614" cy="442.46534398564245" r="5.2" class="point" />
+      
+
+        <line x1="633.8848809193842" y1="559.3962203244073" x2="739.739611603369" y2="564.9438316861593" class="line-soft" />
+        <circle cx="739.739611603369" cy="564.9438316861593" r="3.2" class="point" />
+      
+
+        <line x1="595.7496789412622" y1="625.4483277074156" x2="668.7313096332759" y2="737.8301838121024" class="line-soft" />
+        <circle cx="668.7313096332759" cy="737.8301838121024" r="5.2" class="point" />
+      
+
+        <line x1="522.6522750255988" y1="634.4235603503427" x2="469.9102340035394" y2="787.5975695974319" class="line-soft" />
+        <circle cx="469.9102340035394" cy="787.5975695974319" r="5.2" class="point-soft" />
+      
+
+        <line x1="474.50130011087" y1="591.8231763302825" x2="303.7304313140283" y2="675.1136942202073" class="line-soft" />
+        <circle cx="303.7304313140283" cy="675.1136942202073" r="4.2" class="point" />
+      
+
+        <line x1="474.50130011087" y1="518.1768236697175" x2="278.56419801765156" y2="422.6119136696986" class="guide" />
+        <circle cx="278.56419801765156" cy="422.6119136696986" r="4.2" class="point" />
+      
+
+        <line x1="533.9720443883703" y1="472.5433165903962" x2="487.0330315257403" y2="231.0630294622709" class="line-soft" />
+        <circle cx="487.0330315257403" cy="231.0630294622709" r="5.2" class="point" />
+      
+
+        <line x1="603.9941592136693" y1="490.65226677800587" x2="618.1354866267732" y2="473.7992890293883" class="line-soft" />
+        <circle cx="618.1354866267732" cy="473.7992890293883" r="4.2" class="point" />
+      
+
+        <line x1="633.6803546397066" y1="547.6789176091967" x2="683.4900895442939" y2="543.3211304718138" class="line-soft" />
+        <circle cx="683.4900895442939" cy="543.3211304718138" r="3.2" class="point-soft" />
+      
+
+        <line x1="607.2878622452499" y1="616.4337109360104" x2="660.4837343301248" y2="673.4792996623056" class="line-soft" />
+        <circle cx="660.4837343301248" cy="673.4792996623056" r="3.2" class="point" />
+      
+
+        <line x1="535.4135530759778" y1="637.7238512530255" x2="517.0068462432832" y2="742.1134730723195" class="line-soft" />
+        <circle cx="517.0068462432832" cy="742.1134730723195" r="4.2" class="point" />
+      
+
+        <line x1="476.5319446002908" y1="595.7240081006923" x2="359.3329038436118" y2="660.6884972137016" class="line-soft" />
+        <circle cx="359.3329038436118" cy="660.6884972137016" r="3.2" class="point" />
+      
+
+        <line x1="469.670400499105" y1="530.4407768032901" x2="314.7490300330933" y2="483.07656063820673" class="guide" />
+        <circle cx="314.7490300330933" cy="483.07656063820673" r="3.2" class="point" />
+      
+
+        <line x1="517.178585206901" y1="477.677592309995" x2="442.93967079393894" y2="302.78167015403136" class="line-soft" />
+        <circle cx="442.93967079393894" cy="302.78167015403136" r="4.2" class="point-soft" />
+      
+
+        <line x1="593.2631982924446" y1="482.9979467410226" x2="705.5414986228365" y2="296.13547518796213" class="line-soft" />
+        <circle cx="705.5414986228365" cy="296.13547518796213" r="3.2" class="point" />
+      
+
+        <line x1="632.1643984616396" y1="537.5354179713082" x2="872.7887082421558" y2="486.38914203013945" class="line-soft" />
+        <circle cx="872.7887082421558" cy="486.38914203013945" r="4.2" class="point" />
+      
+
+        <line x1="610.4245432284467" y1="613.3513031185557" x2="626.250018835897" y2="628.6337872686537" class="line-soft" />
+        <circle cx="626.250018835897" cy="628.6337872686537" r="5.2" class="point" />
+      
+
+        <line x1="551.4660021407318" y1="638.9872063931368" x2="552.3386224625959" y2="688.9795911509564" class="line-soft" />
+        <circle cx="552.3386224625959" cy="688.9795911509564" r="4.2" class="point" />
+      
+
+        <line x1="484.7197392376144" y1="607.8629128481863" x2="424.1023542439707" y2="656.9499033500736" class="line-soft" />
+        <circle cx="424.1023542439707" cy="656.9499033500736" r="4.2" class="point-soft" />
+      
+
+        <line x1="468.15291455804027" y1="536.1041114351153" x2="364.86968769080534" y2="512.2592996746656" class="guide" />
+        <circle cx="364.86968769080534" cy="512.2592996746656" r="4.2" class="point" />
+      
+
+        <line x1="507.99999999999994" y1="482.25386608210715" x2="440.9999999999999" y2="366.2064619749924" class="line-soft" />
+        <circle cx="440.9999999999999" cy="366.2064619749924" r="5.2" class="point" />
+      
+
+        <line x1="586.8231763302825" y1="479.50130011087" x2="657.8393021101131" y2="333.8966646104049" class="line-soft" />
+        <circle cx="657.8393021101131" cy="333.8966646104049" r="3.2" class="point" />
+      
+
+        <line x1="629.8887473687929" y1="529.0425724725044" x2="810.589485464872" y2="470.3293435412644" class="line-soft" />
+        <circle cx="810.589485464872" cy="470.3293435412644" r="3.2" class="point" />
+      
+
+        <line x1="621.2360400771398" y1="599.5132181955892" x2="806.1105250392407" y2="715.0356177984279" class="line-soft" />
+        <circle cx="806.1105250392407" cy="715.0356177984279" r="4.2" class="point-soft" />
+      
+
+        <line x1="557.3210823908033" y1="638.6803546397066" x2="578.7613951067272" y2="883.744250370276" class="line-soft" />
+        <circle cx="578.7613951067272" cy="883.744250370276" r="5.2" class="point" />
+      
+
+        <line x1="489.5754567715533" y1="613.3513031185557" x2="473.749981164103" y2="628.6337872686537" class="line-soft" />
+        <circle cx="473.749981164103" cy="628.6337872686537" r="4.2" class="point" />
+      
+
+        <line x1="466.8174822257081" y1="543.3094595193545" x2="417.30407878862957" y2="536.3508044713512" class="guide" />
+        <circle cx="417.30407878862957" cy="536.3508044713512" r="4.2" class="point" />
+      
+
+        <line x1="499.44753805522794" y1="487.9146171560274" x2="452.50596624936816" y2="425.6210473723386" class="line-soft" />
+        <circle cx="452.50596624936816" cy="425.6210473723386" r="3.2" class="point" />
+      
+
+        <line x1="573.153537888628" y1="474.2540175411812" x2="602.3710976052298" y2="372.36027777171944" class="line-soft" />
+        <circle cx="602.3710976052298" cy="372.36027777171944" r="4.2" class="point-soft" />
+      
+
+        <line x1="627.322407690005" y1="522.1785852069011" x2="750.670058052632" y2="469.8206139893383" class="line-soft" />
+        <circle cx="750.670058052632" cy="469.8206139893383" r="3.2" class="point" />
+      
+
+        <line x1="624.1675978001499" y1="594.4356112740148" x2="767.205107843296" y2="670.4900044453291" class="line-soft" />
+        <circle cx="767.205107843296" cy="670.4900044453291" r="5.2" class="point" />
+      
+
+        <line x1="566.0279556116297" y1="637.4566834096038" x2="602.2816647331733" y2="823.9658482646599" class="line-soft" />
+        <circle cx="602.2816647331733" cy="823.9658482646599" r="4.2" class="point" />
+      
+
+        <line x1="503.02779610845727" y1="624.6391560946236" x2="381.1237431518345" y2="805.3693469116226" class="line-soft" />
+        <circle cx="381.1237431518345" cy="805.3693469116226" r="3.2" class="point" />
+      
+
+        <line x1="466.2046197781748" y1="560.8595437945065" x2="220.803863414258" y2="578.0196363355615" class="guide" />
+        <circle cx="220.803863414258" cy="578.0196363355615" r="3.2" class="point-soft" />
+      
+
+        <line x1="494.8910415647974" y1="491.60439526128715" x2="480.4577429270062" y2="475.00078449638613" class="line-soft" />
+        <circle cx="480.4577429270062" cy="475.00078449638613" r="4.2" class="point" />
+      
+
+        <line x1="557.3210823908033" y1="471.3196453602934" x2="561.6788695281862" y2="421.50991045570606" class="line-soft" />
+        <circle cx="561.6788695281862" cy="421.50991045570606" r="4.2" class="point" />
+      
+
+        <line x1="622.0020532589774" y1="511.73680170755546" x2="688.8611027137422" y2="471.5638318645712" class="line-soft" />
+        <circle cx="688.8611027137422" cy="471.5638318645712" r="3.2" class="point" />
+      
+
+        <line x1="628.4207558257649" y1="585.1029077618052" x2="727.3802810344683" y2="623.0899104136071" class="line-soft" />
+        <circle cx="727.3802810344683" cy="623.0899104136071" r="3.2" class="point" />
+      
+
+        <line x1="582.8214147930989" y1="632.322407690005" x2="635.1793860106617" y2="755.670058052632" class="line-soft" />
+        <circle cx="635.1793860106617" cy="755.670058052632" r="3.2" class="point-soft" />
+      
+
+        <line x1="511.86479802187813" y1="629.8445480318229" x2="438.3183370640716" y2="774.1876049503386" class="line-soft" />
+        <circle cx="438.3183370640716" cy="774.1876049503386" r="4.2" class="point" />
+      
+
+        <line x1="467.5433165903962" y1="571.0279556116297" x2="281.03415173534006" y2="607.2816647331732" class="guide" />
+        <circle cx="281.03415173534006" cy="607.2816647331732" r="4.2" class="point" />
+      
+
+        <line x1="486.60439526128715" y1="499.89104156479743" x2="322.0777067727228" y2="356.87017324486686" class="line-soft" />
+        <circle cx="322.0777067727228" cy="356.87017324486686" r="4.2" class="point" />
+      
+
+        <line x1="547.0684422769899" y1="471.05117053039595" x2="538.4831660881747" y2="225.20102708369842" class="line-soft" />
+        <circle cx="538.4831660881747" cy="225.20102708369842" r="5.2" class="point" />
+      
+
+        <line x1="614.3477332219942" y1="501.0058407863307" x2="631.2007109706117" y2="486.8645133732268" class="line-soft" />
+        <circle cx="631.2007109706117" cy="486.8645133732268" r="5.2" class="point-soft" />
+      
+
+        <line x1="631.8470854419597" y1="573.8958885648847" x2="680.5655886812215" y2="585.1434412820779" class="line-soft" />
+        <circle cx="680.5655886812215" cy="585.1434412820779" r="3.2" class="point" />
+      
+
+        <line x1="593.2631982924446" y1="627.0020532589774" x2="633.4361681354288" y2="693.8611027137422" class="line-soft" />
+        <circle cx="633.4361681354288" cy="693.8611027137422" r="3.2" class="point" />
+      
+
+        <line x1="519.8970922381948" y1="633.4207558257649" x2="481.9100895863929" y2="732.3802810344683" class="line-soft" />
+        <circle cx="481.9100895863929" cy="732.3802810344683" r="3.2" class="point" />
+      
+
+        <line x1="469.670400499105" y1="579.5592231967099" x2="341.5255632000583" y2="618.7370316295567" class="guide" />
+        <circle cx="341.5255632000583" cy="618.7370316295567" r="3.2" class="point" />
+      
+
+        <line x1="481.19122827972467" y1="506.8195793465121" x2="348.488597104908" y2="413.90019665764265" class="line-soft" />
+        <circle cx="348.488597104908" cy="413.90019665764265" r="3.2" class="point-soft" />
+      
+
+        <line x1="535.4135530759778" y1="472.2761487469745" x2="502.4203993192611" y2="285.162675674655" class="line-soft" />
+        <circle cx="502.4203993192611" cy="285.162675674655" r="5.2" class="point" />
+      
+
+        <line x1="606.2069709341441" y1="492.5758346598989" x2="752.0774431203752" y2="330.57026270582696" class="line-soft" />
+        <circle cx="752.0774431203752" cy="330.57026270582696" r="5.2" class="point" />
+      
+
+        <line x1="633.7953802218252" y1="560.8595437945065" x2="879.196136585742" y2="578.0196363355614" class="line-soft" />
+        <circle cx="879.196136585742" cy="578.0196363355614" r="5.2" class="point" />
+      
+
+        <line x1="602.8629128481864" y1="620.2802607623855" x2="616.7079614512828" y2="637.377471914439" class="line-soft" />
+        <circle cx="616.7079614512828" cy="637.377471914439" r="3.2" class="point" />
+      
+
+        <line x1="529.6785607696279" y1="636.5048410071837" x2="517.5824659896446" y2="685.0196273209835" class="line-soft" />
+        <circle cx="517.5824659896446" cy="685.0196273209835" r="4.2" class="point-soft" />
+      
+
+  <g transform="translate(120, 1088)">
+    <rect x="0" y="0" width="220" height="104" rx="12" class="label-box" />
+    <text x="18" y="26" class="text-small">○ = Node / Principle</text>
+    <text x="18" y="46" class="text-small">● = Delta / State Marker</text>
+    <text x="18" y="66" class="text-small">⊙ = Hash / Integrity Band</text>
+    <text x="18" y="86" class="text-small">0 = Baseline / Null State</text>
+  </g>
+
+  <g transform="translate(760, 1064)">
+    <rect x="0" y="0" width="220" height="132" rx="12" class="label-box" />
+    <text x="110" y="26" text-anchor="middle" class="text-meta">TOKEN META</text>
+    <text x="18" y="52" class="text-small">Encoding: ASCII</text>
+    <text x="18" y="72" class="text-small">Version: 0.3</text>
+    <text x="18" y="92" class="text-small">Message Length: 20</text>
+    <text x="18" y="112" class="text-small">Delta Count: 56</text>
+  </g>
+
+  <text x="550" y="1138" text-anchor="middle" class="text-medium">
+    VSC-0.3 / TEXT / DELTA ONLY
+  </text>
+
+  <text x="550" y="1172" text-anchor="middle" class="text-id">
+    TOKEN ID: 451F0BC7217E
+  </text>
+
+  <text x="550" y="1204" text-anchor="middle" class="text-meta">
+    HASH: 451F0BC7217ECF73CB8C0DE4
+  </text>
+</svg>

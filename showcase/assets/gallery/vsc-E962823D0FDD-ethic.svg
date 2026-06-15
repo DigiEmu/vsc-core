@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1100"
+  height="1280"
+  viewBox="0 0 1100 1280"
+>
+  <defs>
+    <style>
+      .bg          { fill: #f8f8f6; }
+      .line-strong { stroke: #111; stroke-width: 2.4; fill: none; }
+      .line-mid    { stroke: #888; stroke-width: 1.2; fill: none; }
+      .line-soft   { stroke: #d8d8d8; stroke-width: 0.8; fill: none; }
+      .text-title  { font-family: Arial, Helvetica, sans-serif; font-size: 28px; letter-spacing: 8px; fill: #111; }
+      .text-subtitle { font-family: Arial, Helvetica, sans-serif; font-size: 12px; letter-spacing: 4px; fill: #444; }
+      .text-small  { font-family: Arial, Helvetica, sans-serif; font-size: 13px; fill: #333; }
+      .text-medium { font-family: Arial, Helvetica, sans-serif; font-size: 16px; fill: #222; }
+      .text-meta   { font-family: Arial, Helvetica, sans-serif; font-size: 12px; letter-spacing: 2px; fill: #444; }
+      .text-id     { font-family: 'Courier New', monospace; font-size: 14px; letter-spacing: 2px; fill: #111; }
+      .text-core-big   { font-family: Arial, Helvetica, sans-serif; font-size: 58px; font-weight: 700; fill: #111; }
+      .text-core-small { font-family: Arial, Helvetica, sans-serif; font-size: 11px; letter-spacing: 2px; fill: #555; }
+      .label-box   { fill: #f9f9f9; stroke: #c8c8c8; stroke-width: 1.1; }
+      .orient-dot  { fill: #fff; stroke: #ccc; stroke-width: 1.2; }
+      .hash-fill   { fill: #333; }
+      .hash-open   { fill: none; stroke: #999; stroke-width: 0.9; }
+      .point       { fill: #111; }
+      .point-soft  { fill: #666; opacity: 0.7; }
+      .guide       { stroke: #ccc; stroke-width: 0.8; fill: none; stroke-dasharray: 3 7; }
+      .crosshair   { stroke: #e8e8e8; stroke-width: 0.8; stroke-dasharray: 2 8; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1100" height="1280" />
+
+  <!-- Title / subtitle -->
+  <text x="550" y="86" text-anchor="middle" class="text-title">VSC ETHIC TOKEN</text>
+  <text x="550" y="118" text-anchor="middle" class="text-subtitle">MACHINE READABLE · BASELINE 0 · SPARSE DELTA · SHA-256</text>
+  <line x1="400" y1="132" x2="700" y2="132" class="line-soft" />
+
+  <!-- Quiet crosshairs — two axes only -->
+  <line x1="550" y1="195" x2="550" y2="915" class="crosshair" />
+  <line x1="190" y1="555" x2="910" y2="555" class="crosshair" />
+
+  <!-- 5 structural rings (was 12) -->
+  <circle cx="550" cy="555" r="134" class="line-soft" />
+  <circle cx="550" cy="555" r="190" class="line-soft" />
+  <circle cx="550" cy="555" r="246" class="line-soft" />
+  <circle cx="550" cy="555" r="302" class="line-soft" />
+  <circle cx="550" cy="555" r="358" class="line-soft" />
+
+  <!-- Outer ring — strong boundary -->
+  <circle cx="550" cy="555" r="360" class="line-strong" />
+  <circle cx="550" cy="555" r="342" class="line-mid" />
+
+  <!-- Six quiet orientation dots (no number) -->
+  <circle cx="550.0" cy="193.0" r="9" class="orient-dot" />
+  <circle cx="863.5" cy="374.0" r="9" class="orient-dot" />
+  <circle cx="863.5" cy="736.0" r="9" class="orient-dot" />
+  <circle cx="550.0" cy="917.0" r="9" class="orient-dot" />
+  <circle cx="236.5" cy="736.0" r="9" class="orient-dot" />
+  <circle cx="236.5" cy="374.0" r="9" class="orient-dot" />
+
+  <!-- Hash band — slightly quieter dots -->
+  <circle cx="550" cy="155" r="1.6" class="hash-fill" />
+  <circle cx="588.0306504478696" cy="168.86832605118764" r="2.2" class="hash-open" />
+  <circle cx="625.6950449422578" cy="174.45531120354661" r="1.6" class="hash-fill" />
+  <circle cx="666.1138709017849" cy="172.22386570711643" r="1.6" class="hash-fill" />
+  <circle cx="703.073372946036" cy="185.4481869954853" r="1.6" class="hash-fill" />
+  <circle cx="738.5586947303991" cy="202.231494260658" r="1.6" class="hash-fill" />
+  <circle cx="765.5612504116057" cy="232.38979042661242" r="2.2" class="hash-open" />
+  <circle cx="799.9509539604763" cy="250.43388137508168" r="2.2" class="hash-open" />
+  <circle cx="824.3574311003804" cy="280.64256889961956" r="1.6" class="hash-fill" />
+  <circle cx="849.928055904742" cy="308.85540574450556" r="2.2" class="hash-open" />
+  <circle cx="877.5990272472028" cy="336.10532819027674" r="2.2" class="hash-open" />
+  <circle cx="897.4769781532518" cy="369.2696856905569" r="2.2" class="hash-open" />
+  <circle cx="919.5518130045148" cy="401.9266270539641" r="1.6" class="hash-fill" />
+  <circle cx="921.2928502640971" cy="442.36954522526867" r="1.6" class="hash-fill" />
+  <circle cx="942.3141121612922" cy="476.9638711935487" r="2.2" class="hash-open" />
+  <circle cx="936.1316739488125" cy="516.9693495521304" r="1.6" class="hash-fill" />
+  <circle cx="938" cy="555" r="1.6" class="hash-fill" />
+  <circle cx="936.1316739488125" cy="593.0306504478696" r="1.6" class="hash-fill" />
+  <circle cx="930.5446887964533" cy="630.6950449422577" r="2.2" class="hash-open" />
+  <circle cx="927.0344922784903" cy="669.3721628382582" r="1.6" class="hash-fill" />
+  <circle cx="914.008535809447" cy="705.7772723518453" r="2.2" class="hash-open" />
+  <circle cx="902.768505739342" cy="743.5586947303991" r="2.2" class="hash-open" />
+  <circle cx="877.5990272472029" cy="773.8946718097231" r="2.2" class="hash-open" />
+  <circle cx="849.928055904742" cy="801.1445942554944" r="2.2" class="hash-open" />
+  <circle cx="832.842712474619" cy="837.842712474619" r="1.6" class="hash-fill" />
+  <circle cx="796.1445942554944" cy="854.928055904742" r="2.2" class="hash-open" />
+  <circle cx="765.5612504116057" cy="877.6102095733876" r="2.2" class="hash-open" />
+  <circle cx="735.7303143094432" cy="902.4769781532518" r="1.6" class="hash-fill" />
+  <circle cx="700.7772723518453" cy="919.008535809447" r="2.2" class="hash-open" />
+  <circle cx="664.3721628382582" cy="932.0344922784903" r="2.2" class="hash-open" />
+  <circle cx="628.0361288064514" cy="947.3141121612922" r="1.6" class="hash-fill" />
+  <circle cx="588.0306504478696" cy="941.1316739488124" r="1.6" class="hash-fill" />
+  <circle cx="550" cy="955" r="1.6" class="hash-fill" />
+  <circle cx="511.3812467101531" cy="947.1027823088456" r="1.6" class="hash-fill" />
+  <circle cx="471.96387119354864" cy="947.3141121612922" r="1.6" class="hash-fill" />
+  <circle cx="433.8861290982151" cy="937.7761342928836" r="1.6" class="hash-fill" />
+  <circle cx="396.9266270539641" cy="924.5518130045148" r="1.6" class="hash-fill" />
+  <circle cx="361.4413052696009" cy="907.768505739342" r="2.2" class="hash-open" />
+  <circle cx="327.77190679215926" cy="887.5878449210181" r="1.6" class="hash-fill" />
+  <circle cx="300.0490460395237" cy="859.5661186249184" r="2.2" class="hash-open" />
+  <circle cx="275.64256889961956" cy="829.3574311003804" r="2.2" class="hash-open" />
+  <circle cx="240.79581865490536" cy="808.7573136654584" r="1.6" class="hash-fill" />
+  <circle cx="222.40097275279714" cy="773.8946718097233" r="2.2" class="hash-open" />
+  <circle cx="207.8145494328383" cy="737.9019338884872" r="1.6" class="hash-fill" />
+  <circle cx="180.4481869954854" cy="708.0733729460361" r="2.2" class="hash-open" />
+  <circle cx="172.9655077215097" cy="669.3721628382582" r="2.2" class="hash-open" />
+  <circle cx="157.6858878387078" cy="633.0361288064514" r="2.2" class="hash-open" />
+  <circle cx="151.9261093311212" cy="594.2068561318241" r="2.2" class="hash-open" />
+  <circle cx="150" cy="555" r="2.2" class="hash-open" />
+  <circle cx="151.9261093311212" cy="515.7931438681759" r="2.2" class="hash-open" />
+  <circle cx="163.57059952112724" cy="478.13441312564544" r="1.6" class="hash-fill" />
+  <circle cx="178.70714973590293" cy="442.36954522526867" r="2.2" class="hash-open" />
+  <circle cx="191.5347413856208" cy="406.5188282423451" r="1.6" class="hash-fill" />
+  <circle cx="207.81454943283825" cy="372.09806611151294" r="1.6" class="hash-fill" />
+  <circle cx="217.4121550789818" cy="332.77190679215926" r="1.6" class="hash-fill" />
+  <circle cx="240.79581865490525" cy="301.24268633454176" r="2.2" class="hash-open" />
+  <circle cx="275.6425688996195" cy="280.64256889961956" r="1.6" class="hash-fill" />
+  <circle cx="296.24268633454165" cy="245.79581865490536" r="1.6" class="hash-fill" />
+  <circle cx="327.77190679215914" cy="222.41215507898193" r="1.6" class="hash-fill" />
+  <circle cx="361.44130526960083" cy="202.231494260658" r="1.6" class="hash-fill" />
+  <circle cx="399.22272764815443" cy="190.99146419055313" r="1.6" class="hash-fill" />
+  <circle cx="437.36954522526855" cy="183.707149735903" r="2.2" class="hash-open" />
+  <circle cx="474.30495505774206" cy="174.45531120354661" r="2.2" class="hash-open" />
+  <circle cx="511.96934955213055" cy="168.86832605118758" r="2.2" class="hash-open" />
+
+  <!-- Core circle with type-specific symbol -->
+  <circle cx="550" cy="555" r="78" class="line-strong" />
+  <circle cx="550" cy="555" r="60" class="line-mid" />
+  <text x="550" y="577" text-anchor="middle" class="text-core-big">◌</text>
+  <text x="550" y="601" text-anchor="middle" class="text-core-small">SPARSE PROOF</text>
+
+  <!-- Sparse delta points — guide lines + dots, using wider spacing (6 rings, step 44) -->
+  <line x1="478.8" y1="510.5" x2="446.5" y2="490.3" class="guide" />
+    <circle cx="446.5" cy="490.3" r="5.2" class="point-soft" />
+  <line x1="542.7" y1="471.3" x2="535.5" y2="389.6" class="line-soft" />
+    <circle cx="535.5" cy="389.6" r="3.2" class="point" />
+  <line x1="607.3" y1="493.6" x2="693.2" y2="401.4" class="line-soft" />
+    <circle cx="693.2" cy="401.4" r="5.2" class="point" />
+  <line x1="633.4" y1="565.2" x2="802.1" y2="586.0" class="line-soft" />
+    <circle cx="802.1" cy="586.0" r="4.2" class="point" />
+  <line x1="593.3" y1="627.0" x2="703.5" y2="810.4" class="line-soft" />
+    <circle cx="703.5" cy="810.4" r="4.2" class="point" />
+  <line x1="529.7" y1="636.5" x2="467.3" y2="886.8" class="line-soft" />
+    <circle cx="467.3" cy="886.8" r="3.2" class="point-soft" />
+  <line x1="471.1" y1="583.7" x2="435.4" y2="596.7" class="line-soft" />
+    <circle cx="435.4" cy="596.7" r="4.2" class="point" />
+  <line x1="473.9" y1="519.5" x2="399.6" y2="484.8" class="guide" />
+    <circle cx="399.6" cy="484.8" r="3.2" class="point" />
+  <line x1="532.5" y1="472.8" x2="506.3" y2="349.6" class="line-soft" />
+    <circle cx="506.3" cy="349.6" r="4.2" class="point" />
+  <line x1="602.9" y1="489.7" x2="709.8" y2="357.6" class="line-soft" />
+    <circle cx="709.8" cy="357.6" r="3.2" class="point" />
+  <line x1="633.9" y1="550.6" x2="847.6" y2="539.4" class="line-soft" />
+    <circle cx="847.6" cy="539.4" r="5.2" class="point-soft" />
+  <line x1="607.3" y1="616.4" x2="783.2" y2="805.1" class="line-soft" />
+    <circle cx="783.2" cy="805.1" r="3.2" class="point" />
+  <line x1="534.0" y1="637.5" x2="526.7" y2="674.8" class="line-soft" />
+    <circle cx="526.7" cy="674.8" r="5.2" class="point" />
+  <line x1="478.8" y1="599.5" x2="409.2" y2="643.0" class="line-soft" />
+    <circle cx="409.2" cy="643.0" r="3.2" class="point" />
+  <line x1="471.6" y1="524.9" x2="353.9" y2="479.7" class="guide" />
+    <circle cx="353.9" cy="479.7" r="4.2" class="point" />
+  <line x1="524.0" y1="475.1" x2="471.5" y2="313.4" class="line-soft" />
+    <circle cx="471.5" cy="313.4" r="3.2" class="point-soft" />
+  <line x1="595.7" y1="484.6" x2="712.3" y2="305.1" class="line-soft" />
+    <circle cx="712.3" cy="305.1" r="5.2" class="point" />
+  <line x1="633.5" y1="546.2" x2="890.1" y2="519.3" class="line-soft" />
+    <circle cx="890.1" cy="519.3" r="4.2" class="point" />
+  <line x1="614.3" y1="609.0" x2="643.5" y2="633.4" class="line-soft" />
+    <circle cx="643.5" cy="633.4" r="4.2" class="point" />
+  <line x1="550.0" y1="639.0" x2="550.0" y2="721.0" class="line-soft" />
+    <circle cx="550.0" cy="721.0" r="5.2" class="point" />
+  <line x1="482.9" y1="605.6" x2="382.3" y2="681.4" class="line-soft" />
+    <circle cx="382.3" cy="681.4" r="3.2" class="point-soft" />
+  <line x1="468.5" y1="534.7" x2="303.5" y2="493.6" class="guide" />
+    <circle cx="303.5" cy="493.6" r="5.2" class="point" />
+  <line x1="514.5" y1="478.9" x2="424.1" y2="284.9" class="line-soft" />
+    <circle cx="424.1" cy="284.9" r="4.2" class="point" />
+  <line x1="580.1" y1="476.6" x2="672.6" y2="235.7" class="line-soft" />
+    <circle cx="672.6" cy="235.7" r="4.2" class="point" />
+  <line x1="630.7" y1="531.8" x2="667.3" y2="521.4" class="line-soft" />
+    <circle cx="667.3" cy="521.4" r="5.2" class="point" />
+  <line x1="618.8" y1="603.2" x2="686.0" y2="650.2" class="line-soft" />
+    <circle cx="686.0" cy="650.2" r="4.2" class="point-soft" />
+  <line x1="555.9" y1="638.8" x2="564.6" y2="764.5" class="line-soft" />
+    <circle cx="564.6" cy="764.5" r="3.2" class="point" />
+  <line x1="488.6" y1="612.3" x2="364.2" y2="728.2" class="line-soft" />
+    <circle cx="364.2" cy="728.2" r="5.2" class="point" />
+  <line x1="466.1" y1="550.6" x2="252.4" y2="539.4" class="guide" />
+    <circle cx="252.4" cy="539.4" r="5.2" class="point" />
+  <line x1="499.4" y1="487.9" x2="344.2" y2="281.9" class="line-soft" />
+    <circle cx="344.2" cy="281.9" r="3.2" class="point" />
+  <line x1="573.2" y1="474.3" x2="583.6" y2="437.7" class="line-soft" />
+    <circle cx="583.6" cy="437.7" r="4.2" class="point-soft" />
+  <line x1="625.5" y1="518.2" x2="699.2" y2="482.2" class="line-soft" />
+    <circle cx="699.2" cy="482.2" r="3.2" class="point" />
+  <line x1="622.7" y1="597.0" x2="731.9" y2="660.0" class="line-soft" />
+    <circle cx="731.9" cy="660.0" r="4.2" class="point" />
+  <line x1="571.7" y1="636.1" x2="615.7" y2="800.3" class="line-soft" />
+    <circle cx="615.7" cy="800.3" r="3.2" class="point" />
+  <line x1="499.4" y1="622.1" x2="370.7" y2="793.0" class="line-soft" />
+    <circle cx="370.7" cy="793.0" r="3.2" class="point" />
+  <line x1="466.0" y1="555.0" x2="208.0" y2="555.0" class="guide" />
+    <circle cx="208.0" cy="555.0" r="4.2" class="point-soft" />
+  <line x1="491.6" y1="494.6" x2="465.3" y2="467.2" class="line-soft" />
+    <circle cx="465.3" cy="467.2" r="4.2" class="point" />
+  <line x1="563.1" y1="472.0" x2="576.0" y2="391.0" class="line-soft" />
+    <circle cx="576.0" cy="391.0" r="5.2" class="point" />
+  <line x1="622.7" y1="513.0" x2="731.9" y2="450.0" class="line-soft" />
+    <circle cx="731.9" cy="450.0" r="4.2" class="point" />
+  <line x1="627.9" y1="586.5" x2="785.5" y2="650.2" class="line-soft" />
+    <circle cx="785.5" cy="650.2" r="4.2" class="point" />
+  <line x1="581.5" y1="632.9" x2="661.6" y2="831.3" class="line-soft" />
+    <circle cx="661.6" cy="831.3" r="4.2" class="point-soft" />
+  <line x1="510.6" y1="629.2" x2="389.4" y2="857.0" class="line-soft" />
+    <circle cx="389.4" cy="857.0" r="5.2" class="point" />
+  <line x1="467.3" y1="569.6" x2="429.9" y2="576.2" class="guide" />
+    <circle cx="429.9" cy="576.2" r="5.2" class="point" />
+  <line x1="484.7" y1="502.1" x2="421.0" y2="450.5" class="line-soft" />
+    <circle cx="421.0" cy="450.5" r="5.2" class="point" />
+  <line x1="551.5" y1="471.0" x2="553.7" y2="345.0" class="line-soft" />
+    <circle cx="553.7" cy="345.0" r="5.2" class="point" />
+  <line x1="618.0" y1="505.6" x2="755.5" y2="405.7" class="line-soft" />
+    <circle cx="755.5" cy="405.7" r="3.2" class="point-soft" />
+  <line x1="632.7" y1="569.6" x2="843.5" y2="606.7" class="line-soft" />
+    <circle cx="843.5" cy="606.7" r="3.2" class="point" />
+  <line x1="586.8" y1="630.5" x2="699.9" y2="862.4" class="line-soft" />
+    <circle cx="699.9" cy="862.4" r="5.2" class="point" />
+  <line x1="513.2" y1="630.5" x2="496.5" y2="664.7" class="line-soft" />
+    <circle cx="496.5" cy="664.7" r="5.2" class="point" />
+  <line x1="470.6" y1="582.3" x2="393.0" y2="609.0" class="guide" />
+    <circle cx="393.0" cy="609.0" r="4.2" class="point" />
+  <line x1="479.6" y1="509.3" x2="373.9" y2="440.6" class="line-soft" />
+    <circle cx="373.9" cy="440.6" r="4.2" class="point-soft" />
+  <line x1="544.1" y1="471.2" x2="532.3" y2="301.6" class="line-soft" />
+    <circle cx="532.3" cy="301.6" r="5.2" class="point" />
+  <line x1="611.4" y1="497.7" x2="767.9" y2="351.8" class="line-soft" />
+    <circle cx="767.9" cy="351.8" r="4.2" class="point" />
+  <line x1="633.9" y1="557.9" x2="891.8" y2="566.9" class="line-soft" />
+    <circle cx="891.8" cy="566.9" r="3.2" class="point" />
+  <line x1="597.0" y1="624.6" x2="618.2" y2="656.1" class="line-soft" />
+    <circle cx="618.2" cy="656.1" r="5.2" class="point" />
+  <line x1="524.0" y1="634.9" x2="498.7" y2="712.9" class="line-soft" />
+    <circle cx="498.7" cy="712.9" r="5.2" class="point-soft" />
+  <line x1="475.2" y1="593.1" x2="362.9" y2="650.3" class="guide" />
+    <circle cx="362.9" cy="650.3" r="4.2" class="point" />
+  <line x1="473.9" y1="519.5" x2="319.8" y2="447.7" class="line-soft" />
+    <circle cx="319.8" cy="447.7" r="4.2" class="point" />
+  <line x1="532.5" y1="472.8" x2="488.0" y2="263.5" class="line-soft" />
+    <circle cx="488.0" cy="263.5" r="5.2" class="point" />
+  <line x1="597.0" y1="485.4" x2="741.2" y2="271.5" class="line-soft" />
+    <circle cx="741.2" cy="271.5" r="5.2" class="point" />
+  <line x1="633.8" y1="549.1" x2="671.7" y2="546.5" class="line-soft" />
+    <circle cx="671.7" cy="546.5" r="5.2" class="point-soft" />
+  <line x1="606.2" y1="617.4" x2="661.1" y2="678.4" class="line-soft" />
+    <circle cx="661.1" cy="678.4" r="5.2" class="point" />
+  <line x1="536.9" y1="638.0" x2="517.1" y2="762.4" class="line-soft" />
+    <circle cx="517.1" cy="762.4" r="4.2" class="point" />
+  <line x1="481.2" y1="603.2" x2="341.9" y2="700.7" class="guide" />
+    <circle cx="341.9" cy="700.7" r="4.2" class="point" />
+  <line x1="470.6" y1="527.7" x2="268.2" y2="458.0" class="line-soft" />
+    <circle cx="268.2" cy="458.0" r="3.2" class="point" />
+  <line x1="522.7" y1="475.6" x2="438.7" y2="231.6" class="line-soft" />
+    <circle cx="438.7" cy="231.6" r="3.2" class="point-soft" />
+  <line x1="588.1" y1="480.2" x2="605.4" y2="446.3" class="line-soft" />
+    <circle cx="605.4" cy="446.3" r="3.2" class="point" />
+  <line x1="631.8" y1="536.1" x2="711.7" y2="517.7" class="line-soft" />
+    <circle cx="711.7" cy="517.7" r="4.2" class="point" />
+  <line x1="614.3" y1="609.0" x2="710.9" y2="690.0" class="line-soft" />
+    <circle cx="710.9" cy="690.0" r="5.2" class="point" />
+  <line x1="548.5" y1="639.0" x2="545.6" y2="809.0" class="line-soft" />
+    <circle cx="545.6" cy="809.0" r="4.2" class="point" />
+  <line x1="487.6" y1="611.2" x2="328.5" y2="754.4" class="guide" />
+    <circle cx="328.5" cy="754.4" r="5.2" class="point-soft" />
+  <line x1="467.5" y1="539.0" x2="214.3" y2="489.7" class="line-soft" />
+    <circle cx="214.3" cy="489.7" r="3.2" class="point" />
+  <line x1="513.2" y1="479.5" x2="496.5" y2="445.3" class="line-soft" />
+    <circle cx="496.5" cy="445.3" r="4.2" class="point" />
+  <line x1="577.3" y1="475.6" x2="604.0" y2="398.0" class="line-soft" />
+    <circle cx="604.0" cy="398.0" r="3.2" class="point" />
+  <line x1="630.3" y1="530.4" x2="750.8" y2="493.6" class="line-soft" />
+    <circle cx="750.8" cy="493.6" r="5.2" class="point" />
+  <line x1="619.6" y1="602.0" x2="760.6" y2="697.0" class="line-soft" />
+    <circle cx="760.6" cy="697.0" r="4.2" class="point-soft" />
+  <line x1="564.6" y1="637.7" x2="601.7" y2="848.5" class="line-soft" />
+    <circle cx="601.7" cy="848.5" r="4.2" class="point" />
+  <line x1="491.6" y1="615.4" x2="312.4" y2="801.0" class="guide" />
+    <circle cx="312.4" cy="801.0" r="3.2" class="point" />
+  <line x1="466.5" y1="546.2" x2="428.7" y2="542.2" class="line-soft" />
+    <circle cx="428.7" cy="542.2" r="3.2" class="point" />
+  <line x1="498.3" y1="488.8" x2="447.8" y2="424.2" class="line-soft" />
+    <circle cx="447.8" cy="424.2" r="3.2" class="point" />
+  <line x1="567.5" y1="472.8" x2="593.7" y2="349.6" class="line-soft" />
+    <circle cx="593.7" cy="349.6" r="4.2" class="point-soft" />
+  <line x1="625.5" y1="518.2" x2="778.3" y2="443.7" class="line-soft" />
+    <circle cx="778.3" cy="443.7" r="4.2" class="point" />
+  <line x1="627.3" y1="587.8" x2="824.3" y2="671.4" class="line-soft" />
+    <circle cx="824.3" cy="671.4" r="4.2" class="point" />
+  <line x1="571.7" y1="636.1" x2="638.5" y2="885.3" class="line-soft" />
+    <circle cx="638.5" cy="885.3" r="4.2" class="point" />
+  <line x1="498.3" y1="621.2" x2="474.9" y2="651.1" class="guide" />
+    <circle cx="474.9" cy="651.1" r="5.2" class="point" />
+  <line x1="466.5" y1="563.8" x2="384.9" y2="572.4" class="line-soft" />
+    <circle cx="384.9" cy="572.4" r="5.2" class="point-soft" />
+  <line x1="492.7" y1="493.6" x2="406.8" y2="401.4" class="line-soft" />
+    <circle cx="406.8" cy="401.4" r="3.2" class="point" />
+  <line x1="561.7" y1="471.8" x2="585.3" y2="303.5" class="line-soft" />
+    <circle cx="585.3" cy="303.5" r="5.2" class="point" />
+  <line x1="622.0" y1="511.7" x2="805.4" y2="401.5" class="line-soft" />
+    <circle cx="805.4" cy="401.5" r="4.2" class="point" />
+  <line x1="628.9" y1="583.7" x2="871.4" y2="672.0" class="line-soft" />
+    <circle cx="871.4" cy="672.0" r="3.2" class="point" />
+  <line x1="585.5" y1="631.1" x2="601.6" y2="665.6" class="line-soft" />
+    <circle cx="601.6" cy="665.6" r="5.2" class="point-soft" />
+  <line x1="511.9" y1="629.8" x2="474.6" y2="702.9" class="guide" />
+    <circle cx="474.6" cy="702.9" r="5.2" class="point" />
+  <line x1="467.5" y1="571.0" x2="343.9" y2="595.1" class="line-soft" />
+    <circle cx="343.9" cy="595.1" r="5.2" class="point" />
+  <line x1="482.0" y1="505.6" x2="344.5" y2="405.7" class="line-soft" />
+    <circle cx="344.5" cy="405.7" r="3.2" class="point" />
+  <line x1="550.0" y1="471.0" x2="550.0" y2="257.0" class="line-soft" />
+    <circle cx="550.0" cy="257.0" r="5.2" class="point" />
+  <line x1="616.2" y1="503.3" x2="819.5" y2="344.4" class="line-soft" />
+    <circle cx="819.5" cy="344.4" r="5.2" class="point-soft" />
+  <line x1="633.4" y1="565.2" x2="671.1" y2="569.9" class="line-soft" />
+    <circle cx="671.1" cy="569.9" r="4.2" class="point" />
+  <line x1="589.4" y1="629.2" x2="627.9" y2="701.6" class="line-soft" />
+    <circle cx="627.9" cy="701.6" r="4.2" class="point" />
+  <line x1="517.2" y1="632.3" x2="467.9" y2="748.3" class="guide" />
+    <circle cx="467.9" cy="748.3" r="3.2" class="point" />
+  <line x1="472.1" y1="586.5" x2="314.5" y2="650.2" class="line-soft" />
+    <circle cx="314.5" cy="650.2" r="5.2" class="point" />
+  <line x1="477.3" y1="513.0" x2="291.9" y2="406.0" class="line-soft" />
+    <circle cx="291.9" cy="406.0" r="5.2" class="point-soft" />
+  <line x1="538.3" y1="471.8" x2="502.4" y2="216.3" class="line-soft" />
+    <circle cx="502.4" cy="216.3" r="5.2" class="point" />
+  <line x1="604.0" y1="490.7" x2="628.4" y2="461.5" class="line-soft" />
+    <circle cx="628.4" cy="461.5" r="4.2" class="point" />
+  <line x1="634.0" y1="555.0" x2="716.0" y2="555.0" class="line-soft" />
+    <circle cx="716.0" cy="555.0" r="5.2" class="point" />
+  <line x1="601.7" y1="621.2" x2="679.3" y2="720.5" class="line-soft" />
+    <circle cx="679.3" cy="720.5" r="5.2" class="point" />
+  <line x1="529.7" y1="636.5" x2="488.6" y2="801.5" class="guide" />
+    <circle cx="488.6" cy="801.5" r="5.2" class="point-soft" />
+  <line x1="476.5" y1="595.7" x2="289.4" y2="699.5" class="line-soft" />
+    <circle cx="289.4" cy="699.5" r="3.2" class="point" />
+  <line x1="472.7" y1="522.2" x2="235.2" y2="421.4" class="line-soft" />
+    <circle cx="235.2" cy="421.4" r="3.2" class="point" />
+  <line x1="529.7" y1="473.5" x2="520.5" y2="436.6" class="line-soft" />
+    <circle cx="520.5" cy="436.6" r="4.2" class="point" />
+  <line x1="594.5" y1="483.8" x2="638.0" y2="414.2" class="line-soft" />
+    <circle cx="638.0" cy="414.2" r="4.2" class="point" />
+  <line x1="633.5" y1="546.2" x2="758.8" y2="533.0" class="line-soft" />
+    <circle cx="758.8" cy="533.0" r="4.2" class="point-soft" />
+  <line x1="608.4" y1="615.4" x2="726.4" y2="737.7" class="line-soft" />
+    <circle cx="726.4" cy="737.7" r="4.2" class="point" />
+  <line x1="538.3" y1="638.2" x2="508.5" y2="850.1" class="guide" />
+    <circle cx="508.5" cy="850.1" r="4.2" class="point" />
+  <line x1="482.9" y1="605.6" x2="276.9" y2="760.8" class="line-soft" />
+    <circle cx="276.9" cy="760.8" r="3.2" class="point" />
+  <line x1="468.9" y1="533.3" x2="432.2" y2="523.4" class="line-soft" />
+    <circle cx="432.2" cy="523.4" r="3.2" class="point" />
+  <line x1="518.5" y1="477.1" x2="487.8" y2="401.1" class="line-soft" />
+    <circle cx="487.8" cy="401.1" r="4.2" class="point-soft" />
+  <line x1="590.7" y1="481.5" x2="651.8" y2="371.3" class="line-soft" />
+    <circle cx="651.8" cy="371.3" r="3.2" class="point" />
+  <line x1="630.7" y1="531.8" x2="794.2" y2="485.0" class="line-soft" />
+    <circle cx="794.2" cy="485.0" r="5.2" class="point" />
+  <line x1="618.0" y1="604.4" x2="791.1" y2="730.2" class="line-soft" />
+    <circle cx="791.1" cy="730.2" r="5.2" class="point" />
+  <line x1="552.9" y1="638.9" x2="561.9" y2="896.8" class="guide" />
+    <circle cx="561.9" cy="896.8" r="5.2" class="point" />
+  <line x1="489.6" y1="613.4" x2="462.2" y2="639.7" class="line-soft" />
+    <circle cx="462.2" cy="639.7" r="4.2" class="point-soft" />
+  <line x1="466.5" y1="546.2" x2="384.9" y2="537.6" class="line-soft" />
+    <circle cx="384.9" cy="537.6" r="5.2" class="point" />
+  <line x1="505.5" y1="483.8" x2="438.7" y2="376.9" class="line-soft" />
+    <circle cx="438.7" cy="376.9" r="5.2" class="point" />
+  <line x1="580.1" y1="476.6" x2="641.0" y2="317.9" class="line-soft" />
+    <circle cx="641.0" cy="317.9" r="3.2" class="point" />
+  <line x1="629.9" y1="529.0" x2="833.4" y2="462.9" class="line-soft" />
+    <circle cx="833.4" cy="462.9" r="5.2" class="point" />
+  <line x1="624.8" y1="593.1" x2="854.7" y2="710.3" class="line-soft" />
+    <circle cx="854.7" cy="710.3" r="4.2" class="point-soft" />
+  <line x1="563.1" y1="638.0" x2="569.1" y2="675.5" class="guide" />
+    <circle cx="569.1" cy="675.5" r="3.2" class="point" />
+  <line x1="492.7" y1="616.4" x2="436.8" y2="676.4" class="line-soft" />
+    <circle cx="436.8" cy="676.4" r="3.2" class="point" />
+  <line x1="466.1" y1="557.9" x2="340.1" y2="562.3" class="line-soft" />
+    <circle cx="340.1" cy="562.3" r="5.2" class="point" />
+  <line x1="496.0" y1="490.7" x2="386.7" y2="360.4" class="line-soft" />
+    <circle cx="386.7" cy="360.4" r="5.2" class="point" />
+  <line x1="568.9" y1="473.2" x2="617.0" y2="264.6" class="line-soft" />
+    <circle cx="617.0" cy="264.6" r="3.2" class="point-soft" />
+  <line x1="622.0" y1="511.7" x2="843.2" y2="378.9" class="line-soft" />
+    <circle cx="843.2" cy="378.9" r="3.2" class="point" />
+  <line x1="628.4" y1="585.1" x2="663.9" y2="598.7" class="line-soft" />
+    <circle cx="663.9" cy="598.7" r="3.2" class="point" />
+  <line x1="574.6" y1="635.3" x2="598.5" y2="713.7" class="guide" />
+    <circle cx="598.5" cy="713.7" r="3.2" class="point" />
+  <line x1="503.0" y1="624.6" x2="432.6" y2="729.1" class="line-soft" />
+    <circle cx="432.6" cy="729.1" r="5.2" class="point" />
+  <line x1="467.3" y1="569.6" x2="299.9" y2="599.1" class="line-soft" />
+    <circle cx="299.9" cy="599.1" r="5.2" class="point-soft" />
+  <line x1="489.6" y1="496.6" x2="335.6" y2="348.0" class="line-soft" />
+    <circle cx="335.6" cy="348.0" r="4.2" class="point" />
+  <line x1="558.8" y1="471.5" x2="585.7" y2="214.9" class="line-soft" />
+    <circle cx="585.7" cy="214.9" r="4.2" class="point" />
+  <line x1="616.2" y1="503.3" x2="646.1" y2="479.9" class="line-soft" />
+    <circle cx="646.1" cy="479.9" r="4.2" class="point" />
+  <line x1="632.2" y1="572.5" x2="712.4" y2="589.5" class="line-soft" />
+    <circle cx="712.4" cy="589.5" r="5.2" class="point" />
+  <line x1="585.5" y1="631.1" x2="638.7" y2="745.3" class="guide" />
+    <circle cx="638.7" cy="745.3" r="3.2" class="point-soft" />
+  <line x1="517.2" y1="632.3" x2="450.8" y2="788.8" class="line-soft" />
+    <circle cx="450.8" cy="788.8" r="5.2" class="point" />
+  <line x1="468.9" y1="576.7" x2="262.2" y2="632.1" class="line-soft" />
+    <circle cx="262.2" cy="632.1" r="5.2" class="point" />
+  <line x1="482.9" y1="504.4" x2="276.9" y2="349.2" class="line-soft" />
+    <circle cx="276.9" cy="349.2" r="5.2" class="point" />
+  <line x1="548.5" y1="471.0" x2="547.9" y2="433.0" class="line-soft" />
+    <circle cx="547.9" cy="433.0" r="5.2" class="point" />
+  <line x1="608.4" y1="494.6" x2="665.3" y2="435.6" class="line-soft" />
+    <circle cx="665.3" cy="435.6" r="4.2" class="point-soft" />
+  <line x1="633.4" y1="565.2" x2="758.4" y2="580.6" class="line-soft" />
+    <circle cx="758.4" cy="580.6" r="5.2" class="point" />
+  <line x1="594.5" y1="626.2" x2="684.6" y2="770.4" class="guide" />
+    <circle cx="684.6" cy="770.4" r="4.2" class="point" />
+  <line x1="521.3" y1="633.9" x2="448.1" y2="835.0" class="line-soft" />
+    <circle cx="448.1" cy="835.0" r="4.2" class="point" />
+  <line x1="473.9" y1="590.5" x2="240.0" y2="699.5" class="line-soft" />
+    <circle cx="240.0" cy="699.5" r="3.2" class="point" />
+  <line x1="478.0" y1="511.7" x2="445.4" y2="492.2" class="line-soft" />
+    <circle cx="445.4" cy="492.2" r="4.2" class="point-soft" />
+  <line x1="529.7" y1="473.5" x2="509.8" y2="393.9" class="line-soft" />
+    <circle cx="509.8" cy="393.9" r="3.2" class="point" />
+  <line x1="602.9" y1="489.7" x2="682.2" y2="391.8" class="line-soft" />
+    <circle cx="682.2" cy="391.8" r="4.2" class="point" />
+  <line x1="634.0" y1="555.0" x2="804.0" y2="555.0" class="line-soft" />
+    <circle cx="804.0" cy="555.0" r="3.2" class="point" />
+  <line x1="602.9" y1="620.3" x2="737.5" y2="786.6" class="guide" />
+    <circle cx="737.5" cy="786.6" r="5.2" class="point" />
+  <line x1="539.8" y1="638.4" x2="508.3" y2="894.5" class="line-soft" />
+    <circle cx="508.3" cy="894.5" r="5.2" class="point-soft" />
+  <line x1="477.3" y1="597.0" x2="444.3" y2="616.0" class="line-soft" />
+    <circle cx="444.3" cy="616.0" r="3.2" class="point" />
+  <line x1="472.7" y1="522.2" x2="397.2" y2="490.1" class="line-soft" />
+    <circle cx="397.2" cy="490.1" r="4.2" class="point" />
+  <line x1="518.5" y1="477.1" x2="471.3" y2="360.3" class="line-soft" />
+    <circle cx="471.3" cy="360.3" r="3.2" class="point" />
+  <line x1="592.0" y1="482.3" x2="677.0" y2="335.0" class="line-soft" />
+    <circle cx="677.0" cy="335.0" r="3.2" class="point" />
+  <line x1="633.2" y1="543.3" x2="845.1" y2="513.5" class="line-soft" />
+    <circle cx="845.1" cy="513.5" r="3.2" class="point-soft" />
+  <line x1="615.3" y1="607.9" x2="815.8" y2="770.2" class="guide" />
+    <circle cx="815.8" cy="770.2" r="4.2" class="point" />
+  <line x1="548.5" y1="639.0" x2="547.9" y2="677.0" class="line-soft" />
+    <circle cx="547.9" cy="677.0" r="4.2" class="point" />
+  <line x1="483.8" y1="606.7" x2="419.2" y2="657.2" class="line-soft" />
+    <circle cx="419.2" cy="657.2" r="3.2" class="point" />
+  <line x1="468.9" y1="533.3" x2="347.2" y2="500.6" class="line-soft" />
+    <circle cx="347.2" cy="500.6" r="4.2" class="point" />
+
+  <!-- Footer meta boxes -->
+  <g transform="translate(100, 1082)">
+    <rect x="0" y="0" width="230" height="82" rx="10" class="label-box" />
+    <text x="14" y="26" class="text-small">⊙ = payload hash band</text>
+    <text x="14" y="48" class="text-small">● = sparse delta marker</text>
+    <text x="14" y="68" class="text-small">SPARSE PROOF token</text>
+  </g>
+
+  <g transform="translate(770, 1074)">
+    <rect x="0" y="0" width="230" height="96" rx="10" class="label-box" />
+    <text x="110" y="24" text-anchor="middle" class="text-meta">TOKEN META</text>
+    <text x="14" y="48" class="text-small">Encoding: ASCII</text>
+    <text x="14" y="68" class="text-small">Message: 58 · Δ 165</text>
+    <text x="14" y="88" class="text-small">Version: 0.3</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="550" y="1144"    text-anchor="middle" class="text-medium">VSC-0.3 / ETHIC</text>
+  <text x="550" y="1178"   text-anchor="middle" class="text-id">TOKEN ID: E962823D0FDD</text>
+  <text x="550" y="1210" text-anchor="middle" class="text-meta">HASH: E962823D0FDD26B600FAD579</text>
+</svg>

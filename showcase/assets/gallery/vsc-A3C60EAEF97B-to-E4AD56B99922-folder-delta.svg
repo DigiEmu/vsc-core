@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1100"
+  height="1280"
+  viewBox="0 0 1100 1280"
+>
+  <defs>
+    <style>
+      .bg            { fill: #f8f8f6; }
+      .line-strong   { stroke: #111; stroke-width: 2.4; fill: none; }
+      .line-mid      { stroke: #888; stroke-width: 1.2; fill: none; }
+      .line-soft     { stroke: #d8d8d8; stroke-width: 0.8; fill: none; }
+      .text-title    { font-family: Arial, Helvetica, sans-serif; font-size: 28px; letter-spacing: 8px; fill: #111; }
+      .text-subtitle { font-family: Arial, Helvetica, sans-serif; font-size: 12px; letter-spacing: 3.5px; fill: #444; }
+      .text-small    { font-family: Arial, Helvetica, sans-serif; font-size: 13px; fill: #333; }
+      .text-medium   { font-family: Arial, Helvetica, sans-serif; font-size: 16px; fill: #222; }
+      .text-meta     { font-family: Arial, Helvetica, sans-serif; font-size: 12px; letter-spacing: 2px; fill: #444; }
+      .text-id       { font-family: 'Courier New', monospace; font-size: 14px; letter-spacing: 2px; fill: #111; }
+      .text-arc-label { font-family: Arial, Helvetica, sans-serif; font-size: 15px; letter-spacing: 3px; fill: #111; font-weight: 600; }
+      .text-arc-id   { font-family: 'Courier New', monospace; font-size: 11px; fill: #555; }
+      .text-core-big { font-family: Arial, Helvetica, sans-serif; font-size: 52px; font-weight: 700; fill: #111; }
+      .text-core-sub { font-family: Arial, Helvetica, sans-serif; font-size: 11px; letter-spacing: 2px; fill: #555; }
+      .text-op-label { font-family: 'Courier New', monospace; font-size: 11.5px; fill: #111; }
+      .label-box     { fill: #f9f9f9; stroke: #c8c8c8; stroke-width: 1.1; }
+      .orient-dot    { fill: #fff; stroke: #bbb; stroke-width: 1.2; }
+      .hash-fill     { fill: #333; }
+      .hash-open     { fill: none; stroke: #999; stroke-width: 0.9; }
+      .arc-base      { stroke: #999; stroke-width: 2.2; fill: none; stroke-dasharray: 8 5; }
+      .arc-target    { stroke: #111; stroke-width: 2.8; fill: none; }
+      .delta-ring    { stroke: #444; stroke-width: 2; fill: none; stroke-dasharray: 7 4; }
+      .op-spoke      { stroke: #bbb; stroke-width: 1; fill: none; }
+      .op-modify     { fill: #111; stroke: none; }
+      .op-add        { fill: #fff; stroke: #111; stroke-width: 2.2; }
+      .op-delete     { fill: #f0f0f0; stroke: #111; stroke-width: 2; }
+      .crosshair     { stroke: #e4e4e4; stroke-width: 0.8; stroke-dasharray: 2 8; }
+    </style>
+    <marker id="darr" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#444" />
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1100" height="1280" />
+
+  <!-- Title / subtitle -->
+  <text x="550" y="86" text-anchor="middle" class="text-title">VSC DELTA TOKEN</text>
+  <text x="550" y="118" text-anchor="middle" class="text-subtitle">BASE A3C60EAEF97B → TARGET E4AD56B99922 · CHANGED FILES ONLY · SHA-256</text>
+  <line x1="390" y1="132" x2="710" y2="132" class="line-soft" />
+
+  <!-- Quiet crosshairs — two axes only -->
+  <line x1="550" y1="185" x2="550" y2="925" class="crosshair" />
+  <line x1="180" y1="555" x2="920" y2="555" class="crosshair" />
+
+  <!-- Structural rings — 4 quiet rings -->
+  <circle cx="550" cy="555" r="134" class="line-soft" />
+  <circle cx="550" cy="555" r="190" class="line-soft" />
+  <circle cx="550" cy="555" r="246" class="line-soft" />
+  <circle cx="550" cy="555" r="302" class="line-soft" />
+
+  <!-- Outer ring: BASE (dashed/grey left) and TARGET (solid/black right) arcs -->
+  <path d="M 550 195 A 360 360 0 0 0 550 915"   class="arc-base"   />
+  <path d="M 550 195 A 360 360 0 0 1 550 915" class="arc-target" />
+
+  <!-- BASE / TARGET arc labels -->
+  <text x="158.0"   y="541.0"  text-anchor="middle" class="text-arc-label">BASE</text>
+  <text x="158.0"   y="559.0"   text-anchor="middle" class="text-arc-id">A3C60EAEF97B</text>
+  <text x="942.0" y="541.0" text-anchor="middle" class="text-arc-label">TARGET</text>
+  <text x="942.0" y="559.0"  text-anchor="middle" class="text-arc-id">E4AD56B99922</text>
+
+  <!-- Six quiet orientation markers (no number) -->
+  <circle cx="550.0" cy="193.0" r="8" class="orient-dot" />
+  <circle cx="863.5" cy="374.0" r="8" class="orient-dot" />
+  <circle cx="863.5" cy="736.0" r="8" class="orient-dot" />
+  <circle cx="550.0" cy="917.0" r="8" class="orient-dot" />
+  <circle cx="236.5" cy="736.0" r="8" class="orient-dot" />
+  <circle cx="236.5" cy="374.0" r="8" class="orient-dot" />
+
+  <!-- Target root hash band — quieter dots -->
+  <circle cx="550" cy="155" r="1.52" class="hash-fill" />
+  <circle cx="588.618753289847" cy="162.89721769115448" r="1.52" class="hash-fill" />
+  <circle cx="626.8655868743546" cy="168.57059952112724" r="1.52" class="hash-fill" />
+  <circle cx="664.3721628382582" cy="177.96550772150965" r="2.03" class="hash-open" />
+  <circle cx="703.073372946036" cy="185.4481869954853" r="2.03" class="hash-open" />
+  <circle cx="732.9019338884872" cy="212.8145494328383" r="1.52" class="hash-fill" />
+  <circle cx="772.2280932078409" cy="222.41215507898193" r="2.03" class="hash-open" />
+  <circle cx="796.1445942554944" cy="255.07194409525812" r="2.03" class="hash-open" />
+  <circle cx="824.3574311003804" cy="280.64256889961956" r="2.03" class="hash-open" />
+  <circle cx="849.928055904742" cy="308.85540574450556" r="2.03" class="hash-open" />
+  <circle cx="882.5878449210181" cy="332.77190679215914" r="1.52" class="hash-fill" />
+  <circle cx="902.768505739342" cy="366.4413052696009" r="1.52" class="hash-fill" />
+  <circle cx="908.4652586143793" cy="406.5188282423452" r="1.52" class="hash-fill" />
+  <circle cx="921.2928502640971" cy="442.36954522526867" r="2.03" class="hash-open" />
+  <circle cx="936.4294004788728" cy="478.13441312564544" r="1.52" class="hash-fill" />
+  <circle cx="942.1027823088456" cy="516.381246710153" r="1.52" class="hash-fill" />
+  <circle cx="944" cy="555" r="2.03" class="hash-open" />
+  <circle cx="936.1316739488125" cy="593.0306504478696" r="2.03" class="hash-open" />
+  <circle cx="936.4294004788728" cy="631.8655868743546" r="1.52" class="hash-fill" />
+  <circle cx="927.0344922784903" cy="669.3721628382582" r="2.03" class="hash-open" />
+  <circle cx="908.4652586143793" cy="703.4811717576548" r="1.52" class="hash-fill" />
+  <circle cx="902.768505739342" cy="743.5586947303991" r="1.52" class="hash-fill" />
+  <circle cx="872.6102095733876" cy="770.5612504116057" r="2.03" class="hash-open" />
+  <circle cx="854.5661186249184" cy="804.9509539604762" r="2.03" class="hash-open" />
+  <circle cx="828.6000717874997" cy="833.6000717874997" r="2.03" class="hash-open" />
+  <circle cx="799.9509539604763" cy="859.5661186249183" r="1.52" class="hash-fill" />
+  <circle cx="768.8946718097231" cy="882.5990272472029" r="2.03" class="hash-open" />
+  <circle cx="738.5586947303991" cy="907.768505739342" r="1.52" class="hash-fill" />
+  <circle cx="700.7772723518453" cy="919.008535809447" r="2.03" class="hash-open" />
+  <circle cx="664.3721628382582" cy="932.0344922784903" r="2.03" class="hash-open" />
+  <circle cx="625.6950449422578" cy="935.5446887964533" r="2.03" class="hash-open" />
+  <circle cx="588.0306504478696" cy="941.1316739488124" r="2.03" class="hash-open" />
+  <circle cx="550" cy="955" r="1.52" class="hash-fill" />
+  <circle cx="511.96934955213044" cy="941.1316739488125" r="2.03" class="hash-open" />
+  <circle cx="471.96387119354864" cy="947.3141121612922" r="1.52" class="hash-fill" />
+  <circle cx="437.36954522526867" cy="926.2928502640971" r="1.52" class="hash-fill" />
+  <circle cx="401.5188282423452" cy="913.4652586143793" r="2.03" class="hash-open" />
+  <circle cx="367.09806611151294" cy="897.1854505671618" r="1.52" class="hash-fill" />
+  <circle cx="331.10532819027685" cy="882.5990272472029" r="2.03" class="hash-open" />
+  <circle cx="296.2426863345419" cy="864.2041813450949" r="1.52" class="hash-fill" />
+  <circle cx="275.64256889961956" cy="829.3574311003804" r="2.03" class="hash-open" />
+  <circle cx="250.07194409525817" cy="801.1445942554946" r="2.03" class="hash-open" />
+  <circle cx="222.40097275279714" cy="773.8946718097233" r="2.03" class="hash-open" />
+  <circle cx="202.52302184674818" cy="740.7303143094432" r="2.03" class="hash-open" />
+  <circle cx="180.4481869954854" cy="708.0733729460361" r="1.52" class="hash-fill" />
+  <circle cx="172.9655077215097" cy="669.3721628382582" r="2.03" class="hash-open" />
+  <circle cx="157.6858878387078" cy="633.0361288064514" r="1.52" class="hash-fill" />
+  <circle cx="157.89721769115442" cy="593.6187532898468" r="2.03" class="hash-open" />
+  <circle cx="162" cy="555" r="1.52" class="hash-fill" />
+  <circle cx="151.9261093311212" cy="515.7931438681759" r="1.52" class="hash-fill" />
+  <circle cx="169.45531120354661" cy="479.3049550577422" r="1.52" class="hash-fill" />
+  <circle cx="172.96550772150965" cy="440.6278371617419" r="1.52" class="hash-fill" />
+  <circle cx="180.44818699548534" cy="401.926627053964" r="1.52" class="hash-fill" />
+  <circle cx="202.52302184674812" cy="369.2696856905569" r="1.52" class="hash-fill" />
+  <circle cx="217.4121550789818" cy="332.77190679215926" r="2.03" class="hash-open" />
+  <circle cx="250.07194409525812" cy="308.8554057445055" r="2.03" class="hash-open" />
+  <circle cx="275.6425688996195" cy="280.64256889961956" r="2.03" class="hash-open" />
+  <circle cx="296.24268633454165" cy="245.79581865490536" r="2.03" class="hash-open" />
+  <circle cx="331.10532819027674" cy="227.4009727527972" r="1.52" class="hash-fill" />
+  <circle cx="367.0980661115128" cy="212.8145494328383" r="2.03" class="hash-open" />
+  <circle cx="399.22272764815443" cy="190.99146419055313" r="2.03" class="hash-open" />
+  <circle cx="433.886129098215" cy="172.2238657071165" r="2.03" class="hash-open" />
+  <circle cx="473.1344131256453" cy="168.57059952112724" r="2.03" class="hash-open" />
+  <circle cx="511.96934955213055" cy="168.86832605118758" r="2.03" class="hash-open" />
+
+  <!-- Delta ring — prominent dashed ring on target side -->
+  <circle cx="550" cy="555" r="266" class="delta-ring" />
+
+  <!-- Core: Δ symbol (changed-files nucleus) -->
+  <circle cx="550" cy="555" r="78" class="line-strong" />
+  <circle cx="550" cy="555" r="62" class="line-mid" />
+  <text x="550" y="573" text-anchor="middle" class="text-core-big">Δ</text>
+  <text x="550" y="597" text-anchor="middle" class="text-core-sub">CHANGED FILES</text>
+
+  <!-- Operation nodes on delta ring: spokes + nodes -->
+  <line x1="638.0" y1="555.0" x2="816.0" y2="555.0" class="op-spoke" />
+    <circle cx="816.0" cy="555.0" r="11" class="op-modify" />
+    <text x="848.0" y="559.0" text-anchor="start" class="text-op-label">MOD README.md</text>
+
+  <!-- Delta direction arrow — from BASE arc point to TARGET arc point (top of ring) -->
+  <line x1="520.0" y1="225.0"
+        x2="580.0" y2="225.0"
+        stroke="#444" stroke-width="2" marker-end="url(#darr)" />
+
+  <!-- Footer meta boxes -->
+  <g transform="translate(76, 1076)">
+    <rect x="0" y="0" width="240" height="80" rx="10" class="label-box" />
+    <text x="14" y="24" class="text-small">● MOD · ○+ ADD · ○× DEL</text>
+    <text x="14" y="46" class="text-small">--- BASE arc  ─── TARGET arc</text>
+    <text x="14" y="66" class="text-small">Δ core = changed files nucleus</text>
+  </g>
+
+  <g transform="translate(784, 1076)">
+    <rect x="0" y="0" width="240" height="80" rx="10" class="label-box" />
+    <text x="14" y="24" class="text-small">+0 added  ~1 modified  -0 deleted</text>
+    <text x="14" y="46" class="text-small">Delta: 4260 B · 2 chunks</text>
+    <text x="14" y="66" class="text-small">Verify: E4AD56B99922CFA4</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="550" y="1144"    text-anchor="middle" class="text-medium">VSC-1.4 / FOLDER DELTA</text>
+  <text x="550" y="1178"   text-anchor="middle" class="text-id">TOKEN ID: E4AD56B99922</text>
+  <text x="550" y="1210" text-anchor="middle" class="text-meta">STORED: CHANGED FILES ONLY · VERIFY: TARGET ROOT HASH E4AD56B99922CFA4</text>
+</svg>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1100"
+  height="1280"
+  viewBox="0 0 1100 1280"
+>
+  <defs>
+    <style>
+      .bg          { fill: #f8f8f6; }
+      .line-strong { stroke: #111; stroke-width: 2.4; fill: none; }
+      .line-mid    { stroke: #888; stroke-width: 1.2; fill: none; }
+      .line-soft   { stroke: #d8d8d8; stroke-width: 0.8; fill: none; }
+      .text-title  { font-family: Arial, Helvetica, sans-serif; font-size: 28px; letter-spacing: 8px; fill: #111; }
+      .text-subtitle { font-family: Arial, Helvetica, sans-serif; font-size: 12px; letter-spacing: 4px; fill: #444; }
+      .text-small  { font-family: Arial, Helvetica, sans-serif; font-size: 13px; fill: #333; }
+      .text-medium { font-family: Arial, Helvetica, sans-serif; font-size: 16px; fill: #222; }
+      .text-meta   { font-family: Arial, Helvetica, sans-serif; font-size: 12px; letter-spacing: 2px; fill: #444; }
+      .text-id     { font-family: 'Courier New', monospace; font-size: 14px; letter-spacing: 2px; fill: #111; }
+      .text-core-big   { font-family: Arial, Helvetica, sans-serif; font-size: 58px; font-weight: 700; fill: #111; }
+      .text-core-small { font-family: Arial, Helvetica, sans-serif; font-size: 11px; letter-spacing: 2px; fill: #555; }
+      .label-box   { fill: #f9f9f9; stroke: #c8c8c8; stroke-width: 1.1; }
+      .orient-dot  { fill: #fff; stroke: #ccc; stroke-width: 1.2; }
+      .hash-fill   { fill: #333; }
+      .hash-open   { fill: none; stroke: #999; stroke-width: 0.9; }
+      .point       { fill: #111; }
+      .point-soft  { fill: #666; opacity: 0.7; }
+      .guide       { stroke: #ccc; stroke-width: 0.8; fill: none; stroke-dasharray: 3 7; }
+      .crosshair   { stroke: #e8e8e8; stroke-width: 0.8; stroke-dasharray: 2 8; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1100" height="1280" />
+
+  <!-- Title / subtitle -->
+  <text x="550" y="86" text-anchor="middle" class="text-title">VSC FOLDER TOKEN</text>
+  <text x="550" y="118" text-anchor="middle" class="text-subtitle">MACHINE READABLE · BASELINE 0 · SPARSE DELTA · SHA-256</text>
+  <line x1="400" y1="132" x2="700" y2="132" class="line-soft" />
+
+  <!-- Quiet crosshairs — two axes only -->
+  <line x1="550" y1="195" x2="550" y2="915" class="crosshair" />
+  <line x1="190" y1="555" x2="910" y2="555" class="crosshair" />
+
+  <!-- 5 structural rings (was 12) -->
+  <circle cx="550" cy="555" r="134" class="line-soft" />
+  <circle cx="550" cy="555" r="190" class="line-soft" />
+  <circle cx="550" cy="555" r="246" class="line-soft" />
+  <circle cx="550" cy="555" r="302" class="line-soft" />
+  <circle cx="550" cy="555" r="358" class="line-soft" />
+
+  <!-- Outer ring — strong boundary -->
+  <circle cx="550" cy="555" r="360" class="line-strong" />
+  <circle cx="550" cy="555" r="342" class="line-mid" />
+
+  <!-- Six quiet orientation dots (no number) -->
+  <circle cx="550.0" cy="193.0" r="9" class="orient-dot" />
+  <circle cx="863.5" cy="374.0" r="9" class="orient-dot" />
+  <circle cx="863.5" cy="736.0" r="9" class="orient-dot" />
+  <circle cx="550.0" cy="917.0" r="9" class="orient-dot" />
+  <circle cx="236.5" cy="736.0" r="9" class="orient-dot" />
+  <circle cx="236.5" cy="374.0" r="9" class="orient-dot" />
+
+  <!-- Hash band — slightly quieter dots -->
+  <circle cx="550" cy="161" r="1.6" class="hash-fill" />
+  <circle cx="588.0306504478696" cy="168.86832605118764" r="2.2" class="hash-open" />
+  <circle cx="625.6950449422578" cy="174.45531120354661" r="1.6" class="hash-fill" />
+  <circle cx="662.6304547747313" cy="183.70714973590293" r="1.6" class="hash-fill" />
+  <circle cx="698.4811717576549" cy="196.53474138562075" r="1.6" class="hash-fill" />
+  <circle cx="738.5586947303991" cy="202.231494260658" r="1.6" class="hash-fill" />
+  <circle cx="768.8946718097233" cy="227.4009727527972" r="1.6" class="hash-fill" />
+  <circle cx="803.7573136654582" cy="245.79581865490525" r="1.6" class="hash-fill" />
+  <circle cx="824.3574311003804" cy="280.64256889961956" r="2.2" class="hash-open" />
+  <circle cx="849.928055904742" cy="308.85540574450556" r="2.2" class="hash-open" />
+  <circle cx="877.5990272472028" cy="336.10532819027674" r="2.2" class="hash-open" />
+  <circle cx="902.768505739342" cy="366.4413052696009" r="2.2" class="hash-open" />
+  <circle cx="908.4652586143793" cy="406.5188282423452" r="2.2" class="hash-open" />
+  <circle cx="927.0344922784903" cy="440.62783716174187" r="1.6" class="hash-fill" />
+  <circle cx="936.4294004788728" cy="478.13441312564544" r="2.2" class="hash-open" />
+  <circle cx="942.1027823088456" cy="516.381246710153" r="2.2" class="hash-open" />
+  <circle cx="950" cy="555" r="2.2" class="hash-open" />
+  <circle cx="948.0738906688788" cy="594.2068561318243" r="1.6" class="hash-fill" />
+  <circle cx="942.3141121612922" cy="633.0361288064513" r="1.6" class="hash-fill" />
+  <circle cx="921.2928502640971" cy="667.6304547747313" r="2.2" class="hash-open" />
+  <circle cx="919.5518130045148" cy="708.0733729460359" r="2.2" class="hash-open" />
+  <circle cx="897.4769781532518" cy="740.7303143094431" r="1.6" class="hash-fill" />
+  <circle cx="877.5990272472029" cy="773.8946718097231" r="2.2" class="hash-open" />
+  <circle cx="849.928055904742" cy="801.1445942554944" r="1.6" class="hash-fill" />
+  <circle cx="824.3574311003804" cy="829.3574311003804" r="1.6" class="hash-fill" />
+  <circle cx="799.9509539604763" cy="859.5661186249183" r="1.6" class="hash-fill" />
+  <circle cx="765.5612504116057" cy="877.6102095733876" r="2.2" class="hash-open" />
+  <circle cx="735.7303143094432" cy="902.4769781532518" r="2.2" class="hash-open" />
+  <circle cx="700.7772723518453" cy="919.008535809447" r="2.2" class="hash-open" />
+  <circle cx="664.3721628382582" cy="932.0344922784903" r="2.2" class="hash-open" />
+  <circle cx="626.8655868743547" cy="941.4294004788728" r="2.2" class="hash-open" />
+  <circle cx="589.2068561318243" cy="953.0738906688787" r="1.6" class="hash-fill" />
+  <circle cx="550" cy="955" r="1.6" class="hash-fill" />
+  <circle cx="510.7931438681757" cy="953.0738906688788" r="1.6" class="hash-fill" />
+  <circle cx="473.13441312564544" cy="941.4294004788728" r="1.6" class="hash-fill" />
+  <circle cx="435.6278371617419" cy="932.0344922784903" r="1.6" class="hash-fill" />
+  <circle cx="401.5188282423452" cy="913.4652586143793" r="1.6" class="hash-fill" />
+  <circle cx="364.2696856905569" cy="902.4769781532518" r="2.2" class="hash-open" />
+  <circle cx="334.43874958839444" cy="877.6102095733876" r="2.2" class="hash-open" />
+  <circle cx="300.0490460395237" cy="859.5661186249184" r="2.2" class="hash-open" />
+  <circle cx="267.15728752538104" cy="837.842712474619" r="1.6" class="hash-fill" />
+  <circle cx="240.79581865490536" cy="808.7573136654584" r="1.6" class="hash-fill" />
+  <circle cx="222.40097275279714" cy="773.8946718097233" r="1.6" class="hash-fill" />
+  <circle cx="202.52302184674818" cy="740.7303143094432" r="2.2" class="hash-open" />
+  <circle cx="180.4481869954854" cy="708.0733729460361" r="1.6" class="hash-fill" />
+  <circle cx="167.2238657071165" cy="671.1138709017849" r="1.6" class="hash-fill" />
+  <circle cx="169.45531120354661" cy="630.6950449422579" r="1.6" class="hash-fill" />
+  <circle cx="157.89721769115442" cy="593.6187532898468" r="1.6" class="hash-fill" />
+  <circle cx="150" cy="555" r="2.2" class="hash-open" />
+  <circle cx="151.9261093311212" cy="515.7931438681759" r="2.2" class="hash-open" />
+  <circle cx="157.6858878387078" cy="476.96387119354864" r="2.2" class="hash-open" />
+  <circle cx="172.96550772150965" cy="440.6278371617419" r="2.2" class="hash-open" />
+  <circle cx="185.99146419055307" cy="404.22272764815455" r="2.2" class="hash-open" />
+  <circle cx="197.231494260658" cy="366.44130526960095" r="2.2" class="hash-open" />
+  <circle cx="217.4121550789818" cy="332.77190679215926" r="2.2" class="hash-open" />
+  <circle cx="240.79581865490525" cy="301.24268633454176" r="1.6" class="hash-fill" />
+  <circle cx="275.6425688996195" cy="280.64256889961956" r="2.2" class="hash-open" />
+  <circle cx="303.8554057445054" cy="255.07194409525817" r="2.2" class="hash-open" />
+  <circle cx="334.43874958839433" cy="232.38979042661242" r="2.2" class="hash-open" />
+  <circle cx="364.2696856905568" cy="207.52302184674818" r="2.2" class="hash-open" />
+  <circle cx="399.22272764815443" cy="190.99146419055313" r="2.2" class="hash-open" />
+  <circle cx="437.36954522526855" cy="183.707149735903" r="1.6" class="hash-fill" />
+  <circle cx="473.1344131256453" cy="168.57059952112724" r="2.2" class="hash-open" />
+  <circle cx="511.38124671015316" cy="162.89721769115442" r="1.6" class="hash-fill" />
+
+  <!-- Core circle with type-specific symbol -->
+  <circle cx="550" cy="555" r="78" class="line-strong" />
+  <circle cx="550" cy="555" r="60" class="line-mid" />
+  <text x="550" y="577" text-anchor="middle" class="text-core-big">⊞</text>
+  <text x="550" y="601" text-anchor="middle" class="text-core-small">BASE SNAPSHOT</text>
+
+  <!-- Sparse delta points — guide lines + dots, using wider spacing (6 rings, step 44) -->
+  <line x1="469.7" y1="530.4" x2="433.3" y2="519.3" class="guide" />
+    <circle cx="433.3" cy="519.3" r="5.2" class="point-soft" />
+  <line x1="466.5" y1="546.2" x2="384.9" y2="537.6" class="line-soft" />
+    <circle cx="384.9" cy="537.6" r="5.2" class="point" />
+  <line x1="633.0" y1="541.9" x2="757.4" y2="522.1" class="line-soft" />
+    <circle cx="757.4" cy="522.1" r="4.2" class="point" />
+  <line x1="574.6" y1="474.7" x2="624.3" y2="312.1" class="line-soft" />
+    <circle cx="624.3" cy="312.1" r="5.2" class="point" />
+  <line x1="498.3" y1="621.2" x2="366.5" y2="789.8" class="line-soft" />
+    <circle cx="366.5" cy="789.8" r="4.2" class="point" />
+  <line x1="633.9" y1="559.4" x2="891.5" y2="572.9" class="line-soft" />
+    <circle cx="891.5" cy="572.9" r="4.2" class="point-soft" />
+  <line x1="561.7" y1="471.8" x2="567.0" y2="434.2" class="line-soft" />
+    <circle cx="567.0" cy="434.2" r="5.2" class="point" />
+  <line x1="632.2" y1="537.5" x2="712.4" y2="520.5" class="guide" />
+    <circle cx="712.4" cy="520.5" r="5.2" class="point" />
+  <line x1="630.7" y1="578.2" x2="751.9" y2="612.9" class="line-soft" />
+    <circle cx="751.9" cy="612.9" r="5.2" class="point" />
+  <line x1="517.2" y1="477.7" x2="450.8" y2="321.2" class="line-soft" />
+    <circle cx="450.8" cy="321.2" r="4.2" class="point" />
+  <line x1="598.2" y1="623.8" x2="720.9" y2="799.1" class="line-soft" />
+    <circle cx="720.9" cy="799.1" r="3.2" class="point-soft" />
+  <line x1="500.6" y1="487.0" x2="349.0" y2="278.3" class="line-soft" />
+    <circle cx="349.0" cy="278.3" r="4.2" class="point" />
+  <line x1="566.0" y1="637.5" x2="573.3" y2="674.8" class="line-soft" />
+    <circle cx="573.3" cy="674.8" r="4.2" class="point" />
+  <line x1="511.9" y1="480.2" x2="474.6" y2="407.1" class="line-soft" />
+    <circle cx="474.6" cy="407.1" r="5.2" class="point" />
+  <line x1="630.3" y1="579.6" x2="750.8" y2="616.4" class="guide" />
+    <circle cx="750.8" cy="616.4" r="3.2" class="point" />
+  <line x1="538.3" y1="471.8" x2="514.7" y2="303.5" class="line-soft" />
+    <circle cx="514.7" cy="303.5" r="4.2" class="point-soft" />
+  <line x1="593.3" y1="483.0" x2="703.5" y2="299.6" class="line-soft" />
+    <circle cx="703.5" cy="299.6" r="3.2" class="point" />
+  <line x1="505.5" y1="626.2" x2="368.8" y2="845.0" class="line-soft" />
+    <circle cx="368.8" cy="845.0" r="3.2" class="point" />
+  <line x1="539.8" y1="638.4" x2="535.1" y2="676.1" class="line-soft" />
+    <circle cx="535.1" cy="676.1" r="4.2" class="point" />
+  <line x1="468.2" y1="573.9" x2="388.3" y2="592.3" class="line-soft" />
+    <circle cx="388.3" cy="592.3" r="4.2" class="point" />
+  <line x1="521.3" y1="476.1" x2="478.2" y2="357.7" class="line-soft" />
+    <circle cx="478.2" cy="357.7" r="5.2" class="point-soft" />
+  <line x1="538.3" y1="471.8" x2="514.7" y2="303.5" class="guide" />
+    <circle cx="514.7" cy="303.5" r="4.2" class="point" />
+  <line x1="519.9" y1="476.6" x2="443.2" y2="276.8" class="line-soft" />
+    <circle cx="443.2" cy="276.8" r="5.2" class="point" />
+  <line x1="466.0" y1="555.0" x2="208.0" y2="555.0" class="line-soft" />
+    <circle cx="208.0" cy="555.0" r="4.2" class="point" />
+  <line x1="532.5" y1="637.2" x2="524.6" y2="674.3" class="line-soft" />
+    <circle cx="524.6" cy="674.3" r="3.2" class="point" />
+  <line x1="470.1" y1="529.0" x2="392.1" y2="503.7" class="line-soft" />
+    <circle cx="392.1" cy="503.7" r="5.2" class="point-soft" />
+  <line x1="585.5" y1="478.9" x2="638.7" y2="364.7" class="line-soft" />
+    <circle cx="638.7" cy="364.7" r="5.2" class="point" />
+  <line x1="485.7" y1="609.0" x2="355.4" y2="718.3" class="line-soft" />
+    <circle cx="355.4" cy="718.3" r="5.2" class="point" />
+  <line x1="482.0" y1="604.4" x2="308.9" y2="730.2" class="guide" />
+    <circle cx="308.9" cy="730.2" r="5.2" class="point" />
+  <line x1="633.2" y1="566.7" x2="888.7" y2="602.6" class="line-soft" />
+    <circle cx="888.7" cy="602.6" r="3.2" class="point" />
+  <line x1="584.2" y1="631.7" x2="599.6" y2="666.5" class="line-soft" />
+    <circle cx="599.6" cy="666.5" r="3.2" class="point-soft" />
+  <line x1="626.1" y1="519.5" x2="700.4" y2="484.8" class="line-soft" />
+    <circle cx="700.4" cy="484.8" r="4.2" class="point" />
+  <line x1="466.3" y1="547.7" x2="340.8" y2="536.7" class="line-soft" />
+    <circle cx="340.8" cy="536.7" r="3.2" class="point" />
+  <line x1="466.3" y1="547.7" x2="297.0" y2="532.9" class="line-soft" />
+    <circle cx="297.0" cy="532.9" r="5.2" class="point" />
+  <line x1="606.2" y1="617.4" x2="749.4" y2="776.5" class="line-soft" />
+    <circle cx="749.4" cy="776.5" r="5.2" class="point" />
+  <line x1="514.5" y1="478.9" x2="405.5" y2="245.0" class="guide" />
+    <circle cx="405.5" cy="245.0" r="3.2" class="point-soft" />
+  <line x1="561.7" y1="638.2" x2="567.0" y2="675.8" class="line-soft" />
+    <circle cx="567.0" cy="675.8" r="4.2" class="point" />
+  <line x1="633.7" y1="562.3" x2="715.4" y2="569.5" class="line-soft" />
+    <circle cx="715.4" cy="569.5" r="4.2" class="point" />
+  <line x1="519.9" y1="633.4" x2="474.7" y2="751.1" class="line-soft" />
+    <circle cx="474.7" cy="751.1" r="4.2" class="point" />
+  <line x1="510.6" y1="629.2" x2="430.8" y2="779.3" class="line-soft" />
+    <circle cx="430.8" cy="779.3" r="4.2" class="point" />
+  <line x1="633.7" y1="547.7" x2="846.9" y2="529.0" class="line-soft" />
+    <circle cx="846.9" cy="529.0" r="3.2" class="point-soft" />
+  <line x1="469.3" y1="531.8" x2="221.2" y2="460.7" class="line-soft" />
+    <circle cx="221.2" cy="460.7" r="5.2" class="point" />
+  <line x1="492.7" y1="616.4" x2="466.8" y2="644.2" class="guide" />
+    <circle cx="466.8" cy="644.2" r="4.2" class="point" />
+  <line x1="508.0" y1="482.3" x2="467.0" y2="411.2" class="line-soft" />
+    <circle cx="467.0" cy="411.2" r="5.2" class="point" />
+  <line x1="629.9" y1="581.0" x2="749.7" y2="619.9" class="line-soft" />
+    <circle cx="749.7" cy="619.9" r="4.2" class="point" />
+  <line x1="564.6" y1="637.7" x2="594.1" y2="805.1" class="line-soft" />
+    <circle cx="594.1" cy="805.1" r="5.2" class="point-soft" />
+  <line x1="517.2" y1="632.3" x2="433.6" y2="829.3" class="line-soft" />
+    <circle cx="433.6" cy="829.3" r="4.2" class="point" />
+
+  <!-- Footer meta boxes -->
+  <g transform="translate(100, 1082)">
+    <rect x="0" y="0" width="230" height="82" rx="10" class="label-box" />
+    <text x="14" y="26" class="text-small">⊙ = payload hash band</text>
+    <text x="14" y="48" class="text-small">● = sparse delta marker</text>
+    <text x="14" y="68" class="text-small">BASE SNAPSHOT token</text>
+  </g>
+
+  <g transform="translate(770, 1074)">
+    <rect x="0" y="0" width="230" height="96" rx="10" class="label-box" />
+    <text x="110" y="24" text-anchor="middle" class="text-meta">TOKEN META</text>
+    <text x="14" y="48" class="text-small">Encoding: BINARY_FOLDER</text>
+    <text x="14" y="68" class="text-small">Message: 1659695 · Δ 47</text>
+    <text x="14" y="88" class="text-small">Version: 1.3</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="550" y="1144"    text-anchor="middle" class="text-medium">VSC-1.3 / FOLDER</text>
+  <text x="550" y="1178"   text-anchor="middle" class="text-id">TOKEN ID: A3C60EAEF97B</text>
+  <text x="550" y="1210" text-anchor="middle" class="text-meta">HASH: A3C60EAEF97B3A77B2295470</text>
+</svg>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1100"
+  height="1280"
+  viewBox="0 0 1100 1280"
+>
+  <defs>
+    <style>
+      .bg            { fill: #f8f8f6; }
+      .line-strong   { stroke: #111; stroke-width: 2.4; fill: none; }
+      .line-mid      { stroke: #888; stroke-width: 1.2; fill: none; }
+      .line-soft     { stroke: #d8d8d8; stroke-width: 0.8; fill: none; }
+      .text-title    { font-family: Arial, Helvetica, sans-serif; font-size: 26px; letter-spacing: 7px; fill: #111; }
+      .text-subtitle { font-family: Arial, Helvetica, sans-serif; font-size: 11px; letter-spacing: 3.5px; fill: #444; }
+      .text-small    { font-family: Arial, Helvetica, sans-serif; font-size: 13px; fill: #333; }
+      .text-medium   { font-family: Arial, Helvetica, sans-serif; font-size: 16px; fill: #222; }
+      .text-meta     { font-family: Arial, Helvetica, sans-serif; font-size: 12px; letter-spacing: 2px; fill: #444; }
+      .text-id       { font-family: 'Courier New', monospace; font-size: 14px; letter-spacing: 2px; fill: #111; }
+      .text-node-label { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 1px; fill: #fff; }
+      .text-node-label-base { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 1px; fill: #111; }
+      .text-node-id  { font-family: 'Courier New', monospace; font-size: 10px; fill: #555; }
+      .text-anno-head { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 1px; fill: #111; }
+      .text-anno-body { font-family: 'Courier New', monospace; font-size: 11px; fill: #555; }
+      .text-latest-label { font-family: Arial, Helvetica, sans-serif; font-size: 11px; letter-spacing: 2px; fill: #fff; }
+      .text-core-big { font-family: Arial, Helvetica, sans-serif; font-size: 40px; font-weight: 700; fill: #111; }
+      .text-core-sub { font-family: Arial, Helvetica, sans-serif; font-size: 10px; letter-spacing: 2px; fill: #555; }
+      .label-box     { fill: #f9f9f9; stroke: #c8c8c8; stroke-width: 1.1; }
+      .orient-dot    { fill: #fff; stroke: #ccc; stroke-width: 1; }
+      .hash-fill     { fill: #333; }
+      .hash-open     { fill: none; stroke: #aaa; stroke-width: 0.8; }
+      .crosshair     { stroke: #e8e8e8; stroke-width: 0.8; stroke-dasharray: 2 8; }
+      .rail-spine    { stroke: #bbb; stroke-width: 2.2; fill: none; }
+      .rail-conn     { stroke: #999; stroke-width: 1.6; fill: none; }
+      .node-base     { fill: #fff; stroke: #111; stroke-width: 2.4; }
+      .node-delta    { fill: #666; stroke: #444; stroke-width: 1.8; }
+      .node-latest   { fill: #111; stroke: #111; stroke-width: 2.4; }
+      .latest-band   { fill: #111; }
+      .anno-line     { stroke: #ddd; stroke-width: 1; fill: none; }
+      .arrow-head    { fill: #555; }
+    </style>
+    <marker id="ca" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" class="arrow-head" />
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1100" height="1280" />
+
+  <!-- Title / subtitle -->
+  <text x="550" y="86" text-anchor="middle" class="text-title">VSC CHAIN TOKEN</text>
+  <text x="550" y="118" text-anchor="middle" class="text-subtitle">BASE A3C60EAEF97B → LATEST 8F75655E9A77 · ORDERED DELTAS · SHA-256</text>
+  <line x1="390" y1="132" x2="710" y2="132" class="line-soft" />
+
+  <!-- Quiet crosshairs -->
+  <line x1="550" y1="195" x2="550" y2="915" class="crosshair" />
+  <line x1="190" y1="555" x2="910" y2="555" class="crosshair" />
+
+  <!-- Structural rings -->
+  <circle cx="550" cy="555" r="138" class="line-soft" />
+  <circle cx="550" cy="555" r="218" class="line-soft" />
+  <circle cx="550" cy="555" r="308" class="line-soft" />
+
+  <!-- Outer ring -->
+  <circle cx="550" cy="555" r="360" class="line-strong" />
+  <circle cx="550" cy="555" r="344" class="line-mid" />
+
+  <!-- Six quiet orientation dots -->
+  <circle cx="550.0" cy="193.0" r="7" class="orient-dot" />
+  <circle cx="863.5" cy="374.0" r="7" class="orient-dot" />
+  <circle cx="863.5" cy="736.0" r="7" class="orient-dot" />
+  <circle cx="550.0" cy="917.0" r="7" class="orient-dot" />
+  <circle cx="236.5" cy="736.0" r="7" class="orient-dot" />
+  <circle cx="236.5" cy="374.0" r="7" class="orient-dot" />
+
+  <!-- Latest root hash band — quieter -->
+  <circle cx="550" cy="155" r="1.4" class="hash-fill" />
+  <circle cx="588.0306504478696" cy="168.86832605118764" r="1.9" class="hash-open" />
+  <circle cx="626.8655868743546" cy="168.57059952112724" r="1.9" class="hash-open" />
+  <circle cx="666.1138709017849" cy="172.22386570711643" r="1.9" class="hash-open" />
+  <circle cx="698.4811717576549" cy="196.53474138562075" r="1.4" class="hash-fill" />
+  <circle cx="738.5586947303991" cy="202.231494260658" r="1.9" class="hash-open" />
+  <circle cx="772.2280932078409" cy="222.41215507898193" r="1.9" class="hash-open" />
+  <circle cx="803.7573136654582" cy="245.79581865490525" r="1.4" class="hash-fill" />
+  <circle cx="824.3574311003804" cy="280.64256889961956" r="1.9" class="hash-open" />
+  <circle cx="854.5661186249183" cy="305.04904603952366" r="1.4" class="hash-fill" />
+  <circle cx="877.5990272472028" cy="336.10532819027674" r="1.9" class="hash-open" />
+  <circle cx="897.4769781532518" cy="369.2696856905569" r="1.9" class="hash-open" />
+  <circle cx="914.008535809447" cy="404.22272764815466" r="1.9" class="hash-open" />
+  <circle cx="932.7761342928836" cy="438.88612909821506" r="1.9" class="hash-open" />
+  <circle cx="936.4294004788728" cy="478.13441312564544" r="1.9" class="hash-open" />
+  <circle cx="942.1027823088456" cy="516.381246710153" r="1.9" class="hash-open" />
+  <circle cx="950" cy="555" r="1.4" class="hash-fill" />
+  <circle cx="942.1027823088456" cy="593.618753289847" r="1.9" class="hash-open" />
+  <circle cx="930.5446887964533" cy="630.6950449422577" r="1.4" class="hash-fill" />
+  <circle cx="921.2928502640971" cy="667.6304547747313" r="1.9" class="hash-open" />
+  <circle cx="914.008535809447" cy="705.7772723518453" r="1.9" class="hash-open" />
+  <circle cx="892.1854505671618" cy="737.9019338884871" r="1.9" class="hash-open" />
+  <circle cx="877.5990272472029" cy="773.8946718097231" r="1.4" class="hash-fill" />
+  <circle cx="859.2041813450949" cy="808.7573136654581" r="1.9" class="hash-open" />
+  <circle cx="832.842712474619" cy="837.842712474619" r="1.9" class="hash-open" />
+  <circle cx="803.7573136654582" cy="864.2041813450949" r="1.9" class="hash-open" />
+  <circle cx="768.8946718097231" cy="882.5990272472029" r="1.4" class="hash-fill" />
+  <circle cx="732.9019338884872" cy="897.1854505671618" r="1.9" class="hash-open" />
+  <circle cx="703.073372946036" cy="924.5518130045148" r="1.9" class="hash-open" />
+  <circle cx="664.3721628382582" cy="932.0344922784903" r="1.4" class="hash-fill" />
+  <circle cx="625.6950449422578" cy="935.5446887964533" r="1.4" class="hash-fill" />
+  <circle cx="589.2068561318243" cy="953.0738906688787" r="1.9" class="hash-open" />
+  <circle cx="550" cy="943" r="1.4" class="hash-fill" />
+  <circle cx="511.96934955213044" cy="941.1316739488125" r="1.4" class="hash-fill" />
+  <circle cx="473.13441312564544" cy="941.4294004788728" r="1.4" class="hash-fill" />
+  <circle cx="437.36954522526867" cy="926.2928502640971" r="1.9" class="hash-open" />
+  <circle cx="399.22272764815466" cy="919.008535809447" r="1.9" class="hash-open" />
+  <circle cx="367.09806611151294" cy="897.1854505671618" r="1.9" class="hash-open" />
+  <circle cx="334.43874958839444" cy="877.6102095733876" r="1.9" class="hash-open" />
+  <circle cx="300.0490460395237" cy="859.5661186249184" r="1.4" class="hash-fill" />
+  <circle cx="267.15728752538104" cy="837.842712474619" r="1.9" class="hash-open" />
+  <circle cx="245.43388137508174" cy="804.9509539604765" r="1.4" class="hash-fill" />
+  <circle cx="227.38979042661242" cy="770.5612504116057" r="1.4" class="hash-fill" />
+  <circle cx="202.52302184674818" cy="740.7303143094432" r="1.4" class="hash-fill" />
+  <circle cx="185.99146419055313" cy="705.7772723518456" r="1.9" class="hash-open" />
+  <circle cx="172.9655077215097" cy="669.3721628382582" r="1.9" class="hash-open" />
+  <circle cx="157.6858878387078" cy="633.0361288064514" r="1.9" class="hash-open" />
+  <circle cx="163.86832605118758" cy="593.0306504478694" r="1.9" class="hash-open" />
+  <circle cx="150" cy="555" r="1.4" class="hash-fill" />
+  <circle cx="157.89721769115442" cy="516.3812467101533" r="1.4" class="hash-fill" />
+  <circle cx="163.57059952112724" cy="478.13441312564544" r="1.4" class="hash-fill" />
+  <circle cx="167.22386570711643" cy="438.8861290982152" r="1.4" class="hash-fill" />
+  <circle cx="191.5347413856208" cy="406.5188282423451" r="1.4" class="hash-fill" />
+  <circle cx="202.52302184674812" cy="369.2696856905569" r="1.9" class="hash-open" />
+  <circle cx="217.4121550789818" cy="332.77190679215926" r="1.4" class="hash-fill" />
+  <circle cx="240.79581865490525" cy="301.24268633454176" r="1.4" class="hash-fill" />
+  <circle cx="271.3999282125002" cy="276.3999282125003" r="1.4" class="hash-fill" />
+  <circle cx="300.0490460395235" cy="250.43388137508174" r="1.4" class="hash-fill" />
+  <circle cx="334.43874958839433" cy="232.38979042661242" r="1.4" class="hash-fill" />
+  <circle cx="367.0980661115128" cy="212.8145494328383" r="1.4" class="hash-fill" />
+  <circle cx="401.51882824234497" cy="196.5347413856208" r="1.4" class="hash-fill" />
+  <circle cx="433.886129098215" cy="172.2238657071165" r="1.4" class="hash-fill" />
+  <circle cx="473.1344131256453" cy="168.57059952112724" r="1.9" class="hash-open" />
+  <circle cx="510.79314386817583" cy="156.9261093311212" r="1.4" class="hash-fill" />
+
+  <!-- Chain core: small neutral center -->
+  <circle cx="550" cy="555" r="68" class="line-strong" />
+  <circle cx="550" cy="555" r="54" class="line-mid" />
+  <text x="550" y="569" text-anchor="middle" class="text-core-big">2</text>
+  <text x="550" y="591" text-anchor="middle" class="text-core-sub">DELTA STEPS</text>
+
+  <!-- Rail spine: vertical line from RAIL_TOP to RAIL_BOT -->
+  <line x1="390" y1="307" x2="390" y2="803" class="rail-spine" />
+
+  <!-- Start cap -->
+  <circle cx="390" cy="307" r="4" fill="#bbb" />
+  <line x1="390" y1="303" x2="390" y2="283" class="rail-conn" marker-end="url(#ca)" />
+  <text x="390" y="279" text-anchor="middle" class="text-meta">START</text>
+
+  <!-- Chain nodes along the rail -->
+  
+  <line x1="390" y1="327.0" x2="390" y2="539.0" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="307.0" r="18" class="node-base" />
+  <text x="390" y="311.0" text-anchor="middle" class="text-node-label-base">BASE</text>
+  <line x1="410.0" y1="307.0" x2="438.0" y2="307.0" class="anno-line" />
+  <text x="442" y="299.0" class="text-anno-head">BASE SNAPSHOT</text>
+      <text x="442" y="315.0" class="text-anno-body">A3C60EAEF97B</text>
+  <line x1="390" y1="571.0" x2="390" y2="775.0" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="555.0" r="14" class="node-delta" />
+  <text x="390" y="559.0" text-anchor="middle" class="text-node-label">Δ1</text>
+  <line x1="406.0" y1="555.0" x2="438.0" y2="555.0" class="anno-line" />
+  <text x="442" y="546.0" class="text-anno-head">STEP 1</text>
+      <text x="442" y="561.0" class="text-anno-body">+0 ~1 -0  4.2 KB</text>
+      <text x="442" y="574.0" class="text-anno-body">E4AD56B99922</text>
+  
+  <circle cx="390" cy="803.0" r="26" class="node-latest" />
+  <text x="390" y="807.0" text-anchor="middle" class="text-node-label">Δ2</text>
+  <line x1="418.0" y1="803.0" x2="438.0" y2="803.0" class="anno-line" />
+  <rect x="442" y="785.0" width="280" height="36" rx="6" class="latest-band" />
+      <text x="454.0" y="799.0" class="text-latest-label">LATEST VERIFIED STATE</text>
+      <text x="454.0" y="815.0" class="text-latest-label">8F75655E9A77</text>
+
+  <!-- Footer meta boxes -->
+  <g transform="translate(76, 1076)">
+    <rect x="0" y="0" width="230" height="66" rx="10" class="label-box" />
+    <text x="14" y="24" class="text-small">○ = BASE snapshot</text>
+    <text x="14" y="44" class="text-small">■ = LATEST verified state</text>
+  </g>
+
+  <g transform="translate(794, 1062)">
+    <rect x="0" y="0" width="230" height="96" rx="10" class="label-box" />
+    <text x="14" y="24" class="text-small">Steps:       2</text>
+    <text x="14" y="44" class="text-small">Delta total: 6.1 KB</text>
+    <text x="14" y="64" class="text-small">Chain hash:  E4042A6AB5E9</text>
+    <text x="14" y="84" class="text-small">Latest root: 8F75655E9A77</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="550" y="1148"  text-anchor="middle" class="text-medium">VSC-1.5 / DELTA CHAIN</text>
+  <text x="550" y="1182" text-anchor="middle" class="text-id">CHAIN ID: E4042A6AB5E9</text>
+  <text x="550" y="1216"    text-anchor="middle" class="text-meta">VERIFY: LATEST ROOT HASH 8F75655E9A771577</text>
+</svg>
