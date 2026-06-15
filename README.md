@@ -107,6 +107,18 @@ start output\gallery.html
 
 ---
 
+## VSC v1.11 GitHub Pages Showcase
+
+The static showcase is publicly deployed via GitHub Pages:
+
+**[https://digiemu.github.io/vsc-core/](https://digiemu.github.io/vsc-core/)**
+
+Only `showcase/` is published. No recovery chunks, test fixtures, or heavy output folders are deployed. The deployment is triggered automatically on every push to `main`.
+
+→ [Publishing documentation](docs/vsc-v1-11-github-pages.md)
+
+---
+
 ## VSC v1.10 Static Showcase
 
 VSC v1.10 adds a static showcase export. One command generates a portable `showcase/` folder with the SVG seals, demo metrics, verification summary, and gallery — no server required, opens in any browser.
@@ -190,3 +202,4 @@ npm run clean-manifest     # remove stale manifest entries
 - [VSC v1.8 CLI](docs/vsc-v1-8-cli.md)
 - [VSC v1.9 One-command Demo](docs/vsc-v1-9-one-command-demo.md)
 - [VSC v1.10 Static Showcase](docs/vsc-v1-10-static-showcase.md)
+- [VSC v1.11 GitHub Pages Publishing](docs/vsc-v1-11-github-pages.md)
