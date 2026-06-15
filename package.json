@@ -26,6 +26,7 @@
   "report-chain": "node src/reportChainCli.js",
   "demo:fixture": "node scripts/createWordPressDemoFixture.js",
   "demo:run": "node scripts/runWordPressDemo.js",
+  "showcase": "node scripts/exportShowcase.js",
   "vsc": "node src/vscCli.js"
 }
 }

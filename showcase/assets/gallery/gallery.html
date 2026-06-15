@@ -1,0 +1,2025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VSC Token Gallery</title>
+  <style>
+    :root {
+      --bg: #f4f4f2;
+      --card: #ffffff;
+      --line: #dddddd;
+      --line-soft: #ececec;
+      --text: #111111;
+      --muted: #666666;
+      --shadow: 0 10px 30px rgba(0,0,0,0.06);
+      --radius: 22px;
+      --delta-accent: #1a1a1a;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(0,0,0,0.025), transparent 35%),
+        linear-gradient(to bottom, #fafaf9, #f1f1ef);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .shell {
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 32px 28px 56px;
+    }
+
+    .hero {
+      background: rgba(255,255,255,0.76);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 28px;
+      padding: 28px 30px 24px;
+      margin-bottom: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    h1 { margin: 0; font-size: 34px; letter-spacing: 6px; font-weight: 500; }
+
+    .hero-subtitle {
+      margin: 12px 0 22px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 900px;
+    }
+
+    .stats { display: flex; flex-wrap: wrap; gap: 14px; }
+
+    .stat {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-size: 14px;
+      color: #222;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 28px;
+      align-items: start;
+    }
+
+    /* ── Card ── */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 34px rgba(0,0,0,0.08);
+    }
+
+    .card-folder-delta {
+      border-color: #c8c8c8;
+    }
+
+    .preview {
+      min-height: 480px;
+      padding: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.9), rgba(248,248,246,1));
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .preview img {
+      width: 100%;
+      max-height: 460px;
+      object-fit: contain;
+      display: block;
+      filter: drop-shadow(0 3px 8px rgba(0,0,0,0.04));
+    }
+
+    .content { padding: 20px 22px 24px; }
+
+    .content-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .title { margin: 0; font-size: 26px; letter-spacing: 5px; font-weight: 500; }
+
+    .badge-group { display: flex; gap: 6px; flex-wrap: wrap; }
+
+    /* ── Badges ── */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 5px 11px;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      border: 1px solid #cfcfcf;
+      color: #333;
+      background: #f7f7f7;
+      white-space: nowrap;
+    }
+
+    .badge-delta    { background: #111; color: #fff; border-color: #111; letter-spacing: 1px; }
+    .badge-folder   { background: #f0f0f0; border-color: #bbb; }
+    .badge-recovery { background: #f5f5ff; border-color: #c0c0e0; }
+    .badge-proof    { background: #fff8f0; border-color: #e0d0b0; }
+    .badge-text     { background: #f2f6ff; }
+    .badge-ethic    { background: #f5fff2; }
+    .badge-melody   { background: #fff7f1; }
+    .badge-chain    { background: #111; color: #fff; border-color: #111; font-weight: 600; }
+
+    /* ── Token ID row ── */
+    .token-id-row {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 4px;
+    }
+
+    .token-id-value {
+      font-family: "Courier New", monospace;
+      font-size: 13px;
+      color: #111;
+      word-break: break-all;
+    }
+
+    /* ── Meta grid ── */
+    .meta-grid { display: grid; gap: 8px; margin-bottom: 16px; }
+
+    .meta-row {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 10px;
+      align-items: start;
+      padding-bottom: 7px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .meta-row-hash { border-bottom: none; padding-bottom: 0; }
+
+    .meta-label { color: var(--muted); font-size: 13px; }
+    .meta-value { color: var(--text); font-size: 14px; line-height: 1.45; word-break: break-word; }
+
+    .mono { font-family: "Courier New", monospace; }
+
+    .hash {
+      display: inline-block;
+      background: #f3f3f3;
+      border: 1px solid #e7e7e7;
+      border-radius: 8px;
+      padding: 4px 9px;
+      font-family: "Courier New", monospace;
+      font-size: 12px;
+      word-break: break-all;
+    }
+
+    /* ── Delta-specific ── */
+    .delta-bridge {
+      font-family: "Courier New", monospace;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: #111;
+      margin-bottom: 14px;
+      padding: 10px 14px;
+      background: #f6f6f6;
+      border-radius: 10px;
+      border: 1px solid #e4e4e4;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .delta-arrow { color: #555; margin: 0 6px; }
+
+    .delta-metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .metric-cell {
+      background: #fafafa;
+      border: 1px solid #ececec;
+      border-radius: 12px;
+      padding: 10px 10px 8px;
+      text-align: center;
+    }
+
+    .metric-highlight {
+      background: #111;
+      border-color: #111;
+    }
+
+    .metric-highlight .metric-value,
+    .metric-highlight .metric-label { color: #fff; }
+
+    .metric-value { font-size: 16px; font-weight: 600; color: #111; line-height: 1.2; }
+    .metric-label { font-size: 11px; color: var(--muted); margin-top: 3px; letter-spacing: 0.5px; }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .op-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 10px 0 12px;
+    }
+
+    .op-pill {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 4px 11px;
+      font-family: "Courier New", monospace;
+      font-size: 12px;
+      border: 1px solid #ccc;
+      background: #f5f5f5;
+      color: #222;
+      white-space: nowrap;
+    }
+
+    .op-pill.op-modify { background: #111; color: #fff; border-color: #111; }
+    .op-pill.op-add    { background: #f0fff0; border-color: #aaddaa; color: #1a4a1a; }
+    .op-pill.op-delete { background: #fff0f0; border-color: #ddaaaa; color: #4a1a1a; }
+
+    /* ── Card descriptor ── */
+    .card-descriptor {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 14px;
+      line-height: 1.5;
+      border-left: 3px solid #e0e0e0;
+      padding-left: 10px;
+    }
+
+    .delta-stored-label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 6px;
+      margin-bottom: 16px;
+    }
+
+    .preview-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 200px;
+      background: #f4f4f4;
+      border: 1px dashed #ccc;
+      border-radius: 12px;
+      color: #999;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    /* ── Chain timeline ── */
+    .chain-timeline {
+      margin: 12px 0 14px;
+      display: grid;
+      gap: 0;
+    }
+
+    .tl-entry {
+      display: flex;
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .tl-spine {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+      width: 20px;
+    }
+
+    .tl-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+
+    .tl-node-base   { background: #fff; border: 2px solid #111; }
+    .tl-node-delta  { background: #666; border: 2px solid #444; }
+    .tl-node-latest { background: #111; border: 2px solid #111; }
+
+    .tl-line {
+      flex: 1;
+      width: 2px;
+      background: #ddd;
+      margin: 2px 0;
+      min-height: 16px;
+    }
+
+    .tl-body {
+      padding-bottom: 14px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .tl-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: #111;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .tl-id {
+      font-family: "Courier New", monospace;
+      font-size: 12px;
+      color: #444;
+      margin-top: 1px;
+    }
+
+    .tl-meta {
+      font-size: 11px;
+      color: #777;
+      margin-top: 3px;
+    }
+
+    .tl-root {
+      font-family: "Courier New", monospace;
+      font-size: 10px;
+      color: #aaa;
+      margin-top: 2px;
+    }
+
+    /* ── Restore model ── */
+    .restore-model {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      background: #f6f6f4;
+      border: 1px solid #e4e4e0;
+      border-radius: 10px;
+      padding: 10px 14px;
+      margin-bottom: 12px;
+    }
+
+    .restore-model-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .restore-model-path {
+      font-size: 13px;
+      color: #111;
+      line-height: 1.5;
+      word-break: break-word;
+    }
+
+    /* ── Changed-files list ── */
+    .changed-files {
+      margin: 12px 0;
+      border: 1px solid #e8e8e8;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .changed-files-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 7px 12px;
+      background: #f6f6f6;
+      border-bottom: 1px solid #ececec;
+      font-size: 12px;
+      font-weight: 600;
+      color: #333;
+      letter-spacing: 0.3px;
+    }
+
+    .changed-files-count {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    .cf-row {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      padding: 6px 12px;
+      border-bottom: 1px solid #f2f2f2;
+      font-family: "Courier New", monospace;
+      font-size: 12px;
+    }
+
+    .cf-row:last-child { border-bottom: none; }
+
+    .cf-op {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      border-radius: 4px;
+      padding: 2px 6px;
+      flex-shrink: 0;
+    }
+
+    .cf-mod { background: #111; color: #fff; }
+    .cf-add { background: #d4f5d4; color: #1a4a1a; border: 1px solid #aaddaa; }
+    .cf-del { background: #fde8e8; color: #6b1a1a; border: 1px solid #f0aaaa; }
+
+    .cf-path {
+      color: #333;
+      word-break: break-all;
+      line-height: 1.4;
+    }
+
+    /* ── Legacy op-pills (keep for any remaining usage) ── */
+    .op-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 10px 0 12px;
+    }
+
+    .op-pill {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 4px 11px;
+      font-family: "Courier New", monospace;
+      font-size: 12px;
+      border: 1px solid #ccc;
+      background: #f5f5f5;
+      color: #222;
+      white-space: nowrap;
+    }
+
+    .op-pill.op-modify { background: #111; color: #fff; border-color: #111; }
+    .op-pill.op-add    { background: #f0fff0; border-color: #aaddaa; color: #1a4a1a; }
+    .op-pill.op-delete { background: #fff0f0; border-color: #ddaaaa; color: #4a1a1a; }
+
+    /* ── Actions ── */
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+
+    .actions a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: var(--text);
+      border: 1px solid #1b1b1b;
+      border-radius: 999px;
+      padding: 10px 18px;
+      font-size: 14px;
+      min-width: 120px;
+      transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
+    }
+
+    .actions a:hover { background: #111; color: #fff; transform: translateY(-1px); }
+
+    .footer-note {
+      margin-top: 28px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: 1.5px;
+    }
+
+    @media (max-width: 720px) {
+      .shell { padding: 18px 14px 40px; }
+      h1 { font-size: 26px; letter-spacing: 4px; }
+      .preview { min-height: 360px; }
+      .preview img { max-height: 340px; }
+      .title { font-size: 22px; letter-spacing: 4px; }
+      .meta-row { grid-template-columns: 1fr; gap: 3px; }
+      .delta-metrics { grid-template-columns: repeat(2, 1fr); }
+      .changed-files-header { flex-direction: column; align-items: flex-start; gap: 2px; }
+      .restore-model-path { font-size: 12px; }
+      .tl-id { font-size: 11px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="hero">
+      <div class="eyebrow">Verifiable State Code</div>
+      <h1>VSC TOKEN GALLERY</h1>
+      <p class="hero-subtitle">
+        Machine-readable sparse-delta tokens. Full folder backups, incremental delta
+        backups, binary file recovery and text proofs — all verifiable by root hash.
+      </p>
+
+      <div class="stats">
+        <div class="stat">Tokens: 22</div>
+        <div class="stat">Chains: 3</div>
+        <div class="stat">Delta backups: 9</div>
+        <div class="stat">Folder snapshots: 5</div>
+        <div class="stat">Proof model: Sparse Delta</div>
+      </div>
+    </section>
+
+    <section class="grid">
+      
+    <article class="card card-delta-chain">
+      <div class="preview">
+        <img src="vsc-chain-0689E7F37562-to-5B523E3D4A16.svg" alt="CHAIN token preview" loading="lazy" />
+      </div>
+
+      <div class="content">
+        <div class="content-top">
+          <h2 class="title">CHAIN</h2>
+          <div class="badge-group">
+            <span class="badge badge-chain">DELTA_CHAIN</span>
+          </div>
+        </div>
+
+        <div class="token-id-row">
+          <span class="meta-label">Token ID</span>
+          <span class="mono token-id-value">FE36F6834BE5</span>
+        </div>
+        <div class="token-id-row" style="margin-bottom:14px">
+          <span class="meta-label">Version</span>
+          <span class="meta-value">1.5</span>
+        </div>
+
+        
+    <div class="card-descriptor">Restore base + ordered deltas to reconstruct latest state</div>
+
+    <div class="delta-bridge">0689E7F37562 <span class="delta-arrow">→</span> 5B523E3D4A16</div>
+
+    <div class="delta-metrics"><div class="metric-cell metric-highlight">
+      <div class="metric-value">99.92%</div>
+      <div class="metric-label">Delta reduction</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">2</div>
+      <div class="metric-label">Steps</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">673 B</div>
+      <div class="metric-label">Total delta</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">825.85 KB</div>
+      <div class="metric-label">Full copy est.</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">2</div>
+      <div class="metric-label">Chunks</div>
+    </div></div>
+
+    <div class="chain-timeline">
+    
+      <div class="tl-entry">
+        <div class="tl-spine">
+          <div class="tl-dot tl-node-base"></div>
+          <div class="tl-line"></div>
+        </div>
+        <div class="tl-body">
+          <div class="tl-label">Base snapshot</div>
+          <div class="tl-id">0689E7F37562</div>
+          
+          
+        </div>
+      </div>
+    
+      <div class="tl-entry">
+        <div class="tl-spine">
+          <div class="tl-dot tl-node-delta"></div>
+          <div class="tl-line"></div>
+        </div>
+        <div class="tl-body">
+          <div class="tl-label">Step 1</div>
+          <div class="tl-id">74AB3F058890</div>
+          <div class="tl-meta">+0 ~1 -0 · 368 B</div>
+          <div class="tl-root">root: 74ab3f058890…</div>
+        </div>
+      </div>
+    
+      <div class="tl-entry">
+        <div class="tl-spine">
+          <div class="tl-dot tl-node-latest"></div>
+          
+        </div>
+        <div class="tl-body">
+          <div class="tl-label">Step 2</div>
+          <div class="tl-id">5B523E3D4A16</div>
+          <div class="tl-meta">+0 ~1 -0 · 305 B</div>
+          <div class="tl-root">root: 5b523e3d4a16…</div>
+        </div>
+      </div>
+    
+  </div>
+
+    <div class="restore-model">
+      <span class="restore-model-label">Restore model</span>
+      <span class="restore-model-path">Base → Delta 1 → Delta 2 → Latest verified state</span>
+    </div>
+
+    <div class="meta-grid" style="margin-top:12px">
+      <div class="meta-row meta-row-hash">
+    <span class="meta-label">Chain hash</span>
+    <span class="meta-value"><span class="hash">fe36f6834be5a46c</span></span>
+  </div>
+      <div class="meta-row meta-row-hash">
+    <span class="meta-label">Latest root</span>
+    <span class="meta-value"><span class="hash">5b523e3d4a16d681</span></span>
+  </div>
+    </div>
+
+    <div class="delta-stored-label">Verify: latest root hash · 0 added · 2 modified · 0 deleted</div>
+
+        <div class="actions">
+          <a href="vsc-chain-0689E7F37562-to-5B523E3D4A16.svg" target="_blank" rel="noopener noreferrer">Open SVG</a>
+          <a href="vsc-chain-0689E7F37562-to-5B523E3D4A16.json" target="_blank" rel="noopener noreferrer">Open JSON</a>
+        </div>
+      </div>
+    </article>
+  
+
+    <article class="card card-delta-chain">
+      <div class="preview">
+        <img src="vsc-chain-21A8390BFA3F-to-954BEB0FF3AA.svg" alt="CHAIN token preview" loading="lazy" />
+      </div>
+
+      <div class="content">
+        <div class="content-top">
+          <h2 class="title">CHAIN</h2>
+          <div class="badge-group">
+            <span class="badge badge-chain">DELTA_CHAIN</span>
+          </div>
+        </div>
+
+        <div class="token-id-row">
+          <span class="meta-label">Token ID</span>
+          <span class="mono token-id-value">DDE0844718A5</span>
+        </div>
+        <div class="token-id-row" style="margin-bottom:14px">
+          <span class="meta-label">Version</span>
+          <span class="meta-value">1.5</span>
+        </div>
+
+        
+    <div class="card-descriptor">Restore base + ordered deltas to reconstruct latest state</div>
+
+    <div class="delta-bridge">21A8390BFA3F <span class="delta-arrow">→</span> 954BEB0FF3AA</div>
+
+    <div class="delta-metrics"><div class="metric-cell metric-highlight">
+      <div class="metric-value">99.96%</div>
+      <div class="metric-label">Delta reduction</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">2</div>
+      <div class="metric-label">Steps</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">641 B</div>
+      <div class="metric-label">Total delta</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">1.58 MB</div>
+      <div class="metric-label">Full copy est.</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">2</div>
+      <div class="metric-label">Chunks</div>
+    </div></div>
+
+    <div class="chain-timeline">
+    
+      <div class="tl-entry">
+        <div class="tl-spine">
+          <div class="tl-dot tl-node-base"></div>
+          <div class="tl-line"></div>
+        </div>
+        <div class="tl-body">
+          <div class="tl-label">Base snapshot</div>
+          <div class="tl-id">21A8390BFA3F</div>
+          
+          
+        </div>
+      </div>
+    
+      <div class="tl-entry">
+        <div class="tl-spine">
+          <div class="tl-dot tl-node-delta"></div>
+          <div class="tl-line"></div>
+        </div>
+        <div class="tl-body">
+          <div class="tl-label">Step 1</div>
+          <div class="tl-id">F3876A4BCFE1</div>
+          <div class="tl-meta">+0 ~1 -0 · 376 B</div>
+          <div class="tl-root">root: f3876a4bcfe1…</div>
+        </div>
+      </div>
+    
+      <div class="tl-entry">
+        <div class="tl-spine">
+          <div class="tl-dot tl-node-latest"></div>
+          
+        </div>
+        <div class="tl-body">
+          <div class="tl-label">Step 2</div>
+          <div class="tl-id">954BEB0FF3AA</div>
+          <div class="tl-meta">+0 ~1 -0 · 265 B</div>
+          <div class="tl-root">root: 954beb0ff3aa…</div>
+        </div>
+      </div>
+    
+  </div>
+
+    <div class="restore-model">
+      <span class="restore-model-label">Restore model</span>
+      <span class="restore-model-path">Base → Delta 1 → Delta 2 → Latest verified state</span>
+    </div>
+
+    <div class="meta-grid" style="margin-top:12px">
+      <div class="meta-row meta-row-hash">
+    <span class="meta-label">Chain hash</span>
+    <span class="meta-value"><span class="hash">dde0844718a5b556</span></span>
+  </div>
+      <div class="meta-row meta-row-hash">
+    <span class="meta-label">Latest root</span>
+    <span class="meta-value"><span class="hash">954beb0ff3aabd61</span></span>
+  </div>
+    </div>
+
+    <div class="delta-stored-label">Verify: latest root hash · 0 added · 2 modified · 0 deleted</div>
+
+        <div class="actions">
+          <a href="vsc-chain-21A8390BFA3F-to-954BEB0FF3AA.svg" target="_blank" rel="noopener noreferrer">Open SVG</a>
+          <a href="vsc-chain-21A8390BFA3F-to-954BEB0FF3AA.json" target="_blank" rel="noopener noreferrer">Open JSON</a>
+        </div>
+      </div>
+    </article>
+  
+
+    <article class="card card-delta-chain">
+      <div class="preview">
+        <img src="vsc-chain-A3C60EAEF97B-to-8F75655E9A77.svg" alt="CHAIN token preview" loading="lazy" />
+      </div>
+
+      <div class="content">
+        <div class="content-top">
+          <h2 class="title">CHAIN</h2>
+          <div class="badge-group">
+            <span class="badge badge-chain">DELTA_CHAIN</span>
+          </div>
+        </div>
+
+        <div class="token-id-row">
+          <span class="meta-label">Token ID</span>
+          <span class="mono token-id-value">E4042A6AB5E9</span>
+        </div>
+        <div class="token-id-row" style="margin-bottom:14px">
+          <span class="meta-label">Version</span>
+          <span class="meta-value">1.5</span>
+        </div>
+
+        
+    <div class="card-descriptor">Restore base + ordered deltas to reconstruct latest state</div>
+
+    <div class="delta-bridge">A3C60EAEF97B <span class="delta-arrow">→</span> 8F75655E9A77</div>
+
+    <div class="delta-metrics"><div class="metric-cell metric-highlight">
+      <div class="metric-value">99.63%</div>
+      <div class="metric-label">Delta reduction</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">2</div>
+      <div class="metric-label">Steps</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">6.07 KB</div>
+      <div class="metric-label">Total delta</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">1.58 MB</div>
+      <div class="metric-label">Full copy est.</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">3</div>
+      <div class="metric-label">Chunks</div>
+    </div></div>
+
+    <div class="chain-timeline">
+    
+      <div class="tl-entry">
+        <div class="tl-spine">
+          <div class="tl-dot tl-node-base"></div>
+          <div class="tl-line"></div>
+        </div>
+        <div class="tl-body">
+          <div class="tl-label">Base snapshot</div>
+          <div class="tl-id">A3C60EAEF97B</div>
+          
+          
+        </div>
+      </div>
+    
+      <div class="tl-entry">
+        <div class="tl-spine">
+          <div class="tl-dot tl-node-delta"></div>
+          <div class="tl-line"></div>
+        </div>
+        <div class="tl-body">
+          <div class="tl-label">Step 1</div>
+          <div class="tl-id">E4AD56B99922</div>
+          <div class="tl-meta">+0 ~1 -0 · 4.16 KB</div>
+          <div class="tl-root">root: e4ad56b99922…</div>
+        </div>
+      </div>
+    
+      <div class="tl-entry">
+        <div class="tl-spine">
+          <div class="tl-dot tl-node-latest"></div>
+          
+        </div>
+        <div class="tl-body">
+          <div class="tl-label">Step 2</div>
+          <div class="tl-id">8F75655E9A77</div>
+          <div class="tl-meta">+0 ~1 -0 · 1.91 KB</div>
+          <div class="tl-root">root: 8f75655e9a77…</div>
+        </div>
+      </div>
+    
+  </div>
+
+    <div class="restore-model">
+      <span class="restore-model-label">Restore model</span>
+      <span class="restore-model-path">Base → Delta 1 → Delta 2 → Latest verified state</span>
+    </div>
+
+    <div class="meta-grid" style="margin-top:12px">
+      <div class="meta-row meta-row-hash">
+    <span class="meta-label">Chain hash</span>
+    <span class="meta-value"><span class="hash">e4042a6ab5e9937b</span></span>
+  </div>
+      <div class="meta-row meta-row-hash">
+    <span class="meta-label">Latest root</span>
+    <span class="meta-value"><span class="hash">8f75655e9a771577</span></span>
+  </div>
+    </div>
+
+    <div class="delta-stored-label">Verify: latest root hash · 0 added · 2 modified · 0 deleted</div>
+
+        <div class="actions">
+          <a href="vsc-chain-A3C60EAEF97B-to-8F75655E9A77.svg" target="_blank" rel="noopener noreferrer">Open SVG</a>
+          <a href="vsc-chain-A3C60EAEF97B-to-8F75655E9A77.json" target="_blank" rel="noopener noreferrer">Open JSON</a>
+        </div>
+      </div>
+    </article>
+  
+
+    <article class="card card-folder-delta">
+      <div class="preview">
+        <img src="vsc-74AB3F058890-to-5B523E3D4A16-folder-delta.svg" alt="DELTA token preview" loading="lazy" />
+      </div>
+
+      <div class="content">
+        <div class="content-top">
+          <h2 class="title">DELTA</h2>
+          <div class="badge-group">
+            <span class="badge badge-delta">FOLDER_DELTA</span>
+          </div>
+        </div>
+
+        <div class="token-id-row">
+          <span class="meta-label">Token ID</span>
+          <span class="mono token-id-value">5B523E3D4A16</span>
+        </div>
+        <div class="token-id-row" style="margin-bottom:14px">
+          <span class="meta-label">Version</span>
+          <span class="meta-value">1.6</span>
+        </div>
+
+        
+    <div class="card-descriptor">Stores changed files only — apply to base to restore target state</div>
+
+    <div class="delta-bridge">0689E7F37562 <span class="delta-arrow">→</span> 5B523E3D4A16</div>
+
+    <div class="delta-metrics"><div class="metric-cell">
+      <div class="metric-value">305 B</div>
+      <div class="metric-label">Delta size</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">1</div>
+      <div class="metric-label">Changed files</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">1</div>
+      <div class="metric-label">Chunks</div>
+    </div></div>
+
+    <div class="changed-files">
+        <div class="changed-files-header">
+          <span>Changed files</span>
+          <span class="changed-files-count"> ~1 modified </span>
+        </div>
+        <div class="cf-row">
+            <span class="cf-op cf-mod">MOD</span>
+            <span class="cf-path" title="wp-content/plugins/vsc-demo-plugin/vsc-demo-plugin.php">wp-content/plugins/vsc-demo-plugin/vsc-demo-plugin.php</span>
+          </div>
+      </div>
+
+    <div class="meta-grid" style="margin-top:12px">
+      <div class="meta-row meta-row-hash">
+    <span class="meta-label">Verify model</span>
+    <span class="meta-value"><span class="hash">5b523e3d4a16d681</span></span>
+  </div>
+    </div>
+
+    <div class="delta-stored-label">Stored: changed files only · Verify: target root hash</div>
+
+        <div class="actions">
+          <a href="vsc-74AB3F058890-to-5B523E3D4A16-folder-delta.svg" target="_blank" rel="noopener noreferrer">Open SVG</a>
+          <a href="vsc-74AB3F058890-to-5B523E3D4A16-folder-delta.json" target="_blank" rel="noopener noreferrer">Open JSON</a>
+        </div>
+      </div>
+    </article>
+  
+
+    <article class="card card-folder-delta">
+      <div class="preview">
+        <img src="vsc-0689E7F37562-to-74AB3F058890-folder-delta.svg" alt="DELTA token preview" loading="lazy" />
+      </div>
+
+      <div class="content">
+        <div class="content-top">
+          <h2 class="title">DELTA</h2>
+          <div class="badge-group">
+            <span class="badge badge-delta">FOLDER_DELTA</span>
+          </div>
+        </div>
+
+        <div class="token-id-row">
+          <span class="meta-label">Token ID</span>
+          <span class="mono token-id-value">74AB3F058890</span>
+        </div>
+        <div class="token-id-row" style="margin-bottom:14px">
+          <span class="meta-label">Version</span>
+          <span class="meta-value">1.6</span>
+        </div>
+
+        
+    <div class="card-descriptor">Stores changed files only — apply to base to restore target state</div>
+
+    <div class="delta-bridge">0689E7F37562 <span class="delta-arrow">→</span> 74AB3F058890</div>
+
+    <div class="delta-metrics"><div class="metric-cell metric-highlight">
+      <div class="metric-value">99.96%</div>
+      <div class="metric-label">Reduction</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">368 B</div>
+      <div class="metric-label">Delta size</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">825.85 KB</div>
+      <div class="metric-label">Full / base</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">1</div>
+      <div class="metric-label">Changed files</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">1</div>
+      <div class="metric-label">Chunks</div>
+    </div></div>
+
+    <div class="changed-files">
+        <div class="changed-files-header">
+          <span>Changed files</span>
+          <span class="changed-files-count"> ~1 modified </span>
+        </div>
+        <div class="cf-row">
+            <span class="cf-op cf-mod">MOD</span>
+            <span class="cf-path" title="database.sql">database.sql</span>
+          </div>
+      </div>
+
+    <div class="meta-grid" style="margin-top:12px">
+      <div class="meta-row meta-row-hash">
+    <span class="meta-label">Verify model</span>
+    <span class="meta-value"><span class="hash">74ab3f0588907625</span></span>
+  </div>
+    </div>
+
+    <div class="delta-stored-label">Stored: changed files only · Verify: target root hash</div>
+
+        <div class="actions">
+          <a href="vsc-0689E7F37562-to-74AB3F058890-folder-delta.svg" target="_blank" rel="noopener noreferrer">Open SVG</a>
+          <a href="vsc-0689E7F37562-to-74AB3F058890-folder-delta.json" target="_blank" rel="noopener noreferrer">Open JSON</a>
+        </div>
+      </div>
+    </article>
+  
+
+    <article class="card card-folder-delta">
+      <div class="preview">
+        <img src="vsc-89D0E2A66E35-to-570554CD91EC-folder-delta.svg" alt="DELTA token preview" loading="lazy" />
+      </div>
+
+      <div class="content">
+        <div class="content-top">
+          <h2 class="title">DELTA</h2>
+          <div class="badge-group">
+            <span class="badge badge-delta">FOLDER_DELTA</span>
+          </div>
+        </div>
+
+        <div class="token-id-row">
+          <span class="meta-label">Token ID</span>
+          <span class="mono token-id-value">570554CD91EC</span>
+        </div>
+        <div class="token-id-row" style="margin-bottom:14px">
+          <span class="meta-label">Version</span>
+          <span class="meta-value">1.6</span>
+        </div>
+
+        
+    <div class="card-descriptor">Stores changed files only — apply to base to restore target state</div>
+
+    <div class="delta-bridge">954BEB0FF3AA <span class="delta-arrow">→</span> 570554CD91EC</div>
+
+    <div class="delta-metrics"><div class="metric-cell">
+      <div class="metric-value">334 B</div>
+      <div class="metric-label">Delta size</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">1</div>
+      <div class="metric-label">Changed files</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">1</div>
+      <div class="metric-label">Chunks</div>
+    </div></div>
+
+    <div class="changed-files">
+        <div class="changed-files-header">
+          <span>Changed files</span>
+          <span class="changed-files-count"> ~1 modified </span>
+        </div>
+        <div class="cf-row">
+            <span class="cf-op cf-mod">MOD</span>
+            <span class="cf-path" title="wp-content/plugins/vsc-demo-plugin/vsc-demo-plugin.php">wp-content/plugins/vsc-demo-plugin/vsc-demo-plugin.php</span>
+          </div>
+      </div>
+
+    <div class="meta-grid" style="margin-top:12px">
+      <div class="meta-row meta-row-hash">
+    <span class="meta-label">Verify model</span>
+    <span class="meta-value"><span class="hash">570554cd91ec4795</span></span>
+  </div>
+    </div>
+
+    <div class="delta-stored-label">Stored: changed files only · Verify: target root hash</div>
+
+        <div class="actions">
+          <a href="vsc-89D0E2A66E35-to-570554CD91EC-folder-delta.svg" target="_blank" rel="noopener noreferrer">Open SVG</a>
+          <a href="vsc-89D0E2A66E35-to-570554CD91EC-folder-delta.json" target="_blank" rel="noopener noreferrer">Open JSON</a>
+        </div>
+      </div>
+    </article>
+  
+
+    <article class="card card-folder-delta">
+      <div class="preview">
+        <img src="vsc-954BEB0FF3AA-to-89D0E2A66E35-folder-delta.svg" alt="DELTA token preview" loading="lazy" />
+      </div>
+
+      <div class="content">
+        <div class="content-top">
+          <h2 class="title">DELTA</h2>
+          <div class="badge-group">
+            <span class="badge badge-delta">FOLDER_DELTA</span>
+          </div>
+        </div>
+
+        <div class="token-id-row">
+          <span class="meta-label">Token ID</span>
+          <span class="mono token-id-value">89D0E2A66E35</span>
+        </div>
+        <div class="token-id-row" style="margin-bottom:14px">
+          <span class="meta-label">Version</span>
+          <span class="meta-value">1.6</span>
+        </div>
+
+        
+    <div class="card-descriptor">Stores changed files only — apply to base to restore target state</div>
+
+    <div class="delta-bridge">954BEB0FF3AA <span class="delta-arrow">→</span> 89D0E2A66E35</div>
+
+    <div class="delta-metrics"><div class="metric-cell metric-highlight">
+      <div class="metric-value">99.97%</div>
+      <div class="metric-label">Reduction</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">466 B</div>
+      <div class="metric-label">Delta size</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">1.58 MB</div>
+      <div class="metric-label">Full / base</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">1</div>
+      <div class="metric-label">Changed files</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">1</div>
+      <div class="metric-label">Chunks</div>
+    </div></div>
+
+    <div class="changed-files">
+        <div class="changed-files-header">
+          <span>Changed files</span>
+          <span class="changed-files-count"> ~1 modified </span>
+        </div>
+        <div class="cf-row">
+            <span class="cf-op cf-mod">MOD</span>
+            <span class="cf-path" title="database.sql">database.sql</span>
+          </div>
+      </div>
+
+    <div class="meta-grid" style="margin-top:12px">
+      <div class="meta-row meta-row-hash">
+    <span class="meta-label">Verify model</span>
+    <span class="meta-value"><span class="hash">89d0e2a66e35fb58</span></span>
+  </div>
+    </div>
+
+    <div class="delta-stored-label">Stored: changed files only · Verify: target root hash</div>
+
+        <div class="actions">
+          <a href="vsc-954BEB0FF3AA-to-89D0E2A66E35-folder-delta.svg" target="_blank" rel="noopener noreferrer">Open SVG</a>
+          <a href="vsc-954BEB0FF3AA-to-89D0E2A66E35-folder-delta.json" target="_blank" rel="noopener noreferrer">Open JSON</a>
+        </div>
+      </div>
+    </article>
+  
+
+    <article class="card card-folder-delta">
+      <div class="preview">
+        <img src="vsc-F3876A4BCFE1-to-954BEB0FF3AA-folder-delta.svg" alt="DELTA token preview" loading="lazy" />
+      </div>
+
+      <div class="content">
+        <div class="content-top">
+          <h2 class="title">DELTA</h2>
+          <div class="badge-group">
+            <span class="badge badge-delta">FOLDER_DELTA</span>
+          </div>
+        </div>
+
+        <div class="token-id-row">
+          <span class="meta-label">Token ID</span>
+          <span class="mono token-id-value">954BEB0FF3AA</span>
+        </div>
+        <div class="token-id-row" style="margin-bottom:14px">
+          <span class="meta-label">Version</span>
+          <span class="meta-value">1.6</span>
+        </div>
+
+        
+    <div class="card-descriptor">Stores changed files only — apply to base to restore target state</div>
+
+    <div class="delta-bridge">21A8390BFA3F <span class="delta-arrow">→</span> 954BEB0FF3AA</div>
+
+    <div class="delta-metrics"><div class="metric-cell">
+      <div class="metric-value">265 B</div>
+      <div class="metric-label">Delta size</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">1</div>
+      <div class="metric-label">Changed files</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">1</div>
+      <div class="metric-label">Chunks</div>
+    </div></div>
+
+    <div class="changed-files">
+        <div class="changed-files-header">
+          <span>Changed files</span>
+          <span class="changed-files-count"> ~1 modified </span>
+        </div>
+        <div class="cf-row">
+            <span class="cf-op cf-mod">MOD</span>
+            <span class="cf-path" title="wp-content/plugins/vsc-demo-plugin/vsc-demo-plugin.php">wp-content/plugins/vsc-demo-plugin/vsc-demo-plugin.php</span>
+          </div>
+      </div>
+
+    <div class="meta-grid" style="margin-top:12px">
+      <div class="meta-row meta-row-hash">
+    <span class="meta-label">Verify model</span>
+    <span class="meta-value"><span class="hash">954beb0ff3aabd61</span></span>
+  </div>
+    </div>
+
+    <div class="delta-stored-label">Stored: changed files only · Verify: target root hash</div>
+
+        <div class="actions">
+          <a href="vsc-F3876A4BCFE1-to-954BEB0FF3AA-folder-delta.svg" target="_blank" rel="noopener noreferrer">Open SVG</a>
+          <a href="vsc-F3876A4BCFE1-to-954BEB0FF3AA-folder-delta.json" target="_blank" rel="noopener noreferrer">Open JSON</a>
+        </div>
+      </div>
+    </article>
+  
+
+    <article class="card card-folder-delta">
+      <div class="preview">
+        <img src="vsc-21A8390BFA3F-to-F3876A4BCFE1-folder-delta.svg" alt="DELTA token preview" loading="lazy" />
+      </div>
+
+      <div class="content">
+        <div class="content-top">
+          <h2 class="title">DELTA</h2>
+          <div class="badge-group">
+            <span class="badge badge-delta">FOLDER_DELTA</span>
+          </div>
+        </div>
+
+        <div class="token-id-row">
+          <span class="meta-label">Token ID</span>
+          <span class="mono token-id-value">F3876A4BCFE1</span>
+        </div>
+        <div class="token-id-row" style="margin-bottom:14px">
+          <span class="meta-label">Version</span>
+          <span class="meta-value">1.6</span>
+        </div>
+
+        
+    <div class="card-descriptor">Stores changed files only — apply to base to restore target state</div>
+
+    <div class="delta-bridge">21A8390BFA3F <span class="delta-arrow">→</span> F3876A4BCFE1</div>
+
+    <div class="delta-metrics"><div class="metric-cell metric-highlight">
+      <div class="metric-value">99.98%</div>
+      <div class="metric-label">Reduction</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">376 B</div>
+      <div class="metric-label">Delta size</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">1.58 MB</div>
+      <div class="metric-label">Full / base</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">1</div>
+      <div class="metric-label">Changed files</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">1</div>
+      <div class="metric-label">Chunks</div>
+    </div></div>
+
+    <div class="changed-files">
+        <div class="changed-files-header">
+          <span>Changed files</span>
+          <span class="changed-files-count"> ~1 modified </span>
+        </div>
+        <div class="cf-row">
+            <span class="cf-op cf-mod">MOD</span>
+            <span class="cf-path" title="database.sql">database.sql</span>
+          </div>
+      </div>
+
+    <div class="meta-grid" style="margin-top:12px">
+      <div class="meta-row meta-row-hash">
+    <span class="meta-label">Verify model</span>
+    <span class="meta-value"><span class="hash">f3876a4bcfe134d4</span></span>
+  </div>
+    </div>
+
+    <div class="delta-stored-label">Stored: changed files only · Verify: target root hash</div>
+
+        <div class="actions">
+          <a href="vsc-21A8390BFA3F-to-F3876A4BCFE1-folder-delta.svg" target="_blank" rel="noopener noreferrer">Open SVG</a>
+          <a href="vsc-21A8390BFA3F-to-F3876A4BCFE1-folder-delta.json" target="_blank" rel="noopener noreferrer">Open JSON</a>
+        </div>
+      </div>
+    </article>
+  
+
+    <article class="card card-folder-delta">
+      <div class="preview">
+        <img src="vsc-E4AD56B99922-to-8F75655E9A77-folder-delta.svg" alt="DELTA token preview" loading="lazy" />
+      </div>
+
+      <div class="content">
+        <div class="content-top">
+          <h2 class="title">DELTA</h2>
+          <div class="badge-group">
+            <span class="badge badge-delta">FOLDER_DELTA</span>
+          </div>
+        </div>
+
+        <div class="token-id-row">
+          <span class="meta-label">Token ID</span>
+          <span class="mono token-id-value">8F75655E9A77</span>
+        </div>
+        <div class="token-id-row" style="margin-bottom:14px">
+          <span class="meta-label">Version</span>
+          <span class="meta-value">1.6</span>
+        </div>
+
+        
+    <div class="card-descriptor">Stores changed files only — apply to base to restore target state</div>
+
+    <div class="delta-bridge">A3C60EAEF97B <span class="delta-arrow">→</span> 8F75655E9A77</div>
+
+    <div class="delta-metrics"><div class="metric-cell">
+      <div class="metric-value">1.91 KB</div>
+      <div class="metric-label">Delta size</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">1</div>
+      <div class="metric-label">Changed files</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">1</div>
+      <div class="metric-label">Chunks</div>
+    </div></div>
+
+    <div class="changed-files">
+        <div class="changed-files-header">
+          <span>Changed files</span>
+          <span class="changed-files-count"> ~1 modified </span>
+        </div>
+        <div class="cf-row">
+            <span class="cf-op cf-mod">MOD</span>
+            <span class="cf-path" title="aikido-class/style.css">aikido-class/style.css</span>
+          </div>
+      </div>
+
+    <div class="meta-grid" style="margin-top:12px">
+      <div class="meta-row meta-row-hash">
+    <span class="meta-label">Verify model</span>
+    <span class="meta-value"><span class="hash">8f75655e9a771577</span></span>
+  </div>
+    </div>
+
+    <div class="delta-stored-label">Stored: changed files only · Verify: target root hash</div>
+
+        <div class="actions">
+          <a href="vsc-E4AD56B99922-to-8F75655E9A77-folder-delta.svg" target="_blank" rel="noopener noreferrer">Open SVG</a>
+          <a href="vsc-E4AD56B99922-to-8F75655E9A77-folder-delta.json" target="_blank" rel="noopener noreferrer">Open JSON</a>
+        </div>
+      </div>
+    </article>
+  
+
+    <article class="card card-folder-delta">
+      <div class="preview">
+        <img src="vsc-A3C60EAEF97B-to-E4AD56B99922-folder-delta.svg" alt="DELTA token preview" loading="lazy" />
+      </div>
+
+      <div class="content">
+        <div class="content-top">
+          <h2 class="title">DELTA</h2>
+          <div class="badge-group">
+            <span class="badge badge-delta">FOLDER_DELTA</span>
+          </div>
+        </div>
+
+        <div class="token-id-row">
+          <span class="meta-label">Token ID</span>
+          <span class="mono token-id-value">E4AD56B99922</span>
+        </div>
+        <div class="token-id-row" style="margin-bottom:14px">
+          <span class="meta-label">Version</span>
+          <span class="meta-value">1.4</span>
+        </div>
+
+        
+    <div class="card-descriptor">Stores changed files only — apply to base to restore target state</div>
+
+    <div class="delta-bridge">A3C60EAEF97B <span class="delta-arrow">→</span> E4AD56B99922</div>
+
+    <div class="delta-metrics"><div class="metric-cell metric-highlight">
+      <div class="metric-value">99.74%</div>
+      <div class="metric-label">Reduction</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">4.16 KB</div>
+      <div class="metric-label">Delta size</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">1.58 MB</div>
+      <div class="metric-label">Full / base</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">1</div>
+      <div class="metric-label">Changed files</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">2</div>
+      <div class="metric-label">Chunks</div>
+    </div></div>
+
+    <div class="changed-files">
+        <div class="changed-files-header">
+          <span>Changed files</span>
+          <span class="changed-files-count"> ~1 modified </span>
+        </div>
+        <div class="cf-row">
+            <span class="cf-op cf-mod">MOD</span>
+            <span class="cf-path" title="aikido-class/README.md">aikido-class/README.md</span>
+          </div>
+      </div>
+
+    <div class="meta-grid" style="margin-top:12px">
+      <div class="meta-row meta-row-hash">
+    <span class="meta-label">Verify model</span>
+    <span class="meta-value"><span class="hash">e4ad56b99922cfa4</span></span>
+  </div>
+    </div>
+
+    <div class="delta-stored-label">Stored: changed files only · Verify: target root hash</div>
+
+        <div class="actions">
+          <a href="vsc-A3C60EAEF97B-to-E4AD56B99922-folder-delta.svg" target="_blank" rel="noopener noreferrer">Open SVG</a>
+          <a href="vsc-A3C60EAEF97B-to-E4AD56B99922-folder-delta.json" target="_blank" rel="noopener noreferrer">Open JSON</a>
+        </div>
+      </div>
+    </article>
+  
+
+    <article class="card card-folder-delta">
+      <div class="preview">
+        <img src="vsc-A3C60EAEF97B-to-A3C60EAEF97B-folder-delta.svg" alt="DELTA token preview" loading="lazy" />
+      </div>
+
+      <div class="content">
+        <div class="content-top">
+          <h2 class="title">DELTA</h2>
+          <div class="badge-group">
+            <span class="badge badge-delta">FOLDER_DELTA</span>
+          </div>
+        </div>
+
+        <div class="token-id-row">
+          <span class="meta-label">Token ID</span>
+          <span class="mono token-id-value">A3C60EAEF97B</span>
+        </div>
+        <div class="token-id-row" style="margin-bottom:14px">
+          <span class="meta-label">Version</span>
+          <span class="meta-value">1.4</span>
+        </div>
+
+        
+    <div class="card-descriptor">Stores changed files only — apply to base to restore target state</div>
+
+    <div class="delta-bridge">A3C60EAEF97B <span class="delta-arrow">→</span> A3C60EAEF97B</div>
+
+    <div class="delta-metrics"><div class="metric-cell">
+      <div class="metric-value">0 B</div>
+      <div class="metric-label">Delta size</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">1.58 MB</div>
+      <div class="metric-label">Full / base</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">0</div>
+      <div class="metric-label">Changed files</div>
+    </div><div class="metric-cell">
+      <div class="metric-value">0</div>
+      <div class="metric-label">Chunks</div>
+    </div></div>
+
+    
+
+    <div class="meta-grid" style="margin-top:12px">
+      <div class="meta-row meta-row-hash">
+    <span class="meta-label">Verify model</span>
+    <span class="meta-value"><span class="hash">a3c60eaef97b3a77</span></span>
+  </div>
+    </div>
+
+    <div class="delta-stored-label">Stored: changed files only · Verify: target root hash</div>
+
+        <div class="actions">
+          <a href="vsc-A3C60EAEF97B-to-A3C60EAEF97B-folder-delta.svg" target="_blank" rel="noopener noreferrer">Open SVG</a>
+          <a href="vsc-A3C60EAEF97B-to-A3C60EAEF97B-folder-delta.json" target="_blank" rel="noopener noreferrer">Open JSON</a>
+        </div>
+      </div>
+    </article>
+  
+
+    <article class="card card-folder-recovery">
+      <div class="preview">
+        <img src="vsc-0689E7F37562-folder-recovery.svg" alt="FOLDER token preview" loading="lazy" />
+      </div>
+
+      <div class="content">
+        <div class="content-top">
+          <h2 class="title">FOLDER</h2>
+          <div class="badge-group">
+            <span class="badge badge-folder">FOLDER_RECOVERY</span>
+          </div>
+        </div>
+
+        <div class="token-id-row">
+          <span class="meta-label">Token ID</span>
+          <span class="mono token-id-value">0689E7F37562</span>
+        </div>
+        <div class="token-id-row" style="margin-bottom:14px">
+          <span class="meta-label">Version</span>
+          <span class="meta-value">1.3</span>
+        </div>
+
+        
+    <div class="card-descriptor">Full folder base snapshot — foundation for delta and chain tokens</div>
+    <div class="delta-metrics">
+      <div class="metric-cell">
+        <div class="metric-value">52</div>
+        <div class="metric-label">Files</div>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-value">825.85 KB</div>
+        <div class="metric-label">Total size</div>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-value">246</div>
+        <div class="metric-label">Chunks</div>
+      </div>
+    </div>
+    <div class="meta-grid" style="margin-top:12px">
+      <div class="meta-row meta-row-hash">
+    <span class="meta-label">Root hash</span>
+    <span class="meta-value"><span class="hash">0689e7f375624c6f</span></span>
+  </div>
+    </div>
+
+        <div class="actions">
+          <a href="vsc-0689E7F37562-folder-recovery.svg" target="_blank" rel="noopener noreferrer">Open SVG</a>
+          <a href="vsc-0689E7F37562-folder-recovery.json" target="_blank" rel="noopener noreferrer">Open JSON</a>
+        </div>
+      </div>
+    </article>
+  
+
+    <article class="card card-folder-recovery">
+      <div class="preview">
+        <img src="vsc-954BEB0FF3AA-folder-recovery.svg" alt="FOLDER token preview" loading="lazy" />
+      </div>
+
+      <div class="content">
+        <div class="content-top">
+          <h2 class="title">FOLDER</h2>
+          <div class="badge-group">
+            <span class="badge badge-folder">FOLDER_RECOVERY</span>
+          </div>
+        </div>
+
+        <div class="token-id-row">
+          <span class="meta-label">Token ID</span>
+          <span class="mono token-id-value">954BEB0FF3AA</span>
+        </div>
+        <div class="token-id-row" style="margin-bottom:14px">
+          <span class="meta-label">Version</span>
+          <span class="meta-value">1.3</span>
+        </div>
+
+        
+    <div class="card-descriptor">Full folder base snapshot — foundation for delta and chain tokens</div>
+    <div class="delta-metrics">
+      <div class="metric-cell">
+        <div class="metric-value">55</div>
+        <div class="metric-label">Files</div>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-value">1.58 MB</div>
+        <div class="metric-label">Total size</div>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-value">447</div>
+        <div class="metric-label">Chunks</div>
+      </div>
+    </div>
+    <div class="meta-grid" style="margin-top:12px">
+      <div class="meta-row meta-row-hash">
+    <span class="meta-label">Root hash</span>
+    <span class="meta-value"><span class="hash">954beb0ff3aabd61</span></span>
+  </div>
+    </div>
+
+        <div class="actions">
+          <a href="vsc-954BEB0FF3AA-folder-recovery.svg" target="_blank" rel="noopener noreferrer">Open SVG</a>
+          <a href="vsc-954BEB0FF3AA-folder-recovery.json" target="_blank" rel="noopener noreferrer">Open JSON</a>
+        </div>
+      </div>
+    </article>
+  
+
+    <article class="card card-folder-recovery">
+      <div class="preview">
+        <img src="vsc-21A8390BFA3F-folder-recovery.svg" alt="FOLDER token preview" loading="lazy" />
+      </div>
+
+      <div class="content">
+        <div class="content-top">
+          <h2 class="title">FOLDER</h2>
+          <div class="badge-group">
+            <span class="badge badge-folder">FOLDER_RECOVERY</span>
+          </div>
+        </div>
+
+        <div class="token-id-row">
+          <span class="meta-label">Token ID</span>
+          <span class="mono token-id-value">21A8390BFA3F</span>
+        </div>
+        <div class="token-id-row" style="margin-bottom:14px">
+          <span class="meta-label">Version</span>
+          <span class="meta-value">1.3</span>
+        </div>
+
+        
+    <div class="card-descriptor">Full folder base snapshot — foundation for delta and chain tokens</div>
+    <div class="delta-metrics">
+      <div class="metric-cell">
+        <div class="metric-value">55</div>
+        <div class="metric-label">Files</div>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-value">1.58 MB</div>
+        <div class="metric-label">Total size</div>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-value">447</div>
+        <div class="metric-label">Chunks</div>
+      </div>
+    </div>
+    <div class="meta-grid" style="margin-top:12px">
+      <div class="meta-row meta-row-hash">
+    <span class="meta-label">Root hash</span>
+    <span class="meta-value"><span class="hash">21a8390bfa3fa4a0</span></span>
+  </div>
+    </div>
+
+        <div class="actions">
+          <a href="vsc-21A8390BFA3F-folder-recovery.svg" target="_blank" rel="noopener noreferrer">Open SVG</a>
+          <a href="vsc-21A8390BFA3F-folder-recovery.json" target="_blank" rel="noopener noreferrer">Open JSON</a>
+        </div>
+      </div>
+    </article>
+  
+
+    <article class="card card-folder-recovery">
+      <div class="preview">
+        <img src="vsc-A3C60EAEF97B-folder-recovery.svg" alt="FOLDER token preview" loading="lazy" />
+      </div>
+
+      <div class="content">
+        <div class="content-top">
+          <h2 class="title">FOLDER</h2>
+          <div class="badge-group">
+            <span class="badge badge-folder">FOLDER_RECOVERY</span>
+          </div>
+        </div>
+
+        <div class="token-id-row">
+          <span class="meta-label">Token ID</span>
+          <span class="mono token-id-value">A3C60EAEF97B</span>
+        </div>
+        <div class="token-id-row" style="margin-bottom:14px">
+          <span class="meta-label">Version</span>
+          <span class="meta-value">1.3</span>
+        </div>
+
+        
+    <div class="card-descriptor">Full folder base snapshot — foundation for delta and chain tokens</div>
+    <div class="delta-metrics">
+      <div class="metric-cell">
+        <div class="metric-value">47</div>
+        <div class="metric-label">Files</div>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-value">1.58 MB</div>
+        <div class="metric-label">Total size</div>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-value">439</div>
+        <div class="metric-label">Chunks</div>
+      </div>
+    </div>
+    <div class="meta-grid" style="margin-top:12px">
+      <div class="meta-row meta-row-hash">
+    <span class="meta-label">Root hash</span>
+    <span class="meta-value"><span class="hash">a3c60eaef97b3a77</span></span>
+  </div>
+    </div>
+
+        <div class="actions">
+          <a href="vsc-A3C60EAEF97B-folder-recovery.svg" target="_blank" rel="noopener noreferrer">Open SVG</a>
+          <a href="vsc-A3C60EAEF97B-folder-recovery.json" target="_blank" rel="noopener noreferrer">Open JSON</a>
+        </div>
+      </div>
+    </article>
+  
+
+    <article class="card card-folder-recovery">
+      <div class="preview">
+        <img src="vsc-949F6C70AF8A-folder-recovery.svg" alt="FOLDER token preview" loading="lazy" />
+      </div>
+
+      <div class="content">
+        <div class="content-top">
+          <h2 class="title">FOLDER</h2>
+          <div class="badge-group">
+            <span class="badge badge-folder">FOLDER_RECOVERY</span>
+          </div>
+        </div>
+
+        <div class="token-id-row">
+          <span class="meta-label">Token ID</span>
+          <span class="mono token-id-value">949F6C70AF8A</span>
+        </div>
+        <div class="token-id-row" style="margin-bottom:14px">
+          <span class="meta-label">Version</span>
+          <span class="meta-value">1.3</span>
+        </div>
+
+        
+    <div class="card-descriptor">Full folder base snapshot — foundation for delta and chain tokens</div>
+    <div class="delta-metrics">
+      <div class="metric-cell">
+        <div class="metric-value">5</div>
+        <div class="metric-label">Files</div>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-value">286 B</div>
+        <div class="metric-label">Total size</div>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-value">5</div>
+        <div class="metric-label">Chunks</div>
+      </div>
+    </div>
+    <div class="meta-grid" style="margin-top:12px">
+      <div class="meta-row meta-row-hash">
+    <span class="meta-label">Root hash</span>
+    <span class="meta-value"><span class="hash">949f6c70af8a9a46</span></span>
+  </div>
+    </div>
+
+        <div class="actions">
+          <a href="vsc-949F6C70AF8A-folder-recovery.svg" target="_blank" rel="noopener noreferrer">Open SVG</a>
+          <a href="vsc-949F6C70AF8A-folder-recovery.json" target="_blank" rel="noopener noreferrer">Open JSON</a>
+        </div>
+      </div>
+    </article>
+  
+
+    <article class="card card-recovery">
+      <div class="preview">
+        <img src="vsc-D26E503DB51F-pdf-recovery.svg" alt="PDF token preview" loading="lazy" />
+      </div>
+
+      <div class="content">
+        <div class="content-top">
+          <h2 class="title">PDF</h2>
+          <div class="badge-group">
+            <span class="badge badge-recovery">RECOVERY</span>
+          </div>
+        </div>
+
+        <div class="token-id-row">
+          <span class="meta-label">Token ID</span>
+          <span class="mono token-id-value">D26E503DB51F</span>
+        </div>
+        <div class="token-id-row" style="margin-bottom:14px">
+          <span class="meta-label">Version</span>
+          <span class="meta-value">1.2</span>
+        </div>
+
+        
+    <div class="card-descriptor">Recoverable binary file token — restore from chunks by hash</div>
+    <div class="delta-metrics">
+      <div class="metric-cell">
+        <div class="metric-value">1.07 MB</div>
+        <div class="metric-label">File size</div>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-value">273</div>
+        <div class="metric-label">Chunks</div>
+      </div>
+    </div>
+    <div class="meta-grid" style="margin-top:12px">
+      <div class="meta-row meta-row-hash">
+    <span class="meta-label">Hash</span>
+    <span class="meta-value"><span class="hash">d26e503db51f2e6e</span></span>
+  </div>
+    </div>
+
+        <div class="actions">
+          <a href="vsc-D26E503DB51F-pdf-recovery.svg" target="_blank" rel="noopener noreferrer">Open SVG</a>
+          <a href="vsc-D26E503DB51F-pdf-recovery.json" target="_blank" rel="noopener noreferrer">Open JSON</a>
+        </div>
+      </div>
+    </article>
+  
+
+    <article class="card card-proof">
+      <div class="preview">
+        <img src="vsc-451F0BC7217E-text.svg" alt="TEXT token preview" loading="lazy" />
+      </div>
+
+      <div class="content">
+        <div class="content-top">
+          <h2 class="title">TEXT</h2>
+          <div class="badge-group">
+            <span class="badge badge-proof">PROOF</span>
+          </div>
+        </div>
+
+        <div class="token-id-row">
+          <span class="meta-label">Token ID</span>
+          <span class="mono token-id-value">451F0BC7217E</span>
+        </div>
+        <div class="token-id-row" style="margin-bottom:14px">
+          <span class="meta-label">Version</span>
+          <span class="meta-value">0.3</span>
+        </div>
+
+        
+    <div class="card-descriptor">Sparse text proof token — content verified by payload hash</div>
+    <div class="delta-metrics">
+      <div class="metric-cell">
+        <div class="metric-value">20</div>
+        <div class="metric-label">Message length</div>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-value">56</div>
+        <div class="metric-label">Delta entries</div>
+      </div>
+    </div>
+    <div class="meta-grid" style="margin-top:12px">
+      <div class="meta-row meta-row-hash">
+    <span class="meta-label">Hash</span>
+    <span class="meta-value"><span class="hash">451f0bc7217ecf73</span></span>
+  </div>
+    </div>
+
+        <div class="actions">
+          <a href="vsc-451F0BC7217E-text.svg" target="_blank" rel="noopener noreferrer">Open SVG</a>
+          <a href="vsc-451F0BC7217E-text.json" target="_blank" rel="noopener noreferrer">Open JSON</a>
+        </div>
+      </div>
+    </article>
+  
+
+    <article class="card card-recovery">
+      <div class="preview">
+        <img src="vsc-D26E503DB51F-pdf.svg" alt="PDF token preview" loading="lazy" />
+      </div>
+
+      <div class="content">
+        <div class="content-top">
+          <h2 class="title">PDF</h2>
+          <div class="badge-group">
+            <span class="badge badge-recovery">RECOVERY</span>
+          </div>
+        </div>
+
+        <div class="token-id-row">
+          <span class="meta-label">Token ID</span>
+          <span class="mono token-id-value">D26E503DB51F</span>
+        </div>
+        <div class="token-id-row" style="margin-bottom:14px">
+          <span class="meta-label">Version</span>
+          <span class="meta-value">1.1</span>
+        </div>
+
+        
+    <div class="card-descriptor">Recoverable binary file token — restore from chunks by hash</div>
+    <div class="delta-metrics">
+      <div class="metric-cell">
+        <div class="metric-value">1.07 MB</div>
+        <div class="metric-label">File size</div>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-value">273</div>
+        <div class="metric-label">Chunks</div>
+      </div>
+    </div>
+    <div class="meta-grid" style="margin-top:12px">
+      <div class="meta-row meta-row-hash">
+    <span class="meta-label">Hash</span>
+    <span class="meta-value"><span class="hash">d26e503db51f2e6e</span></span>
+  </div>
+    </div>
+
+        <div class="actions">
+          <a href="vsc-D26E503DB51F-pdf.svg" target="_blank" rel="noopener noreferrer">Open SVG</a>
+          <a href="vsc-D26E503DB51F-pdf.json" target="_blank" rel="noopener noreferrer">Open JSON</a>
+        </div>
+      </div>
+    </article>
+  
+
+    <article class="card card-proof">
+      <div class="preview">
+        <img src="vsc-F81C7B6D17C3-melody.svg" alt="MELODY token preview" loading="lazy" />
+      </div>
+
+      <div class="content">
+        <div class="content-top">
+          <h2 class="title">MELODY</h2>
+          <div class="badge-group">
+            <span class="badge badge-proof">PROOF</span>
+          </div>
+        </div>
+
+        <div class="token-id-row">
+          <span class="meta-label">Token ID</span>
+          <span class="mono token-id-value">F81C7B6D17C3</span>
+        </div>
+        <div class="token-id-row" style="margin-bottom:14px">
+          <span class="meta-label">Version</span>
+          <span class="meta-value">0.3</span>
+        </div>
+
+        
+    <div class="card-descriptor">Sparse melody proof token — sequence verified by payload hash</div>
+    <div class="delta-metrics">
+      <div class="metric-cell">
+        <div class="metric-value">25</div>
+        <div class="metric-label">Message length</div>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-value">60</div>
+        <div class="metric-label">Delta entries</div>
+      </div>
+    </div>
+    <div class="meta-grid" style="margin-top:12px">
+      <div class="meta-row meta-row-hash">
+    <span class="meta-label">Hash</span>
+    <span class="meta-value"><span class="hash">f81c7b6d17c30e44</span></span>
+  </div>
+    </div>
+
+        <div class="actions">
+          <a href="vsc-F81C7B6D17C3-melody.svg" target="_blank" rel="noopener noreferrer">Open SVG</a>
+          <a href="vsc-F81C7B6D17C3-melody.json" target="_blank" rel="noopener noreferrer">Open JSON</a>
+        </div>
+      </div>
+    </article>
+  
+
+    <article class="card card-proof">
+      <div class="preview">
+        <img src="vsc-E962823D0FDD-ethic.svg" alt="ETHIC token preview" loading="lazy" />
+      </div>
+
+      <div class="content">
+        <div class="content-top">
+          <h2 class="title">ETHIC</h2>
+          <div class="badge-group">
+            <span class="badge badge-proof">PROOF</span>
+          </div>
+        </div>
+
+        <div class="token-id-row">
+          <span class="meta-label">Token ID</span>
+          <span class="mono token-id-value">E962823D0FDD</span>
+        </div>
+        <div class="token-id-row" style="margin-bottom:14px">
+          <span class="meta-label">Version</span>
+          <span class="meta-value">0.3</span>
+        </div>
+
+        
+    <div class="card-descriptor">Sparse ethic proof token — statement verified by payload hash</div>
+    <div class="delta-metrics">
+      <div class="metric-cell">
+        <div class="metric-value">58</div>
+        <div class="metric-label">Message length</div>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-value">165</div>
+        <div class="metric-label">Delta entries</div>
+      </div>
+    </div>
+    <div class="meta-grid" style="margin-top:12px">
+      <div class="meta-row meta-row-hash">
+    <span class="meta-label">Hash</span>
+    <span class="meta-value"><span class="hash">e962823d0fdd26b6</span></span>
+  </div>
+    </div>
+
+        <div class="actions">
+          <a href="vsc-E962823D0FDD-ethic.svg" target="_blank" rel="noopener noreferrer">Open SVG</a>
+          <a href="vsc-E962823D0FDD-ethic.json" target="_blank" rel="noopener noreferrer">Open JSON</a>
+        </div>
+      </div>
+    </article>
+  
+    </section>
+
+    <div class="footer-note">
+      VSC Gallery &nbsp;•&nbsp; Deterministic &nbsp;•&nbsp; Machine Readable &nbsp;•&nbsp; Root Hash Verified
+    </div>
+  </div>
+</body>
+</html>

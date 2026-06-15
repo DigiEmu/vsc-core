@@ -81,6 +81,9 @@ Commands:
   demo:run
       Run the complete WordPress-style VSC proof flow end-to-end.
 
+  showcase
+      Export a lightweight static showcase site to showcase/.
+
   gallery
       Open output/gallery.html in the default browser.
 
@@ -89,6 +92,7 @@ Commands:
 
 Examples:
   npm run vsc -- demo:run
+  npm run vsc -- showcase
   npm run vsc -- demo
   npm run vsc -- backup test-wp
   npm run vsc -- delta output\\vsc-21A8390BFA3F-folder-recovery.json test-wp
@@ -214,6 +218,12 @@ Use: npm run vsc -- restore-delta <base-token.json> <delta-token.json>
   // ── demo:run ───────────────────────────────────────────────────────────────
   case "demo:run": {
     run("scripts/runWordPressDemo.js");
+    break;
+  }
+
+  // ── showcase ──────────────────────────────────────────────────────────────
+  case "showcase": {
+    run("scripts/exportShowcase.js");
     break;
   }
 

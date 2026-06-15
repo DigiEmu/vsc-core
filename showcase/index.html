@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VSC Core — Static Showcase</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg:      #fafafa;
+    --fg:      #111;
+    --mid:     #444;
+    --quiet:   #888;
+    --border:  #ddd;
+    --accent:  #111;
+    --card-bg: #fff;
+    --mono:    "SFMono-Regular", "Consolas", "Liberation Mono", monospace;
+    --sans:    "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    --max:     960px;
+    --radius:  6px;
+  }
+  body { font-family: var(--sans); background: var(--bg); color: var(--fg); line-height: 1.6; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:hover { opacity: 0.7; }
+
+  /* ── layout ── */
+  .page { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+  section { padding: 64px 0; border-bottom: 1px solid var(--border); }
+  section:last-child { border-bottom: none; }
+  h1 { font-size: 2.4rem; font-weight: 700; letter-spacing: -0.5px; }
+  h2 { font-size: 1.4rem; font-weight: 600; margin-bottom: 24px; letter-spacing: -0.2px; }
+  p  { color: var(--mid); margin-bottom: 12px; max-width: 640px; }
+
+  /* ── hero ── */
+  #hero { padding-top: 96px; padding-bottom: 80px; }
+  #hero h1 { margin-bottom: 12px; }
+  #hero .sub { font-size: 1.1rem; color: var(--mid); max-width: 600px; margin-bottom: 8px; }
+  #hero .status { font-size: 0.85rem; color: var(--quiet); font-family: var(--mono); margin-top: 16px; }
+  .btn {
+    display: inline-block; margin-top: 28px; padding: 10px 22px;
+    background: var(--accent); color: #fff; text-decoration: none;
+    border-radius: var(--radius); font-size: 0.9rem; font-weight: 500;
+  }
+  .btn:hover { opacity: 0.85; }
+
+  /* ── flow ── */
+  .flow { font-family: var(--mono); font-size: 0.95rem; line-height: 2;
+          background: var(--card-bg); border: 1px solid var(--border);
+          border-radius: var(--radius); padding: 24px 32px; display: inline-block; }
+  .flow .arrow { color: var(--quiet); }
+  .flow .changed { color: var(--fg); font-weight: 600; }
+  .flow .latest { font-weight: 700; }
+
+  /* ── metrics ── */
+  .metrics-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; }
+  .metric-card {
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 20px 18px;
+  }
+  .metric-card .label { font-size: 0.78rem; color: var(--quiet); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+  .metric-card .value { font-size: 1.5rem; font-weight: 700; font-family: var(--mono); }
+  .metric-card.accent { background: var(--fg); color: #fff; border-color: var(--fg); }
+  .metric-card.accent .label { color: #aaa; }
+  .metric-card.accent .value { color: #fff; }
+
+  /* ── seals ── */
+  .seals-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 24px; }
+  .seal-card {
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 16px; text-align: center;
+  }
+  .seal-card img { width: 100%; max-width: 180px; height: auto; display: block; margin: 0 auto 12px; }
+  .seal-card .seal-label { font-size: 0.8rem; color: var(--quiet); text-transform: uppercase; letter-spacing: 0.06em; }
+  .seal-card .seal-id { font-family: var(--mono); font-size: 0.72rem; color: var(--border); margin-top: 4px; word-break: break-all; }
+
+  /* ── verify ── */
+  .verify-list { list-style: none; }
+  .verify-list li { padding: 10px 0; border-bottom: 1px solid var(--border); font-family: var(--mono); font-size: 0.9rem; display: flex; gap: 12px; align-items: center; }
+  .verify-list li:last-child { border-bottom: none; }
+  .verify-list .badge {
+    display: inline-block; padding: 2px 10px; border-radius: 20px;
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.05em;
+    background: var(--fg); color: #fff;
+  }
+
+  /* ── code ── */
+  pre { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius);
+        padding: 20px 24px; font-family: var(--mono); font-size: 0.88rem; overflow-x: auto; }
+
+  /* ── links ── */
+  .link-list { list-style: none; }
+  .link-list li { padding: 6px 0; font-size: 0.95rem; }
+
+  /* ── footer ── */
+  footer { padding: 32px 0; text-align: center; font-size: 0.8rem; color: var(--quiet); }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <section id="hero">
+    <h1>VSC Core</h1>
+    <p class="sub">Verifiable Structural Compression</p>
+    <p class="sub">Store a full state once. Store only ordered, verifiable deltas after that.
+    Reconstruct the latest state and verify it by root hash.</p>
+    <a href="https://github.com/DigiEmu/vsc-core" class="btn" target="_blank" rel="noopener">
+      GitHub Repository →
+    </a>
+    <p class="status">Research prototype / MVP proof-of-concept · Generated 2026-06-15</p>
+  </section>
+
+  <!-- PROOF FLOW -->
+  <section id="proof-flow">
+    <h2>Proof Flow</h2>
+    <p>WordPress-style folder: one base, two ordered deltas, one verified latest state.</p>
+    <div class="flow">
+      <div><strong>Base snapshot</strong>&nbsp;&nbsp;<span style="color:#888">21A8390BFA3F · 1.58 MB</span></div>
+      <div class="arrow">↓ Delta 1: <span class="changed">database.sql</span>&nbsp;&nbsp;<span style="color:#888">376 B stored</span></div>
+      <div class="arrow">↓ Delta 2: <span class="changed">vsc-demo-plugin.php</span>&nbsp;&nbsp;<span style="color:#888">265 B stored</span></div>
+      <div class="latest">Latest verified state&nbsp;&nbsp;<span style="color:#888">954BEB0FF3AA · PASS</span></div>
+    </div>
+  </section>
+
+  <!-- METRICS -->
+  <section id="metrics">
+    <h2>WordPress-style MVP Result</h2>
+    <p>Full-copy backup strategy vs VSC base + ordered deltas.</p>
+    <div class="metrics-grid">
+      <div class="metric-card"><div class="label">Base</div><div class="value">1.58 MB</div></div>
+      <div class="metric-card"><div class="label">Delta 1</div><div class="value">376 B</div></div>
+      <div class="metric-card"><div class="label">Delta 2</div><div class="value">265 B</div></div>
+      <div class="metric-card"><div class="label">Total delta</div><div class="value">641 B</div></div>
+      <div class="metric-card"><div class="label">Traditional full-copy</div><div class="value">4.75 MB *(base × 3)*</div></div>
+      <div class="metric-card"><div class="label">VSC storage</div><div class="value">1.58 MB</div></div>
+      <div class="metric-card"><div class="label">Saved</div><div class="value">3.17 MB</div></div>
+      <div class="metric-card accent"><div class="label">Delta-only reduction</div><div class="value">99.96%</div></div>
+    </div>
+  </section>
+
+  <!-- SEALS -->
+  <section id="seals">
+    <h2>Visual Token Grammar</h2>
+    <p>Each VSC token is represented as a human-readable SVG seal.
+       The seal encodes token type, state relationship, and verification identity.</p>
+    <div class="seals-grid">
+      <div class="seal-card">
+        <img src="assets/seals/base.svg" alt="Base Snapshot Seal" />
+        <div class="seal-label">Base Snapshot</div>
+        <div class="seal-id">21A8390BFA3F · FOLDER_RECOVERY</div>
+      </div>
+      <div class="seal-card">
+        <img src="assets/seals/delta1.svg" alt="Delta 1 Seal" />
+        <div class="seal-label">Delta 1</div>
+        <div class="seal-id">F3876A4BCFE1 · FOLDER_DELTA</div>
+      </div>
+      <div class="seal-card">
+        <img src="assets/seals/delta2.svg" alt="Delta 2 Seal" />
+        <div class="seal-label">Delta 2</div>
+        <div class="seal-id">954BEB0FF3AA · FOLDER_DELTA</div>
+      </div>
+      <div class="seal-card">
+        <img src="assets/seals/chain.svg" alt="Delta Chain Seal" />
+        <div class="seal-label">Delta Chain</div>
+        <div class="seal-id">DDE0844718A5 · DELTA_CHAIN</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VERIFICATION -->
+  <section id="verification">
+    <h2>Verification</h2>
+    <p>All cryptographic verification runs against SHA-256 root hashes stored in the token JSON. No external service required.</p>
+    <ul class="verify-list">
+      <li><span class="badge">PASS</span> Chain restore — latest state reconstructed from base + 2 deltas</li>
+      <li><span class="badge">PASS</span> Chain verify — reconstructed root hash matches expected latest root hash</li>
+      <li><span class="badge">PASS</span> verify-all — FAIL: 0 across all registered tokens</li>
+      <li><span class="badge">SHA-256</span> Latest state verified by root hash</li>
+    </ul>
+  </section>
+
+  <!-- COMMANDS -->
+  <section id="commands">
+    <h2>Reproduce the Demo</h2>
+    <p>From a clean clone of the repository:</p>
+    <pre>npm install
+npm run vsc -- demo:run</pre>
+    <p style="margin-top:16px">Or run individual steps:</p>
+    <pre>npm run vsc -- demo        # create test fixture
+npm run vsc -- backup test-wp   # base snapshot
+npm run vsc -- delta &lt;base&gt; test-wp   # delta
+npm run vsc -- chain &lt;base&gt; &lt;d1&gt; &lt;d2&gt;
+npm run vsc -- restore &lt;chain&gt;
+npm run vsc -- verify &lt;chain&gt; &lt;restored-folder&gt;
+npm run vsc -- verify-all</pre>
+  </section>
+
+  <!-- LINKS -->
+  <section id="links">
+    <h2>Links</h2>
+    <ul class="link-list">
+      <li>→ <a href="https://github.com/DigiEmu/vsc-core" target="_blank" rel="noopener">GitHub Repository — DigiEmu/vsc-core</a></li>
+      <li>→ <a href="assets/gallery/gallery.html">Token Gallery (local)</a></li>
+      <li>→ <a href="assets/reports/chain-report.md">Chain Storage Report (markdown)</a></li>
+      <li>→ <a href="https://github.com/DigiEmu/vsc-core/tree/main/docs" target="_blank" rel="noopener">Documentation</a></li>
+    </ul>
+    <p style="margin-top: 20px; font-size: 0.82rem;">
+      Status: research prototype / MVP proof-of-concept. Not production-ready.
+    </p>
+  </section>
+
+</div>
+<footer>VSC Core v1.10 · Static Showcase Export · 2026-06-15</footer>
+</body>
+</html>

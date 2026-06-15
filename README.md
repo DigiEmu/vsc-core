@@ -107,6 +107,19 @@ start output\gallery.html
 
 ---
 
+## VSC v1.10 Static Showcase
+
+VSC v1.10 adds a static showcase export. One command generates a portable `showcase/` folder with the SVG seals, demo metrics, verification summary, and gallery — no server required, opens in any browser.
+
+```bash
+npm run vsc -- demo:run   # run full proof flow first
+npm run vsc -- showcase   # export showcase/
+```
+
+→ [Full showcase documentation](docs/vsc-v1-10-static-showcase.md)
+
+---
+
 ## VSC v1.9 One-command Demo
 
 VSC v1.9 adds a complete reproducible demo command. One command runs the full WordPress-style base + delta + chain + restore + verify flow:
@@ -176,3 +189,4 @@ npm run clean-manifest     # remove stale manifest entries
 - [Reproduce WordPress Demo](docs/reproduce-wordpress-demo.md)
 - [VSC v1.8 CLI](docs/vsc-v1-8-cli.md)
 - [VSC v1.9 One-command Demo](docs/vsc-v1-9-one-command-demo.md)
+- [VSC v1.10 Static Showcase](docs/vsc-v1-10-static-showcase.md)
