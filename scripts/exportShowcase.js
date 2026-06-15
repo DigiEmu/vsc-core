@@ -52,50 +52,95 @@ function latestEntry(pred) {
     .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))[0] || null;
 }
 
-function svgDataUri(svgPath) {
-  if (!fs.existsSync(svgPath)) return null;
-  const content = fs.readFileSync(svgPath, "utf8");
-  return "data:image/svg+xml;base64," + Buffer.from(content).toString("base64");
-}
-
 // ── Artifact selection ────────────────────────────────────────────────────────
-// Prefer known WordPress demo files; fall back to latest matching manifest entry.
+// Prefer known local WordPress demo files; fall back to newest manifest entries.
+// All paths are discovered dynamically so GitHub Actions builds work without
+// fixed token IDs.
 
-const KNOWN = {
-  baseSvg:    "vsc-21A8390BFA3F-folder-recovery.svg",
-  delta1Svg:  "vsc-21A8390BFA3F-to-F3876A4BCFE1-folder-delta.svg",
-  delta2Svg:  "vsc-F3876A4BCFE1-to-954BEB0FF3AA-folder-delta.svg",
-  chainSvg:   "vsc-chain-21A8390BFA3F-to-954BEB0FF3AA.svg",
-  chainReport:"report-chain-21A8390BFA3F-to-954BEB0FF3AA.md",
-};
+const KNOWN_BASE_ID = "21A8390BFA3F";
 
-function resolveArtifact(knownName, manifestPred) {
-  const knownPath = path.join(OUT, knownName);
-  if (fs.existsSync(knownPath)) return knownPath;
-  const entry = latestEntry(manifestPred);
-  if (entry) {
-    const p = path.join(OUT, path.basename(entry.svg || entry.json || ""));
+function resolveFromManifestSvg(pred) {
+  const entry = latestEntry(pred);
+  if (!entry) return null;
+  const svgName = entry.svg || "";
+  if (svgName) {
+    const p = path.join(OUT, path.basename(svgName));
     if (fs.existsSync(p)) return p;
   }
   return null;
 }
 
+// Chain report: try known path first, then scan output/ for newest report-chain-*.md
+function findNewestChainReport() {
+  const knownPath = path.join(OUT, `report-chain-${KNOWN_BASE_ID}-to-954BEB0FF3AA.md`);
+  if (fs.existsSync(knownPath)) return knownPath;
+  // Scan for any report-chain-*.md, pick newest by mtime
+  let entries;
+  try { entries = fs.readdirSync(OUT); } catch { return null; }
+  const reports = entries
+    .filter(n => n.startsWith("report-chain-") && n.endsWith(".md"))
+    .map(n => ({ name: n, p: path.join(OUT, n), mtime: fs.statSync(path.join(OUT, n)).mtimeMs }))
+    .sort((a, b) => b.mtime - a.mtime);
+  if (reports.length === 0) return null;
+  console.log(`  info   chain report selected: ${reports[0].name}`);
+  return reports[0].p;
+}
+
+// Determine the newest chain entry so we can select SVGs from the same run
+const newestChain = latestEntry(e => e.mode === "DELTA_CHAIN");
+const chainBaseId  = newestChain?.baseline || KNOWN_BASE_ID;
+const chainLatestId = newestChain?.id || "954BEB0FF3AA";
+
+// Deltas that belong to this chain (baseline chain base or are steps within it)
+const chainDeltas = readManifest()
+  .filter(e => e.mode === "FOLDER_DELTA")
+  .sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+
+// delta1: earliest delta whose baseline === chainBaseId
+const delta1Entry = chainDeltas.find(e => e.baseline === chainBaseId);
+// delta2: earliest delta whose baseline === delta1.id
+const delta2Entry = delta1Entry ? chainDeltas.find(e => e.baseline === delta1Entry.id) : null;
+
+function svgPath(name) {
+  const p = path.join(OUT, name);
+  return fs.existsSync(p) ? p : null;
+}
+
 const artifacts = {
-  baseSvg:    resolveArtifact(KNOWN.baseSvg,    e => e.mode === "FOLDER_RECOVERY"),
-  delta1Svg:  resolveArtifact(KNOWN.delta1Svg,  e => e.mode === "FOLDER_DELTA"),
-  delta2Svg:  resolveArtifact(KNOWN.delta2Svg,  e => e.mode === "FOLDER_DELTA" && e.id !== (latestEntry(f => f.mode==="FOLDER_DELTA")?.id)),
-  chainSvg:   resolveArtifact(KNOWN.chainSvg,   e => e.mode === "DELTA_CHAIN"),
-  chainReport:path.join(OUT, KNOWN.chainReport),
-  galleryHtml:path.join(OUT, "gallery.html"),
+  baseSvg: svgPath(`vsc-${chainBaseId}-folder-recovery.svg`)
+        || resolveFromManifestSvg(e => e.mode === "FOLDER_RECOVERY" && e.id === chainBaseId)
+        || resolveFromManifestSvg(e => e.mode === "FOLDER_RECOVERY"),
+
+  delta1Svg: delta1Entry
+        ? (svgPath(path.basename(delta1Entry.svg || "")) || resolveFromManifestSvg(e => e.id === delta1Entry.id))
+        : resolveFromManifestSvg(e => e.mode === "FOLDER_DELTA"),
+
+  delta2Svg: delta2Entry
+        ? (svgPath(path.basename(delta2Entry.svg || "")) || resolveFromManifestSvg(e => e.id === delta2Entry.id))
+        : null,
+
+  chainSvg: svgPath(`vsc-chain-${chainBaseId}-to-${chainLatestId}.svg`)
+        || resolveFromManifestSvg(e => e.mode === "DELTA_CHAIN"),
+
+  chainReport: findNewestChainReport(),
+  galleryHtml: path.join(OUT, "gallery.html"),
 };
 
-// Validate essentials
-const missing = Object.entries(artifacts)
-  .filter(([k, v]) => !v || !fs.existsSync(v))
-  .map(([k]) => k);
+// Validate essentials — delta SVGs are best-effort, the rest are required
+const REQUIRED_KEYS = ["baseSvg", "chainSvg", "chainReport", "galleryHtml"];
+const OPTIONAL_KEYS = ["delta1Svg", "delta2Svg"];
+
+const missing = REQUIRED_KEYS.filter(k => !artifacts[k] || !fs.existsSync(artifacts[k]));
+const missingOpt = OPTIONAL_KEYS.filter(k => !artifacts[k] || !fs.existsSync(artifacts[k]));
+
+if (missingOpt.length > 0) {
+  missingOpt.forEach(k => console.log(`  warn   ${k} not found — seal slot will be blank`));
+  // null out so copyFile skips gracefully
+  missingOpt.forEach(k => { artifacts[k] = null; });
+}
 
 if (missing.length > 0) {
-  console.error("\nvsc showcase: some expected files are missing:");
+  console.error("\nvsc showcase: required files are missing:");
   missing.forEach(k => console.error(`  missing: ${k}`));
   console.error("\nRun first:  npm run vsc -- demo:run");
   console.error("Then retry: npm run vsc -- showcase\n");

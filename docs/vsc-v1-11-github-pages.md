@@ -63,6 +63,19 @@ The `pages.yml` workflow:
 
 ---
 
+## Dynamic Artifact Discovery
+
+The showcase exporter does not require fixed token IDs. On each run it:
+
+1. Reads `output/manifest.json` to find the newest DELTA_CHAIN entry and its base token ID.
+2. Resolves SVG seals for the base, delta 1, delta 2, and chain from that run.
+3. Scans `output/` for the newest `report-chain-*.md` file (sorted by modification time).
+4. Falls back to local known WordPress demo IDs if they exist, otherwise uses the freshly generated artifacts.
+
+This means `demo:run` followed by `showcase` will always work in GitHub Actions regardless of the token IDs produced.
+
+---
+
 ## Safety
 
 The workflow and showcase export are designed to never publish:
