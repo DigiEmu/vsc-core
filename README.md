@@ -107,6 +107,27 @@ start output\gallery.html
 
 ---
 
+## VSC v1.8 CLI
+
+VSC v1.8 introduces a simplified CLI wrapper. The old scripts remain available and unchanged.
+
+```bash
+npm run vsc -- help          # command overview
+npm run vsc -- demo          # create demo fixture
+npm run vsc -- backup test-wp
+npm run vsc -- delta output\vsc-<BASE>-folder-recovery.json test-wp
+npm run vsc -- chain <base> <delta1> <delta2>
+npm run vsc -- restore output\vsc-chain-<BASE>-to-<D2>.json
+npm run vsc -- verify  output\vsc-chain-<BASE>-to-<D2>.json output\chain-<BASE>-to-<D2>\restored-test-wp
+npm run vsc -- report  output\vsc-chain-<BASE>-to-<D2>.json
+npm run vsc -- verify-all
+npm run vsc -- gallery
+```
+
+→ [Full CLI documentation](docs/vsc-v1-8-cli.md)
+
+---
+
 ## Repository / Demo Notes
 
 This repository is a research prototype / MVP. The following conventions apply:
@@ -139,3 +160,4 @@ npm run clean-manifest     # remove stale manifest entries
 - [VSC v1.7 Release Note](docs/vsc-v1-7-release-note.md)
 - [Demo Artifact Policy](docs/demo-artifact-policy.md)
 - [Reproduce WordPress Demo](docs/reproduce-wordpress-demo.md)
+- [VSC v1.8 CLI](docs/vsc-v1-8-cli.md)
