@@ -78,6 +78,9 @@ Commands:
   demo
       Create or refresh the reproducible WordPress-style test fixture.
 
+  demo:run
+      Run the complete WordPress-style VSC proof flow end-to-end.
+
   gallery
       Open output/gallery.html in the default browser.
 
@@ -85,6 +88,7 @@ Commands:
       Print this help text.
 
 Examples:
+  npm run vsc -- demo:run
   npm run vsc -- demo
   npm run vsc -- backup test-wp
   npm run vsc -- delta output\\vsc-21A8390BFA3F-folder-recovery.json test-wp
@@ -204,6 +208,12 @@ Use: npm run vsc -- restore-delta <base-token.json> <delta-token.json>
   // ── demo ───────────────────────────────────────────────────────────────────
   case "demo": {
     run("scripts/createWordPressDemoFixture.js");
+    break;
+  }
+
+  // ── demo:run ───────────────────────────────────────────────────────────────
+  case "demo:run": {
+    run("scripts/runWordPressDemo.js");
     break;
   }
 

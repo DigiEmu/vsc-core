@@ -1,5 +1,14 @@
 # Reproducing the WordPress MVP Demo
 
+> **Shortcut:** VSC v1.9 automates this entire flow with one command:
+> ```
+> npm run vsc -- demo:run
+> ```
+> See [vsc-v1-9-one-command-demo.md](vsc-v1-9-one-command-demo.md) for details.
+> The manual steps below remain useful for understanding each stage individually.
+
+---
+
 This document explains how to reproduce the VSC WordPress-style backup demo from a clean clone. All steps use `npm` scripts only.
 
 ---

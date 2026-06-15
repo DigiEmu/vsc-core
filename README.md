@@ -107,6 +107,20 @@ start output\gallery.html
 
 ---
 
+## VSC v1.9 One-command Demo
+
+VSC v1.9 adds a complete reproducible demo command. One command runs the full WordPress-style base + delta + chain + restore + verify flow:
+
+```bash
+npm run vsc -- demo:run
+```
+
+No manual token ID replacement. No placeholder values. The runner discovers generated paths from the manifest and prints a final summary with `DEMO RESULT: PASS`.
+
+→ [Full demo documentation](docs/vsc-v1-9-one-command-demo.md)
+
+---
+
 ## VSC v1.8 CLI
 
 VSC v1.8 introduces a simplified CLI wrapper. The old scripts remain available and unchanged.
@@ -161,3 +175,4 @@ npm run clean-manifest     # remove stale manifest entries
 - [Demo Artifact Policy](docs/demo-artifact-policy.md)
 - [Reproduce WordPress Demo](docs/reproduce-wordpress-demo.md)
 - [VSC v1.8 CLI](docs/vsc-v1-8-cli.md)
+- [VSC v1.9 One-command Demo](docs/vsc-v1-9-one-command-demo.md)

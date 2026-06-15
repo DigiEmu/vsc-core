@@ -25,6 +25,7 @@
   "clean-manifest": "node src/cleanManifestCli.js",
   "report-chain": "node src/reportChainCli.js",
   "demo:fixture": "node scripts/createWordPressDemoFixture.js",
+  "demo:run": "node scripts/runWordPressDemo.js",
   "vsc": "node src/vscCli.js"
 }
 }
