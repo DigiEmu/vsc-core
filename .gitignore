@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+aikido-class/**/node_modules/
+
+# Environment
+.env
+.env.*
+.env.local
+
+# Logs
+npm-debug.log*
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated recovery chunk folders (can be hundreds of MB)
+output/recovery-*/
+
+# Generated restored-state folders from delta/chain operations
+output/delta-*/
+output/chain-*/
+
+# Manifest backups (created automatically by clean-manifest)
+output/manifest.backup-*.json
+
+# Temporary output files
+output/*.tmp
+output/*.bak
+
+# Local WordPress-style test fixture
+# (reproduce with: npm run demo:fixture)
+test-wp/
+
+# PDF source files (large, not part of the public token demo)
+*.pdf

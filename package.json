@@ -1,0 +1,29 @@
+{
+  "name": "vsc-code",
+  "version": "1.0.0",
+  "type": "module",
+  
+ "scripts": {
+  "start": "node src/index.js",
+  "encode": "node src/index.js",
+  "decode": "node src/decodeFile.js",
+  "verify-all": "node src/verifyAll.js",
+  "tamper": "node src/tamperToken.js",
+  "encode-file": "node src/encodeFileCli.js",
+  "verify-file": "node src/verifyFile.js",
+  "encode-recovery": "node src/encodeRecoveryCli.js",
+  "restore": "node src/restoreFile.js",
+  "encode-folder": "node src/encodeFolderCli.js",
+  "restore-folder": "node src/restoreFolder.js",
+  "verify-folder": "node src/verifyFolder.js",
+  "encode-folder-delta": "node src/encodeFolderDeltaCli.js",
+  "restore-folder-delta": "node src/restoreFolderDelta.js",
+  "verify-folder-delta": "node src/verifyFolderDelta.js",
+  "create-chain": "node src/createDeltaChainCli.js",
+  "restore-chain": "node src/restoreDeltaChain.js",
+  "verify-chain": "node src/verifyDeltaChain.js",
+  "clean-manifest": "node src/cleanManifestCli.js",
+  "report-chain": "node src/reportChainCli.js",
+  "demo:fixture": "node scripts/createWordPressDemoFixture.js"
+}
+}
