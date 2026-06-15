@@ -179,39 +179,86 @@ copyFile(artifacts.chainReport, path.join(SHOWCASE, "assets", "reports", "chain-
 // Copy gallery
 copyFile(artifacts.galleryHtml, path.join(SHOWCASE, "assets", "gallery", "gallery.html"));
 
-// ── Read chain report for inline metrics ──────────────────────────────────────
+// ── Calculate metrics from token JSON (source of truth) ──────────────────────
 
-let reportText = "";
-try { reportText = fs.readFileSync(artifacts.chainReport, "utf8"); } catch { /* best-effort */ }
-
-function extractMetric(text, label) {
-  const m = text.match(new RegExp(`\\|\\s*${label}\\s*\\|\\s*([^\\|]+)\\s*\\|`));
-  return m ? m[1].trim() : "—";
+function fmtBytes(n) {
+  if (n === undefined || n === null) return "—";
+  if (n < 1024)        return `${n} B`;
+  if (n < 1024 * 1024) return `${(n / 1024).toFixed(2)} KB`;
+  return `${(n / (1024 * 1024)).toFixed(2)} MB`;
 }
 
-const metrics = {
-  base:        extractMetric(reportText, "Base size"),
-  delta1:      extractMetric(reportText, "Delta 1"),
-  delta2:      extractMetric(reportText, "Delta 2"),
-  totalDelta:  extractMetric(reportText, "Total delta size"),
-  fullCopy:    extractMetric(reportText, "Traditional full-copy size"),
-  vscStorage:  extractMetric(reportText, "VSC storage size"),
-  saved:       extractMetric(reportText, "Saved"),
-  reduction:   extractMetric(reportText, "Total chain reduction"),
-  deltaOnly:   extractMetric(reportText, "Delta-only reduction"),
-};
+function fmtPct(n) {
+  if (n === undefined || n === null) return "—";
+  return `${Number(n).toFixed(2)}%`;
+}
 
-// Fallback to known values if report parse fails
+// Read chain token JSON — always from the manifest entry (reliable in CI and locally)
+let chainToken = null;
+if (newestChain) {
+  const chainJsonPath = path.join(OUT, path.basename(newestChain.json || ""));
+  try { chainToken = JSON.parse(fs.readFileSync(chainJsonPath, "utf8")); } catch { /* best-effort */ }
+}
+
+// Read base token JSON using chain.baseTokenPath or manifest lookup
+let baseToken = null;
+if (chainToken?.baseTokenPath) {
+  const bPath = path.join(OUT, path.basename(chainToken.baseTokenPath));
+  try { baseToken = JSON.parse(fs.readFileSync(bPath, "utf8")); } catch { /* best-effort */ }
+}
+if (!baseToken) {
+  const baseId = chainToken?.baseTokenId || chainBaseId;
+  const baseEntry = readManifest().find(e => e.mode === "FOLDER_RECOVERY" && e.id === baseId);
+  if (baseEntry) {
+    try { baseToken = JSON.parse(fs.readFileSync(path.join(OUT, path.basename(baseEntry.json)), "utf8")); } catch { /* best-effort */ }
+  }
+}
+
+// Derive numeric metrics
+const baseSizeBytes       = baseToken?.totalSizeBytes ?? baseToken?.messageLength ?? 0;
+const steps               = chainToken?.steps ?? [];
+const stepCount           = chainToken?.summary?.stepCount ?? steps.length;
+const totalDeltaBytes     = chainToken?.summary?.totalDeltaSizeBytes
+                          ?? steps.reduce((s, st) => s + (st.deltaSizeBytes || 0), 0);
+const fullCopyBytes       = baseSizeBytes * (stepCount + 1);
+const vscStorageBytes     = baseSizeBytes + totalDeltaBytes;
+const savedBytes          = fullCopyBytes - vscStorageBytes;
+const totalReductionPct   = fullCopyBytes > 0 ? (savedBytes / fullCopyBytes * 100) : 0;
+const deltaOnlyReductionPct = baseSizeBytes > 0 ? ((baseSizeBytes - totalDeltaBytes) / baseSizeBytes * 100) : 0;
+
+// Per-step delta sizes
+const step1Bytes = steps[0]?.deltaSizeBytes ?? null;
+const step2Bytes = steps[1]?.deltaSizeBytes ?? null;
+
+// Sanity check
+if (fullCopyBytes > 0 && fullCopyBytes < vscStorageBytes) {
+  console.error("  WARN   traditional full-copy < VSC storage — check token data");
+}
+if (baseSizeBytes > 0 && baseSizeBytes < totalDeltaBytes) {
+  console.log("  warn   base size < total delta size — unexpected for this demo");
+}
+
+// Print calculated metrics to terminal
+console.log(`  metric Base size:               ${fmtBytes(baseSizeBytes)}`);
+console.log(`  metric Delta 1:                 ${fmtBytes(step1Bytes)}`);
+console.log(`  metric Delta 2:                 ${fmtBytes(step2Bytes)}`);
+console.log(`  metric Total delta:             ${fmtBytes(totalDeltaBytes)}`);
+console.log(`  metric Traditional full-copy:   ${fmtBytes(fullCopyBytes)}`);
+console.log(`  metric VSC storage:             ${fmtBytes(vscStorageBytes)}`);
+console.log(`  metric Saved:                   ${fmtBytes(savedBytes)}`);
+console.log(`  metric Total chain reduction:   ${fmtPct(totalReductionPct)}`);
+console.log(`  metric Delta-only reduction:    ${fmtPct(deltaOnlyReductionPct)}`);
+
 const M = {
-  base:       metrics.base       !== "—" ? metrics.base       : "1.58 MB",
-  delta1:     metrics.delta1     !== "—" ? metrics.delta1     : "376 B",
-  delta2:     metrics.delta2     !== "—" ? metrics.delta2     : "265 B",
-  totalDelta: metrics.totalDelta !== "—" ? metrics.totalDelta : "641 B",
-  fullCopy:   metrics.fullCopy   !== "—" ? metrics.fullCopy   : "4.75 MB",
-  vscStorage: metrics.vscStorage !== "—" ? metrics.vscStorage : "1.58 MB",
-  saved:      metrics.saved      !== "—" ? metrics.saved      : "3.17 MB",
-  reduction:  metrics.reduction  !== "—" ? metrics.reduction  : "66.65%",
-  deltaOnly:  metrics.deltaOnly  !== "—" ? metrics.deltaOnly  : "99.96%",
+  base:       fmtBytes(baseSizeBytes),
+  delta1:     step1Bytes !== null ? fmtBytes(step1Bytes) : "—",
+  delta2:     step2Bytes !== null ? fmtBytes(step2Bytes) : "—",
+  totalDelta: fmtBytes(totalDeltaBytes),
+  fullCopy:   fmtBytes(fullCopyBytes),
+  vscStorage: fmtBytes(vscStorageBytes),
+  saved:      fmtBytes(savedBytes),
+  reduction:  fmtPct(totalReductionPct),
+  deltaOnly:  fmtPct(deltaOnlyReductionPct),
 };
 
 // ── Generate index.html ───────────────────────────────────────────────────────
@@ -354,6 +401,7 @@ const html = `<!DOCTYPE html>
       <div class="metric-card"><div class="label">Traditional full-copy</div><div class="value">${M.fullCopy}</div></div>
       <div class="metric-card"><div class="label">VSC storage</div><div class="value">${M.vscStorage}</div></div>
       <div class="metric-card"><div class="label">Saved</div><div class="value">${M.saved}</div></div>
+      <div class="metric-card accent"><div class="label">Total chain reduction</div><div class="value">${M.reduction}</div></div>
       <div class="metric-card accent"><div class="label">Delta-only reduction</div><div class="value">${M.deltaOnly}</div></div>
     </div>
   </section>
