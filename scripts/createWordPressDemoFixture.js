@@ -87,38 +87,85 @@ Purpose: representative upload artifact for VSC demo fixture
 `,
 };
 
-// ── Theme: copy or stub ───────────────────────────────────────────────────────
+// ── Deterministic payload generator ──────────────────────────────────────────
+// Produces repeating, label-seeded text content to simulate realistic file sizes.
+// Output is deterministic: same label + targetBytes always produces the same bytes.
+
+function createDeterministicPayload(label, targetBytes) {
+  const header = `/* VSC demo generated payload — ${label} */\n`;
+  const unit = `/* ${label.padEnd(40, "-")} ${label.split("").reverse().join("").padEnd(28, "-")} */\n`;
+  const chunks = [];
+  let total = header.length;
+  chunks.push(header);
+  while (total < targetBytes) {
+    const remaining = targetBytes - total;
+    const piece = remaining < unit.length ? unit.slice(0, remaining) : unit;
+    chunks.push(piece);
+    total += piece.length;
+  }
+  return chunks.join("");
+}
+
+// ── Theme: copy real aikido-class or create deterministic fallback ─────────────
 
 const THEME_SRC  = path.join(ROOT, "aikido-class", "aikido-class");
 const THEME_DEST = path.join(DEST, "wp-content", "themes", "aikido-class");
-
-function copyThemeFile(src, dest) {
-  if (fs.existsSync(dest)) return;
-  fs.mkdirSync(path.dirname(dest), { recursive: true });
-  fs.copyFileSync(src, dest);
-}
+const UPLOADS    = path.join(DEST, "wp-content", "uploads", "2026", "06");
 
 function installAikidoTheme() {
   if (!fs.existsSync(THEME_SRC)) {
-    console.log("  theme aikido-class source not found — creating fallback theme");
+    console.log("  theme aikido-class not found — generating deterministic fallback theme");
+
+    // style.css ~250 KB
     write(path.join(THEME_DEST, "style.css"),
-`/*
-Theme Name: VSC Demo Fallback Theme
-Version: 1.0
-Description: Minimal fallback theme for VSC demo fixture.
-*/
-body { font-family: sans-serif; }
-`);
+      `/*\nTheme Name: VSC Demo Fallback Theme\nVersion: 1.0\n*/\n` +
+      createDeterministicPayload("theme-style-css", 250 * 1024)
+    );
+
+    // functions.php ~20 KB
     write(path.join(THEME_DEST, "functions.php"),
-`<?php
-// VSC demo fallback theme functions
-function vsc_theme_setup() {}
-add_action('after_setup_theme', 'vsc_theme_setup');
-`);
+      `<?php\n// VSC demo fallback theme functions.php\n` +
+      createDeterministicPayload("theme-functions-php", 20 * 1024)
+    );
+
+    // templates/home.php ~80 KB
+    write(path.join(THEME_DEST, "templates", "home.php"),
+      `<?php\n// VSC demo fallback theme template: home\n` +
+      createDeterministicPayload("theme-template-home", 80 * 1024)
+    );
+
+    // templates/page.php ~30 KB
+    write(path.join(THEME_DEST, "templates", "page.php"),
+      `<?php\n// VSC demo fallback theme template: page\n` +
+      createDeterministicPayload("theme-template-page", 30 * 1024)
+    );
+
+    // assets/css/components.css ~80 KB
+    write(path.join(THEME_DEST, "assets", "css", "components.css"),
+      createDeterministicPayload("theme-assets-css-components", 80 * 1024)
+    );
+
+    // assets/js/main.js ~40 KB
+    write(path.join(THEME_DEST, "assets", "js", "main.js"),
+      createDeterministicPayload("theme-assets-js-main", 40 * 1024)
+    );
+
+    // uploads/demo-media-placeholder.txt ~500 KB
+    write(path.join(UPLOADS, "demo-media-placeholder.txt"),
+      `VSC demo media placeholder\nPurpose: simulate uploaded media for realistic base size.\n` +
+      createDeterministicPayload("uploads-media-placeholder", 500 * 1024)
+    );
+
+    // uploads/demo-document-placeholder.txt ~250 KB
+    write(path.join(UPLOADS, "demo-document-placeholder.txt"),
+      `VSC demo document placeholder\nPurpose: simulate uploaded document for realistic base size.\n` +
+      createDeterministicPayload("uploads-document-placeholder", 250 * 1024)
+    );
+
     return;
   }
 
-  // Copy selected theme files (skip node_modules, dist, package-lock)
+  // ── Real aikido-class theme present: copy selected files ──────────────────
   const SKIP = new Set(["node_modules", "dist", "package-lock.json", ".git"]);
   function copyDir(src, dest) {
     for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
