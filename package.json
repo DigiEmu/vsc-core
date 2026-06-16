@@ -30,6 +30,7 @@
   "pages": "npm run vsc -- showcase",
   "benchmark": "node scripts/runBenchmark.js",
   "json-benchmark": "node scripts/runJsonEventBenchmark.js",
+  "bundle": "node scripts/exportEvidenceBundle.js",
   "vsc": "node src/vscCli.js"
 }
 }

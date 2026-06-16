@@ -97,6 +97,10 @@ Commands:
   gallery
       Open output/gallery.html in the default browser.
 
+  bundle <chain-token.json>
+      Export a complete evidence bundle for a VSC delta chain.
+      Creates a portable package with tokens, reports, seals, and checksums.
+
   help
       Print this help text.
 
@@ -264,6 +268,16 @@ Use: npm run vsc -- restore-delta <base-token.json> <delta-token.json>
       console.log("Open the file above in your browser.");
     }
     process.exit(0);
+    break;
+  }
+
+  // ── bundle <chain-token.json> ──────────────────────────────────────────────
+  case "bundle": {
+    const chainTokenPath = args[1];
+    if (!chainTokenPath) {
+      die("Usage: npm run vsc -- bundle <chain-token.json>");
+    }
+    run("scripts/exportEvidenceBundle.js", [chainTokenPath]);
     break;
   }
 

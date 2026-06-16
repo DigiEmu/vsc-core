@@ -1,6 +1,6 @@
 # VSC — Versioned State Commit
 
-**v1.13 — JSON Event Benchmark**
+**v1.14 — Evidence Bundle Export**
 
 Research prototype / proof-of-concept. Not production-ready.
 
@@ -180,6 +180,50 @@ npm run vsc -- benchmark:json large  # 1000 states - extended test
 
 ---
 
+## VSC v1.14 Evidence Bundle Export
+
+VSC v1.14 adds **Evidence Bundle Export** — a CLI command that turns a verified VSC delta chain into a **portable evidence package** containing all proof artifacts.
+
+```bash
+npm run vsc -- bundle output/vsc-chain-21A8390BFA3F-to-954BEB0FF3AA.json
+```
+
+**What's included:**
+- Chain token (complete delta chain with all steps)
+- Base token (initial state snapshot)
+- Delta tokens (ordered state changes)
+- Chain report (human-readable summary)
+- SVG seals (visual proof representations)
+- Verification summary with expected hashes
+- Complete manifest
+- SHA-256 checksums for integrity
+
+**Bundle structure:**
+```
+output/bundles/vsc-bundle-<BASE>-to-<LATEST>/
+├── README.md                    # Bundle guide
+├── manifest.json                # Complete artifact inventory
+├── chain-token.json             # The delta chain
+├── base-token.json              # Base state
+├── verification-summary.json    # Verification instructions
+├── checksums.sha256            # File integrity checksums
+├── delta-tokens/delta-*.json   # Delta steps
+├── reports/chain-report.md     # Human-readable report
+└── seals/*.svg                 # Visual seals
+```
+
+**Use cases:**
+- **Partner sharing** — Send verifiable proof to collaborators
+- **Audit trail** — Create compliance evidence
+- **Research publication** — Package reproducible proof artifacts
+- **DigiEmu proof** — Export as proof artifact
+
+**Note:** Bundles do not include heavy recovery chunk folders or restored state (these can be regenerated from the tokens).
+
+→ [Full Evidence Bundle Export documentation](docs/vsc-v1-14-evidence-bundle-export.md)
+
+---
+
 ## VSC v1.10 Static Showcase
 
 VSC v1.10 adds a static showcase export. One command generates a portable `showcase/` folder with the SVG seals, demo metrics, verification summary, and gallery — no server required, opens in any browser.
@@ -263,6 +307,7 @@ npm run clean-manifest     # remove stale manifest entries
 - [VSC v1.8 CLI](docs/vsc-v1-8-cli.md)
 - [VSC v1.9 One-command Demo](docs/vsc-v1-9-one-command-demo.md)
 - [VSC v1.10 Static Showcase](docs/vsc-v1-10-static-showcase.md)
+- [VSC v1.14 Evidence Bundle Export](docs/vsc-v1-14-evidence-bundle-export.md)
 - [VSC v1.13 JSON Event Benchmark](docs/vsc-v1-13-json-event-benchmark.md)
 - [VSC v1.12 Benchmark Mode](docs/vsc-v1-12-benchmark-mode.md)
 - [VSC v2 Architecture Notes](docs/vsc-v2-architecture-notes.md)
