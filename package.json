@@ -2,7 +2,8 @@
   "name": "vsc-code",
   "version": "1.0.0",
   "type": "module",
-  
+  "license": "Apache-2.0",
+
  "scripts": {
   "start": "node src/index.js",
   "encode": "node src/index.js",

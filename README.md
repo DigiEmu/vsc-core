@@ -4,6 +4,8 @@
 
 Research prototype / proof-of-concept. Not production-ready.
 
+**License:** VSC Core is licensed under the Apache License 2.0. The names DigiEmu and VSC, logos, and project branding are not granted as trademarks.
+
 ---
 
 ## Core Concept
