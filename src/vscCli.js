@@ -45,8 +45,8 @@ function die(msg) {
 
 function printHelp() {
   console.log(`
-VSC — Versioned State Commit CLI  (v1.8)
-─────────────────────────────────────────
+VSC — Versioned State Commit CLI  (v1.12)
+──────────────────────────────────────────
 Usage:  npm run vsc -- <command> [args]
 
 Commands:
@@ -74,6 +74,11 @@ Commands:
 
   verify-all
       Verify all registered tokens in the manifest.
+
+  benchmark [profile]
+      Run storage-load reduction benchmark (small|medium|large).
+      Measures VSC storage efficiency and restore/verify performance.
+      Default profile: medium (100 states).
 
   demo
       Create or refresh the reproducible WordPress-style test fixture.
@@ -206,6 +211,13 @@ Use: npm run vsc -- restore-delta <base-token.json> <delta-token.json>
   // ── verify-all ─────────────────────────────────────────────────────────────
   case "verify-all": {
     run("src/verifyAll.js");
+    break;
+  }
+
+  // ── benchmark [profile] ────────────────────────────────────────────────────
+  case "benchmark": {
+    const profile = args[1] || "medium";
+    run("scripts/runBenchmark.js", [profile]);
     break;
   }
 

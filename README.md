@@ -1,6 +1,6 @@
 # VSC — Versioned State Commit
 
-**v1.7 — Visual State Grammar**
+**v1.12 — Benchmark Mode**
 
 Research prototype / proof-of-concept. Not production-ready.
 
@@ -119,6 +119,36 @@ Only `showcase/` is published. No recovery chunks, test fixtures, or heavy outpu
 
 ---
 
+## VSC v1.12 Benchmark Mode
+
+VSC v1.12 adds Benchmark Mode — reproducible measurement of storage-load reduction and restore/verify performance.
+
+```bash
+npm run vsc -- benchmark        # default: medium profile (100 states)
+npm run vsc -- benchmark small  # 10 states - fast smoke test
+npm run vsc -- benchmark large  # 1000 states - extended test
+```
+
+**What it measures:**
+- Storage comparison: VSC base+delta vs traditional full-copy storage
+- Timing: Base snapshot, delta generation, chain creation, restore, verify
+- Verification: Restore integrity and root-hash verification pass/fail
+
+**Sample output:**
+- Total chain reduction: 90-98% (profile-dependent)
+- Saved bytes: ~2-5 MB for medium fixture
+- Restore time: ~500-1500ms
+- Verify time: ~200-500ms
+
+Benchmark Mode makes VSC's storage-load reduction claims **measurable and reproducible** without introducing unbenchmarked enterprise claims.
+
+**Note:** Benchmark output is written to `output/benchmark/` and is separate from the public showcase. The showcase (`npm run vsc -- showcase`) uses the stable WordPress-style demo, not benchmark artifacts.
+
+→ [Full benchmark documentation](docs/vsc-v1-12-benchmark-mode.md)  
+→ [VSC v2 Architecture Notes](docs/vsc-v2-architecture-notes.md)
+
+---
+
 ## VSC v1.10 Static Showcase
 
 VSC v1.10 adds a static showcase export. One command generates a portable `showcase/` folder with the SVG seals, demo metrics, verification summary, and gallery — no server required, opens in any browser.
@@ -202,4 +232,6 @@ npm run clean-manifest     # remove stale manifest entries
 - [VSC v1.8 CLI](docs/vsc-v1-8-cli.md)
 - [VSC v1.9 One-command Demo](docs/vsc-v1-9-one-command-demo.md)
 - [VSC v1.10 Static Showcase](docs/vsc-v1-10-static-showcase.md)
+- [VSC v1.12 Benchmark Mode](docs/vsc-v1-12-benchmark-mode.md)
+- [VSC v2 Architecture Notes](docs/vsc-v2-architecture-notes.md)
 - [VSC v1.11 GitHub Pages Publishing](docs/vsc-v1-11-github-pages.md)

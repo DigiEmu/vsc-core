@@ -61,70 +61,70 @@
   <circle cx="236.5" cy="374.0" r="9" class="orient-dot" />
 
   <!-- Hash band — slightly quieter dots -->
-  <circle cx="550" cy="167" r="1.6" class="hash-fill" />
-  <circle cx="588.0306504478696" cy="168.86832605118764" r="1.6" class="hash-fill" />
-  <circle cx="628.0361288064513" cy="162.6858878387078" r="1.6" class="hash-fill" />
-  <circle cx="662.6304547747313" cy="183.70714973590293" r="2.2" class="hash-open" />
-  <circle cx="703.073372946036" cy="185.4481869954853" r="1.6" class="hash-fill" />
-  <circle cx="735.7303143094432" cy="207.52302184674818" r="2.2" class="hash-open" />
-  <circle cx="765.5612504116057" cy="232.38979042661242" r="2.2" class="hash-open" />
-  <circle cx="796.1445942554944" cy="255.07194409525812" r="2.2" class="hash-open" />
-  <circle cx="828.6000717874997" cy="276.3999282125003" r="2.2" class="hash-open" />
-  <circle cx="859.2041813450949" cy="301.2426863345418" r="2.2" class="hash-open" />
-  <circle cx="872.6102095733876" cy="339.43874958839433" r="1.6" class="hash-fill" />
-  <circle cx="902.768505739342" cy="366.4413052696009" r="1.6" class="hash-fill" />
+  <circle cx="550" cy="155" r="1.6" class="hash-fill" />
+  <circle cx="588.618753289847" cy="162.89721769115448" r="2.2" class="hash-open" />
+  <circle cx="626.8655868743546" cy="168.57059952112724" r="1.6" class="hash-fill" />
+  <circle cx="666.1138709017849" cy="172.22386570711643" r="1.6" class="hash-fill" />
+  <circle cx="698.4811717576549" cy="196.53474138562075" r="2.2" class="hash-open" />
+  <circle cx="732.9019338884872" cy="212.8145494328383" r="2.2" class="hash-open" />
+  <circle cx="765.5612504116057" cy="232.38979042661242" r="1.6" class="hash-fill" />
+  <circle cx="803.7573136654582" cy="245.79581865490525" r="2.2" class="hash-open" />
+  <circle cx="824.3574311003804" cy="280.64256889961956" r="2.2" class="hash-open" />
+  <circle cx="854.5661186249183" cy="305.04904603952366" r="1.6" class="hash-fill" />
+  <circle cx="872.6102095733876" cy="339.43874958839433" r="2.2" class="hash-open" />
+  <circle cx="892.1854505671618" cy="372.0980661115129" r="2.2" class="hash-open" />
   <circle cx="914.008535809447" cy="404.22272764815466" r="1.6" class="hash-fill" />
-  <circle cx="921.2928502640971" cy="442.36954522526867" r="1.6" class="hash-fill" />
-  <circle cx="930.5446887964533" cy="479.30495505774223" r="1.6" class="hash-fill" />
-  <circle cx="936.1316739488125" cy="516.9693495521304" r="2.2" class="hash-open" />
-  <circle cx="950" cy="555" r="1.6" class="hash-fill" />
-  <circle cx="948.0738906688788" cy="594.2068561318243" r="2.2" class="hash-open" />
-  <circle cx="942.3141121612922" cy="633.0361288064513" r="1.6" class="hash-fill" />
-  <circle cx="927.0344922784903" cy="669.3721628382582" r="1.6" class="hash-fill" />
-  <circle cx="914.008535809447" cy="705.7772723518453" r="2.2" class="hash-open" />
-  <circle cx="897.4769781532518" cy="740.7303143094431" r="1.6" class="hash-fill" />
-  <circle cx="882.5878449210181" cy="777.2280932078409" r="1.6" class="hash-fill" />
-  <circle cx="854.5661186249184" cy="804.9509539604762" r="2.2" class="hash-open" />
-  <circle cx="832.842712474619" cy="837.842712474619" r="1.6" class="hash-fill" />
-  <circle cx="803.7573136654582" cy="864.2041813450949" r="2.2" class="hash-open" />
-  <circle cx="768.8946718097231" cy="882.5990272472029" r="2.2" class="hash-open" />
-  <circle cx="732.9019338884872" cy="897.1854505671618" r="2.2" class="hash-open" />
-  <circle cx="703.073372946036" cy="924.5518130045148" r="2.2" class="hash-open" />
-  <circle cx="664.3721628382582" cy="932.0344922784903" r="2.2" class="hash-open" />
+  <circle cx="927.0344922784903" cy="440.62783716174187" r="1.6" class="hash-fill" />
+  <circle cx="936.4294004788728" cy="478.13441312564544" r="1.6" class="hash-fill" />
+  <circle cx="936.1316739488125" cy="516.9693495521304" r="1.6" class="hash-fill" />
+  <circle cx="944" cy="555" r="2.2" class="hash-open" />
+  <circle cx="942.1027823088456" cy="593.618753289847" r="1.6" class="hash-fill" />
+  <circle cx="936.4294004788728" cy="631.8655868743546" r="2.2" class="hash-open" />
+  <circle cx="921.2928502640971" cy="667.6304547747313" r="1.6" class="hash-fill" />
+  <circle cx="919.5518130045148" cy="708.0733729460359" r="1.6" class="hash-fill" />
+  <circle cx="902.768505739342" cy="743.5586947303991" r="1.6" class="hash-fill" />
+  <circle cx="877.5990272472029" cy="773.8946718097231" r="2.2" class="hash-open" />
+  <circle cx="849.928055904742" cy="801.1445942554944" r="1.6" class="hash-fill" />
+  <circle cx="832.842712474619" cy="837.842712474619" r="2.2" class="hash-open" />
+  <circle cx="796.1445942554944" cy="854.928055904742" r="1.6" class="hash-fill" />
+  <circle cx="772.2280932078409" cy="887.5878449210181" r="2.2" class="hash-open" />
+  <circle cx="738.5586947303991" cy="907.768505739342" r="2.2" class="hash-open" />
+  <circle cx="698.4811717576549" cy="913.4652586143793" r="2.2" class="hash-open" />
+  <circle cx="666.1138709017849" cy="937.7761342928836" r="1.6" class="hash-fill" />
   <circle cx="625.6950449422578" cy="935.5446887964533" r="1.6" class="hash-fill" />
   <circle cx="589.2068561318243" cy="953.0738906688787" r="2.2" class="hash-open" />
-  <circle cx="550" cy="943" r="2.2" class="hash-open" />
-  <circle cx="511.3812467101531" cy="947.1027823088456" r="2.2" class="hash-open" />
-  <circle cx="474.3049550577422" cy="935.5446887964533" r="2.2" class="hash-open" />
-  <circle cx="437.36954522526867" cy="926.2928502640971" r="2.2" class="hash-open" />
-  <circle cx="401.5188282423452" cy="913.4652586143793" r="2.2" class="hash-open" />
-  <circle cx="364.2696856905569" cy="902.4769781532518" r="1.6" class="hash-fill" />
-  <circle cx="331.10532819027685" cy="882.5990272472029" r="1.6" class="hash-fill" />
-  <circle cx="303.85540574450556" cy="854.928055904742" r="1.6" class="hash-fill" />
+  <circle cx="550" cy="949" r="2.2" class="hash-open" />
+  <circle cx="511.96934955213044" cy="941.1316739488125" r="2.2" class="hash-open" />
+  <circle cx="474.3049550577422" cy="935.5446887964533" r="1.6" class="hash-fill" />
+  <circle cx="437.36954522526867" cy="926.2928502640971" r="1.6" class="hash-fill" />
+  <circle cx="399.22272764815466" cy="919.008535809447" r="2.2" class="hash-open" />
+  <circle cx="361.4413052696009" cy="907.768505739342" r="1.6" class="hash-fill" />
+  <circle cx="331.10532819027685" cy="882.5990272472029" r="2.2" class="hash-open" />
+  <circle cx="303.85540574450556" cy="854.928055904742" r="2.2" class="hash-open" />
   <circle cx="271.3999282125003" cy="833.6000717874997" r="2.2" class="hash-open" />
-  <circle cx="240.79581865490536" cy="808.7573136654584" r="2.2" class="hash-open" />
-  <circle cx="217.41215507898187" cy="777.2280932078409" r="2.2" class="hash-open" />
-  <circle cx="202.52302184674818" cy="740.7303143094432" r="1.6" class="hash-fill" />
-  <circle cx="191.5347413856208" cy="703.481171757655" r="2.2" class="hash-open" />
-  <circle cx="178.707149735903" cy="667.6304547747314" r="1.6" class="hash-fill" />
-  <circle cx="157.6858878387078" cy="633.0361288064514" r="1.6" class="hash-fill" />
-  <circle cx="163.86832605118758" cy="593.0306504478694" r="2.2" class="hash-open" />
+  <circle cx="250.07194409525817" cy="801.1445942554946" r="2.2" class="hash-open" />
+  <circle cx="227.38979042661242" cy="770.5612504116057" r="1.6" class="hash-fill" />
+  <circle cx="202.52302184674818" cy="740.7303143094432" r="2.2" class="hash-open" />
+  <circle cx="185.99146419055313" cy="705.7772723518456" r="2.2" class="hash-open" />
+  <circle cx="178.707149735903" cy="667.6304547747314" r="2.2" class="hash-open" />
+  <circle cx="157.6858878387078" cy="633.0361288064514" r="2.2" class="hash-open" />
+  <circle cx="163.86832605118758" cy="593.0306504478694" r="1.6" class="hash-fill" />
   <circle cx="162" cy="555" r="1.6" class="hash-fill" />
-  <circle cx="163.86832605118758" cy="516.9693495521307" r="2.2" class="hash-open" />
-  <circle cx="169.45531120354661" cy="479.3049550577422" r="1.6" class="hash-fill" />
-  <circle cx="167.22386570711643" cy="438.8861290982152" r="1.6" class="hash-fill" />
-  <circle cx="185.99146419055307" cy="404.22272764815455" r="1.6" class="hash-fill" />
-  <circle cx="207.81454943283825" cy="372.09806611151294" r="2.2" class="hash-open" />
-  <circle cx="222.4009727527971" cy="336.10532819027685" r="2.2" class="hash-open" />
-  <circle cx="250.07194409525812" cy="308.8554057445055" r="2.2" class="hash-open" />
-  <circle cx="267.1572875253809" cy="272.15728752538104" r="1.6" class="hash-fill" />
-  <circle cx="303.8554057445054" cy="255.07194409525817" r="2.2" class="hash-open" />
-  <circle cx="334.43874958839433" cy="232.38979042661242" r="1.6" class="hash-fill" />
-  <circle cx="364.2696856905568" cy="207.52302184674818" r="2.2" class="hash-open" />
-  <circle cx="399.22272764815443" cy="190.99146419055313" r="1.6" class="hash-fill" />
-  <circle cx="435.6278371617418" cy="177.9655077215097" r="1.6" class="hash-fill" />
-  <circle cx="471.9638711935485" cy="162.68588783870786" r="2.2" class="hash-open" />
-  <circle cx="511.38124671015316" cy="162.89721769115442" r="2.2" class="hash-open" />
+  <circle cx="163.86832605118758" cy="516.9693495521307" r="1.6" class="hash-fill" />
+  <circle cx="163.57059952112724" cy="478.13441312564544" r="2.2" class="hash-open" />
+  <circle cx="172.96550772150965" cy="440.6278371617419" r="1.6" class="hash-fill" />
+  <circle cx="180.44818699548534" cy="401.926627053964" r="2.2" class="hash-open" />
+  <circle cx="202.52302184674812" cy="369.2696856905569" r="2.2" class="hash-open" />
+  <circle cx="217.4121550789818" cy="332.77190679215926" r="1.6" class="hash-fill" />
+  <circle cx="240.79581865490525" cy="301.24268633454176" r="2.2" class="hash-open" />
+  <circle cx="275.6425688996195" cy="280.64256889961956" r="2.2" class="hash-open" />
+  <circle cx="300.0490460395235" cy="250.43388137508174" r="1.6" class="hash-fill" />
+  <circle cx="331.10532819027674" cy="227.4009727527972" r="1.6" class="hash-fill" />
+  <circle cx="364.2696856905568" cy="207.52302184674818" r="1.6" class="hash-fill" />
+  <circle cx="401.51882824234497" cy="196.5347413856208" r="2.2" class="hash-open" />
+  <circle cx="437.36954522526855" cy="183.707149735903" r="2.2" class="hash-open" />
+  <circle cx="473.1344131256453" cy="168.57059952112724" r="1.6" class="hash-fill" />
+  <circle cx="510.79314386817583" cy="156.9261093311212" r="1.6" class="hash-fill" />
 
   <!-- Core circle with type-specific symbol -->
   <circle cx="550" cy="555" r="78" class="line-strong" />
@@ -133,16 +133,16 @@
   <text x="550" y="601" text-anchor="middle" class="text-core-small">BASE SNAPSHOT</text>
 
   <!-- Sparse delta points — guide lines + dots, using wider spacing (6 rings, step 44) -->
-  <line x1="623.5" y1="595.7" x2="656.7" y2="614.1" class="guide" />
-    <circle cx="656.7" cy="614.1" r="5.2" class="point-soft" />
-  <line x1="534.0" y1="637.5" x2="518.3" y2="718.0" class="line-soft" />
-    <circle cx="518.3" cy="718.0" r="4.2" class="point" />
-  <line x1="466.0" y1="556.5" x2="340.0" y2="558.7" class="line-soft" />
-    <circle cx="340.0" cy="558.7" r="3.2" class="point" />
-  <line x1="542.7" y1="638.7" x2="527.9" y2="808.0" class="line-soft" />
-    <circle cx="527.9" cy="808.0" r="5.2" class="point" />
-  <line x1="573.2" y1="635.7" x2="632.1" y2="841.5" class="line-soft" />
-    <circle cx="632.1" cy="841.5" r="4.2" class="point" />
+  <line x1="514.5" y1="478.9" x2="498.4" y2="444.4" class="guide" />
+    <circle cx="498.4" cy="444.4" r="5.2" class="point-soft" />
+  <line x1="469.3" y1="531.8" x2="390.4" y2="509.2" class="line-soft" />
+    <circle cx="390.4" cy="509.2" r="3.2" class="point" />
+  <line x1="563.1" y1="638.0" x2="582.9" y2="762.4" class="line-soft" />
+    <circle cx="582.9" cy="762.4" r="4.2" class="point" />
+  <line x1="627.9" y1="523.5" x2="785.5" y2="459.8" class="line-soft" />
+    <circle cx="785.5" cy="459.8" r="5.2" class="point" />
+  <line x1="630.3" y1="579.6" x2="835.0" y2="642.1" class="line-soft" />
+    <circle cx="835.0" cy="642.1" r="4.2" class="point" />
   <line x1="472.7" y1="522.2" x2="235.2" y2="421.4" class="line-soft" />
     <circle cx="235.2" cy="421.4" r="3.2" class="point-soft" />
   <line x1="584.2" y1="631.7" x2="599.6" y2="666.5" class="line-soft" />
@@ -175,68 +175,74 @@
     <circle cx="397.2" cy="490.1" r="4.2" class="point" />
   <line x1="630.7" y1="578.2" x2="751.9" y2="612.9" class="line-soft" />
     <circle cx="751.9" cy="612.9" r="5.2" class="point-soft" />
-  <line x1="632.2" y1="537.5" x2="798.4" y2="502.2" class="guide" />
-    <circle cx="798.4" cy="502.2" r="3.2" class="point" />
-  <line x1="482.9" y1="605.6" x2="312.0" y2="734.3" class="line-soft" />
-    <circle cx="312.0" cy="734.3" r="4.2" class="point" />
-  <line x1="580.1" y1="633.4" x2="672.6" y2="874.3" class="line-soft" />
-    <circle cx="672.6" cy="874.3" r="4.2" class="point" />
-  <line x1="624.2" y1="515.6" x2="657.7" y2="497.7" class="line-soft" />
-    <circle cx="657.7" cy="497.7" r="5.2" class="point" />
-  <line x1="616.2" y1="606.7" x2="680.8" y2="657.2" class="line-soft" />
-    <circle cx="680.8" cy="657.2" r="4.2" class="point-soft" />
-  <line x1="626.1" y1="590.5" x2="740.3" y2="643.7" class="line-soft" />
-    <circle cx="740.3" cy="643.7" r="5.2" class="point" />
-  <line x1="510.6" y1="629.2" x2="430.8" y2="779.3" class="line-soft" />
-    <circle cx="430.8" cy="779.3" r="4.2" class="point" />
-  <line x1="529.7" y1="473.5" x2="477.9" y2="265.9" class="guide" />
-    <circle cx="477.9" cy="265.9" r="3.2" class="point" />
-  <line x1="535.4" y1="637.7" x2="490.6" y2="891.8" class="line-soft" />
-    <circle cx="490.6" cy="891.8" r="5.2" class="point" />
-  <line x1="466.0" y1="556.5" x2="428.0" y2="557.1" class="line-soft" />
-    <circle cx="428.0" cy="557.1" r="5.2" class="point-soft" />
-  <line x1="622.7" y1="513.0" x2="693.8" y2="472.0" class="line-soft" />
-    <circle cx="693.8" cy="472.0" r="5.2" class="point" />
-  <line x1="466.8" y1="566.7" x2="342.0" y2="584.2" class="line-soft" />
-    <circle cx="342.0" cy="584.2" r="5.2" class="point" />
-  <line x1="629.9" y1="529.0" x2="791.6" y2="476.5" class="line-soft" />
-    <circle cx="791.6" cy="476.5" r="3.2" class="point" />
-  <line x1="590.7" y1="628.5" x2="694.5" y2="815.6" class="line-soft" />
-    <circle cx="694.5" cy="815.6" r="3.2" class="point" />
-  <line x1="618.8" y1="506.8" x2="830.1" y2="358.8" class="guide" />
-    <circle cx="830.1" cy="358.8" r="5.2" class="point-soft" />
-  <line x1="564.6" y1="472.3" x2="571.2" y2="434.9" class="line-soft" />
-    <circle cx="571.2" cy="434.9" r="4.2" class="point" />
-  <line x1="589.4" y1="629.2" x2="627.9" y2="701.6" class="line-soft" />
-    <circle cx="627.9" cy="701.6" r="4.2" class="point" />
-  <line x1="473.9" y1="519.5" x2="359.7" y2="466.3" class="line-soft" />
-    <circle cx="359.7" cy="466.3" r="5.2" class="point" />
-  <line x1="467.8" y1="572.5" x2="301.6" y2="607.8" class="line-soft" />
-    <circle cx="301.6" cy="607.8" r="3.2" class="point" />
-  <line x1="548.5" y1="639.0" x2="544.8" y2="853.0" class="line-soft" />
-    <circle cx="544.8" cy="853.0" r="3.2" class="point-soft" />
-  <line x1="600.6" y1="622.1" x2="755.8" y2="828.1" class="line-soft" />
-    <circle cx="755.8" cy="828.1" r="3.2" class="point" />
-  <line x1="515.8" y1="631.7" x2="500.4" y2="666.5" class="guide" />
-    <circle cx="500.4" cy="666.5" r="3.2" class="point" />
-  <line x1="628.4" y1="585.1" x2="705.0" y2="614.5" class="line-soft" />
-    <circle cx="705.0" cy="614.5" r="5.2" class="point" />
-  <line x1="477.3" y1="513.0" x2="368.1" y2="450.0" class="line-soft" />
-    <circle cx="368.1" cy="450.0" r="4.2" class="point" />
-  <line x1="595.7" y1="625.4" x2="688.3" y2="768.0" class="line-soft" />
-    <circle cx="688.3" cy="768.0" r="3.2" class="point-soft" />
-  <line x1="526.8" y1="474.3" x2="467.9" y2="268.5" class="line-soft" />
-    <circle cx="467.9" cy="268.5" r="4.2" class="point" />
-  <line x1="604.0" y1="619.3" x2="769.8" y2="817.0" class="line-soft" />
-    <circle cx="769.8" cy="817.0" r="3.2" class="point" />
-  <line x1="594.5" y1="626.2" x2="614.7" y2="658.5" class="line-soft" />
-    <circle cx="614.7" cy="658.5" r="4.2" class="point" />
-  <line x1="466.0" y1="553.5" x2="384.0" y2="552.1" class="guide" />
-    <circle cx="384.0" cy="552.1" r="3.2" class="point" />
-  <line x1="590.7" y1="628.5" x2="651.8" y2="738.7" class="line-soft" />
-    <circle cx="651.8" cy="738.7" r="5.2" class="point-soft" />
-  <line x1="593.3" y1="627.0" x2="680.8" y2="772.7" class="line-soft" />
-    <circle cx="680.8" cy="772.7" r="5.2" class="point" />
+  <line x1="600.6" y1="487.9" x2="702.9" y2="352.1" class="guide" />
+    <circle cx="702.9" cy="352.1" r="4.2" class="point" />
+  <line x1="616.2" y1="606.7" x2="784.8" y2="738.5" class="line-soft" />
+    <circle cx="784.8" cy="738.5" r="4.2" class="point" />
+  <line x1="468.2" y1="536.1" x2="216.8" y2="478.1" class="line-soft" />
+    <circle cx="216.8" cy="478.1" r="5.2" class="point" />
+  <line x1="509.3" y1="628.5" x2="490.9" y2="661.7" class="line-soft" />
+    <circle cx="490.9" cy="661.7" r="5.2" class="point" />
+  <line x1="627.9" y1="586.5" x2="703.9" y2="617.2" class="line-soft" />
+    <circle cx="703.9" cy="617.2" r="3.2" class="point-soft" />
+  <line x1="552.9" y1="638.9" x2="557.3" y2="764.9" class="line-soft" />
+    <circle cx="557.3" cy="764.9" r="5.2" class="point" />
+  <line x1="571.7" y1="636.1" x2="615.7" y2="800.3" class="line-soft" />
+    <circle cx="615.7" cy="800.3" r="3.2" class="point" />
+  <line x1="467.8" y1="572.5" x2="258.5" y2="617.0" class="guide" />
+    <circle cx="258.5" cy="617.0" r="5.2" class="point" />
+  <line x1="599.4" y1="487.0" x2="751.0" y2="278.3" class="line-soft" />
+    <circle cx="751.0" cy="278.3" r="4.2" class="point" />
+  <line x1="477.3" y1="597.0" x2="444.3" y2="616.0" class="line-soft" />
+    <circle cx="444.3" cy="616.0" r="3.2" class="point-soft" />
+  <line x1="494.9" y1="491.6" x2="441.1" y2="429.7" class="line-soft" />
+    <circle cx="441.1" cy="429.7" r="3.2" class="point" />
+  <line x1="628.9" y1="583.7" x2="747.3" y2="626.8" class="line-soft" />
+    <circle cx="747.3" cy="626.8" r="3.2" class="point" />
+  <line x1="487.6" y1="498.8" x2="361.2" y2="385.0" class="line-soft" />
+    <circle cx="361.2" cy="385.0" r="3.2" class="point" />
+  <line x1="621.2" y1="599.5" x2="802.7" y2="712.9" class="line-soft" />
+    <circle cx="802.7" cy="712.9" r="4.2" class="point" />
+  <line x1="576.0" y1="634.9" x2="655.7" y2="880.3" class="guide" />
+    <circle cx="655.7" cy="880.3" r="4.2" class="point-soft" />
+  <line x1="470.6" y1="582.3" x2="434.6" y2="594.7" class="line-soft" />
+    <circle cx="434.6" cy="594.7" r="5.2" class="point" />
+  <line x1="585.5" y1="631.1" x2="620.2" y2="705.4" class="line-soft" />
+    <circle cx="620.2" cy="705.4" r="4.2" class="point" />
+  <line x1="628.9" y1="583.7" x2="747.3" y2="626.8" class="line-soft" />
+    <circle cx="747.3" cy="626.8" r="3.2" class="point" />
+  <line x1="470.1" y1="581.0" x2="308.4" y2="633.5" class="line-soft" />
+    <circle cx="308.4" cy="633.5" r="3.2" class="point" />
+  <line x1="598.2" y1="486.2" x2="720.9" y2="310.9" class="line-soft" />
+    <circle cx="720.9" cy="310.9" r="4.2" class="point-soft" />
+  <line x1="547.1" y1="471.1" x2="538.1" y2="213.2" class="line-soft" />
+    <circle cx="538.1" cy="213.2" r="5.2" class="point" />
+  <line x1="467.5" y1="539.0" x2="430.2" y2="531.7" class="guide" />
+    <circle cx="430.2" cy="531.7" r="5.2" class="point" />
+  <line x1="475.2" y1="593.1" x2="402.1" y2="630.4" class="line-soft" />
+    <circle cx="402.1" cy="630.4" r="5.2" class="point" />
+  <line x1="480.4" y1="508.0" x2="375.9" y2="437.6" class="line-soft" />
+    <circle cx="375.9" cy="437.6" r="5.2" class="point" />
+  <line x1="506.7" y1="627.0" x2="419.2" y2="772.7" class="line-soft" />
+    <circle cx="419.2" cy="772.7" r="4.2" class="point-soft" />
+  <line x1="604.0" y1="490.7" x2="741.6" y2="326.7" class="line-soft" />
+    <circle cx="741.6" cy="326.7" r="3.2" class="point" />
+  <line x1="472.7" y1="587.8" x2="235.2" y2="688.6" class="line-soft" />
+    <circle cx="235.2" cy="688.6" r="5.2" class="point" />
+  <line x1="633.5" y1="546.2" x2="671.3" y2="542.2" class="line-soft" />
+    <circle cx="671.3" cy="542.2" r="3.2" class="point" />
+  <line x1="477.3" y1="597.0" x2="406.2" y2="638.0" class="guide" />
+    <circle cx="406.2" cy="638.0" r="5.2" class="point" />
+  <line x1="472.1" y1="586.5" x2="355.3" y2="633.7" class="line-soft" />
+    <circle cx="355.3" cy="633.7" r="3.2" class="point-soft" />
+  <line x1="566.0" y1="472.5" x2="598.5" y2="305.7" class="line-soft" />
+    <circle cx="598.5" cy="305.7" r="5.2" class="point" />
+  <line x1="534.0" y1="637.5" x2="493.1" y2="847.5" class="line-soft" />
+    <circle cx="493.1" cy="847.5" r="4.2" class="point" />
+  <line x1="607.3" y1="493.6" x2="783.2" y2="304.9" class="line-soft" />
+    <circle cx="783.2" cy="304.9" r="5.2" class="point" />
+  <line x1="612.4" y1="611.2" x2="640.7" y2="636.6" class="line-soft" />
+    <circle cx="640.7" cy="636.6" r="3.2" class="point" />
 
   <!-- Footer meta boxes -->
   <g transform="translate(100, 1082)">
@@ -250,12 +256,12 @@
     <rect x="0" y="0" width="230" height="96" rx="10" class="label-box" />
     <text x="110" y="24" text-anchor="middle" class="text-meta">TOKEN META</text>
     <text x="14" y="48" class="text-small">Encoding: BINARY_FOLDER</text>
-    <text x="14" y="68" class="text-small">Message: 845666 · Δ 52</text>
+    <text x="14" y="68" class="text-small">Message: 1660570 · Δ 55</text>
     <text x="14" y="88" class="text-small">Version: 1.3</text>
   </g>
 
   <!-- Footer -->
   <text x="550" y="1144"    text-anchor="middle" class="text-medium">VSC-1.3 / FOLDER</text>
-  <text x="550" y="1178"   text-anchor="middle" class="text-id">TOKEN ID: 0689E7F37562</text>
-  <text x="550" y="1210" text-anchor="middle" class="text-meta">HASH: 0689E7F375624C6F252ADAE1</text>
+  <text x="550" y="1178"   text-anchor="middle" class="text-id">TOKEN ID: 21A8390BFA3F</text>
+  <text x="550" y="1210" text-anchor="middle" class="text-meta">HASH: 21A8390BFA3FA4A01A108EDC</text>
 </svg>

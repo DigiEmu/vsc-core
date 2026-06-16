@@ -35,3 +35,12 @@ test-wp/
 
 # PDF source files (large, not part of the public token demo)
 *.pdf
+
+# Local source fixture, not part of repository
+aikido-class/
+
+# Generated VSC output artifacts
+output/
+
+# Generated benchmark fixture
+test-benchmark/

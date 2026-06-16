@@ -44,7 +44,7 @@
 
   <!-- Title / subtitle -->
   <text x="550" y="86" text-anchor="middle" class="text-title">VSC DELTA TOKEN</text>
-  <text x="550" y="118" text-anchor="middle" class="text-subtitle">BASE 0689E7F37562 → TARGET 5B523E3D4A16 · CHANGED FILES ONLY · SHA-256</text>
+  <text x="550" y="118" text-anchor="middle" class="text-subtitle">BASE 21A8390BFA3F → TARGET 954BEB0FF3AA · CHANGED FILES ONLY · SHA-256</text>
   <line x1="390" y1="132" x2="710" y2="132" class="line-soft" />
 
   <!-- Quiet crosshairs — two axes only -->
@@ -63,9 +63,9 @@
 
   <!-- BASE / TARGET arc labels -->
   <text x="158.0"   y="541.0"  text-anchor="middle" class="text-arc-label">BASE</text>
-  <text x="158.0"   y="559.0"   text-anchor="middle" class="text-arc-id">0689E7F37562</text>
+  <text x="158.0"   y="559.0"   text-anchor="middle" class="text-arc-id">21A8390BFA3F</text>
   <text x="942.0" y="541.0" text-anchor="middle" class="text-arc-label">TARGET</text>
-  <text x="942.0" y="559.0"  text-anchor="middle" class="text-arc-id">5B523E3D4A16</text>
+  <text x="942.0" y="559.0"  text-anchor="middle" class="text-arc-id">954BEB0FF3AA</text>
 
   <!-- Six quiet orientation markers (no number) -->
   <circle cx="550.0" cy="193.0" r="8" class="orient-dot" />
@@ -76,69 +76,69 @@
   <circle cx="236.5" cy="374.0" r="8" class="orient-dot" />
 
   <!-- Target root hash band — quieter dots -->
-  <circle cx="550" cy="155" r="2.03" class="hash-open" />
+  <circle cx="550" cy="167" r="2.03" class="hash-open" />
   <circle cx="589.2068561318243" cy="156.92610933112127" r="2.03" class="hash-open" />
-  <circle cx="628.0361288064513" cy="162.6858878387078" r="2.03" class="hash-open" />
-  <circle cx="666.1138709017849" cy="172.22386570711643" r="1.52" class="hash-fill" />
-  <circle cx="698.4811717576549" cy="196.53474138562075" r="2.03" class="hash-open" />
-  <circle cx="738.5586947303991" cy="202.231494260658" r="1.52" class="hash-fill" />
-  <circle cx="765.5612504116057" cy="232.38979042661242" r="2.03" class="hash-open" />
-  <circle cx="799.9509539604763" cy="250.43388137508168" r="2.03" class="hash-open" />
-  <circle cx="828.6000717874997" cy="276.3999282125003" r="1.52" class="hash-fill" />
-  <circle cx="854.5661186249183" cy="305.04904603952366" r="1.52" class="hash-fill" />
-  <circle cx="877.5990272472028" cy="336.10532819027674" r="2.03" class="hash-open" />
-  <circle cx="892.1854505671618" cy="372.0980661115129" r="1.52" class="hash-fill" />
-  <circle cx="914.008535809447" cy="404.22272764815466" r="2.03" class="hash-open" />
-  <circle cx="921.2928502640971" cy="442.36954522526867" r="1.52" class="hash-fill" />
-  <circle cx="942.3141121612922" cy="476.9638711935487" r="1.52" class="hash-fill" />
+  <circle cx="626.8655868743546" cy="168.57059952112724" r="1.52" class="hash-fill" />
+  <circle cx="666.1138709017849" cy="172.22386570711643" r="2.03" class="hash-open" />
+  <circle cx="703.073372946036" cy="185.4481869954853" r="1.52" class="hash-fill" />
+  <circle cx="738.5586947303991" cy="202.231494260658" r="2.03" class="hash-open" />
+  <circle cx="765.5612504116057" cy="232.38979042661242" r="1.52" class="hash-fill" />
+  <circle cx="796.1445942554944" cy="255.07194409525812" r="2.03" class="hash-open" />
+  <circle cx="824.3574311003804" cy="280.64256889961956" r="2.03" class="hash-open" />
+  <circle cx="849.928055904742" cy="308.85540574450556" r="2.03" class="hash-open" />
+  <circle cx="877.5990272472028" cy="336.10532819027674" r="1.52" class="hash-fill" />
+  <circle cx="897.4769781532518" cy="369.2696856905569" r="1.52" class="hash-fill" />
+  <circle cx="919.5518130045148" cy="401.9266270539641" r="2.03" class="hash-open" />
+  <circle cx="927.0344922784903" cy="440.62783716174187" r="2.03" class="hash-open" />
+  <circle cx="930.5446887964533" cy="479.30495505774223" r="1.52" class="hash-fill" />
   <circle cx="942.1027823088456" cy="516.381246710153" r="2.03" class="hash-open" />
-  <circle cx="950" cy="555" r="1.52" class="hash-fill" />
-  <circle cx="936.1316739488125" cy="593.0306504478696" r="2.03" class="hash-open" />
-  <circle cx="930.5446887964533" cy="630.6950449422577" r="1.52" class="hash-fill" />
-  <circle cx="921.2928502640971" cy="667.6304547747313" r="1.52" class="hash-fill" />
-  <circle cx="914.008535809447" cy="705.7772723518453" r="1.52" class="hash-fill" />
-  <circle cx="897.4769781532518" cy="740.7303143094431" r="2.03" class="hash-open" />
-  <circle cx="882.5878449210181" cy="777.2280932078409" r="1.52" class="hash-fill" />
+  <circle cx="938" cy="555" r="2.03" class="hash-open" />
+  <circle cx="942.1027823088456" cy="593.618753289847" r="2.03" class="hash-open" />
+  <circle cx="942.3141121612922" cy="633.0361288064513" r="2.03" class="hash-open" />
+  <circle cx="921.2928502640971" cy="667.6304547747313" r="2.03" class="hash-open" />
+  <circle cx="908.4652586143793" cy="703.4811717576548" r="1.52" class="hash-fill" />
+  <circle cx="892.1854505671618" cy="737.9019338884871" r="1.52" class="hash-fill" />
+  <circle cx="877.5990272472029" cy="773.8946718097231" r="2.03" class="hash-open" />
   <circle cx="854.5661186249184" cy="804.9509539604762" r="2.03" class="hash-open" />
-  <circle cx="828.6000717874997" cy="833.6000717874997" r="2.03" class="hash-open" />
-  <circle cx="803.7573136654582" cy="864.2041813450949" r="2.03" class="hash-open" />
-  <circle cx="772.2280932078409" cy="887.5878449210181" r="1.52" class="hash-fill" />
-  <circle cx="735.7303143094432" cy="902.4769781532518" r="2.03" class="hash-open" />
-  <circle cx="700.7772723518453" cy="919.008535809447" r="1.52" class="hash-fill" />
-  <circle cx="666.1138709017849" cy="937.7761342928836" r="2.03" class="hash-open" />
-  <circle cx="626.8655868743547" cy="941.4294004788728" r="1.52" class="hash-fill" />
-  <circle cx="588.618753289847" cy="947.1027823088455" r="2.03" class="hash-open" />
-  <circle cx="550" cy="943" r="2.03" class="hash-open" />
-  <circle cx="510.7931438681757" cy="953.0738906688788" r="2.03" class="hash-open" />
-  <circle cx="474.3049550577422" cy="935.5446887964533" r="1.52" class="hash-fill" />
-  <circle cx="437.36954522526867" cy="926.2928502640971" r="1.52" class="hash-fill" />
-  <circle cx="399.22272764815466" cy="919.008535809447" r="1.52" class="hash-fill" />
-  <circle cx="364.2696856905569" cy="902.4769781532518" r="1.52" class="hash-fill" />
-  <circle cx="331.10532819027685" cy="882.5990272472029" r="2.03" class="hash-open" />
-  <circle cx="296.2426863345419" cy="864.2041813450949" r="1.52" class="hash-fill" />
-  <circle cx="271.3999282125003" cy="833.6000717874997" r="2.03" class="hash-open" />
-  <circle cx="240.79581865490536" cy="808.7573136654584" r="1.52" class="hash-fill" />
-  <circle cx="217.41215507898187" cy="777.2280932078409" r="2.03" class="hash-open" />
-  <circle cx="197.231494260658" cy="743.5586947303991" r="1.52" class="hash-fill" />
-  <circle cx="191.5347413856208" cy="703.481171757655" r="1.52" class="hash-fill" />
-  <circle cx="178.707149735903" cy="667.6304547747314" r="2.03" class="hash-open" />
-  <circle cx="157.6858878387078" cy="633.0361288064514" r="2.03" class="hash-open" />
+  <circle cx="824.3574311003804" cy="829.3574311003804" r="1.52" class="hash-fill" />
+  <circle cx="796.1445942554944" cy="854.928055904742" r="1.52" class="hash-fill" />
+  <circle cx="765.5612504116057" cy="877.6102095733876" r="1.52" class="hash-fill" />
+  <circle cx="738.5586947303991" cy="907.768505739342" r="2.03" class="hash-open" />
+  <circle cx="698.4811717576549" cy="913.4652586143793" r="1.52" class="hash-fill" />
+  <circle cx="662.6304547747313" cy="926.2928502640971" r="2.03" class="hash-open" />
+  <circle cx="625.6950449422578" cy="935.5446887964533" r="2.03" class="hash-open" />
+  <circle cx="589.2068561318243" cy="953.0738906688787" r="1.52" class="hash-fill" />
+  <circle cx="550" cy="955" r="1.52" class="hash-fill" />
+  <circle cx="511.96934955213044" cy="941.1316739488125" r="1.52" class="hash-fill" />
+  <circle cx="473.13441312564544" cy="941.4294004788728" r="2.03" class="hash-open" />
+  <circle cx="435.6278371617419" cy="932.0344922784903" r="2.03" class="hash-open" />
+  <circle cx="401.5188282423452" cy="913.4652586143793" r="2.03" class="hash-open" />
+  <circle cx="361.4413052696009" cy="907.768505739342" r="1.52" class="hash-fill" />
+  <circle cx="327.77190679215926" cy="887.5878449210181" r="1.52" class="hash-fill" />
+  <circle cx="300.0490460395237" cy="859.5661186249184" r="2.03" class="hash-open" />
+  <circle cx="271.3999282125003" cy="833.6000717874997" r="1.52" class="hash-fill" />
+  <circle cx="245.43388137508174" cy="804.9509539604765" r="2.03" class="hash-open" />
+  <circle cx="217.41215507898187" cy="777.2280932078409" r="1.52" class="hash-fill" />
+  <circle cx="197.231494260658" cy="743.5586947303991" r="2.03" class="hash-open" />
+  <circle cx="185.99146419055313" cy="705.7772723518456" r="1.52" class="hash-fill" />
+  <circle cx="172.9655077215097" cy="669.3721628382582" r="1.52" class="hash-fill" />
+  <circle cx="163.57059952112724" cy="631.8655868743547" r="1.52" class="hash-fill" />
   <circle cx="163.86832605118758" cy="593.0306504478694" r="2.03" class="hash-open" />
-  <circle cx="162" cy="555" r="2.03" class="hash-open" />
+  <circle cx="150" cy="555" r="1.52" class="hash-fill" />
   <circle cx="157.89721769115442" cy="516.3812467101533" r="1.52" class="hash-fill" />
-  <circle cx="157.6858878387078" cy="476.96387119354864" r="2.03" class="hash-open" />
-  <circle cx="178.70714973590293" cy="442.36954522526867" r="2.03" class="hash-open" />
-  <circle cx="185.99146419055307" cy="404.22272764815455" r="1.52" class="hash-fill" />
-  <circle cx="202.52302184674812" cy="369.2696856905569" r="1.52" class="hash-fill" />
-  <circle cx="222.4009727527971" cy="336.10532819027685" r="1.52" class="hash-fill" />
-  <circle cx="240.79581865490525" cy="301.24268633454176" r="2.03" class="hash-open" />
+  <circle cx="163.57059952112724" cy="478.13441312564544" r="2.03" class="hash-open" />
+  <circle cx="167.22386570711643" cy="438.8861290982152" r="2.03" class="hash-open" />
+  <circle cx="191.5347413856208" cy="406.5188282423451" r="1.52" class="hash-fill" />
+  <circle cx="207.81454943283825" cy="372.09806611151294" r="2.03" class="hash-open" />
+  <circle cx="222.4009727527971" cy="336.10532819027685" r="2.03" class="hash-open" />
+  <circle cx="245.43388137508168" cy="305.04904603952366" r="2.03" class="hash-open" />
   <circle cx="275.6425688996195" cy="280.64256889961956" r="2.03" class="hash-open" />
-  <circle cx="300.0490460395235" cy="250.43388137508174" r="2.03" class="hash-open" />
-  <circle cx="334.43874958839433" cy="232.38979042661242" r="2.03" class="hash-open" />
-  <circle cx="367.0980661115128" cy="212.8145494328383" r="1.52" class="hash-fill" />
-  <circle cx="399.22272764815443" cy="190.99146419055313" r="1.52" class="hash-fill" />
-  <circle cx="437.36954522526855" cy="183.707149735903" r="1.52" class="hash-fill" />
-  <circle cx="474.30495505774206" cy="174.45531120354661" r="1.52" class="hash-fill" />
+  <circle cx="303.8554057445054" cy="255.07194409525817" r="1.52" class="hash-fill" />
+  <circle cx="334.43874958839433" cy="232.38979042661242" r="1.52" class="hash-fill" />
+  <circle cx="361.44130526960083" cy="202.231494260658" r="1.52" class="hash-fill" />
+  <circle cx="399.22272764815443" cy="190.99146419055313" r="2.03" class="hash-open" />
+  <circle cx="433.886129098215" cy="172.2238657071165" r="1.52" class="hash-fill" />
+  <circle cx="473.1344131256453" cy="168.57059952112724" r="2.03" class="hash-open" />
   <circle cx="511.96934955213055" cy="168.86832605118758" r="2.03" class="hash-open" />
 
   <!-- Delta ring — prominent dashed ring on target side -->
@@ -171,12 +171,12 @@
   <g transform="translate(784, 1076)">
     <rect x="0" y="0" width="240" height="80" rx="10" class="label-box" />
     <text x="14" y="24" class="text-small">+0 added  ~1 modified  -0 deleted</text>
-    <text x="14" y="46" class="text-small">Delta: 305 B · 1 chunks</text>
-    <text x="14" y="66" class="text-small">Verify: 5B523E3D4A16D681</text>
+    <text x="14" y="46" class="text-small">Delta: 265 B · 1 chunks</text>
+    <text x="14" y="66" class="text-small">Verify: 954BEB0FF3AABD61</text>
   </g>
 
   <!-- Footer -->
   <text x="550" y="1144"    text-anchor="middle" class="text-medium">VSC-1.6 / FOLDER DELTA</text>
-  <text x="550" y="1178"   text-anchor="middle" class="text-id">TOKEN ID: 5B523E3D4A16</text>
-  <text x="550" y="1210" text-anchor="middle" class="text-meta">STORED: CHANGED FILES ONLY · VERIFY: TARGET ROOT HASH 5B523E3D4A16D681</text>
+  <text x="550" y="1178"   text-anchor="middle" class="text-id">TOKEN ID: 954BEB0FF3AA</text>
+  <text x="550" y="1210" text-anchor="middle" class="text-meta">STORED: CHANGED FILES ONLY · VERIFY: TARGET ROOT HASH 954BEB0FF3AABD61</text>
 </svg>

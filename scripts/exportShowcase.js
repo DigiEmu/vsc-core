@@ -70,24 +70,91 @@ function resolveFromManifestSvg(pred) {
   return null;
 }
 
+// ── Chain selection constants ───────────────────────────────────────────────
+const MIN_SHOWCASE_BASE_BYTES = 100 * 1024; // 100 KB — exclude tiny benchmark fixtures
+const KNOWN_WP_LATEST_ID = "954BEB0FF3AA";
+const KNOWN_WP_DELTA1_ID = "F3876A4BCFE1";
+
 // Chain report: try known path first, then scan output/ for newest report-chain-*.md
 function findNewestChainReport() {
+  // Prefer the known WordPress demo report
   const knownPath = path.join(OUT, `report-chain-${KNOWN_BASE_ID}-to-954BEB0FF3AA.md`);
   if (fs.existsSync(knownPath)) return knownPath;
-  // Scan for any report-chain-*.md, pick newest by mtime
+
+  // Scan for report-chain-*.md, but exclude benchmark reports
   let entries;
   try { entries = fs.readdirSync(OUT); } catch { return null; }
   const reports = entries
     .filter(n => n.startsWith("report-chain-") && n.endsWith(".md"))
     .map(n => ({ name: n, p: path.join(OUT, n), mtime: fs.statSync(path.join(OUT, n)).mtimeMs }))
+    // Exclude reports from benchmark runs (check if base is in filename and not the known WP base)
+    .filter(r => {
+      // Extract base ID from report name: report-chain-<BASE>-to-<LATEST>.md
+      const match = r.name.match(/report-chain-([A-F0-9]+)-to-/);
+      if (!match) return true;
+      const baseId = match[1];
+      // Keep if it's the known WordPress base or has realistic size
+      if (baseId === KNOWN_BASE_ID) return true;
+      const baseEntry = readManifest().find(e => e.mode === "FOLDER_RECOVERY" && e.id === baseId);
+      return !baseEntry || baseEntry.fileSizeBytes >= MIN_SHOWCASE_BASE_BYTES;
+    })
     .sort((a, b) => b.mtime - a.mtime);
+
   if (reports.length === 0) return null;
   console.log(`  info   chain report selected: ${reports[0].name}`);
   return reports[0].p;
 }
 
-// Determine the newest chain entry so we can select SVGs from the same run
-const newestChain = latestEntry(e => e.mode === "DELTA_CHAIN");
+// ── Chain selection (exclude benchmark chains from public showcase) ───────────
+// Prefer WordPress-style demo chain over benchmark chains.
+// Never select benchmark chains for the public showcase.
+
+function isBenchmarkChain(entry) {
+  // Check if this chain is from a benchmark run
+  // Benchmark chains have tiny base sizes or are marked with source: 'benchmark'
+  if (!entry) return false;
+  const baseEntry = readManifest().find(e => e.mode === "FOLDER_RECOVERY" && e.id === entry.baseline);
+  if (baseEntry && baseEntry.fileSizeBytes < MIN_SHOWCASE_BASE_BYTES) {
+    return true;
+  }
+  // Check for benchmark marker in chain JSON if available
+  try {
+    const chainJsonPath = path.join(OUT, path.basename(entry.json || ""));
+    if (fs.existsSync(chainJsonPath)) {
+      const chainToken = JSON.parse(fs.readFileSync(chainJsonPath, "utf8"));
+      if (chainToken.source === "benchmark" || chainToken._benchmark === true) {
+        return true;
+      }
+    }
+  } catch { /* best-effort */ }
+  return false;
+}
+
+function findShowcaseChain() {
+  const allChains = readManifest().filter(e => e.mode === "DELTA_CHAIN");
+
+  // First: try to find the known WordPress demo chain by base ID
+  const wpChain = allChains.find(e => e.baseline === KNOWN_BASE_ID && !isBenchmarkChain(e));
+  if (wpChain) {
+    console.log(`  info   showcase chain selected: WordPress demo chain ${wpChain.id}`);
+    return wpChain;
+  }
+
+  // Second: find newest non-benchmark chain with realistic base size
+  const nonBenchmarkChains = allChains
+    .filter(e => !isBenchmarkChain(e))
+    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
+  if (nonBenchmarkChains.length > 0) {
+    console.log(`  info   showcase chain selected: ${nonBenchmarkChains[0].id}`);
+    return nonBenchmarkChains[0];
+  }
+
+  // Fallback: no suitable chain found
+  return null;
+}
+
+const newestChain = findShowcaseChain();
 const chainBaseId  = newestChain?.baseline || KNOWN_BASE_ID;
 const chainLatestId = newestChain?.id || "954BEB0FF3AA";
 
@@ -176,12 +243,31 @@ copyFile(artifacts.chainSvg,  sealDest.chain);
 // Copy report
 copyFile(artifacts.chainReport, path.join(SHOWCASE, "assets", "reports", "chain-report.md"));
 
-// Copy gallery + all SVGs it references (bare filenames → same directory)
+// Copy gallery + selected SVGs (exclude benchmark SVGs by default)
 copyFile(artifacts.galleryHtml, path.join(SHOWCASE, "assets", "gallery", "gallery.html"));
 try {
   const galleryDir = path.join(SHOWCASE, "assets", "gallery");
   fs.readdirSync(OUT)
     .filter(n => n.endsWith(".svg") && !n.includes("pdf"))
+    // Exclude benchmark SVGs: those with tiny base IDs or from benchmark runs
+    .filter(n => {
+      // Keep if related to known WordPress demo
+      if (n.includes(KNOWN_BASE_ID)) return true;
+      if (n.includes(KNOWN_WP_LATEST_ID)) return true;
+      if (n.includes(KNOWN_WP_DELTA1_ID)) return true;
+
+      // Exclude benchmark SVGs by checking base ID
+      const baseMatch = n.match(/vsc-(?:chain-)?([A-F0-9]{12})/);
+      if (baseMatch) {
+        const baseId = baseMatch[1];
+        const baseEntry = readManifest().find(e => e.mode === "FOLDER_RECOVERY" && e.id === baseId);
+        // Exclude if base is tiny (benchmark fixture)
+        if (baseEntry && baseEntry.fileSizeBytes < MIN_SHOWCASE_BASE_BYTES) {
+          return false;
+        }
+      }
+      return true;
+    })
     .forEach(n => copyFile(path.join(OUT, n), path.join(galleryDir, n)));
 } catch { /* best-effort */ }
 

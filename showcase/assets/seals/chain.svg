@@ -48,7 +48,7 @@
 
   <!-- Title / subtitle -->
   <text x="550" y="86" text-anchor="middle" class="text-title">VSC CHAIN TOKEN</text>
-  <text x="550" y="118" text-anchor="middle" class="text-subtitle">BASE 0689E7F37562 → LATEST 5B523E3D4A16 · ORDERED DELTAS · SHA-256</text>
+  <text x="550" y="118" text-anchor="middle" class="text-subtitle">BASE ADD097014592 → LATEST 3C4F21023E1C · ORDERED DELTAS · SHA-256</text>
   <line x1="390" y1="132" x2="710" y2="132" class="line-soft" />
 
   <!-- Quiet crosshairs -->
@@ -73,75 +73,75 @@
   <circle cx="236.5" cy="374.0" r="7" class="orient-dot" />
 
   <!-- Latest root hash band — quieter -->
-  <circle cx="550" cy="155" r="1.9" class="hash-open" />
-  <circle cx="589.2068561318243" cy="156.92610933112127" r="1.9" class="hash-open" />
-  <circle cx="628.0361288064513" cy="162.6858878387078" r="1.9" class="hash-open" />
-  <circle cx="666.1138709017849" cy="172.22386570711643" r="1.4" class="hash-fill" />
-  <circle cx="698.4811717576549" cy="196.53474138562075" r="1.9" class="hash-open" />
-  <circle cx="738.5586947303991" cy="202.231494260658" r="1.4" class="hash-fill" />
-  <circle cx="765.5612504116057" cy="232.38979042661242" r="1.9" class="hash-open" />
-  <circle cx="799.9509539604763" cy="250.43388137508168" r="1.9" class="hash-open" />
-  <circle cx="828.6000717874997" cy="276.3999282125003" r="1.4" class="hash-fill" />
-  <circle cx="854.5661186249183" cy="305.04904603952366" r="1.4" class="hash-fill" />
+  <circle cx="550" cy="167" r="1.9" class="hash-open" />
+  <circle cx="588.0306504478696" cy="168.86832605118764" r="1.4" class="hash-fill" />
+  <circle cx="626.8655868743546" cy="168.57059952112724" r="1.4" class="hash-fill" />
+  <circle cx="662.6304547747313" cy="183.70714973590293" r="1.9" class="hash-open" />
+  <circle cx="703.073372946036" cy="185.4481869954853" r="1.4" class="hash-fill" />
+  <circle cx="735.7303143094432" cy="207.52302184674818" r="1.9" class="hash-open" />
+  <circle cx="765.5612504116057" cy="232.38979042661242" r="1.4" class="hash-fill" />
+  <circle cx="803.7573136654582" cy="245.79581865490525" r="1.4" class="hash-fill" />
+  <circle cx="824.3574311003804" cy="280.64256889961956" r="1.9" class="hash-open" />
+  <circle cx="859.2041813450949" cy="301.2426863345418" r="1.4" class="hash-fill" />
   <circle cx="877.5990272472028" cy="336.10532819027674" r="1.9" class="hash-open" />
   <circle cx="892.1854505671618" cy="372.0980661115129" r="1.4" class="hash-fill" />
   <circle cx="914.008535809447" cy="404.22272764815466" r="1.9" class="hash-open" />
   <circle cx="921.2928502640971" cy="442.36954522526867" r="1.4" class="hash-fill" />
-  <circle cx="942.3141121612922" cy="476.9638711935487" r="1.4" class="hash-fill" />
-  <circle cx="942.1027823088456" cy="516.381246710153" r="1.9" class="hash-open" />
+  <circle cx="942.3141121612922" cy="476.9638711935487" r="1.9" class="hash-open" />
+  <circle cx="936.1316739488125" cy="516.9693495521304" r="1.9" class="hash-open" />
   <circle cx="950" cy="555" r="1.4" class="hash-fill" />
   <circle cx="936.1316739488125" cy="593.0306504478696" r="1.9" class="hash-open" />
-  <circle cx="930.5446887964533" cy="630.6950449422577" r="1.4" class="hash-fill" />
-  <circle cx="921.2928502640971" cy="667.6304547747313" r="1.4" class="hash-fill" />
-  <circle cx="914.008535809447" cy="705.7772723518453" r="1.4" class="hash-fill" />
+  <circle cx="936.4294004788728" cy="631.8655868743546" r="1.4" class="hash-fill" />
+  <circle cx="927.0344922784903" cy="669.3721628382582" r="1.4" class="hash-fill" />
+  <circle cx="914.008535809447" cy="705.7772723518453" r="1.9" class="hash-open" />
   <circle cx="897.4769781532518" cy="740.7303143094431" r="1.9" class="hash-open" />
   <circle cx="882.5878449210181" cy="777.2280932078409" r="1.4" class="hash-fill" />
-  <circle cx="854.5661186249184" cy="804.9509539604762" r="1.9" class="hash-open" />
-  <circle cx="828.6000717874997" cy="833.6000717874997" r="1.9" class="hash-open" />
+  <circle cx="859.2041813450949" cy="808.7573136654581" r="1.9" class="hash-open" />
+  <circle cx="832.842712474619" cy="837.842712474619" r="1.4" class="hash-fill" />
   <circle cx="803.7573136654582" cy="864.2041813450949" r="1.9" class="hash-open" />
-  <circle cx="772.2280932078409" cy="887.5878449210181" r="1.4" class="hash-fill" />
-  <circle cx="735.7303143094432" cy="902.4769781532518" r="1.9" class="hash-open" />
-  <circle cx="700.7772723518453" cy="919.008535809447" r="1.4" class="hash-fill" />
-  <circle cx="666.1138709017849" cy="937.7761342928836" r="1.9" class="hash-open" />
-  <circle cx="626.8655868743547" cy="941.4294004788728" r="1.4" class="hash-fill" />
-  <circle cx="588.618753289847" cy="947.1027823088455" r="1.9" class="hash-open" />
-  <circle cx="550" cy="943" r="1.9" class="hash-open" />
-  <circle cx="510.7931438681757" cy="953.0738906688788" r="1.9" class="hash-open" />
+  <circle cx="768.8946718097231" cy="882.5990272472029" r="1.9" class="hash-open" />
+  <circle cx="732.9019338884872" cy="897.1854505671618" r="1.4" class="hash-fill" />
+  <circle cx="703.073372946036" cy="924.5518130045148" r="1.4" class="hash-fill" />
+  <circle cx="666.1138709017849" cy="937.7761342928836" r="1.4" class="hash-fill" />
+  <circle cx="625.6950449422578" cy="935.5446887964533" r="1.4" class="hash-fill" />
+  <circle cx="589.2068561318243" cy="953.0738906688787" r="1.4" class="hash-fill" />
+  <circle cx="550" cy="949" r="1.9" class="hash-open" />
+  <circle cx="510.7931438681757" cy="953.0738906688788" r="1.4" class="hash-fill" />
   <circle cx="474.3049550577422" cy="935.5446887964533" r="1.4" class="hash-fill" />
-  <circle cx="437.36954522526867" cy="926.2928502640971" r="1.4" class="hash-fill" />
-  <circle cx="399.22272764815466" cy="919.008535809447" r="1.4" class="hash-fill" />
-  <circle cx="364.2696856905569" cy="902.4769781532518" r="1.4" class="hash-fill" />
-  <circle cx="331.10532819027685" cy="882.5990272472029" r="1.9" class="hash-open" />
+  <circle cx="435.6278371617419" cy="932.0344922784903" r="1.9" class="hash-open" />
+  <circle cx="396.9266270539641" cy="924.5518130045148" r="1.4" class="hash-fill" />
+  <circle cx="367.09806611151294" cy="897.1854505671618" r="1.4" class="hash-fill" />
+  <circle cx="334.43874958839444" cy="877.6102095733876" r="1.4" class="hash-fill" />
   <circle cx="296.2426863345419" cy="864.2041813450949" r="1.4" class="hash-fill" />
-  <circle cx="271.3999282125003" cy="833.6000717874997" r="1.9" class="hash-open" />
+  <circle cx="271.3999282125003" cy="833.6000717874997" r="1.4" class="hash-fill" />
   <circle cx="240.79581865490536" cy="808.7573136654584" r="1.4" class="hash-fill" />
-  <circle cx="217.41215507898187" cy="777.2280932078409" r="1.9" class="hash-open" />
-  <circle cx="197.231494260658" cy="743.5586947303991" r="1.4" class="hash-fill" />
+  <circle cx="222.40097275279714" cy="773.8946718097233" r="1.9" class="hash-open" />
+  <circle cx="202.52302184674818" cy="740.7303143094432" r="1.9" class="hash-open" />
   <circle cx="191.5347413856208" cy="703.481171757655" r="1.4" class="hash-fill" />
-  <circle cx="178.707149735903" cy="667.6304547747314" r="1.9" class="hash-open" />
-  <circle cx="157.6858878387078" cy="633.0361288064514" r="1.9" class="hash-open" />
-  <circle cx="163.86832605118758" cy="593.0306504478694" r="1.9" class="hash-open" />
-  <circle cx="162" cy="555" r="1.9" class="hash-open" />
-  <circle cx="157.89721769115442" cy="516.3812467101533" r="1.4" class="hash-fill" />
-  <circle cx="157.6858878387078" cy="476.96387119354864" r="1.9" class="hash-open" />
-  <circle cx="178.70714973590293" cy="442.36954522526867" r="1.9" class="hash-open" />
-  <circle cx="185.99146419055307" cy="404.22272764815455" r="1.4" class="hash-fill" />
-  <circle cx="202.52302184674812" cy="369.2696856905569" r="1.4" class="hash-fill" />
-  <circle cx="222.4009727527971" cy="336.10532819027685" r="1.4" class="hash-fill" />
-  <circle cx="240.79581865490525" cy="301.24268633454176" r="1.9" class="hash-open" />
-  <circle cx="275.6425688996195" cy="280.64256889961956" r="1.9" class="hash-open" />
-  <circle cx="300.0490460395235" cy="250.43388137508174" r="1.9" class="hash-open" />
-  <circle cx="334.43874958839433" cy="232.38979042661242" r="1.9" class="hash-open" />
+  <circle cx="167.2238657071165" cy="671.1138709017849" r="1.4" class="hash-fill" />
+  <circle cx="157.6858878387078" cy="633.0361288064514" r="1.4" class="hash-fill" />
+  <circle cx="151.9261093311212" cy="594.2068561318241" r="1.9" class="hash-open" />
+  <circle cx="156" cy="555" r="1.9" class="hash-open" />
+  <circle cx="157.89721769115442" cy="516.3812467101533" r="1.9" class="hash-open" />
+  <circle cx="169.45531120354661" cy="479.3049550577422" r="1.9" class="hash-open" />
+  <circle cx="167.22386570711643" cy="438.8861290982152" r="1.4" class="hash-fill" />
+  <circle cx="191.5347413856208" cy="406.5188282423451" r="1.4" class="hash-fill" />
+  <circle cx="202.52302184674812" cy="369.2696856905569" r="1.9" class="hash-open" />
+  <circle cx="227.38979042661236" cy="339.43874958839444" r="1.9" class="hash-open" />
+  <circle cx="250.07194409525812" cy="308.8554057445055" r="1.9" class="hash-open" />
+  <circle cx="275.6425688996195" cy="280.64256889961956" r="1.4" class="hash-fill" />
+  <circle cx="296.24268633454165" cy="245.79581865490536" r="1.9" class="hash-open" />
+  <circle cx="327.77190679215914" cy="222.41215507898193" r="1.4" class="hash-fill" />
   <circle cx="367.0980661115128" cy="212.8145494328383" r="1.4" class="hash-fill" />
-  <circle cx="399.22272764815443" cy="190.99146419055313" r="1.4" class="hash-fill" />
+  <circle cx="401.51882824234497" cy="196.5347413856208" r="1.9" class="hash-open" />
   <circle cx="437.36954522526855" cy="183.707149735903" r="1.4" class="hash-fill" />
-  <circle cx="474.30495505774206" cy="174.45531120354661" r="1.4" class="hash-fill" />
-  <circle cx="511.96934955213055" cy="168.86832605118758" r="1.9" class="hash-open" />
+  <circle cx="471.9638711935485" cy="162.68588783870786" r="1.4" class="hash-fill" />
+  <circle cx="511.96934955213055" cy="168.86832605118758" r="1.4" class="hash-fill" />
 
   <!-- Chain core: small neutral center -->
   <circle cx="550" cy="555" r="68" class="line-strong" />
   <circle cx="550" cy="555" r="54" class="line-mid" />
-  <text x="550" y="569" text-anchor="middle" class="text-core-big">2</text>
+  <text x="550" y="569" text-anchor="middle" class="text-core-big">99</text>
   <text x="550" y="591" text-anchor="middle" class="text-core-sub">DELTA STEPS</text>
 
   <!-- Rail spine: vertical line from RAIL_TOP to RAIL_BOT -->
@@ -154,26 +154,705 @@
 
   <!-- Chain nodes along the rail -->
   
-  <line x1="390" y1="327.0" x2="390" y2="539.0" class="rail-conn" marker-end="url(#ca)" />
+  <line x1="390" y1="327.0" x2="390" y2="296.0" class="rail-conn" marker-end="url(#ca)" />
   <circle cx="390" cy="307.0" r="18" class="node-base" />
   <text x="390" y="311.0" text-anchor="middle" class="text-node-label-base">BASE</text>
   <line x1="410.0" y1="307.0" x2="438.0" y2="307.0" class="anno-line" />
   <text x="442" y="299.0" class="text-anno-head">BASE SNAPSHOT</text>
-      <text x="442" y="315.0" class="text-anno-body">0689E7F37562</text>
-  <line x1="390" y1="571.0" x2="390" y2="775.0" class="rail-conn" marker-end="url(#ca)" />
-  <circle cx="390" cy="555.0" r="14" class="node-delta" />
-  <text x="390" y="559.0" text-anchor="middle" class="text-node-label">Δ1</text>
-  <line x1="406.0" y1="555.0" x2="438.0" y2="555.0" class="anno-line" />
-  <text x="442" y="546.0" class="text-anno-head">STEP 1</text>
-      <text x="442" y="561.0" class="text-anno-body">+0 ~1 -0  368 B</text>
-      <text x="442" y="574.0" class="text-anno-body">74AB3F058890</text>
+      <text x="442" y="315.0" class="text-anno-body">ADD097014592</text>
+  <line x1="390" y1="328.0" x2="390" y2="301.0" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="312.0" r="14" class="node-delta" />
+  <text x="390" y="316.0" text-anchor="middle" class="text-node-label">Δ1</text>
+  <line x1="406.0" y1="312.0" x2="438.0" y2="312.0" class="anno-line" />
+  <text x="442" y="303.0" class="text-anno-head">STEP 1</text>
+      <text x="442" y="318.0" class="text-anno-body">+1 ~0 -0  21 B</text>
+      <text x="442" y="331.0" class="text-anno-body">E46C10E3C08E</text>
+  <line x1="390" y1="333.0" x2="390" y2="306.0" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="317.0" r="14" class="node-delta" />
+  <text x="390" y="321.0" text-anchor="middle" class="text-node-label">Δ2</text>
+  <line x1="406.0" y1="317.0" x2="438.0" y2="317.0" class="anno-line" />
+  <text x="442" y="308.0" class="text-anno-head">STEP 2</text>
+      <text x="442" y="323.0" class="text-anno-body">+0 ~1 -0  64 B</text>
+      <text x="442" y="336.0" class="text-anno-body">C5F28357E0E8</text>
+  <line x1="390" y1="338.0" x2="390" y2="311.0" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="322.0" r="14" class="node-delta" />
+  <text x="390" y="326.0" text-anchor="middle" class="text-node-label">Δ3</text>
+  <line x1="406.0" y1="322.0" x2="438.0" y2="322.0" class="anno-line" />
+  <text x="442" y="313.0" class="text-anno-head">STEP 3</text>
+      <text x="442" y="328.0" class="text-anno-body">+2 ~0 -0  65 B</text>
+      <text x="442" y="341.0" class="text-anno-body">67B6F369FFD6</text>
+  <line x1="390" y1="343.0" x2="390" y2="316.1" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="327.0" r="14" class="node-delta" />
+  <text x="390" y="331.0" text-anchor="middle" class="text-node-label">Δ4</text>
+  <line x1="406.0" y1="327.0" x2="438.0" y2="327.0" class="anno-line" />
+  <text x="442" y="318.0" class="text-anno-head">STEP 4</text>
+      <text x="442" y="333.0" class="text-anno-body">+0 ~2 -0  149 B</text>
+      <text x="442" y="346.0" class="text-anno-body">A0B6BCD125B7</text>
+  <line x1="390" y1="348.1" x2="390" y2="321.1" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="332.1" r="14" class="node-delta" />
+  <text x="390" y="336.1" text-anchor="middle" class="text-node-label">Δ5</text>
+  <line x1="406.0" y1="332.1" x2="438.0" y2="332.1" class="anno-line" />
+  <text x="442" y="323.1" class="text-anno-head">STEP 5</text>
+      <text x="442" y="338.1" class="text-anno-body">+2 ~1 -0  152 B</text>
+      <text x="442" y="351.1" class="text-anno-body">7BA57FF50B4D</text>
+  <line x1="390" y1="353.1" x2="390" y2="326.1" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="337.1" r="14" class="node-delta" />
+  <text x="390" y="341.1" text-anchor="middle" class="text-node-label">Δ6</text>
+  <line x1="406.0" y1="337.1" x2="438.0" y2="337.1" class="anno-line" />
+  <text x="442" y="328.1" class="text-anno-head">STEP 6</text>
+      <text x="442" y="343.1" class="text-anno-body">+0 ~3 -0  170 B</text>
+      <text x="442" y="356.1" class="text-anno-body">F05192FECEF4</text>
+  <line x1="390" y1="358.1" x2="390" y2="331.1" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="342.1" r="14" class="node-delta" />
+  <text x="390" y="346.1" text-anchor="middle" class="text-node-label">Δ7</text>
+  <line x1="406.0" y1="342.1" x2="438.0" y2="342.1" class="anno-line" />
+  <text x="442" y="333.1" class="text-anno-head">STEP 7</text>
+      <text x="442" y="348.1" class="text-anno-body">+1 ~2 -0  195 B</text>
+      <text x="442" y="361.1" class="text-anno-body">95A8C95CA07B</text>
+  <line x1="390" y1="363.1" x2="390" y2="336.1" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="347.1" r="14" class="node-delta" />
+  <text x="390" y="351.1" text-anchor="middle" class="text-node-label">Δ8</text>
+  <line x1="406.0" y1="347.1" x2="438.0" y2="347.1" class="anno-line" />
+  <text x="442" y="338.1" class="text-anno-head">STEP 8</text>
+      <text x="442" y="353.1" class="text-anno-body">+2 ~1 -0  150 B</text>
+      <text x="442" y="366.1" class="text-anno-body">5355BD1833C2</text>
+  <line x1="390" y1="368.1" x2="390" y2="341.1" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="352.1" r="14" class="node-delta" />
+  <text x="390" y="356.1" text-anchor="middle" class="text-node-label">Δ9</text>
+  <line x1="406.0" y1="352.1" x2="438.0" y2="352.1" class="anno-line" />
+  <text x="442" y="343.1" class="text-anno-head">STEP 9</text>
+      <text x="442" y="358.1" class="text-anno-body">+1 ~3 -0  319 B</text>
+      <text x="442" y="371.1" class="text-anno-body">18D45B9F29AF</text>
+  <line x1="390" y1="373.1" x2="390" y2="346.1" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="357.1" r="14" class="node-delta" />
+  <text x="390" y="361.1" text-anchor="middle" class="text-node-label">Δ10</text>
+  <line x1="406.0" y1="357.1" x2="438.0" y2="357.1" class="anno-line" />
+  <text x="442" y="348.1" class="text-anno-head">STEP 10</text>
+      <text x="442" y="363.1" class="text-anno-body">+2 ~1 -0  189 B</text>
+      <text x="442" y="376.1" class="text-anno-body">4B8B97655FCB</text>
+  <line x1="390" y1="378.1" x2="390" y2="351.1" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="362.1" r="14" class="node-delta" />
+  <text x="390" y="366.1" text-anchor="middle" class="text-node-label">Δ11</text>
+  <line x1="406.0" y1="362.1" x2="438.0" y2="362.1" class="anno-line" />
+  <text x="442" y="353.1" class="text-anno-head">STEP 11</text>
+      <text x="442" y="368.1" class="text-anno-body">+1 ~3 -0  255 B</text>
+      <text x="442" y="381.1" class="text-anno-body">75967FC648A8</text>
+  <line x1="390" y1="383.1" x2="390" y2="356.1" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="367.1" r="14" class="node-delta" />
+  <text x="390" y="371.1" text-anchor="middle" class="text-node-label">Δ12</text>
+  <line x1="406.0" y1="367.1" x2="438.0" y2="367.1" class="anno-line" />
+  <text x="442" y="358.1" class="text-anno-head">STEP 12</text>
+      <text x="442" y="373.1" class="text-anno-body">+1 ~2 -0  234 B</text>
+      <text x="442" y="386.1" class="text-anno-body">A5C4A383C310</text>
+  <line x1="390" y1="388.1" x2="390" y2="361.1" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="372.1" r="14" class="node-delta" />
+  <text x="390" y="376.1" text-anchor="middle" class="text-node-label">Δ13</text>
+  <line x1="406.0" y1="372.1" x2="438.0" y2="372.1" class="anno-line" />
+  <text x="442" y="363.1" class="text-anno-head">STEP 13</text>
+      <text x="442" y="378.1" class="text-anno-body">+3 ~1 -0  236 B</text>
+      <text x="442" y="391.1" class="text-anno-body">FC2103E013F8</text>
+  <line x1="390" y1="393.1" x2="390" y2="366.2" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="377.1" r="14" class="node-delta" />
+  <text x="390" y="381.1" text-anchor="middle" class="text-node-label">Δ14</text>
+  <line x1="406.0" y1="377.1" x2="438.0" y2="377.1" class="anno-line" />
+  <text x="442" y="368.1" class="text-anno-head">STEP 14</text>
+      <text x="442" y="383.1" class="text-anno-body">+1 ~3 -0  398 B</text>
+      <text x="442" y="396.1" class="text-anno-body">18BDD84F92BE</text>
+  <line x1="390" y1="398.2" x2="390" y2="371.2" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="382.2" r="14" class="node-delta" />
+  <text x="390" y="386.2" text-anchor="middle" class="text-node-label">Δ15</text>
+  <line x1="406.0" y1="382.2" x2="438.0" y2="382.2" class="anno-line" />
+  <text x="442" y="373.2" class="text-anno-head">STEP 15</text>
+      <text x="442" y="388.2" class="text-anno-body">+3 ~1 -0  273 B</text>
+      <text x="442" y="401.2" class="text-anno-body">AAB87AA74743</text>
+  <line x1="390" y1="403.2" x2="390" y2="376.2" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="387.2" r="14" class="node-delta" />
+  <text x="390" y="391.2" text-anchor="middle" class="text-node-label">Δ16</text>
+  <line x1="406.0" y1="387.2" x2="438.0" y2="387.2" class="anno-line" />
+  <text x="442" y="378.2" class="text-anno-head">STEP 16</text>
+      <text x="442" y="393.2" class="text-anno-body">+1 ~3 -0  297 B</text>
+      <text x="442" y="406.2" class="text-anno-body">5553E097DF52</text>
+  <line x1="390" y1="408.2" x2="390" y2="381.2" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="392.2" r="14" class="node-delta" />
+  <text x="390" y="396.2" text-anchor="middle" class="text-node-label">Δ17</text>
+  <line x1="406.0" y1="392.2" x2="438.0" y2="392.2" class="anno-line" />
+  <text x="442" y="383.2" class="text-anno-head">STEP 17</text>
+      <text x="442" y="398.2" class="text-anno-body">+2 ~2 -0  316 B</text>
+      <text x="442" y="411.2" class="text-anno-body">7EC6D9FA2B05</text>
+  <line x1="390" y1="413.2" x2="390" y2="386.2" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="397.2" r="14" class="node-delta" />
+  <text x="390" y="401.2" text-anchor="middle" class="text-node-label">Δ18</text>
+  <line x1="406.0" y1="397.2" x2="438.0" y2="397.2" class="anno-line" />
+  <text x="442" y="388.2" class="text-anno-head">STEP 18</text>
+      <text x="442" y="403.2" class="text-anno-body">+3 ~1 -0  276 B</text>
+      <text x="442" y="416.2" class="text-anno-body">FEF6B86E6C24</text>
+  <line x1="390" y1="418.2" x2="390" y2="391.2" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="402.2" r="14" class="node-delta" />
+  <text x="390" y="406.2" text-anchor="middle" class="text-node-label">Δ19</text>
+  <line x1="406.0" y1="402.2" x2="438.0" y2="402.2" class="anno-line" />
+  <text x="442" y="393.2" class="text-anno-head">STEP 19</text>
+      <text x="442" y="408.2" class="text-anno-body">+2 ~3 -0  520 B</text>
+      <text x="442" y="421.2" class="text-anno-body">C0FB7BE22E35</text>
+  <line x1="390" y1="423.2" x2="390" y2="396.2" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="407.2" r="14" class="node-delta" />
+  <text x="390" y="411.2" text-anchor="middle" class="text-node-label">Δ20</text>
+  <line x1="406.0" y1="407.2" x2="438.0" y2="407.2" class="anno-line" />
+  <text x="442" y="398.2" class="text-anno-head">STEP 20</text>
+      <text x="442" y="413.2" class="text-anno-body">+3 ~1 -0  310 B</text>
+      <text x="442" y="426.2" class="text-anno-body">B07052758F9C</text>
+  <line x1="390" y1="428.2" x2="390" y2="401.2" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="412.2" r="14" class="node-delta" />
+  <text x="390" y="416.2" text-anchor="middle" class="text-node-label">Δ21</text>
+  <line x1="406.0" y1="412.2" x2="438.0" y2="412.2" class="anno-line" />
+  <text x="442" y="403.2" class="text-anno-head">STEP 21</text>
+      <text x="442" y="418.2" class="text-anno-body">+2 ~3 -0  382 B</text>
+      <text x="442" y="431.2" class="text-anno-body">A688719C5E40</text>
+  <line x1="390" y1="433.2" x2="390" y2="406.2" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="417.2" r="14" class="node-delta" />
+  <text x="390" y="421.2" text-anchor="middle" class="text-node-label">Δ22</text>
+  <line x1="406.0" y1="417.2" x2="438.0" y2="417.2" class="anno-line" />
+  <text x="442" y="408.2" class="text-anno-head">STEP 22</text>
+      <text x="442" y="423.2" class="text-anno-body">+2 ~2 -0  353 B</text>
+      <text x="442" y="436.2" class="text-anno-body">16566995E729</text>
+  <line x1="390" y1="438.2" x2="390" y2="411.2" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="422.2" r="14" class="node-delta" />
+  <text x="390" y="426.2" text-anchor="middle" class="text-node-label">Δ23</text>
+  <line x1="406.0" y1="422.2" x2="438.0" y2="422.2" class="anno-line" />
+  <text x="442" y="413.2" class="text-anno-head">STEP 23</text>
+      <text x="442" y="428.2" class="text-anno-body">+4 ~1 -0  361 B</text>
+      <text x="442" y="441.2" class="text-anno-body">DB47769D2B35</text>
+  <line x1="390" y1="443.2" x2="390" y2="416.3" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="427.2" r="14" class="node-delta" />
+  <text x="390" y="431.2" text-anchor="middle" class="text-node-label">Δ24</text>
+  <line x1="406.0" y1="427.2" x2="438.0" y2="427.2" class="anno-line" />
+  <text x="442" y="418.2" class="text-anno-head">STEP 24</text>
+      <text x="442" y="433.2" class="text-anno-body">+2 ~3 -0  597 B</text>
+      <text x="442" y="446.2" class="text-anno-body">2C4FCF6F075D</text>
+  <line x1="390" y1="448.3" x2="390" y2="421.3" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="432.3" r="14" class="node-delta" />
+  <text x="390" y="436.3" text-anchor="middle" class="text-node-label">Δ25</text>
+  <line x1="406.0" y1="432.3" x2="438.0" y2="432.3" class="anno-line" />
+  <text x="442" y="423.3" class="text-anno-head">STEP 25</text>
+      <text x="442" y="438.3" class="text-anno-body">+4 ~1 -0  392 B</text>
+      <text x="442" y="451.3" class="text-anno-body">B11F72702230</text>
+  <line x1="390" y1="453.3" x2="390" y2="426.3" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="437.3" r="14" class="node-delta" />
+  <text x="390" y="441.3" text-anchor="middle" class="text-node-label">Δ26</text>
+  <line x1="406.0" y1="437.3" x2="438.0" y2="437.3" class="anno-line" />
+  <text x="442" y="428.3" class="text-anno-head">STEP 26</text>
+      <text x="442" y="443.3" class="text-anno-body">+2 ~3 -0  422 B</text>
+      <text x="442" y="456.3" class="text-anno-body">C6BBA6E1364C</text>
+  <line x1="390" y1="458.3" x2="390" y2="431.3" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="442.3" r="14" class="node-delta" />
+  <text x="390" y="446.3" text-anchor="middle" class="text-node-label">Δ27</text>
+  <line x1="406.0" y1="442.3" x2="438.0" y2="442.3" class="anno-line" />
+  <text x="442" y="433.3" class="text-anno-head">STEP 27</text>
+      <text x="442" y="448.3" class="text-anno-body">+3 ~2 -0  435 B</text>
+      <text x="442" y="461.3" class="text-anno-body">6602EAA8A1BE</text>
+  <line x1="390" y1="463.3" x2="390" y2="436.3" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="447.3" r="14" class="node-delta" />
+  <text x="390" y="451.3" text-anchor="middle" class="text-node-label">Δ28</text>
+  <line x1="406.0" y1="447.3" x2="438.0" y2="447.3" class="anno-line" />
+  <text x="442" y="438.3" class="text-anno-head">STEP 28</text>
+      <text x="442" y="453.3" class="text-anno-body">+4 ~1 -0  401 B</text>
+      <text x="442" y="466.3" class="text-anno-body">7411900F67C7</text>
+  <line x1="390" y1="468.3" x2="390" y2="441.3" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="452.3" r="14" class="node-delta" />
+  <text x="390" y="456.3" text-anchor="middle" class="text-node-label">Δ29</text>
+  <line x1="406.0" y1="452.3" x2="438.0" y2="452.3" class="anno-line" />
+  <text x="442" y="443.3" class="text-anno-head">STEP 29</text>
+      <text x="442" y="458.3" class="text-anno-body">+3 ~3 -0  719 B</text>
+      <text x="442" y="471.3" class="text-anno-body">36B5C545A169</text>
+  <line x1="390" y1="473.3" x2="390" y2="446.3" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="457.3" r="14" class="node-delta" />
+  <text x="390" y="461.3" text-anchor="middle" class="text-node-label">Δ30</text>
+  <line x1="406.0" y1="457.3" x2="438.0" y2="457.3" class="anno-line" />
+  <text x="442" y="448.3" class="text-anno-head">STEP 30</text>
+      <text x="442" y="463.3" class="text-anno-body">+4 ~1 -0  429 B</text>
+      <text x="442" y="476.3" class="text-anno-body">9BF5FDE83F7D</text>
+  <line x1="390" y1="478.3" x2="390" y2="451.3" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="462.3" r="14" class="node-delta" />
+  <text x="390" y="466.3" text-anchor="middle" class="text-node-label">Δ31</text>
+  <line x1="406.0" y1="462.3" x2="438.0" y2="462.3" class="anno-line" />
+  <text x="442" y="453.3" class="text-anno-head">STEP 31</text>
+      <text x="442" y="468.3" class="text-anno-body">+3 ~3 -0  507 B</text>
+      <text x="442" y="481.3" class="text-anno-body">4D8C01EE6FC7</text>
+  <line x1="390" y1="483.3" x2="390" y2="456.3" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="467.3" r="14" class="node-delta" />
+  <text x="390" y="471.3" text-anchor="middle" class="text-node-label">Δ32</text>
+  <line x1="406.0" y1="467.3" x2="438.0" y2="467.3" class="anno-line" />
+  <text x="442" y="458.3" class="text-anno-head">STEP 32</text>
+      <text x="442" y="473.3" class="text-anno-body">+3 ~2 -0  472 B</text>
+      <text x="442" y="486.3" class="text-anno-body">7CF0650A59B1</text>
+  <line x1="390" y1="488.3" x2="390" y2="461.3" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="472.3" r="14" class="node-delta" />
+  <text x="390" y="476.3" text-anchor="middle" class="text-node-label">Δ33</text>
+  <line x1="406.0" y1="472.3" x2="438.0" y2="472.3" class="anno-line" />
+  <text x="442" y="463.3" class="text-anno-head">STEP 33</text>
+      <text x="442" y="478.3" class="text-anno-body">+5 ~1 -0  486 B</text>
+      <text x="442" y="491.3" class="text-anno-body">2E9B2F6FFAED</text>
+  <line x1="390" y1="493.3" x2="390" y2="466.4" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="477.3" r="14" class="node-delta" />
+  <text x="390" y="481.3" text-anchor="middle" class="text-node-label">Δ34</text>
+  <line x1="406.0" y1="477.3" x2="438.0" y2="477.3" class="anno-line" />
+  <text x="442" y="468.3" class="text-anno-head">STEP 34</text>
+      <text x="442" y="483.3" class="text-anno-body">+3 ~3 -0  796 B</text>
+      <text x="442" y="496.3" class="text-anno-body">AEA06C2ECEBA</text>
+  <line x1="390" y1="498.4" x2="390" y2="471.4" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="482.4" r="14" class="node-delta" />
+  <text x="390" y="486.4" text-anchor="middle" class="text-node-label">Δ35</text>
+  <line x1="406.0" y1="482.4" x2="438.0" y2="482.4" class="anno-line" />
+  <text x="442" y="473.4" class="text-anno-head">STEP 35</text>
+      <text x="442" y="488.4" class="text-anno-body">+5 ~1 -0  511 B</text>
+      <text x="442" y="501.4" class="text-anno-body">4DE4CA1ED2D0</text>
+  <line x1="390" y1="503.4" x2="390" y2="476.4" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="487.4" r="14" class="node-delta" />
+  <text x="390" y="491.4" text-anchor="middle" class="text-node-label">Δ36</text>
+  <line x1="406.0" y1="487.4" x2="438.0" y2="487.4" class="anno-line" />
+  <text x="442" y="478.4" class="text-anno-head">STEP 36</text>
+      <text x="442" y="493.4" class="text-anno-body">+3 ~3 -0  547 B</text>
+      <text x="442" y="506.4" class="text-anno-body">CE194C3EBB7B</text>
+  <line x1="390" y1="508.4" x2="390" y2="481.4" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="492.4" r="14" class="node-delta" />
+  <text x="390" y="496.4" text-anchor="middle" class="text-node-label">Δ37</text>
+  <line x1="406.0" y1="492.4" x2="438.0" y2="492.4" class="anno-line" />
+  <text x="442" y="483.4" class="text-anno-head">STEP 37</text>
+      <text x="442" y="498.4" class="text-anno-body">+4 ~2 -0  554 B</text>
+      <text x="442" y="511.4" class="text-anno-body">C3EA1FE58D1E</text>
+  <line x1="390" y1="513.4" x2="390" y2="486.4" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="497.4" r="14" class="node-delta" />
+  <text x="390" y="501.4" text-anchor="middle" class="text-node-label">Δ38</text>
+  <line x1="406.0" y1="497.4" x2="438.0" y2="497.4" class="anno-line" />
+  <text x="442" y="488.4" class="text-anno-head">STEP 38</text>
+      <text x="442" y="503.4" class="text-anno-body">+5 ~1 -0  526 B</text>
+      <text x="442" y="516.4" class="text-anno-body">41F063825EBB</text>
+  <line x1="390" y1="518.4" x2="390" y2="491.4" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="502.4" r="14" class="node-delta" />
+  <text x="390" y="506.4" text-anchor="middle" class="text-node-label">Δ39</text>
+  <line x1="406.0" y1="502.4" x2="438.0" y2="502.4" class="anno-line" />
+  <text x="442" y="493.4" class="text-anno-head">STEP 39</text>
+      <text x="442" y="508.4" class="text-anno-body">+4 ~3 -0  918 B</text>
+      <text x="442" y="521.4" class="text-anno-body">E56275DF18B3</text>
+  <line x1="390" y1="523.4" x2="390" y2="496.4" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="507.4" r="14" class="node-delta" />
+  <text x="390" y="511.4" text-anchor="middle" class="text-node-label">Δ40</text>
+  <line x1="406.0" y1="507.4" x2="438.0" y2="507.4" class="anno-line" />
+  <text x="442" y="498.4" class="text-anno-head">STEP 40</text>
+      <text x="442" y="513.4" class="text-anno-body">+5 ~1 -0  548 B</text>
+      <text x="442" y="526.4" class="text-anno-body">F298F0714734</text>
+  <line x1="390" y1="528.4" x2="390" y2="501.4" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="512.4" r="14" class="node-delta" />
+  <text x="390" y="516.4" text-anchor="middle" class="text-node-label">Δ41</text>
+  <line x1="406.0" y1="512.4" x2="438.0" y2="512.4" class="anno-line" />
+  <text x="442" y="503.4" class="text-anno-head">STEP 41</text>
+      <text x="442" y="518.4" class="text-anno-body">+4 ~3 -0  632 B</text>
+      <text x="442" y="531.4" class="text-anno-body">7BAE093C48AB</text>
+  <line x1="390" y1="533.4" x2="390" y2="506.4" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="517.4" r="14" class="node-delta" />
+  <text x="390" y="521.4" text-anchor="middle" class="text-node-label">Δ42</text>
+  <line x1="406.0" y1="517.4" x2="438.0" y2="517.4" class="anno-line" />
+  <text x="442" y="508.4" class="text-anno-head">STEP 42</text>
+      <text x="442" y="523.4" class="text-anno-body">+4 ~2 -0  591 B</text>
+      <text x="442" y="536.4" class="text-anno-body">B193E0A75418</text>
+  <line x1="390" y1="538.4" x2="390" y2="511.4" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="522.4" r="14" class="node-delta" />
+  <text x="390" y="526.4" text-anchor="middle" class="text-node-label">Δ43</text>
+  <line x1="406.0" y1="522.4" x2="438.0" y2="522.4" class="anno-line" />
+  <text x="442" y="513.4" class="text-anno-head">STEP 43</text>
+      <text x="442" y="528.4" class="text-anno-body">+6 ~1 -0  611 B</text>
+      <text x="442" y="541.4" class="text-anno-body">87185DA12F78</text>
+  <line x1="390" y1="543.4" x2="390" y2="516.5" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="527.4" r="14" class="node-delta" />
+  <text x="390" y="531.4" text-anchor="middle" class="text-node-label">Δ44</text>
+  <line x1="406.0" y1="527.4" x2="438.0" y2="527.4" class="anno-line" />
+  <text x="442" y="518.4" class="text-anno-head">STEP 44</text>
+      <text x="442" y="533.4" class="text-anno-body">+4 ~3 -0  995 B</text>
+      <text x="442" y="546.4" class="text-anno-body">105D3C1CDC40</text>
+  <line x1="390" y1="548.5" x2="390" y2="521.5" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="532.5" r="14" class="node-delta" />
+  <text x="390" y="536.5" text-anchor="middle" class="text-node-label">Δ45</text>
+  <line x1="406.0" y1="532.5" x2="438.0" y2="532.5" class="anno-line" />
+  <text x="442" y="523.5" class="text-anno-head">STEP 45</text>
+      <text x="442" y="538.5" class="text-anno-body">+6 ~1 -0  630 B</text>
+      <text x="442" y="551.5" class="text-anno-body">F503C379667F</text>
+  <line x1="390" y1="553.5" x2="390" y2="526.5" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="537.5" r="14" class="node-delta" />
+  <text x="390" y="541.5" text-anchor="middle" class="text-node-label">Δ46</text>
+  <line x1="406.0" y1="537.5" x2="438.0" y2="537.5" class="anno-line" />
+  <text x="442" y="528.5" class="text-anno-head">STEP 46</text>
+      <text x="442" y="543.5" class="text-anno-body">+4 ~3 -0  672 B</text>
+      <text x="442" y="556.5" class="text-anno-body">075D313F38D6</text>
+  <line x1="390" y1="558.5" x2="390" y2="531.5" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="542.5" r="14" class="node-delta" />
+  <text x="390" y="546.5" text-anchor="middle" class="text-node-label">Δ47</text>
+  <line x1="406.0" y1="542.5" x2="438.0" y2="542.5" class="anno-line" />
+  <text x="442" y="533.5" class="text-anno-head">STEP 47</text>
+      <text x="442" y="548.5" class="text-anno-body">+5 ~2 -0  673 B</text>
+      <text x="442" y="561.5" class="text-anno-body">84373DBE3635</text>
+  <line x1="390" y1="563.5" x2="390" y2="536.5" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="547.5" r="14" class="node-delta" />
+  <text x="390" y="551.5" text-anchor="middle" class="text-node-label">Δ48</text>
+  <line x1="406.0" y1="547.5" x2="438.0" y2="547.5" class="anno-line" />
+  <text x="442" y="538.5" class="text-anno-head">STEP 48</text>
+      <text x="442" y="553.5" class="text-anno-body">+6 ~1 -0  651 B</text>
+      <text x="442" y="566.5" class="text-anno-body">D7C44EE17086</text>
+  <line x1="390" y1="568.5" x2="390" y2="541.5" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="552.5" r="14" class="node-delta" />
+  <text x="390" y="556.5" text-anchor="middle" class="text-node-label">Δ49</text>
+  <line x1="406.0" y1="552.5" x2="438.0" y2="552.5" class="anno-line" />
+  <text x="442" y="543.5" class="text-anno-head">STEP 49</text>
+      <text x="442" y="558.5" class="text-anno-body">+5 ~3 -0  1.1 KB</text>
+      <text x="442" y="571.5" class="text-anno-body">F8D35EA6832D</text>
+  <line x1="390" y1="573.5" x2="390" y2="546.5" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="557.5" r="14" class="node-delta" />
+  <text x="390" y="561.5" text-anchor="middle" class="text-node-label">Δ50</text>
+  <line x1="406.0" y1="557.5" x2="438.0" y2="557.5" class="anno-line" />
+  <text x="442" y="548.5" class="text-anno-head">STEP 50</text>
+      <text x="442" y="563.5" class="text-anno-body">+6 ~1 -0  667 B</text>
+      <text x="442" y="576.5" class="text-anno-body">EC64BC4C285B</text>
+  <line x1="390" y1="578.5" x2="390" y2="551.5" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="562.5" r="14" class="node-delta" />
+  <text x="390" y="566.5" text-anchor="middle" class="text-node-label">Δ51</text>
+  <line x1="406.0" y1="562.5" x2="438.0" y2="562.5" class="anno-line" />
+  <text x="442" y="553.5" class="text-anno-head">STEP 51</text>
+      <text x="442" y="568.5" class="text-anno-body">+5 ~3 -0  757 B</text>
+      <text x="442" y="581.5" class="text-anno-body">B1418E750544</text>
+  <line x1="390" y1="583.5" x2="390" y2="556.5" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="567.5" r="14" class="node-delta" />
+  <text x="390" y="571.5" text-anchor="middle" class="text-node-label">Δ52</text>
+  <line x1="406.0" y1="567.5" x2="438.0" y2="567.5" class="anno-line" />
+  <text x="442" y="558.5" class="text-anno-head">STEP 52</text>
+      <text x="442" y="573.5" class="text-anno-body">+5 ~2 -0  710 B</text>
+      <text x="442" y="586.5" class="text-anno-body">D8B02DA71591</text>
+  <line x1="390" y1="588.5" x2="390" y2="561.5" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="572.5" r="14" class="node-delta" />
+  <text x="390" y="576.5" text-anchor="middle" class="text-node-label">Δ53</text>
+  <line x1="406.0" y1="572.5" x2="438.0" y2="572.5" class="anno-line" />
+  <text x="442" y="563.5" class="text-anno-head">STEP 53</text>
+      <text x="442" y="578.5" class="text-anno-body">+7 ~1 -0  736 B</text>
+      <text x="442" y="591.5" class="text-anno-body">6F6573FFF798</text>
+  <line x1="390" y1="593.5" x2="390" y2="566.6" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="577.5" r="14" class="node-delta" />
+  <text x="390" y="581.5" text-anchor="middle" class="text-node-label">Δ54</text>
+  <line x1="406.0" y1="577.5" x2="438.0" y2="577.5" class="anno-line" />
+  <text x="442" y="568.5" class="text-anno-head">STEP 54</text>
+      <text x="442" y="583.5" class="text-anno-body">+5 ~3 -0  1.2 KB</text>
+      <text x="442" y="596.5" class="text-anno-body">A0E5F11E8952</text>
+  <line x1="390" y1="598.6" x2="390" y2="571.6" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="582.6" r="14" class="node-delta" />
+  <text x="390" y="586.6" text-anchor="middle" class="text-node-label">Δ55</text>
+  <line x1="406.0" y1="582.6" x2="438.0" y2="582.6" class="anno-line" />
+  <text x="442" y="573.6" class="text-anno-head">STEP 55</text>
+      <text x="442" y="588.6" class="text-anno-body">+7 ~1 -0  749 B</text>
+      <text x="442" y="601.6" class="text-anno-body">FB830C5B90E2</text>
+  <line x1="390" y1="603.6" x2="390" y2="576.6" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="587.6" r="14" class="node-delta" />
+  <text x="390" y="591.6" text-anchor="middle" class="text-node-label">Δ56</text>
+  <line x1="406.0" y1="587.6" x2="438.0" y2="587.6" class="anno-line" />
+  <text x="442" y="578.6" class="text-anno-head">STEP 56</text>
+      <text x="442" y="593.6" class="text-anno-body">+5 ~3 -0  797 B</text>
+      <text x="442" y="606.6" class="text-anno-body">4A19D5051B5E</text>
+  <line x1="390" y1="608.6" x2="390" y2="581.6" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="592.6" r="14" class="node-delta" />
+  <text x="390" y="596.6" text-anchor="middle" class="text-node-label">Δ57</text>
+  <line x1="406.0" y1="592.6" x2="438.0" y2="592.6" class="anno-line" />
+  <text x="442" y="583.6" class="text-anno-head">STEP 57</text>
+      <text x="442" y="598.6" class="text-anno-body">+6 ~2 -0  792 B</text>
+      <text x="442" y="611.6" class="text-anno-body">F64EA9B18F3E</text>
+  <line x1="390" y1="613.6" x2="390" y2="586.6" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="597.6" r="14" class="node-delta" />
+  <text x="390" y="601.6" text-anchor="middle" class="text-node-label">Δ58</text>
+  <line x1="406.0" y1="597.6" x2="438.0" y2="597.6" class="anno-line" />
+  <text x="442" y="588.6" class="text-anno-head">STEP 58</text>
+      <text x="442" y="603.6" class="text-anno-body">+7 ~1 -0  776 B</text>
+      <text x="442" y="616.6" class="text-anno-body">EB700865AD92</text>
+  <line x1="390" y1="618.6" x2="390" y2="591.6" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="602.6" r="14" class="node-delta" />
+  <text x="390" y="606.6" text-anchor="middle" class="text-node-label">Δ59</text>
+  <line x1="406.0" y1="602.6" x2="438.0" y2="602.6" class="anno-line" />
+  <text x="442" y="593.6" class="text-anno-head">STEP 59</text>
+      <text x="442" y="608.6" class="text-anno-body">+6 ~3 -0  1.3 KB</text>
+      <text x="442" y="621.6" class="text-anno-body">1358C797BCA2</text>
+  <line x1="390" y1="623.6" x2="390" y2="596.6" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="607.6" r="14" class="node-delta" />
+  <text x="390" y="611.6" text-anchor="middle" class="text-node-label">Δ60</text>
+  <line x1="406.0" y1="607.6" x2="438.0" y2="607.6" class="anno-line" />
+  <text x="442" y="598.6" class="text-anno-head">STEP 60</text>
+      <text x="442" y="613.6" class="text-anno-body">+7 ~1 -0  786 B</text>
+      <text x="442" y="626.6" class="text-anno-body">BA80258254CB</text>
+  <line x1="390" y1="628.6" x2="390" y2="601.6" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="612.6" r="14" class="node-delta" />
+  <text x="390" y="616.6" text-anchor="middle" class="text-node-label">Δ61</text>
+  <line x1="406.0" y1="612.6" x2="438.0" y2="612.6" class="anno-line" />
+  <text x="442" y="603.6" class="text-anno-head">STEP 61</text>
+      <text x="442" y="618.6" class="text-anno-body">+6 ~3 -0  882 B</text>
+      <text x="442" y="631.6" class="text-anno-body">BA079FCC6251</text>
+  <line x1="390" y1="633.6" x2="390" y2="606.6" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="617.6" r="14" class="node-delta" />
+  <text x="390" y="621.6" text-anchor="middle" class="text-node-label">Δ62</text>
+  <line x1="406.0" y1="617.6" x2="438.0" y2="617.6" class="anno-line" />
+  <text x="442" y="608.6" class="text-anno-head">STEP 62</text>
+      <text x="442" y="623.6" class="text-anno-body">+6 ~2 -0  829 B</text>
+      <text x="442" y="636.6" class="text-anno-body">3D1FADAA9355</text>
+  <line x1="390" y1="638.6" x2="390" y2="611.6" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="622.6" r="14" class="node-delta" />
+  <text x="390" y="626.6" text-anchor="middle" class="text-node-label">Δ63</text>
+  <line x1="406.0" y1="622.6" x2="438.0" y2="622.6" class="anno-line" />
+  <text x="442" y="613.6" class="text-anno-head">STEP 63</text>
+      <text x="442" y="628.6" class="text-anno-body">+8 ~1 -0  861 B</text>
+      <text x="442" y="641.6" class="text-anno-body">78E63B9FF1E6</text>
+  <line x1="390" y1="643.6" x2="390" y2="616.7" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="627.6" r="14" class="node-delta" />
+  <text x="390" y="631.6" text-anchor="middle" class="text-node-label">Δ64</text>
+  <line x1="406.0" y1="627.6" x2="438.0" y2="627.6" class="anno-line" />
+  <text x="442" y="618.6" class="text-anno-head">STEP 64</text>
+      <text x="442" y="633.6" class="text-anno-body">+6 ~3 -0  1.4 KB</text>
+      <text x="442" y="646.6" class="text-anno-body">787AEFB4EDCE</text>
+  <line x1="390" y1="648.7" x2="390" y2="621.7" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="632.7" r="14" class="node-delta" />
+  <text x="390" y="636.7" text-anchor="middle" class="text-node-label">Δ65</text>
+  <line x1="406.0" y1="632.7" x2="438.0" y2="632.7" class="anno-line" />
+  <text x="442" y="623.7" class="text-anno-head">STEP 65</text>
+      <text x="442" y="638.7" class="text-anno-body">+8 ~1 -0  868 B</text>
+      <text x="442" y="651.7" class="text-anno-body">746441FA3ACA</text>
+  <line x1="390" y1="653.7" x2="390" y2="626.7" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="637.7" r="14" class="node-delta" />
+  <text x="390" y="641.7" text-anchor="middle" class="text-node-label">Δ66</text>
+  <line x1="406.0" y1="637.7" x2="438.0" y2="637.7" class="anno-line" />
+  <text x="442" y="628.7" class="text-anno-head">STEP 66</text>
+      <text x="442" y="643.7" class="text-anno-body">+6 ~3 -0  922 B</text>
+      <text x="442" y="656.7" class="text-anno-body">2287BF21E420</text>
+  <line x1="390" y1="658.7" x2="390" y2="631.7" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="642.7" r="14" class="node-delta" />
+  <text x="390" y="646.7" text-anchor="middle" class="text-node-label">Δ67</text>
+  <line x1="406.0" y1="642.7" x2="438.0" y2="642.7" class="anno-line" />
+  <text x="442" y="633.7" class="text-anno-head">STEP 67</text>
+      <text x="442" y="648.7" class="text-anno-body">+7 ~2 -0  911 B</text>
+      <text x="442" y="661.7" class="text-anno-body">662812110B77</text>
+  <line x1="390" y1="663.7" x2="390" y2="636.7" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="647.7" r="14" class="node-delta" />
+  <text x="390" y="651.7" text-anchor="middle" class="text-node-label">Δ68</text>
+  <line x1="406.0" y1="647.7" x2="438.0" y2="647.7" class="anno-line" />
+  <text x="442" y="638.7" class="text-anno-head">STEP 68</text>
+      <text x="442" y="653.7" class="text-anno-body">+8 ~1 -0  901 B</text>
+      <text x="442" y="666.7" class="text-anno-body">E95C11A9D08D</text>
+  <line x1="390" y1="668.7" x2="390" y2="641.7" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="652.7" r="14" class="node-delta" />
+  <text x="390" y="656.7" text-anchor="middle" class="text-node-label">Δ69</text>
+  <line x1="406.0" y1="652.7" x2="438.0" y2="652.7" class="anno-line" />
+  <text x="442" y="643.7" class="text-anno-head">STEP 69</text>
+      <text x="442" y="658.7" class="text-anno-body">+7 ~3 -0  1.5 KB</text>
+      <text x="442" y="671.7" class="text-anno-body">D5C214D33FB6</text>
+  <line x1="390" y1="673.7" x2="390" y2="646.7" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="657.7" r="14" class="node-delta" />
+  <text x="390" y="661.7" text-anchor="middle" class="text-node-label">Δ70</text>
+  <line x1="406.0" y1="657.7" x2="438.0" y2="657.7" class="anno-line" />
+  <text x="442" y="648.7" class="text-anno-head">STEP 70</text>
+      <text x="442" y="663.7" class="text-anno-body">+8 ~1 -0  905 B</text>
+      <text x="442" y="676.7" class="text-anno-body">349DEEA86378</text>
+  <line x1="390" y1="678.7" x2="390" y2="651.7" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="662.7" r="14" class="node-delta" />
+  <text x="390" y="666.7" text-anchor="middle" class="text-node-label">Δ71</text>
+  <line x1="406.0" y1="662.7" x2="438.0" y2="662.7" class="anno-line" />
+  <text x="442" y="653.7" class="text-anno-head">STEP 71</text>
+      <text x="442" y="668.7" class="text-anno-body">+7 ~3 -0  1007 B</text>
+      <text x="442" y="681.7" class="text-anno-body">AB1193D5462F</text>
+  <line x1="390" y1="683.7" x2="390" y2="656.7" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="667.7" r="14" class="node-delta" />
+  <text x="390" y="671.7" text-anchor="middle" class="text-node-label">Δ72</text>
+  <line x1="406.0" y1="667.7" x2="438.0" y2="667.7" class="anno-line" />
+  <text x="442" y="658.7" class="text-anno-head">STEP 72</text>
+      <text x="442" y="673.7" class="text-anno-body">+7 ~2 -0  948 B</text>
+      <text x="442" y="686.7" class="text-anno-body">F5A3052E1A29</text>
+  <line x1="390" y1="688.7" x2="390" y2="661.7" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="672.7" r="14" class="node-delta" />
+  <text x="390" y="676.7" text-anchor="middle" class="text-node-label">Δ73</text>
+  <line x1="406.0" y1="672.7" x2="438.0" y2="672.7" class="anno-line" />
+  <text x="442" y="663.7" class="text-anno-head">STEP 73</text>
+      <text x="442" y="678.7" class="text-anno-body">+9 ~1 -0  986 B</text>
+      <text x="442" y="691.7" class="text-anno-body">ACCE1277AA0A</text>
+  <line x1="390" y1="693.7" x2="390" y2="666.8" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="677.7" r="14" class="node-delta" />
+  <text x="390" y="681.7" text-anchor="middle" class="text-node-label">Δ74</text>
+  <line x1="406.0" y1="677.7" x2="438.0" y2="677.7" class="anno-line" />
+  <text x="442" y="668.7" class="text-anno-head">STEP 74</text>
+      <text x="442" y="683.7" class="text-anno-body">+7 ~3 -0  1.6 KB</text>
+      <text x="442" y="696.7" class="text-anno-body">5AB5F48DAC5C</text>
+  <line x1="390" y1="698.8" x2="390" y2="671.8" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="682.8" r="14" class="node-delta" />
+  <text x="390" y="686.8" text-anchor="middle" class="text-node-label">Δ75</text>
+  <line x1="406.0" y1="682.8" x2="438.0" y2="682.8" class="anno-line" />
+  <text x="442" y="673.8" class="text-anno-head">STEP 75</text>
+      <text x="442" y="688.8" class="text-anno-body">+9 ~1 -0  987 B</text>
+      <text x="442" y="701.8" class="text-anno-body">C291E4E0000F</text>
+  <line x1="390" y1="703.8" x2="390" y2="676.8" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="687.8" r="14" class="node-delta" />
+  <text x="390" y="691.8" text-anchor="middle" class="text-node-label">Δ76</text>
+  <line x1="406.0" y1="687.8" x2="438.0" y2="687.8" class="anno-line" />
+  <text x="442" y="678.8" class="text-anno-head">STEP 76</text>
+      <text x="442" y="693.8" class="text-anno-body">+7 ~3 -0  1.0 KB</text>
+      <text x="442" y="706.8" class="text-anno-body">34AA2979F769</text>
+  <line x1="390" y1="708.8" x2="390" y2="681.8" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="692.8" r="14" class="node-delta" />
+  <text x="390" y="696.8" text-anchor="middle" class="text-node-label">Δ77</text>
+  <line x1="406.0" y1="692.8" x2="438.0" y2="692.8" class="anno-line" />
+  <text x="442" y="683.8" class="text-anno-head">STEP 77</text>
+      <text x="442" y="698.8" class="text-anno-body">+8 ~2 -0  1.0 KB</text>
+      <text x="442" y="711.8" class="text-anno-body">0825462865C4</text>
+  <line x1="390" y1="713.8" x2="390" y2="686.8" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="697.8" r="14" class="node-delta" />
+  <text x="390" y="701.8" text-anchor="middle" class="text-node-label">Δ78</text>
+  <line x1="406.0" y1="697.8" x2="438.0" y2="697.8" class="anno-line" />
+  <text x="442" y="688.8" class="text-anno-head">STEP 78</text>
+      <text x="442" y="703.8" class="text-anno-body">+9 ~1 -0  1.0 KB</text>
+      <text x="442" y="716.8" class="text-anno-body">4CF392BDBBFB</text>
+  <line x1="390" y1="718.8" x2="390" y2="691.8" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="702.8" r="14" class="node-delta" />
+  <text x="390" y="706.8" text-anchor="middle" class="text-node-label">Δ79</text>
+  <line x1="406.0" y1="702.8" x2="438.0" y2="702.8" class="anno-line" />
+  <text x="442" y="693.8" class="text-anno-head">STEP 79</text>
+      <text x="442" y="708.8" class="text-anno-body">+8 ~3 -0  1.7 KB</text>
+      <text x="442" y="721.8" class="text-anno-body">D21348B82DCA</text>
+  <line x1="390" y1="723.8" x2="390" y2="696.8" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="707.8" r="14" class="node-delta" />
+  <text x="390" y="711.8" text-anchor="middle" class="text-node-label">Δ80</text>
+  <line x1="406.0" y1="707.8" x2="438.0" y2="707.8" class="anno-line" />
+  <text x="442" y="698.8" class="text-anno-head">STEP 80</text>
+      <text x="442" y="713.8" class="text-anno-body">+9 ~1 -0  1.0 KB</text>
+      <text x="442" y="726.8" class="text-anno-body">9CC6549E4781</text>
+  <line x1="390" y1="728.8" x2="390" y2="701.8" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="712.8" r="14" class="node-delta" />
+  <text x="390" y="716.8" text-anchor="middle" class="text-node-label">Δ81</text>
+  <line x1="406.0" y1="712.8" x2="438.0" y2="712.8" class="anno-line" />
+  <text x="442" y="703.8" class="text-anno-head">STEP 81</text>
+      <text x="442" y="718.8" class="text-anno-body">+8 ~3 -0  1.1 KB</text>
+      <text x="442" y="731.8" class="text-anno-body">21E1C7E8AA3C</text>
+  <line x1="390" y1="733.8" x2="390" y2="706.8" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="717.8" r="14" class="node-delta" />
+  <text x="390" y="721.8" text-anchor="middle" class="text-node-label">Δ82</text>
+  <line x1="406.0" y1="717.8" x2="438.0" y2="717.8" class="anno-line" />
+  <text x="442" y="708.8" class="text-anno-head">STEP 82</text>
+      <text x="442" y="723.8" class="text-anno-body">+8 ~2 -0  1.0 KB</text>
+      <text x="442" y="736.8" class="text-anno-body">34C93B520333</text>
+  <line x1="390" y1="738.8" x2="390" y2="711.8" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="722.8" r="14" class="node-delta" />
+  <text x="390" y="726.8" text-anchor="middle" class="text-node-label">Δ83</text>
+  <line x1="406.0" y1="722.8" x2="438.0" y2="722.8" class="anno-line" />
+  <text x="442" y="713.8" class="text-anno-head">STEP 83</text>
+      <text x="442" y="728.8" class="text-anno-body">+10 ~1 -0  1.1 KB</text>
+      <text x="442" y="741.8" class="text-anno-body">894AE83DFB67</text>
+  <line x1="390" y1="743.8" x2="390" y2="716.9" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="727.8" r="14" class="node-delta" />
+  <text x="390" y="731.8" text-anchor="middle" class="text-node-label">Δ84</text>
+  <line x1="406.0" y1="727.8" x2="438.0" y2="727.8" class="anno-line" />
+  <text x="442" y="718.8" class="text-anno-head">STEP 84</text>
+      <text x="442" y="733.8" class="text-anno-body">+8 ~3 -0  1.7 KB</text>
+      <text x="442" y="746.8" class="text-anno-body">316DF769236D</text>
+  <line x1="390" y1="748.9" x2="390" y2="721.9" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="732.9" r="14" class="node-delta" />
+  <text x="390" y="736.9" text-anchor="middle" class="text-node-label">Δ85</text>
+  <line x1="406.0" y1="732.9" x2="438.0" y2="732.9" class="anno-line" />
+  <text x="442" y="723.9" class="text-anno-head">STEP 85</text>
+      <text x="442" y="738.9" class="text-anno-body">+10 ~1 -0  1.1 KB</text>
+      <text x="442" y="751.9" class="text-anno-body">381808C5F9C6</text>
+  <line x1="390" y1="753.9" x2="390" y2="726.9" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="737.9" r="14" class="node-delta" />
+  <text x="390" y="741.9" text-anchor="middle" class="text-node-label">Δ86</text>
+  <line x1="406.0" y1="737.9" x2="438.0" y2="737.9" class="anno-line" />
+  <text x="442" y="728.9" class="text-anno-head">STEP 86</text>
+      <text x="442" y="743.9" class="text-anno-body">+8 ~3 -0  1.1 KB</text>
+      <text x="442" y="756.9" class="text-anno-body">9775972FD9AE</text>
+  <line x1="390" y1="758.9" x2="390" y2="731.9" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="742.9" r="14" class="node-delta" />
+  <text x="390" y="746.9" text-anchor="middle" class="text-node-label">Δ87</text>
+  <line x1="406.0" y1="742.9" x2="438.0" y2="742.9" class="anno-line" />
+  <text x="442" y="733.9" class="text-anno-head">STEP 87</text>
+      <text x="442" y="748.9" class="text-anno-body">+9 ~2 -0  1.1 KB</text>
+      <text x="442" y="761.9" class="text-anno-body">D8396AC5B466</text>
+  <line x1="390" y1="763.9" x2="390" y2="736.9" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="747.9" r="14" class="node-delta" />
+  <text x="390" y="751.9" text-anchor="middle" class="text-node-label">Δ88</text>
+  <line x1="406.0" y1="747.9" x2="438.0" y2="747.9" class="anno-line" />
+  <text x="442" y="738.9" class="text-anno-head">STEP 88</text>
+      <text x="442" y="753.9" class="text-anno-body">+10 ~1 -0  1.1 KB</text>
+      <text x="442" y="766.9" class="text-anno-body">8C6A5FE662D4</text>
+  <line x1="390" y1="768.9" x2="390" y2="741.9" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="752.9" r="14" class="node-delta" />
+  <text x="390" y="756.9" text-anchor="middle" class="text-node-label">Δ89</text>
+  <line x1="406.0" y1="752.9" x2="438.0" y2="752.9" class="anno-line" />
+  <text x="442" y="743.9" class="text-anno-head">STEP 89</text>
+      <text x="442" y="758.9" class="text-anno-body">+9 ~3 -0  1.9 KB</text>
+      <text x="442" y="771.9" class="text-anno-body">BC38580A14FC</text>
+  <line x1="390" y1="773.9" x2="390" y2="746.9" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="757.9" r="14" class="node-delta" />
+  <text x="390" y="761.9" text-anchor="middle" class="text-node-label">Δ90</text>
+  <line x1="406.0" y1="757.9" x2="438.0" y2="757.9" class="anno-line" />
+  <text x="442" y="748.9" class="text-anno-head">STEP 90</text>
+      <text x="442" y="763.9" class="text-anno-body">+10 ~1 -0  1.1 KB</text>
+      <text x="442" y="776.9" class="text-anno-body">453C7BA83C71</text>
+  <line x1="390" y1="778.9" x2="390" y2="751.9" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="762.9" r="14" class="node-delta" />
+  <text x="390" y="766.9" text-anchor="middle" class="text-node-label">Δ91</text>
+  <line x1="406.0" y1="762.9" x2="438.0" y2="762.9" class="anno-line" />
+  <text x="442" y="753.9" class="text-anno-head">STEP 91</text>
+      <text x="442" y="768.9" class="text-anno-body">+9 ~3 -0  1.2 KB</text>
+      <text x="442" y="781.9" class="text-anno-body">44D401D52199</text>
+  <line x1="390" y1="783.9" x2="390" y2="756.9" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="767.9" r="14" class="node-delta" />
+  <text x="390" y="771.9" text-anchor="middle" class="text-node-label">Δ92</text>
+  <line x1="406.0" y1="767.9" x2="438.0" y2="767.9" class="anno-line" />
+  <text x="442" y="758.9" class="text-anno-head">STEP 92</text>
+      <text x="442" y="773.9" class="text-anno-body">+9 ~2 -0  1.2 KB</text>
+      <text x="442" y="786.9" class="text-anno-body">CD176451340D</text>
+  <line x1="390" y1="788.9" x2="390" y2="761.9" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="772.9" r="14" class="node-delta" />
+  <text x="390" y="776.9" text-anchor="middle" class="text-node-label">Δ93</text>
+  <line x1="406.0" y1="772.9" x2="438.0" y2="772.9" class="anno-line" />
+  <text x="442" y="763.9" class="text-anno-head">STEP 93</text>
+      <text x="442" y="778.9" class="text-anno-body">+11 ~1 -0  1.2 KB</text>
+      <text x="442" y="791.9" class="text-anno-body">DB8D1AF660CD</text>
+  <line x1="390" y1="793.9" x2="390" y2="767.0" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="777.9" r="14" class="node-delta" />
+  <text x="390" y="781.9" text-anchor="middle" class="text-node-label">Δ94</text>
+  <line x1="406.0" y1="777.9" x2="438.0" y2="777.9" class="anno-line" />
+  <text x="442" y="768.9" class="text-anno-head">STEP 94</text>
+      <text x="442" y="783.9" class="text-anno-body">+9 ~3 -0  1.9 KB</text>
+      <text x="442" y="796.9" class="text-anno-body">390FBC23DB09</text>
+  <line x1="390" y1="799.0" x2="390" y2="772.0" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="783.0" r="14" class="node-delta" />
+  <text x="390" y="787.0" text-anchor="middle" class="text-node-label">Δ95</text>
+  <line x1="406.0" y1="783.0" x2="438.0" y2="783.0" class="anno-line" />
+  <text x="442" y="774.0" class="text-anno-head">STEP 95</text>
+      <text x="442" y="789.0" class="text-anno-body">+11 ~1 -0  1.2 KB</text>
+      <text x="442" y="802.0" class="text-anno-body">EE1A094EA0F4</text>
+  <line x1="390" y1="804.0" x2="390" y2="777.0" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="788.0" r="14" class="node-delta" />
+  <text x="390" y="792.0" text-anchor="middle" class="text-node-label">Δ96</text>
+  <line x1="406.0" y1="788.0" x2="438.0" y2="788.0" class="anno-line" />
+  <text x="442" y="779.0" class="text-anno-head">STEP 96</text>
+      <text x="442" y="794.0" class="text-anno-body">+9 ~3 -0  1.3 KB</text>
+      <text x="442" y="807.0" class="text-anno-body">B7415387A676</text>
+  <line x1="390" y1="809.0" x2="390" y2="782.0" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="793.0" r="14" class="node-delta" />
+  <text x="390" y="797.0" text-anchor="middle" class="text-node-label">Δ97</text>
+  <line x1="406.0" y1="793.0" x2="438.0" y2="793.0" class="anno-line" />
+  <text x="442" y="784.0" class="text-anno-head">STEP 97</text>
+      <text x="442" y="799.0" class="text-anno-body">+10 ~2 -0  1.2 KB</text>
+      <text x="442" y="812.0" class="text-anno-body">5BA8C1400CA9</text>
+  <line x1="390" y1="814.0" x2="390" y2="775.0" class="rail-conn" marker-end="url(#ca)" />
+  <circle cx="390" cy="798.0" r="14" class="node-delta" />
+  <text x="390" y="802.0" text-anchor="middle" class="text-node-label">Δ98</text>
+  <line x1="406.0" y1="798.0" x2="438.0" y2="798.0" class="anno-line" />
+  <text x="442" y="789.0" class="text-anno-head">STEP 98</text>
+      <text x="442" y="804.0" class="text-anno-body">+11 ~1 -0  1.2 KB</text>
+      <text x="442" y="817.0" class="text-anno-body">3BEA92C81941</text>
   
   <circle cx="390" cy="803.0" r="26" class="node-latest" />
-  <text x="390" y="807.0" text-anchor="middle" class="text-node-label">Δ2</text>
+  <text x="390" y="807.0" text-anchor="middle" class="text-node-label">Δ99</text>
   <line x1="418.0" y1="803.0" x2="438.0" y2="803.0" class="anno-line" />
   <rect x="442" y="785.0" width="280" height="36" rx="6" class="latest-band" />
       <text x="454.0" y="799.0" class="text-latest-label">LATEST VERIFIED STATE</text>
-      <text x="454.0" y="815.0" class="text-latest-label">5B523E3D4A16</text>
+      <text x="454.0" y="815.0" class="text-latest-label">3C4F21023E1C</text>
 
   <!-- Footer meta boxes -->
   <g transform="translate(76, 1076)">
@@ -184,14 +863,14 @@
 
   <g transform="translate(794, 1062)">
     <rect x="0" y="0" width="230" height="96" rx="10" class="label-box" />
-    <text x="14" y="24" class="text-small">Steps:       2</text>
-    <text x="14" y="44" class="text-small">Delta total: 673 B</text>
-    <text x="14" y="64" class="text-small">Chain hash:  FE36F6834BE5</text>
-    <text x="14" y="84" class="text-small">Latest root: 5B523E3D4A16</text>
+    <text x="14" y="24" class="text-small">Steps:       99</text>
+    <text x="14" y="44" class="text-small">Delta total: 75.9 KB</text>
+    <text x="14" y="64" class="text-small">Chain hash:  4663438F8ED9</text>
+    <text x="14" y="84" class="text-small">Latest root: 3C4F21023E1C</text>
   </g>
 
   <!-- Footer -->
   <text x="550" y="1148"  text-anchor="middle" class="text-medium">VSC-1.5 / DELTA CHAIN</text>
-  <text x="550" y="1182" text-anchor="middle" class="text-id">CHAIN ID: FE36F6834BE5</text>
-  <text x="550" y="1216"    text-anchor="middle" class="text-meta">VERIFY: LATEST ROOT HASH 5B523E3D4A16D681</text>
+  <text x="550" y="1182" text-anchor="middle" class="text-id">CHAIN ID: 4663438F8ED9</text>
+  <text x="550" y="1216"    text-anchor="middle" class="text-meta">VERIFY: LATEST ROOT HASH 3C4F21023E1CD059</text>
 </svg>

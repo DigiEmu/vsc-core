@@ -28,6 +28,7 @@
   "demo:run": "node scripts/runWordPressDemo.js",
   "showcase": "node scripts/exportShowcase.js",
   "pages": "npm run vsc -- showcase",
+  "benchmark": "node scripts/runBenchmark.js",
   "vsc": "node src/vscCli.js"
 }
 }
