@@ -1,6 +1,6 @@
 # VSC — Versioned State Commit
 
-**v1.14 — Evidence Bundle Export**
+**v1.15 — JSON Event Evidence Bundle**
 
 Research prototype / proof-of-concept. Not production-ready.
 
@@ -224,6 +224,70 @@ output/bundles/vsc-bundle-<BASE>-to-<LATEST>/
 
 ---
 
+## VSC v1.15 JSON Event Evidence Bundle
+
+VSC v1.15 adds **JSON Event Evidence Bundle Export** — a specialized export mode that turns deterministic JSON AI event chains into **portable evidence packages** for audit, post-incident review, and DigiEmu verification workflows.
+
+```bash
+# Export bundle using latest JSON benchmark results
+npm run vsc -- bundle:json
+
+# Export with explicit chain token
+npm run vsc -- bundle:json output/json-benchmark/vsc-chain-*.json
+```
+
+**Prerequisites:**
+```bash
+npm run vsc -- benchmark:json   # must run first to generate JSON benchmark data
+```
+
+**What's included:**
+- Event schema (`event-schema.json`) — Event structure definition
+- Event summary (`event-summary.json`) — Session statistics
+- JSON benchmark summary, report, and chart data
+- Chain token, base token, delta tokens
+- Verification summary with restore/verify status
+- Complete manifest and SHA-256 checksums
+
+**Bundle structure:**
+```
+output/json-event-bundles/vsc-json-event-bundle-<BASE>-to-<LATEST>/
+├── README.md                           # Bundle guide
+├── manifest.json                       # Complete inventory
+├── event-schema.json                   # Event structure
+├── event-summary.json                  # Session statistics
+├── json-benchmark-summary.json         # Benchmark metrics
+├── json-benchmark-report.md            # Human report
+├── json-benchmark-chart-data.json      # Chart data
+├── chain-token.json                    # Delta chain
+├── base-token.json                     # Base state
+├── verification-summary.json           # Verification status
+├── checksums.sha256                   # Checksums
+└── delta-tokens/delta-*.json          # Delta steps
+```
+
+**Event Model:**
+- **Primary unit of proof:** Individual Event
+- **Event types:** prompt_response, tool_call, policy_check, retrieval, final_decision
+- **Required fields:** event_id, sequence, timestamp, event_type, actor, session_id, model, input_hash, output_hash, policy_result, tool_calls, metadata
+- **Determinism:** Synthetic deterministic data for reproducibility
+
+**Use cases:**
+- **Audit trail** — AI decision event logging for compliance
+- **Post-incident review** — Capture decision timeline for investigation
+- **Research publication** — Reproducible AI event evidence
+- **DigiEmu proof** — Portable AI event proof artifact
+
+**Limitations:**
+- Synthetic deterministic events — not real AI inference
+- Single-session model — not multi-session orchestration
+- Simulated tool calls — not actual execution
+- Research prototype — not enterprise production software
+
+→ [Full JSON Event Evidence Bundle documentation](docs/vsc-v1-15-json-event-evidence-bundle.md)
+
+---
+
 ## VSC v1.10 Static Showcase
 
 VSC v1.10 adds a static showcase export. One command generates a portable `showcase/` folder with the SVG seals, demo metrics, verification summary, and gallery — no server required, opens in any browser.
@@ -307,6 +371,7 @@ npm run clean-manifest     # remove stale manifest entries
 - [VSC v1.8 CLI](docs/vsc-v1-8-cli.md)
 - [VSC v1.9 One-command Demo](docs/vsc-v1-9-one-command-demo.md)
 - [VSC v1.10 Static Showcase](docs/vsc-v1-10-static-showcase.md)
+- [VSC v1.15 JSON Event Evidence Bundle](docs/vsc-v1-15-json-event-evidence-bundle.md)
 - [VSC v1.14 Evidence Bundle Export](docs/vsc-v1-14-evidence-bundle-export.md)
 - [VSC v1.13 JSON Event Benchmark](docs/vsc-v1-13-json-event-benchmark.md)
 - [VSC v1.12 Benchmark Mode](docs/vsc-v1-12-benchmark-mode.md)

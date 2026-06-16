@@ -101,6 +101,11 @@ Commands:
       Export a complete evidence bundle for a VSC delta chain.
       Creates a portable package with tokens, reports, seals, and checksums.
 
+  bundle:json [chain-token.json]
+      Export a JSON event evidence bundle for AI-style event chains.
+      Packages JSON benchmark data with VSC proof artifacts.
+      Uses latest JSON benchmark results if no chain token is provided.
+
   help
       Print this help text.
 
@@ -278,6 +283,17 @@ Use: npm run vsc -- restore-delta <base-token.json> <delta-token.json>
       die("Usage: npm run vsc -- bundle <chain-token.json>");
     }
     run("scripts/exportEvidenceBundle.js", [chainTokenPath]);
+    break;
+  }
+
+  // ── bundle:json [chain-token.json] ───────────────────────────────────────────
+  case "bundle:json": {
+    const jsonChainTokenPath = args[1];
+    if (jsonChainTokenPath) {
+      run("scripts/exportJsonEventBundle.js", [jsonChainTokenPath]);
+    } else {
+      run("scripts/exportJsonEventBundle.js", []);
+    }
     break;
   }
 
