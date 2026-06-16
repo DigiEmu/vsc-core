@@ -1,0 +1,15 @@
+{
+  "chain_token_version": "VSC-ChainToken-v1.0",
+  "chain_token_id": "vsc-chain-token-001",
+  "moment_id": "agent-moment-001",
+  "base_token_id": "vsc-base-token-001",
+  "delta_token_ids": [
+    "vsc-delta-token-001",
+    "vsc-delta-token-002"
+  ],
+  "chain_result": {
+    "state_after_id": "state-after-001",
+    "decision": "ALLOW_TEST_ACTION",
+    "explanation": "The action is allowed only inside the minimal alignment test context."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "manifest_version": "VSC-EvidenceBundleManifest-v1.0",
+  "bundle_id": "vsc-bundle-001",
+  "bundle_type": "VSC_EVIDENCE_BUNDLE",
+  "moment_id": "agent-moment-001",
+  "created_at_utc": "2026-06-16T00:00:00Z",
+  "files": [
+    "event_metadata.json",
+    "base_token.json",
+    "delta_tokens.json",
+    "chain_token.json",
+    "checksums.json"
+  ],
+  "verification_scope": "evidence_bundle_integrity",
+  "non_claims": {
+    "does_not_verify_agent_identity": true,
+    "does_not_certify_agent_trust_status": true,
+    "does_not_attest_real_world_authority": true,
+    "does_not_replace_tbn": true,
+    "does_not_claim_partnership_or_formal_integration": true
+  }
+}

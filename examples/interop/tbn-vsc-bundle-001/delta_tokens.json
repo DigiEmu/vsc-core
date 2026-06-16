@@ -1,0 +1,17 @@
+{
+  "delta_tokens_version": "VSC-DeltaTokens-v1.0",
+  "moment_id": "agent-moment-001",
+  "delta_tokens": [
+    {
+      "delta_token_id": "vsc-delta-token-001",
+      "operation": "evaluate_policy_context",
+      "input_reference": "alignment-test-policy",
+      "result": "policy_context_evaluated"
+    },
+    {
+      "delta_token_id": "vsc-delta-token-002",
+      "operation": "produce_decision_state",
+      "result": "test_action_allowed_for_alignment_test"
+    }
+  ]
+}

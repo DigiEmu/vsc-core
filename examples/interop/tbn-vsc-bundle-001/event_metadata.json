@@ -1,0 +1,12 @@
+{
+  "event_metadata_version": "VSC-EventMetadata-v1.0",
+  "event_id": "vsc-event-001",
+  "moment_id": "agent-moment-001",
+  "agent_reference": {
+    "agent_label": "demo-governance-agent",
+    "identity_verified_by_vsc": false
+  },
+  "event_type": "alignment_test_decision_state_event",
+  "created_at_utc": "2026-06-16T00:00:00Z",
+  "purpose": "Minimal VSC evidence bundle for TBN reference receipt alignment test"
+}

@@ -1,0 +1,13 @@
+{
+  "token_version": "VSC-BaseToken-v1.0",
+  "base_token_id": "vsc-base-token-001",
+  "moment_id": "agent-moment-001",
+  "state_before": {
+    "state_id": "state-before-001",
+    "state_label": "initial_demo_state",
+    "content": {
+      "input": "Should the demo governance agent proceed with the test action?",
+      "policy_context": "alignment-test-policy"
+    }
+  }
+}
