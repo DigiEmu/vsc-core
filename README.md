@@ -1,6 +1,6 @@
 # VSC — Versioned State Commit
 
-**v1.15 — JSON Event Evidence Bundle**
+**v1.16 — Evidence Bundle Verification**
 
 Research prototype / proof-of-concept. Not production-ready.
 
@@ -285,6 +285,52 @@ output/json-event-bundles/vsc-json-event-bundle-<BASE>-to-<LATEST>/
 - Research prototype — not enterprise production software
 
 → [Full JSON Event Evidence Bundle documentation](docs/vsc-v1-15-json-event-evidence-bundle.md)
+
+---
+
+## VSC v1.16 Evidence Bundle Verification
+
+VSC v1.16 adds **Evidence Bundle Verification** — a read-only verifier that checks whether an exported evidence bundle is complete, internally consistent, and unchanged according to its manifest and checksums.
+
+```bash
+# Verify a generic evidence bundle
+npm run vsc -- verify-bundle output/bundles/vsc-bundle-<BASE>-to-<LATEST>
+
+# Verify a JSON event evidence bundle
+npm run vsc -- verify-bundle output/json-event-bundles/vsc-json-event-bundle-<BASE>-to-<LATEST>
+```
+
+**What it verifies:**
+- **Required files** — README.md, manifest.json, checksums.sha256, chain-token.json, base-token.json, verification-summary.json
+- **Checksum integrity** — Every file in checksums.sha256 exists and matches its hash
+- **Manifest consistency** — Manifest references match chain/base/delta token IDs
+- **Chain token** — Valid JSON, contains base/latest token IDs and steps
+- **Base token** — Exists and is valid JSON
+- **Delta tokens** — All deltas referenced by the chain exist in delta-tokens/
+- **JSON event metadata** — (for JSON event bundles) event-schema.json, event-summary.json, json-benchmark-summary.json are valid
+
+**Expected output:**
+```
+VSC v1.16 — Evidence Bundle Verification
+...
+Manifest:        PASS
+Checksums:       PASS (XX files verified)
+Chain token:     PASS (BASE → LATEST)
+Base token:      PASS
+Delta tokens:    PASS (XX/XX found)
+JSON event meta: PASS or N/A
+Result:          PASS
+```
+
+**Use cases:**
+- **Pre-sharing validation** — Verify bundle integrity before sending to partners
+- **Receipt verification** — Confirm received bundle is unchanged
+- **Audit compliance** — Prove bundle completeness for compliance review
+- **CI/CD integration** — Automated bundle verification in pipelines
+
+**Note:** This command is **read-only**. It never modifies the bundle (no manifest rewrite, no checksum update, no token mutation).
+
+→ [Full Evidence Bundle Verification documentation](docs/vsc-v1-16-verify-evidence-bundle.md)
 
 ---
 

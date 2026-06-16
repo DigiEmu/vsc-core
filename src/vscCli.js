@@ -45,7 +45,7 @@ function die(msg) {
 
 function printHelp() {
   console.log(`
-VSC — Versioned State Commit CLI  (v1.12)
+VSC — Versioned State Commit CLI  (v1.16)
 ──────────────────────────────────────────
 Usage:  npm run vsc -- <command> [args]
 
@@ -105,6 +105,10 @@ Commands:
       Export a JSON event evidence bundle for AI-style event chains.
       Packages JSON benchmark data with VSC proof artifacts.
       Uses latest JSON benchmark results if no chain token is provided.
+
+  verify-bundle <bundle-folder>
+      Verify an exported evidence bundle is complete and unchanged.
+      Checks manifest, checksums, chain/base/delta tokens, and JSON metadata.
 
   help
       Print this help text.
@@ -294,6 +298,16 @@ Use: npm run vsc -- restore-delta <base-token.json> <delta-token.json>
     } else {
       run("scripts/exportJsonEventBundle.js", []);
     }
+    break;
+  }
+
+  // ── verify-bundle <bundle-folder> ─────────────────────────────────────────────
+  case "verify-bundle": {
+    const bundlePath = args[1];
+    if (!bundlePath) {
+      die("verify-bundle requires a bundle folder path.\n  Usage: npm run vsc -- verify-bundle <bundle-folder>");
+    }
+    run("scripts/verifyEvidenceBundle.js", [bundlePath]);
     break;
   }
 
