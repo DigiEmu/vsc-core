@@ -219,10 +219,27 @@ if (missing.length > 0) {
 console.log("\nVSC v1.10 SHOWCASE EXPORT");
 console.log("─────────────────────────");
 
-// Clean only showcase/ — never output/ or anything else
+// Clean showcase/ but preserve gallery/ to avoid deleting tracked files
+// Only clean seals, reports, and root index.html/README.md
 if (fs.existsSync(SHOWCASE)) {
-  fs.rmSync(SHOWCASE, { recursive: true, force: true });
-  console.log("  clean  showcase/");
+  const sealsDir = path.join(SHOWCASE, "assets", "seals");
+  const reportsDir = path.join(SHOWCASE, "assets", "reports");
+  const indexPath = path.join(SHOWCASE, "index.html");
+  const readmePath = path.join(SHOWCASE, "README.md");
+
+  if (fs.existsSync(sealsDir)) {
+    fs.rmSync(sealsDir, { recursive: true, force: true });
+  }
+  if (fs.existsSync(reportsDir)) {
+    fs.rmSync(reportsDir, { recursive: true, force: true });
+  }
+  if (fs.existsSync(indexPath)) {
+    fs.rmSync(indexPath, { force: true });
+  }
+  if (fs.existsSync(readmePath)) {
+    fs.rmSync(readmePath, { force: true });
+  }
+  console.log("  clean  showcase/ (preserved gallery/)");
 }
 ensure(path.join(SHOWCASE, "assets", "seals"));
 ensure(path.join(SHOWCASE, "assets", "reports"));
@@ -250,10 +267,22 @@ copyFile(artifacts.galleryHtml, path.join(SHOWCASE, "assets", "gallery", "galler
 // Only selected showcase artifacts + stable demo SVGs are included
 const galleryAllowlist = new Set();
 
-// Add selected showcase seal SVGs (extract just the filename)
+// Gallery SVGs to exclude (skip filenames containing these IDs)
+const GALLERY_EXCLUDED_IDS = [
+  "408C8C13C4D4", "ED9566562A13", "D5C25ED07934", "ADD097014592",
+  "3C4F21023E1C", "4663438F8ED9", "0689E7F37562", "5B523E3D4A16", "FE36F6834BE5"
+];
+
+function isExcludedFromGallery(filename) {
+  return GALLERY_EXCLUDED_IDS.some(id => filename.includes(id));
+}
+
+// Add selected showcase seal SVGs (extract just the filename, skip excluded)
 [artifacts.baseSvg, artifacts.delta1Svg, artifacts.delta2Svg, artifacts.chainSvg]
   .filter(Boolean)
-  .forEach(p => galleryAllowlist.add(path.basename(p)));
+  .map(p => path.basename(p))
+  .filter(name => !isExcludedFromGallery(name))
+  .forEach(name => galleryAllowlist.add(name));
 
 // Add stable demo SVGs if they exist (text, melody, ethic proofs)
 const stableDemoSvgs = [
@@ -261,11 +290,13 @@ const stableDemoSvgs = [
   "vsc-F8D35EA6832D-melody.svg",
   "vsc-E962823D0FDD-ethic.svg"
 ];
-stableDemoSvgs.forEach(name => {
-  if (fs.existsSync(path.join(OUT, name))) {
-    galleryAllowlist.add(name);
-  }
-});
+stableDemoSvgs
+  .filter(name => !isExcludedFromGallery(name))
+  .forEach(name => {
+    if (fs.existsSync(path.join(OUT, name))) {
+      galleryAllowlist.add(name);
+    }
+  });
 
 // Also include SVGs referenced by the selected WordPress demo chain
 // These are already captured in the seal artifacts above, but we double-check
@@ -279,7 +310,7 @@ const selectedWpSvgPatterns = [
 try {
   const outputFiles = fs.readdirSync(OUT);
   outputFiles
-    .filter(n => n.endsWith(".svg") && !n.includes("pdf"))
+    .filter(n => n.endsWith(".svg") && !n.includes("pdf") && !isExcludedFromGallery(n))
     .forEach(n => {
       // Include if it matches selected WP demo patterns
       for (const pattern of selectedWpSvgPatterns) {
