@@ -42,5 +42,10 @@ aikido-class/
 # Generated VSC output artifacts
 output/
 
-# Generated benchmark fixture
+# Generated benchmark fixtures
 test-benchmark/
+test-json-benchmark/
+
+# Benchmark output (already covered by output/ but listed explicitly)
+output/benchmark/
+output/json-benchmark/

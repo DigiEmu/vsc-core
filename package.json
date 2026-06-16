@@ -29,6 +29,7 @@
   "showcase": "node scripts/exportShowcase.js",
   "pages": "npm run vsc -- showcase",
   "benchmark": "node scripts/runBenchmark.js",
+  "json-benchmark": "node scripts/runJsonEventBenchmark.js",
   "vsc": "node src/vscCli.js"
 }
 }

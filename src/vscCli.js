@@ -80,6 +80,11 @@ Commands:
       Measures VSC storage efficiency and restore/verify performance.
       Default profile: medium (100 states).
 
+  benchmark:json [profile]
+      Run JSON Event Benchmark for AI-style structured event logs.
+      Measures VSC storage efficiency for accumulating JSON event states.
+      Default profile: medium (100 states).
+
   demo
       Create or refresh the reproducible WordPress-style test fixture.
 
@@ -218,6 +223,13 @@ Use: npm run vsc -- restore-delta <base-token.json> <delta-token.json>
   case "benchmark": {
     const profile = args[1] || "medium";
     run("scripts/runBenchmark.js", [profile]);
+    break;
+  }
+
+  // ── benchmark:json [profile] ───────────────────────────────────────────────
+  case "benchmark:json": {
+    const jsonProfile = args[1] || "medium";
+    run("scripts/runJsonEventBenchmark.js", [jsonProfile]);
     break;
   }
 

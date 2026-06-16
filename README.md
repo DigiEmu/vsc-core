@@ -1,6 +1,6 @@
 # VSC — Versioned State Commit
 
-**v1.12 — Benchmark Mode**
+**v1.13 — JSON Event Benchmark**
 
 Research prototype / proof-of-concept. Not production-ready.
 
@@ -149,6 +149,35 @@ Benchmark Mode makes VSC's storage-load reduction claims **measurable and reprod
 
 ---
 
+## VSC v1.13 JSON Event Benchmark
+
+VSC v1.13 adds JSON Event Benchmark — extending storage-load reduction measurement to **structured AI decision event logs** represented as deterministic JSON.
+
+```bash
+npm run vsc -- benchmark:json        # default: medium profile (100 states)
+npm run vsc -- benchmark:json small  # 10 states - fast smoke test
+npm run vsc -- benchmark:json large  # 1000 states - extended test
+```
+
+**Event Model:**
+- Primary unit of proof: **Individual Event** (prompt/response, tool call, policy check, retrieval, final decision)
+- Deterministic JSON with canonical key ordering
+- Accumulating event log: each state contains all events from 0 to N
+- Events include: `event_id`, `sequence`, `timestamp`, `event_type`, `actor`, `model`, `input_hash`, `output_hash`, `policy_result`, `tool_calls`, `metadata`
+
+**What it measures:**
+- Storage efficiency for growing AI event logs
+- VSC delta encoding performance on structured JSON
+- Restore and verify timing for event state chains
+
+**Note:** This benchmark models AI-style events but uses synthetic deterministic data. It is a bridge toward future AI evidence logging, not a claim of enterprise-ready AI log infrastructure.
+
+**Separation:** JSON Event Benchmark output is written to `output/json-benchmark/` and is separate from both the public showcase and the v1.12 folder benchmark.
+
+→ [Full JSON Event Benchmark documentation](docs/vsc-v1-13-json-event-benchmark.md)
+
+---
+
 ## VSC v1.10 Static Showcase
 
 VSC v1.10 adds a static showcase export. One command generates a portable `showcase/` folder with the SVG seals, demo metrics, verification summary, and gallery — no server required, opens in any browser.
@@ -232,6 +261,7 @@ npm run clean-manifest     # remove stale manifest entries
 - [VSC v1.8 CLI](docs/vsc-v1-8-cli.md)
 - [VSC v1.9 One-command Demo](docs/vsc-v1-9-one-command-demo.md)
 - [VSC v1.10 Static Showcase](docs/vsc-v1-10-static-showcase.md)
+- [VSC v1.13 JSON Event Benchmark](docs/vsc-v1-13-json-event-benchmark.md)
 - [VSC v1.12 Benchmark Mode](docs/vsc-v1-12-benchmark-mode.md)
 - [VSC v2 Architecture Notes](docs/vsc-v2-architecture-notes.md)
 - [VSC v1.11 GitHub Pages Publishing](docs/vsc-v1-11-github-pages.md)
