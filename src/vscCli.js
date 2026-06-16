@@ -45,7 +45,7 @@ function die(msg) {
 
 function printHelp() {
   console.log(`
-VSC — Versioned State Commit CLI  (v1.16)
+VSC — Versioned State Commit CLI  (v1.17)
 ──────────────────────────────────────────
 Usage:  npm run vsc -- <command> [args]
 
@@ -109,6 +109,10 @@ Commands:
   verify-bundle <bundle-folder>
       Verify an exported evidence bundle is complete and unchanged.
       Checks manifest, checksums, chain/base/delta tokens, and JSON metadata.
+
+  zip-bundle <bundle-folder>
+      Create a portable .zip file from an evidence bundle folder.
+      Outputs to output/zips/ with the bundle name as the filename.
 
   help
       Print this help text.
@@ -308,6 +312,16 @@ Use: npm run vsc -- restore-delta <base-token.json> <delta-token.json>
       die("verify-bundle requires a bundle folder path.\n  Usage: npm run vsc -- verify-bundle <bundle-folder>");
     }
     run("scripts/verifyEvidenceBundle.js", [bundlePath]);
+    break;
+  }
+
+  // ── zip-bundle <bundle-folder> ────────────────────────────────────────────────
+  case "zip-bundle": {
+    const zipBundlePath = args[1];
+    if (!zipBundlePath) {
+      die("zip-bundle requires a bundle folder path.\n  Usage: npm run vsc -- zip-bundle <bundle-folder>");
+    }
+    run("scripts/zipEvidenceBundle.js", [zipBundlePath]);
     break;
   }
 

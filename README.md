@@ -1,6 +1,6 @@
 # VSC — Versioned State Commit
 
-**v1.16 — Evidence Bundle Verification**
+**v1.17 — ZIP Bundle Export**
 
 Research prototype / proof-of-concept. Not production-ready.
 
@@ -333,6 +333,41 @@ Result:          PASS
 **Note:** This command is **read-only**. It never modifies the bundle (no manifest rewrite, no checksum update, no token mutation).
 
 → [Full Evidence Bundle Verification documentation](docs/vsc-v1-16-verify-evidence-bundle.md)
+
+---
+
+## VSC v1.17 ZIP Bundle Export
+
+VSC v1.17 adds **ZIP Bundle Export** — a command to package an existing evidence bundle directory into a shareable ZIP archive.
+
+```bash
+npm run vsc -- zip-bundle output\json-event-bundles\vsc-json-event-bundle-408C8C13C4D4-to-ED9566562A13
+```
+
+**What it does:**
+- Creates a `.zip` file from the bundle folder
+- Outputs to `output/zips/<bundle-name>.zip`
+- Preserves the bundle directory structure inside the ZIP
+- Does not modify the source bundle
+
+**Expected output:**
+```
+VSC v1.17 — ZIP Bundle Export
+...
+ZIP path:        output\zips\vsc-json-event-bundle-408C8C13C4D4-to-ED9566562A13.zip
+Files included:  108
+ZIP size:        245.6 KB
+Result:          PASS
+```
+
+**Use cases:**
+- **Email distribution** — Share bundles as single-file attachments
+- **Archive storage** — Compress bundles for long-term storage
+- **Distribution packaging** — Prepare bundles for download/release
+
+**Note:** The ZIP file is created in `output/zips/` and is not committed to Git (see `.gitignore`).
+
+→ [Full ZIP Bundle Export documentation](docs/vsc-v1-17-zip-bundle-export.md)
 
 ---
 
