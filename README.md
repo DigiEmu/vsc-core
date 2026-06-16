@@ -174,6 +174,8 @@ npm run vsc -- benchmark:json large  # 1000 states - extended test
 
 **Separation:** JSON Event Benchmark output is written to `output/json-benchmark/` and is separate from both the public showcase and the v1.12 folder benchmark.
 
+**Gallery:** The public showcase gallery uses an allowlist approach and does not include benchmark or JSON benchmark generated SVGs, keeping the GitHub Pages gallery deterministic and lightweight.
+
 → [Full JSON Event Benchmark documentation](docs/vsc-v1-13-json-event-benchmark.md)
 
 ---

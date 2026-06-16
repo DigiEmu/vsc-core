@@ -243,33 +243,73 @@ copyFile(artifacts.chainSvg,  sealDest.chain);
 // Copy report
 copyFile(artifacts.chainReport, path.join(SHOWCASE, "assets", "reports", "chain-report.md"));
 
-// Copy gallery + selected SVGs (exclude benchmark SVGs by default)
+// Copy gallery + controlled SVGs (allowlist approach — deterministic, no benchmark flood)
 copyFile(artifacts.galleryHtml, path.join(SHOWCASE, "assets", "gallery", "gallery.html"));
-try {
-  const galleryDir = path.join(SHOWCASE, "assets", "gallery");
-  fs.readdirSync(OUT)
-    .filter(n => n.endsWith(".svg") && !n.includes("pdf"))
-    // Exclude benchmark SVGs: those with tiny base IDs or from benchmark runs
-    .filter(n => {
-      // Keep if related to known WordPress demo
-      if (n.includes(KNOWN_BASE_ID)) return true;
-      if (n.includes(KNOWN_WP_LATEST_ID)) return true;
-      if (n.includes(KNOWN_WP_DELTA1_ID)) return true;
 
-      // Exclude benchmark SVGs by checking base ID
-      const baseMatch = n.match(/vsc-(?:chain-)?([A-F0-9]{12})/);
-      if (baseMatch) {
-        const baseId = baseMatch[1];
-        const baseEntry = readManifest().find(e => e.mode === "FOLDER_RECOVERY" && e.id === baseId);
-        // Exclude if base is tiny (benchmark fixture)
-        if (baseEntry && baseEntry.fileSizeBytes < MIN_SHOWCASE_BASE_BYTES) {
-          return false;
+// Build allowlist of SVG filenames for the public gallery
+// Only selected showcase artifacts + stable demo SVGs are included
+const galleryAllowlist = new Set();
+
+// Add selected showcase seal SVGs (extract just the filename)
+[artifacts.baseSvg, artifacts.delta1Svg, artifacts.delta2Svg, artifacts.chainSvg]
+  .filter(Boolean)
+  .forEach(p => galleryAllowlist.add(path.basename(p)));
+
+// Add stable demo SVGs if they exist (text, melody, ethic proofs)
+const stableDemoSvgs = [
+  "vsc-53E64BC4C285B-text.svg",
+  "vsc-F8D35EA6832D-melody.svg",
+  "vsc-E962823D0FDD-ethic.svg"
+];
+stableDemoSvgs.forEach(name => {
+  if (fs.existsSync(path.join(OUT, name))) {
+    galleryAllowlist.add(name);
+  }
+});
+
+// Also include SVGs referenced by the selected WordPress demo chain
+// These are already captured in the seal artifacts above, but we double-check
+const selectedWpSvgPatterns = [
+  KNOWN_BASE_ID,           // 21A8390BFA3F
+  KNOWN_WP_LATEST_ID,      // 954BEB0FF3AA
+  KNOWN_WP_DELTA1_ID       // F3876A4BCFE1
+];
+
+// Scan output once to find any additional WordPress demo related SVGs
+try {
+  const outputFiles = fs.readdirSync(OUT);
+  outputFiles
+    .filter(n => n.endsWith(".svg") && !n.includes("pdf"))
+    .forEach(n => {
+      // Include if it matches selected WP demo patterns
+      for (const pattern of selectedWpSvgPatterns) {
+        if (n.includes(pattern)) {
+          galleryAllowlist.add(n);
+          return;
         }
       }
-      return true;
-    })
-    .forEach(n => copyFile(path.join(OUT, n), path.join(galleryDir, n)));
-} catch { /* best-effort */ }
+    });
+} catch { /* ignore */ }
+
+// Copy only allowlisted SVGs to gallery
+try {
+  const galleryDir = path.join(SHOWCASE, "assets", "gallery");
+  let copiedCount = 0;
+  let skippedCount = 0;
+
+  for (const svgName of galleryAllowlist) {
+    const srcPath = path.join(OUT, svgName);
+    if (fs.existsSync(srcPath)) {
+      copyFile(srcPath, path.join(galleryDir, svgName));
+      copiedCount++;
+    }
+  }
+
+  // Log summary for visibility
+  console.log(`  info   gallery: copied ${copiedCount} allowlisted SVG(s), skipped ${skippedCount}`);
+} catch (err) {
+  console.log(`  warn   gallery SVG copy failed: ${err.message}`);
+}
 
 // ── Calculate metrics from token JSON (source of truth) ──────────────────────
 

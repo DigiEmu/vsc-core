@@ -167,6 +167,17 @@ The showcase (`npm run vsc -- showcase`) explicitly excludes:
 
 JSON benchmark results are written to `output/json-benchmark/` and do not affect the public showcase metrics.
 
+### Gallery Filtering
+
+JSON benchmark artifacts are **not automatically published** to the public showcase gallery. The `exportShowcase.js` script uses an **allowlist approach** for gallery SVGs:
+
+- Only selected WordPress demo chain SVGs are included
+- Stable demo SVGs (text, melody, ethic proofs) are included if they exist
+- Benchmark and JSON benchmark SVGs are explicitly excluded
+- The gallery remains deterministic and lightweight regardless of local benchmark runs
+
+To include JSON benchmark results in a custom showcase, manually copy the desired files from `output/json-benchmark/`.
+
 ---
 
 ## Limitations
