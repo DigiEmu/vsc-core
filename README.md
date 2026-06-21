@@ -61,6 +61,8 @@ External reference fixture plan: [`docs/interop/EXTERNAL_REFERENCE_FIXTURE_PLAN.
 
 Interop consolidation summary: [`docs/interop/INTEROP_CONSOLIDATION_SUMMARY.md`](docs/interop/INTEROP_CONSOLIDATION_SUMMARY.md). Consolidates v2.17–v2.23. Documentation only; does not implement validation or start v3.0.
 
+Partner / reviewer interop brief: [`docs/interop/PARTNER_REVIEWER_INTEROP_BRIEF.md`](docs/interop/PARTNER_REVIEWER_INTEROP_BRIEF.md). Compact partner/reviewer entry point. Documentation only; does not implement validation or start v3.0.
+
 ## CI Conformance Check
 
 VSC includes a GitHub Actions workflow for automated conformance validation.

@@ -187,6 +187,14 @@ Unsafe:
 The v2.x interop arc means v3.0 has started.
 ```
 
+## Partner / reviewer brief
+
+A compact partner-facing entry point is available in:
+
+[`docs/interop/PARTNER_REVIEWER_INTEROP_BRIEF.md`](PARTNER_REVIEWER_INTEROP_BRIEF.md)
+
+This brief summarizes the interop model without adding implementation scope.
+
 ## Decision point after v2.24
 
 After this consolidation, the project can choose among several safe next directions:
