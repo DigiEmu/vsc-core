@@ -63,6 +63,8 @@ Interop consolidation summary: [`docs/interop/INTEROP_CONSOLIDATION_SUMMARY.md`]
 
 Partner / reviewer interop brief: [`docs/interop/PARTNER_REVIEWER_INTEROP_BRIEF.md`](docs/interop/PARTNER_REVIEWER_INTEROP_BRIEF.md). Compact partner/reviewer entry point. Documentation only; does not implement validation or start v3.0.
 
+Enterprise review package: [`docs/review/ENTERPRISE_REVIEW_PACKAGE.md`](docs/review/ENTERPRISE_REVIEW_PACKAGE.md). Review package only; not certification. Includes validation commands, expected outputs, key files, and explicit non-claims.
+
 ## CI Conformance Check
 
 VSC includes a GitHub Actions workflow for automated conformance validation.
