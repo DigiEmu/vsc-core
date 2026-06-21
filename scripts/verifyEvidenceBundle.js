@@ -5,8 +5,13 @@
  * Usage:  npm run vsc -- verify-bundle <bundle-folder>
  *    or:  node scripts/verifyEvidenceBundle.js <bundle-folder>
  *
- * Verifies an exported VSC evidence bundle is complete, internally consistent,
- * and unchanged according to its manifest and checksums.
+ * Read-only verification of an exported VSC evidence bundle.
+ * Checks that the bundle is complete, internally consistent, and that every
+ * file matches the checksum binding recorded at export time.
+ *
+ * This script never writes to the source bundle — manifest integrity is
+ * evaluated by reading, not by recomputing and overwriting. Fail-closed
+ * behavior: any unresolvable inconsistency exits non-zero.
  */
 
 import fs from "fs";
@@ -19,11 +24,20 @@ const VSC_VERSION = "v1.16";
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
 
+/**
+ * Computes the SHA-256 digest of a file as hex.
+ * Used to re-derive the hash at verification time; the result is compared
+ * against the checksum binding recorded in checksums.sha256 at export time.
+ */
 function sha256File(filePath) {
   const data = fs.readFileSync(filePath);
   return crypto.createHash("sha256").update(data).digest("hex");
 }
 
+/**
+ * Parses a JSON file, returning null on any failure.
+ * Callers treat null as a structural error — fail-closed behavior.
+ */
 function readJson(filePath) {
   try {
     return JSON.parse(fs.readFileSync(filePath, "utf8"));
@@ -38,6 +52,11 @@ function printResult(label, passed, details = "") {
   console.log(`  ${icon} ${label}: ${status}${details ? " " + details : ""}`);
 }
 
+/**
+ * Terminates with a non-zero exit code.
+ * Called when a verification step detects an unrecoverable inconsistency.
+ * Ensures fail-closed behavior: the caller can never silently continue.
+ */
 function fail(message, exitCode = 1) {
   console.error(`\n✗ ${message}`);
   process.exit(exitCode);
@@ -45,6 +64,15 @@ function fail(message, exitCode = 1) {
 
 // ── Checksum Parser ────────────────────────────────────────────────────────────
 
+/**
+ * Parses a checksums.sha256 file into an array of { hash, filePath } entries.
+ *
+ * The checksum file is the primary checksum binding artifact: it records the
+ * expected SHA-256 digest of every file at the moment the bundle was exported.
+ * Verifying against it is what makes the bundle tamper-evident.
+ *
+ * Accepts both single-space and double-space separators (shasum compatibility).
+ */
 function parseChecksums(checksumsPath) {
   const content = fs.readFileSync(checksumsPath, "utf8");
   const lines = content.split("\n").filter(line => line.trim());
@@ -66,6 +94,17 @@ function parseChecksums(checksumsPath) {
 
 // ── Verification Functions ─────────────────────────────────────────────────────
 
+/**
+ * Verifies that all structurally required files are present in the bundle.
+ *
+ * The required-file list is the minimal evidence boundary: a bundle missing
+ * any of these files cannot be fully verified and must be rejected.
+ * JSON event bundles carry additional required files beyond the generic set.
+ *
+ * @param {string} bundleDir - Absolute path to the bundle directory.
+ * @param {boolean} isJsonEventBundle - Whether to enforce JSON event file requirements.
+ * @returns {{ passed: boolean, missing: string[] }}
+ */
 function verifyRequiredFiles(bundleDir, isJsonEventBundle) {
   const requiredGeneric = [
     "README.md",
@@ -99,6 +138,19 @@ function verifyRequiredFiles(bundleDir, isJsonEventBundle) {
   return { passed: missing.length === 0, missing };
 }
 
+/**
+ * Core checksum binding verification.
+ *
+ * Re-hashes every file listed in checksums.sha256 and compares the result
+ * against the digest recorded at export time. A mismatch means the file was
+ * modified after the bundle was sealed — the evidence boundary is broken.
+ *
+ * This step must pass before any token-level checks are trusted, because
+ * the token files themselves are covered by the checksum binding.
+ *
+ * @param {string} bundleDir - Absolute path to the bundle directory.
+ * @returns {{ passed: boolean, verified: number, total: number, errors: string[] }}
+ */
 function verifyChecksums(bundleDir) {
   const checksumsPath = path.join(bundleDir, "checksums.sha256");
   if (!fs.existsSync(checksumsPath)) {
@@ -120,6 +172,7 @@ function verifyChecksums(bundleDir) {
       continue;
     }
 
+    // Re-derive hash and compare against the bound digest — not against the manifest.
     const actualHash = sha256File(filePath).toLowerCase();
     if (actualHash !== entry.hash) {
       errors.push(`Checksum mismatch: ${entry.filePath}`);
@@ -136,6 +189,18 @@ function verifyChecksums(bundleDir) {
   };
 }
 
+/**
+ * Verifies manifest integrity by cross-checking its chain references against
+ * the chain token embedded in the bundle.
+ *
+ * The manifest is a human-readable index of the bundle's contents and claims.
+ * Its token IDs must agree with the authoritative chain-token.json — any
+ * divergence means the manifest was edited independently after sealing.
+ *
+ * @param {string} bundleDir - Absolute path to the bundle directory.
+ * @param {object} chainToken - Already-parsed chain token object.
+ * @returns {{ passed: boolean, errors: string[], warnings: string[], manifest: object|null }}
+ */
 function verifyManifest(bundleDir, chainToken) {
   const manifestPath = path.join(bundleDir, "manifest.json");
   if (!fs.existsSync(manifestPath)) {
@@ -150,7 +215,8 @@ function verifyManifest(bundleDir, chainToken) {
   const errors = [];
   const warnings = [];
 
-  // Verify chain references match
+  // Cross-check manifest chain references against the authoritative chain token.
+  // Mismatches mean either the manifest or the token was replaced post-export.
   if (manifest.chain) {
     const chainBaseId = chainToken.baseTokenId || chainToken.base?.id;
     const chainLatestId = chainToken.latestTokenId || chainToken.latest?.id;
@@ -173,6 +239,16 @@ function verifyManifest(bundleDir, chainToken) {
   return { passed: errors.length === 0, errors, warnings, manifest };
 }
 
+/**
+ * Verifies the chain token — the root evidence artifact of the bundle.
+ *
+ * The chain token encodes the full delta sequence (base → latest) and is the
+ * anchor against which all other bundle contents are cross-checked. If the
+ * chain token is missing or malformed, no downstream verification is meaningful.
+ *
+ * @param {string} bundleDir - Absolute path to the bundle directory.
+ * @returns {{ passed: boolean, errors: string[], chainToken: object|null, baseTokenId: string, latestTokenId: string }}
+ */
 function verifyChainToken(bundleDir) {
   const chainPath = path.join(bundleDir, "chain-token.json");
   if (!fs.existsSync(chainPath)) {
@@ -186,7 +262,8 @@ function verifyChainToken(bundleDir) {
 
   const errors = [];
 
-  // Validate it's a chain token
+  // A valid chain token must declare DELTA_CHAIN mode and carry a steps array.
+  // Without steps, delta token count cannot be cross-checked.
   if (chainToken.mode !== "DELTA_CHAIN" && !chainToken.steps) {
     errors.push("Not a valid chain token (missing mode or steps)");
   }
@@ -210,6 +287,16 @@ function verifyChainToken(bundleDir) {
   };
 }
 
+/**
+ * Verifies the base token is present and parseable.
+ *
+ * The base token records the full initial state snapshot. It is required for
+ * deterministic reconstruction: without it, no delta sequence can be replayed
+ * back to the original starting point.
+ *
+ * @param {string} bundleDir - Absolute path to the bundle directory.
+ * @returns {{ passed: boolean, errors: string[], baseToken: object|null }}
+ */
 function verifyBaseToken(bundleDir) {
   const basePath = path.join(bundleDir, "base-token.json");
   if (!fs.existsSync(basePath)) {
@@ -224,6 +311,18 @@ function verifyBaseToken(bundleDir) {
   return { passed: true, errors: [], baseToken };
 }
 
+/**
+ * Verifies that every delta token referenced by the chain token is present
+ * and parseable in the bundle's delta-tokens directory.
+ *
+ * Delta tokens are the incremental steps that, together with the base token,
+ * enable deterministic reconstruction of every intermediate state. A gap in
+ * the sequence breaks the chain and must be reported.
+ *
+ * @param {string} bundleDir - Absolute path to the bundle directory.
+ * @param {object} chainToken - Already-parsed chain token (provides the expected step list).
+ * @returns {{ passed: boolean, errors: string[], count: number, expected: number }}
+ */
 function verifyDeltaTokens(bundleDir, chainToken) {
   const deltaDir = path.join(bundleDir, "delta-tokens");
   if (!fs.existsSync(deltaDir)) {
@@ -244,13 +343,13 @@ function verifyDeltaTokens(bundleDir, chainToken) {
     const fromId = step.fromTokenId || step.from;
     const toId = step.toTokenId || step.to;
 
-    // Look for delta file by index pattern
+    // Primary filename uses zero-padded index (e.g. delta-001.json).
     const indexStr = String(i + 1).padStart(3, "0");
     const deltaFileName = `delta-${indexStr}.json`;
     const deltaPath = path.join(deltaDir, deltaFileName);
 
     if (!fs.existsSync(deltaPath)) {
-      // Try without zero-padding for older bundles
+      // Fall back to unpadded index for bundles exported before zero-padding was introduced.
       const altName = `delta-${i + 1}.json`;
       const altPath = path.join(deltaDir, altName);
       if (!fs.existsSync(altPath)) {
@@ -276,12 +375,25 @@ function verifyDeltaTokens(bundleDir, chainToken) {
   };
 }
 
+/**
+ * Verifies JSON event metadata files when present in the bundle.
+ *
+ * JSON event bundles (v1.15+) carry additional evidence artifacts beyond
+ * the generic chain proof: an event schema, a session summary, and benchmark
+ * results. These establish the behavioral evidence boundary for AI-style
+ * structured event logs.
+ *
+ * This check is skipped (N/A) for generic evidence bundles — their absence
+ * is not an error, but their presence and parseability is required when detected.
+ *
+ * @param {string} bundleDir - Absolute path to the bundle directory.
+ * @returns {{ passed: boolean, errors: string[], warnings: string[], isJsonEventBundle: boolean, metadata: object }}
+ */
 function verifyJsonEventMetadata(bundleDir) {
   const errors = [];
   const warnings = [];
   let metadata = {};
 
-  // Check event-schema.json
   const schemaPath = path.join(bundleDir, "event-schema.json");
   if (fs.existsSync(schemaPath)) {
     const schema = readJson(schemaPath);
@@ -294,7 +406,6 @@ function verifyJsonEventMetadata(bundleDir) {
     warnings.push("event-schema.json not found (optional for generic bundles)");
   }
 
-  // Check event-summary.json
   const summaryPath = path.join(bundleDir, "event-summary.json");
   if (fs.existsSync(summaryPath)) {
     const summary = readJson(summaryPath);
@@ -308,7 +419,6 @@ function verifyJsonEventMetadata(bundleDir) {
     warnings.push("event-summary.json not found (optional for generic bundles)");
   }
 
-  // Check json-benchmark-summary.json
   const benchPath = path.join(bundleDir, "json-benchmark-summary.json");
   if (fs.existsSync(benchPath)) {
     const bench = readJson(benchPath);
@@ -316,7 +426,7 @@ function verifyJsonEventMetadata(bundleDir) {
       errors.push("Failed to parse json-benchmark-summary.json");
     } else {
       metadata.hasBenchmarkSummary = true;
-      // Check for expected session ID in known v1.15 bundle
+      // The v1.15 canonical session ID anchors this bundle to a known benchmark run.
       if (bench.event_model?.session_id === "2F9047C9F1C1A3FF") {
         metadata.expectedSession = true;
       }
@@ -325,7 +435,8 @@ function verifyJsonEventMetadata(bundleDir) {
     warnings.push("json-benchmark-summary.json not found (optional for generic bundles)");
   }
 
-  // If no JSON event files exist at all, this is N/A
+  // Bundle is classified as a JSON event bundle if any of its event-specific
+  // artifacts are present — presence alone triggers the stricter check set.
   const isJsonEventBundle = metadata.hasSchema || metadata.hasSummary || metadata.hasBenchmarkSummary;
 
   return {
@@ -339,6 +450,18 @@ function verifyJsonEventMetadata(bundleDir) {
 
 // ── Main Verification ──────────────────────────────────────────────────────────
 
+/**
+ * Orchestrates the full read-only verification of an evidence bundle.
+ *
+ * Verification order matters: required-file and checksum checks run first
+ * so that structural completeness is confirmed before token-level semantics
+ * are evaluated. Fail-closed: any failing step exits non-zero immediately
+ * or is aggregated into the final FAIL result.
+ *
+ * This function never writes to the bundle directory.
+ *
+ * @param {string} bundlePath - Relative or absolute path to the bundle directory.
+ */
 function verifyEvidenceBundle(bundlePath) {
   console.log("╔════════════════════════════════════════════════════════════╗");
   console.log("║   VSC v1.16 — Evidence Bundle Verification                 ║");
@@ -361,7 +484,9 @@ function verifyEvidenceBundle(bundlePath) {
 
   console.log(`\nBundle path: ${resolvedBundlePath}`);
 
-  // Detect bundle type early for required file checks
+  // Detect bundle type before required-file validation so the correct
+  // file set is enforced. Detection is based on presence of JSON event
+  // artifacts — no manifest field is trusted for this classification.
   const isJsonEventBundle =
     fs.existsSync(path.join(resolvedBundlePath, "event-schema.json")) ||
     fs.existsSync(path.join(resolvedBundlePath, "json-benchmark-summary.json"));
@@ -473,6 +598,8 @@ function verifyEvidenceBundle(bundlePath) {
   console.log("║   VERIFICATION SUMMARY                                     ║");
   console.log("╚════════════════════════════════════════════════════════════╝");
 
+  // JSON event metadata is only a blocking check for JSON event bundles.
+  // For generic bundles its absence is expected and must not count as a failure.
   const results = {
     manifest: requiredResult.passed,
     checksums: checksumResult.passed,

@@ -5,8 +5,12 @@
  * Usage:  npm run vsc -- zip-bundle <bundle-folder>
  *    or:  node scripts/zipEvidenceBundle.js <bundle-folder>
  *
- * Creates a portable .zip file from an existing VSC evidence bundle folder
- * without changing the bundle contents.
+ * Packages an existing VSC evidence bundle directory into a portable handoff
+ * artifact (.zip) without modifying the source bundle in any way.
+ *
+ * Source bundle immutability is the central guarantee of this script:
+ * it reads from the bundle and writes to output/zips/ only. No file inside
+ * the source bundle is created, modified, or deleted.
  */
 
 import fs from "fs";
@@ -14,15 +18,19 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { createRequire } from "module";
 
+// archiver is a CommonJS package; createRequire bridges it into this ESM module.
 const require = createRequire(import.meta.url);
 const archiver = require("archiver");
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
-const VSC_VERSION = "v1.17";
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
 
+/**
+ * Terminates with a non-zero exit code.
+ * Ensures fail-closed behavior: no ZIP is produced on any detected error.
+ */
 function die(message, exitCode = 1) {
   console.error(`\n✗ ${message}`);
   process.exit(exitCode);
@@ -43,6 +51,19 @@ function countFiles(dir) {
 
 // ── Main ZIP Function ────────────────────────────────────────────────────────
 
+/**
+ * Packages an evidence bundle directory into a portable handoff artifact.
+ *
+ * The ZIP preserves the full bundle directory structure with the bundle
+ * folder name as the archive root, so recipients extract to a self-contained
+ * named folder — identical to what `verify-bundle` expects as input.
+ *
+ * Source bundle immutability: this function only reads from `bundlePath`
+ * and only writes to `output/zips/`. No path inside the source bundle
+ * is opened for writing.
+ *
+ * @param {string} bundlePath - Relative or absolute path to the bundle directory.
+ */
 async function zipEvidenceBundle(bundlePath) {
   console.log("╔════════════════════════════════════════════════════════════╗");
   console.log("║   VSC v1.17 — ZIP Bundle Export                            ║");
@@ -53,6 +74,8 @@ async function zipEvidenceBundle(bundlePath) {
     die("No bundle path provided.\nUsage: npm run vsc -- zip-bundle <bundle-folder>");
   }
 
+  // Resolve early so all downstream operations use an absolute path,
+  // regardless of how the caller invoked the command.
   const resolvedBundlePath = path.resolve(bundlePath);
   if (!fs.existsSync(resolvedBundlePath)) {
     die(`Bundle not found: ${bundlePath}`);
@@ -65,11 +88,12 @@ async function zipEvidenceBundle(bundlePath) {
 
   console.log(`\nBundle path: ${resolvedBundlePath}`);
 
-  // Get bundle folder name for ZIP filename
+  // ZIP filename mirrors the bundle folder name so the archive is self-describing
+  // and recipients know which bundle it contains without extracting it first.
   const bundleName = path.basename(resolvedBundlePath);
   const zipFileName = `${bundleName}.zip`;
 
-  // Create output/zips directory
+  // output/zips/ is intentionally gitignored — ZIP artifacts are not committed.
   const zipsDir = path.join(ROOT, "output", "zips");
   if (!fs.existsSync(zipsDir)) {
     fs.mkdirSync(zipsDir, { recursive: true });
@@ -77,7 +101,8 @@ async function zipEvidenceBundle(bundlePath) {
 
   const zipPath = path.join(zipsDir, zipFileName);
 
-  // Remove existing ZIP if present
+  // Replace any existing ZIP so reruns are idempotent.
+  // This is the only write that occurs outside the source bundle.
   if (fs.existsSync(zipPath)) {
     console.log(`Removing existing ZIP: ${zipPath}`);
     fs.rmSync(zipPath, { force: true });
@@ -87,14 +112,13 @@ async function zipEvidenceBundle(bundlePath) {
   const fileCount = countFiles(resolvedBundlePath);
   console.log(`Files to include: ${fileCount}`);
 
-  // Create ZIP archive
   const output = fs.createWriteStream(zipPath);
   const archive = new archiver.ZipArchive({
-    zlib: { level: 9 } // Maximum compression
+    zlib: { level: 9 }
   });
 
-  // Handle archive events
   archive.on("warning", (err) => {
+    // ENOENT during archiving means a file disappeared mid-run — warn but continue.
     if (err.code === "ENOENT") {
       console.warn(`  ⚠ Warning: ${err.message}`);
     } else {
@@ -106,17 +130,18 @@ async function zipEvidenceBundle(bundlePath) {
     die(`Archive error: ${err.message}`);
   });
 
-  // Pipe archive data to the file
   archive.pipe(output);
 
-  // Add bundle directory contents to archive
-  // Use the bundle name as the root directory inside the ZIP
+  // Nest all bundle files under the bundle name as the ZIP root directory.
+  // This ensures the extracted layout matches the original bundle structure
+  // and is directly usable as input to `verify-bundle`.
   archive.directory(resolvedBundlePath, bundleName);
 
-  // Finalize the archive
   await archive.finalize();
 
-  // Wait for the output stream to finish
+  // finalize() signals the archive is written to the stream, but the underlying
+  // write stream may still be flushing. Wait for the close event before reading
+  // the file size or reporting success.
   await new Promise((resolve, reject) => {
     output.on("close", () => {
       resolve();

@@ -1,10 +1,12 @@
 #!/usr/bin/env node
 /**
- * vscCli.js — VSC v1.8 simplified CLI router
+ * vscCli.js — VSC CLI router
  *
  * Usage:  npm run vsc -- <command> [args]
  *
- * Delegates to existing src/ scripts. No core logic lives here.
+ * Dispatches commands to their dedicated scripts via spawnSync.
+ * No proof, hashing, or evidence logic lives here — this file is
+ * routing only. Each command inherits the full exit code of its target.
  */
 
 import { spawnSync } from "child_process";
@@ -17,6 +19,14 @@ const ROOT      = path.resolve(__dirname, "..");
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 
+/**
+ * Spawns a script in a child process and exits with its status code.
+ *
+ * stdio: "inherit" ensures the child's output is streamed directly to the
+ * terminal, preserving PASS/FAIL lines and formatting from each script.
+ * cwd: ROOT ensures relative bundle paths resolve consistently regardless
+ * of where the user runs the command from.
+ */
 function run(scriptRelPath, extraArgs = []) {
   const scriptPath = path.join(ROOT, scriptRelPath);
   const result = spawnSync(
@@ -24,9 +34,16 @@ function run(scriptRelPath, extraArgs = []) {
     [scriptPath, ...extraArgs],
     { stdio: "inherit", cwd: ROOT }
   );
+  // Propagate the child's exit code exactly — callers and CI pipelines
+  // rely on non-zero meaning failure.
   process.exit(result.status ?? 1);
 }
 
+/**
+ * Reads the mode and type fields from a token JSON file.
+ * Used by `restore` and `verify` to auto-detect which script to dispatch to
+ * without requiring the caller to know the token's internal structure.
+ */
 function readTokenMode(tokenPath) {
   try {
     const t = JSON.parse(fs.readFileSync(tokenPath, "utf8"));
@@ -297,6 +314,9 @@ Use: npm run vsc -- restore-delta <base-token.json> <delta-token.json>
   // ── bundle:json [chain-token.json] ───────────────────────────────────────────
   case "bundle:json": {
     const jsonChainTokenPath = args[1];
+    // Without an explicit token path the exporter discovers the latest
+    // JSON benchmark results automatically — pass an empty args list so
+    // the script falls through to its auto-detect logic.
     if (jsonChainTokenPath) {
       run("scripts/exportJsonEventBundle.js", [jsonChainTokenPath]);
     } else {
@@ -311,6 +331,8 @@ Use: npm run vsc -- restore-delta <base-token.json> <delta-token.json>
     if (!bundlePath) {
       die("verify-bundle requires a bundle folder path.\n  Usage: npm run vsc -- verify-bundle <bundle-folder>");
     }
+    // Read-only verification: verifyEvidenceBundle.js never writes to the bundle.
+    // Exit code is propagated directly — callers can use this in CI pipelines.
     run("scripts/verifyEvidenceBundle.js", [bundlePath]);
     break;
   }
@@ -321,6 +343,9 @@ Use: npm run vsc -- restore-delta <base-token.json> <delta-token.json>
     if (!zipBundlePath) {
       die("zip-bundle requires a bundle folder path.\n  Usage: npm run vsc -- zip-bundle <bundle-folder>");
     }
+    // Packages the bundle into a portable handoff artifact in output/zips/.
+    // Source bundle immutability is guaranteed by zipEvidenceBundle.js —
+    // this routing passes the path through unchanged.
     run("scripts/zipEvidenceBundle.js", [zipBundlePath]);
     break;
   }
