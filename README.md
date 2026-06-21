@@ -10,9 +10,10 @@ Research prototype / proof-of-concept. Not production-ready.
 
 ## Non-technical overview
 
-For a plain-language explanation of what VSC proves, what it does not prove, and how to read PASS / FAIL results, see:
+For plain-language explanations of what VSC proves, what it does not prove, and how to read PASS / FAIL / ERROR results:
 
-[`docs/non-technical/VSC_TRUST_OVERVIEW.md`](docs/non-technical/VSC_TRUST_OVERVIEW.md)
+- [`docs/non-technical/VSC_TRUST_OVERVIEW.md`](docs/non-technical/VSC_TRUST_OVERVIEW.md) — what VSC is and what it proves
+- [`docs/non-technical/PASS_FAIL_EXPLAINED.md`](docs/non-technical/PASS_FAIL_EXPLAINED.md) — how to interpret PASS, FAIL, and ERROR
 
 ---
 

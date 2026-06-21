@@ -122,6 +122,10 @@ For example, a required file may be malformed or unreadable.
 
 It means the verification process could not complete normally.
 
+For a more focused plain-language explanation of these result classes, see:
+
+[`docs/non-technical/PASS_FAIL_EXPLAINED.md`](PASS_FAIL_EXPLAINED.md)
+
 ## The three-layer trust model
 
 VSC is designed to work as one layer in a broader trust architecture.
