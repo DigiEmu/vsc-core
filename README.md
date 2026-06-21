@@ -59,6 +59,8 @@ External reference shape validation plan: [`docs/interop/EXTERNAL_REFERENCE_SHAP
 
 External reference fixture plan: [`docs/interop/EXTERNAL_REFERENCE_FIXTURE_PLAN.md`](docs/interop/EXTERNAL_REFERENCE_FIXTURE_PLAN.md). Fixture planning does not implement fixture validation.
 
+Interop consolidation summary: [`docs/interop/INTEROP_CONSOLIDATION_SUMMARY.md`](docs/interop/INTEROP_CONSOLIDATION_SUMMARY.md). Consolidates v2.17–v2.23. Documentation only; does not implement validation or start v3.0.
+
 ## CI Conformance Check
 
 VSC includes a GitHub Actions workflow for automated conformance validation.

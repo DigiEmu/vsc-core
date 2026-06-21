@@ -241,6 +241,14 @@ VSC does not prove:
 
 Unless a separate external verifier is explicitly defined, these remain outside VSC.
 
+## Consolidation summary
+
+The v2.17–v2.23 interop arc is consolidated in:
+
+[`docs/interop/INTEROP_CONSOLIDATION_SUMMARY.md`](INTEROP_CONSOLIDATION_SUMMARY.md)
+
+This is documentation-only consolidation and does not add implementation behavior.
+
 ## Recommended next step after v2.21
 
 Possible next release:
