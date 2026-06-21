@@ -181,6 +181,14 @@ Any future validation must preserve the distinction:
 Reference validation is not artifact validation.
 ```
 
+## Roadmap
+
+For staged pre-v3 planning, see:
+
+[`docs/interop/INTEROP_ROADMAP_PRE_V3.md`](INTEROP_ROADMAP_PRE_V3.md)
+
+The roadmap is planning only and does not implement external reference validation.
+
 ## Summary
 
 External references help VSC connect to broader trust ecosystems.

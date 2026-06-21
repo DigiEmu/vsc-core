@@ -53,6 +53,8 @@ External reference examples (draft, not production integrations): [`examples/ext
 
 External reference validation notes: [`docs/interop/EXTERNAL_REFERENCE_VALIDATION_NOTES.md`](docs/interop/EXTERNAL_REFERENCE_VALIDATION_NOTES.md). Reference validation is not artifact validation.
 
+Interop roadmap / pre-v3 planning: [`docs/interop/INTEROP_ROADMAP_PRE_V3.md`](docs/interop/INTEROP_ROADMAP_PRE_V3.md). Planning only; does not start v3.0 or implement external reference validation.
+
 ## CI Conformance Check
 
 VSC includes a GitHub Actions workflow for automated conformance validation.
