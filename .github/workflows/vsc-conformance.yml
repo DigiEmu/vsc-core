@@ -1,0 +1,44 @@
+name: VSC Conformance
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  conformance:
+    name: VSC Conformance Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run fixture comparison
+        run: npm run vsc -- compare:fixtures
+
+      - name: Validate fixture comparison JSON
+        shell: bash
+        run: |
+          npm run vsc -- compare:fixtures --json > comparison-result.json
+          cat comparison-result.json
+          node -e "const fs = require('fs'); const data = JSON.parse(fs.readFileSync('comparison-result.json', 'utf8')); if (data.result !== 'COMPARE_PASS') { console.error(data); process.exit(1); } console.log('COMPARE_JSON_PASS');"
+
+      - name: Run full VSC verification
+        run: npm run vsc -- verify-all
