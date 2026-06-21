@@ -28,6 +28,8 @@ The VSC v2.6 Machine-readable Verification Result Schema draft is available in [
 
 The VSC v2.7 Conformance Fixture Package is available in [`conformance/v2.7/`](conformance/v2.7/). It provides minimal PASS / FAIL / ERROR fixtures for comparing verifier behavior across implementations.
 
+The VSC v2.8 Node/Go Result Comparison Draft is available in [`conformance/v2.8/`](conformance/v2.8/). It defines how verifier implementations should compare result classes across the v2.7 conformance fixtures.
+
 ---
 
 ## Core Concept

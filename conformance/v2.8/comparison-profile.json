@@ -1,0 +1,59 @@
+{
+  "profile": "vsc-node-go-result-comparison-v2.8-draft",
+  "schema_version": "2.8-draft",
+  "comparison_name": "Node/Go Result Comparison",
+  "fixture_index": "../v2.7/fixture-index.json",
+  "implementations": [
+    {
+      "id": "node-reference",
+      "type": "reference",
+      "language": "javascript",
+      "command": "npm run vsc -- verify-bundle <path>"
+    },
+    {
+      "id": "go-verifier",
+      "type": "prototype",
+      "language": "go",
+      "command": "go run ./cmd/vsc-go verify-bundle --json <path>"
+    }
+  ],
+  "hard_fields": [
+    "result",
+    "expected_result",
+    "exit_code_class",
+    "checks.required_files.status",
+    "checks.checksums.status",
+    "checks.chain_token.status",
+    "checks.base_token.status",
+    "checks.delta_tokens.status",
+    "checks.manifest.status"
+  ],
+  "soft_fields": [
+    "diagnostics.checksums_verified",
+    "diagnostics.checksums_expected",
+    "diagnostics.delta_tokens_found",
+    "diagnostics.delta_tokens_expected",
+    "bundle.chain_token_id",
+    "bundle.base_token_id",
+    "bundle.latest_token_id"
+  ],
+  "ignored_fields": [
+    "input.resolved_path",
+    "input.path",
+    "diagnostics.duration_ms",
+    "diagnostics.bytes_read",
+    "verifier.name",
+    "verifier.version",
+    "verifier.implementation",
+    "checks.*.message",
+    "timestamps.started_at",
+    "timestamps.completed_at",
+    "metadata"
+  ],
+  "comparison_result_classes": [
+    "COMPARE_PASS",
+    "COMPARE_FAIL",
+    "COMPARE_ERROR",
+    "COMPARE_INCOMPLETE"
+  ]
+}
