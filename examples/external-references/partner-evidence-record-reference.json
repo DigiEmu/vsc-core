@@ -1,0 +1,15 @@
+{
+  "profile": "vsc-external-reference-v2.18-draft",
+  "reference_id": "ref-partner-001",
+  "reference_type": "partner_evidence_record",
+  "target_system": "PartnerSystem",
+  "target_artifact_id": "partner-evidence-record-001",
+  "target_artifact_hash": "sha256:example-placeholder-partner-evidence-record",
+  "target_artifact_uri": "urn:example:partner:evidence:partner-evidence-record-001",
+  "issued_at": "2026-06-21T00:00:00Z",
+  "issuer": "Example partner evidence context",
+  "relation": "references_partner_evidence",
+  "proof_boundary": "external_reference_only",
+  "verified_by_vsc": false,
+  "notes": "This is an external pointer to a partner evidence record. VSC does not verify the partner system, the partner evidence claim, or absorb the external proof claim."
+}

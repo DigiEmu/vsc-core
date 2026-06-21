@@ -1,0 +1,15 @@
+{
+  "profile": "vsc-external-reference-v2.18-draft",
+  "reference_id": "ref-clarixo-001",
+  "reference_type": "clarixo_record",
+  "target_system": "CLARIXO",
+  "target_artifact_id": "clarixo-responsibility-record-001",
+  "target_artifact_hash": "sha256:example-placeholder-clarixo-record",
+  "target_artifact_uri": "urn:example:clarixo:record:clarixo-responsibility-record-001",
+  "issued_at": "2026-06-21T00:00:00Z",
+  "issuer": "Example CLARIXO context",
+  "relation": "references_external_attribution_context",
+  "proof_boundary": "external_reference_only",
+  "verified_by_vsc": false,
+  "notes": "This is an external pointer to a CLARIXO responsibility context record. VSC does not prove attribution, responsibility, or absorb the external proof claim."
+}

@@ -1,0 +1,15 @@
+{
+  "profile": "vsc-external-reference-v2.18-draft",
+  "reference_id": "ref-audit-001",
+  "reference_type": "external_audit_note",
+  "target_system": "ExternalAudit",
+  "target_artifact_id": "audit-note-001",
+  "target_artifact_hash": "sha256:example-placeholder-external-audit-note",
+  "target_artifact_uri": "urn:example:audit:note:audit-note-001",
+  "issued_at": "2026-06-21T00:00:00Z",
+  "issuer": "Example external audit context",
+  "relation": "references_external_audit_context",
+  "proof_boundary": "external_reference_only",
+  "verified_by_vsc": false,
+  "notes": "This is an external pointer to an audit note. VSC does not verify legal, regulatory, audit, or compliance conclusions and does not absorb the external proof claim."
+}

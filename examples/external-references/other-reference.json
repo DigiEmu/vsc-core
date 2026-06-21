@@ -1,0 +1,15 @@
+{
+  "profile": "vsc-external-reference-v2.18-draft",
+  "reference_id": "ref-other-001",
+  "reference_type": "other",
+  "target_system": "ExternalContext",
+  "target_artifact_id": "external-context-artifact-001",
+  "target_artifact_hash": "sha256:example-placeholder-other",
+  "target_artifact_uri": "urn:example:external:context:external-context-artifact-001",
+  "issued_at": "2026-06-21T00:00:00Z",
+  "issuer": "Example external context",
+  "relation": "other",
+  "proof_boundary": "external_reference_only",
+  "verified_by_vsc": false,
+  "notes": "This is an external pointer only. VSC does not verify or absorb the external proof claim."
+}

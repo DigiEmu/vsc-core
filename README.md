@@ -49,6 +49,8 @@ VSC can be discussed as part of a broader trust architecture with identity / tru
 
 External reference profile draft: [`docs/interop/EXTERNAL_REFERENCE_PROFILE_DRAFT.md`](docs/interop/EXTERNAL_REFERENCE_PROFILE_DRAFT.md) and [`schemas/external-reference-profile-v2.18-draft.schema.json`](schemas/external-reference-profile-v2.18-draft.schema.json). External references are pointers, not proof imports.
 
+External reference examples (draft, not production integrations): [`examples/external-references/`](examples/external-references/)
+
 ## CI Conformance Check
 
 VSC includes a GitHub Actions workflow for automated conformance validation.

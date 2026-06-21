@@ -1,0 +1,15 @@
+{
+  "profile": "vsc-external-reference-v2.18-draft",
+  "reference_id": "ref-tbn-001",
+  "reference_type": "tbn_receipt",
+  "target_system": "TBN",
+  "target_artifact_id": "tbn-receipt-agent-demo-001",
+  "target_artifact_hash": "sha256:example-placeholder-tbn-receipt",
+  "target_artifact_uri": "urn:example:tbn:receipt:tbn-receipt-agent-demo-001",
+  "issued_at": "2026-06-21T00:00:00Z",
+  "issuer": "Example TBN context",
+  "relation": "references_external_trust_context",
+  "proof_boundary": "external_reference_only",
+  "verified_by_vsc": false,
+  "notes": "This is an external pointer to a TBN trust receipt. VSC does not verify identity, trust status, or absorb the external proof claim."
+}

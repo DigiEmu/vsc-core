@@ -258,6 +258,14 @@ VSC imported the external proof claim.
 VSC proved identity or attribution through the external reference.
 ```
 
+## Examples
+
+Example JSON files using this draft profile are available in:
+
+[`examples/external-references/`](../../examples/external-references/)
+
+These examples remain pointers only and do not import external proof claims into VSC.
+
 ## Summary
 
 External references make VSC evidence easier to connect to broader trust ecosystems.
