@@ -1,0 +1,12 @@
+{
+  "id": "AABB001122CC",
+  "mode": "FOLDER_DELTA",
+  "baseTokenId": "BASE000001AA",
+  "latestTokenId": "DELTA00001BB",
+  "steps": [
+    {
+      "tokenId": "DELTA00001BB",
+      "index": 1
+    }
+  ]
+}

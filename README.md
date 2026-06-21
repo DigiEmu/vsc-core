@@ -26,6 +26,8 @@ The VSC v2.4 Go Core Prototype Preparation draft is available in [`docs/vsc-v2-4
 
 The VSC v2.6 Machine-readable Verification Result Schema draft is available in [`docs/vsc-v2-6-machine-readable-verification-result-schema-draft.md`](docs/vsc-v2-6-machine-readable-verification-result-schema-draft.md). It defines a stable JSON result surface for future Go `--json` output, conformance comparisons, APIs, and interop receipts.
 
+The VSC v2.7 Conformance Fixture Package is available in [`conformance/v2.7/`](conformance/v2.7/). It provides minimal PASS / FAIL / ERROR fixtures for comparing verifier behavior across implementations.
+
 ---
 
 ## Core Concept

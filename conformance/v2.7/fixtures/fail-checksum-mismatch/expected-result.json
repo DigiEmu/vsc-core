@@ -1,0 +1,17 @@
+{
+  "profile": "vsc-conformance-fixture-v2.7-draft",
+  "schema_version": "2.7-draft",
+  "fixture_id": "fail-checksum-mismatch",
+  "fixture_name": "Checksum mismatch — manifest.json",
+  "expected_result": "FAIL",
+  "expected_exit_code": 1,
+  "expected_checks": {
+    "required_files": "PASS",
+    "checksums": "FAIL",
+    "chain_token": "PASS",
+    "base_token": "PASS",
+    "delta_tokens": "PASS",
+    "manifest": "PASS"
+  },
+  "notes": "manifest.json checksum is intentionally set to all-zeros in checksums.sha256. The file is valid JSON and all other files are intact. Result must be FAIL. The failed check must be checksums. This fixture must not return PASS or ERROR."
+}

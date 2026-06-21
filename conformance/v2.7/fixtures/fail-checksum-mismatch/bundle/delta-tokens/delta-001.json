@@ -1,0 +1,10 @@
+{
+  "id": "DELTA00001BB",
+  "mode": "FOLDER_DELTA",
+  "index": 1,
+  "baseTokenId": "BASE000001AA",
+  "timestamp": "2026-06-21T00:01:00.000Z",
+  "deltaHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "chunks": 0,
+  "bytes": 0
+}

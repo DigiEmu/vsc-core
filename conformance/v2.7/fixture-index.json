@@ -1,0 +1,27 @@
+{
+  "profile": "vsc-conformance-fixture-index-v2.7-draft",
+  "schema_version": "2.7-draft",
+  "fixtures": [
+    {
+      "id": "pass-basic",
+      "path": "fixtures/pass-basic/bundle",
+      "expected_result": "PASS",
+      "expected_exit_code": 0,
+      "description": "Minimal valid VSC Evidence Bundle. All checks must pass."
+    },
+    {
+      "id": "fail-checksum-mismatch",
+      "path": "fixtures/fail-checksum-mismatch/bundle",
+      "expected_result": "FAIL",
+      "expected_exit_code": 1,
+      "description": "manifest.json checksum is intentionally wrong. Result must be FAIL."
+    },
+    {
+      "id": "error-malformed-manifest",
+      "path": "fixtures/error-malformed-manifest/bundle",
+      "expected_result": "ERROR",
+      "expected_exit_code": 2,
+      "description": "manifest.json is intentionally malformed JSON. Result must be ERROR."
+    }
+  ]
+}

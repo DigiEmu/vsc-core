@@ -1,0 +1,17 @@
+{
+  "profile": "vsc-conformance-fixture-v2.7-draft",
+  "schema_version": "2.7-draft",
+  "fixture_id": "pass-basic",
+  "fixture_name": "Minimal valid VSC Evidence Bundle",
+  "expected_result": "PASS",
+  "expected_exit_code": 0,
+  "expected_checks": {
+    "required_files": "PASS",
+    "checksums": "PASS",
+    "chain_token": "PASS",
+    "base_token": "PASS",
+    "delta_tokens": "PASS",
+    "manifest": "PASS"
+  },
+  "notes": "All required files present. All checksums match. Chain token valid. One delta token present. Manifest valid JSON. All conformant verifiers must return PASS."
+}

@@ -1,0 +1,23 @@
+{
+  "profile": "vsc-conformance-fixture-v2.7-draft",
+  "schema_version": "2.7-draft",
+  "fixture_id": "error-malformed-manifest",
+  "fixture_name": "Malformed manifest.json — truncated JSON",
+  "expected_result": "ERROR",
+  "expected_exit_code": 2,
+  "expected_checks": {
+    "required_files": "PASS",
+    "checksums": "PASS",
+    "chain_token": "PASS",
+    "base_token": "PASS",
+    "delta_tokens": "PASS",
+    "manifest": "ERROR"
+  },
+  "expected_errors": [
+    {
+      "code": "MALFORMED_JSON",
+      "file": "manifest.json"
+    }
+  ],
+  "notes": "manifest.json is intentionally truncated invalid JSON. The checksum of the malformed file is correctly recorded, so checksums passes. The manifest parse error triggers result ERROR. This fixture must not return PASS or FAIL."
+}
