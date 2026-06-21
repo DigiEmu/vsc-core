@@ -16,6 +16,8 @@ It defines the VSC evidence model, token roles, bundle structure, verifier behav
 
 The VSC v2.1 Canonical Event Model draft is available in [`docs/vsc-v2-1-canonical-event-model-draft.md`](docs/vsc-v2-1-canonical-event-model-draft.md). It defines the smallest verifiable event unit used by VSC evidence flows.
 
+The VSC v2.2 Conformance Test Vectors draft is available in [`docs/vsc-v2-2-conformance-test-vectors-draft.md`](docs/vsc-v2-2-conformance-test-vectors-draft.md). It defines the compatibility test surface for future VSC implementations.
+
 ---
 
 ## Core Concept
