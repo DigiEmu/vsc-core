@@ -8,6 +8,14 @@ Research prototype / proof-of-concept. Not production-ready.
 
 ---
 
+## VSC v2.0 Formal Specification Draft
+
+The VSC v2.0 formal specification draft is available in [`docs/vsc-v2-0-formal-specification-draft.md`](docs/vsc-v2-0-formal-specification-draft.md).
+
+It defines the VSC evidence model, token roles, bundle structure, verifier behavior, and validation semantics in a language-independent form. **v1.x remains the current Node.js reference implementation.**
+
+---
+
 ## Core Concept
 
 VSC is a base + delta + proof + recovery model for folder and file state:
