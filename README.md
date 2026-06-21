@@ -14,6 +14,8 @@ The VSC v2.0 formal specification draft is available in [`docs/vsc-v2-0-formal-s
 
 It defines the VSC evidence model, token roles, bundle structure, verifier behavior, and validation semantics in a language-independent form. **v1.x remains the current Node.js reference implementation.**
 
+The VSC v2.1 Canonical Event Model draft is available in [`docs/vsc-v2-1-canonical-event-model-draft.md`](docs/vsc-v2-1-canonical-event-model-draft.md). It defines the smallest verifiable event unit used by VSC evidence flows.
+
 ---
 
 ## Core Concept
