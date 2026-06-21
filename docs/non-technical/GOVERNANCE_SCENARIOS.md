@@ -204,6 +204,10 @@ VSC does not replace TBN or CLARIXO.
 
 It does not prove identity or responsibility attribution by itself.
 
+For boundary details between the three layers, see:
+
+[`docs/interop/TBN_VSC_CLARIXO_BOUNDARIES.md`](../interop/TBN_VSC_CLARIXO_BOUNDARIES.md)
+
 ## Summary
 
 VSC is useful when a workflow needs portable, reproducible, independently checkable decision-state evidence.

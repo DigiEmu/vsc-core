@@ -41,6 +41,12 @@ The VSC v2.7 Conformance Fixture Package is available in [`conformance/v2.7/`](c
 
 The VSC v2.8 Node/Go Result Comparison Draft is available in [`conformance/v2.8/`](conformance/v2.8/). It defines how verifier implementations should compare result classes across the v2.7 conformance fixtures. The v2.8.2 comparison runner supports human-readable and machine-readable output: `npm run vsc -- compare:fixtures` (human-readable table) or `npm run vsc -- compare:fixtures --json` (JSON, intended for automation and future CI).
 
+## Interop / boundary notes
+
+VSC can be discussed as part of a broader trust architecture with identity / trust and responsibility / attribution layers.
+
+[`docs/interop/TBN_VSC_CLARIXO_BOUNDARIES.md`](docs/interop/TBN_VSC_CLARIXO_BOUNDARIES.md) — TBN / VSC / CLARIXO safe interoperability boundaries. This document describes reference patterns. It is not an integration-complete claim.
+
 ## CI Conformance Check
 
 VSC includes a GitHub Actions workflow for automated conformance validation.
