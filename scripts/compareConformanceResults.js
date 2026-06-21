@@ -1,8 +1,12 @@
-// VSC v2.8.1 — Conformance Comparison Runner
+// VSC v2.8.2 — Conformance Comparison Runner
 // Reads the v2.7 fixture index, runs the Go verifier --json for each fixture,
 // and compares actual results against expected results.
 // Exits 0 only when all fixtures produce COMPARE_PASS.
 // Read-only: never writes to fixture bundle directories.
+//
+// Usage:
+//   node scripts/compareConformanceResults.js           (human-readable table)
+//   node scripts/compareConformanceResults.js --json    (machine-readable JSON)
 
 import { spawnSync } from "child_process";
 import { readFileSync, existsSync } from "fs";
@@ -123,18 +127,18 @@ function compareFixture(fixture) {
 
 // ── Formatting ───────────────────────────────────────────────────────────────
 const COL = {
-  fixture:       18,
-  expected:       8,
-  actual:         8,
-  exp_exit:       8,
-  act_exit:       8,
+  fixture:       33,
+  expected:      11,
+  actual:        11,
+  exp_exit:      11,
+  act_exit:      11,
   comparison:    20,
 };
 
 function pad(s, n) { return String(s ?? "—").padEnd(n); }
 
 function printHeader() {
-  console.log(`\nVSC v2.8.1 — Conformance Comparison Runner`);
+  console.log(`\nVSC v2.8.2 — Conformance Comparison Runner`);
   console.log(`Fixture index: ${FIXTURE_INDEX_PATH}`);
   console.log(`Verifier:      go run ./cmd/vsc-go verify-bundle --json`);
   console.log();
@@ -166,46 +170,96 @@ function printTable(rows) {
   console.log(divider);
 }
 
+// ── JSON output ───────────────────────────────────────────────────────────────
+function buildJsonReport(rows, finalResult) {
+  const passed     = rows.filter(r => r.comparison === COMPARE_PASS);
+  const failed     = rows.filter(r => r.comparison === COMPARE_FAIL);
+  const errored    = rows.filter(r => r.comparison === COMPARE_ERROR);
+  const incomplete = rows.filter(r => r.comparison === COMPARE_INCOMPLETE);
+
+  const comparisons = rows.map(r => ({
+    fixture_id:             r.id,
+    expected_result:        r.expected   ?? null,
+    actual_result:          r.actual     ?? null,
+    expected_exit_code_class: r.expected_exit ?? null,
+    actual_exit_code_class:   r.actual_exit   ?? null,
+    comparison:             r.comparison,
+    ...(r.reason ? { reason: r.reason } : {}),
+  }));
+
+  const errors = rows
+    .filter(r => r.comparison === COMPARE_ERROR || r.comparison === COMPARE_INCOMPLETE)
+    .map(r => ({ fixture_id: r.id, message: r.reason ?? "unknown error" }));
+
+  return {
+    profile:          "vsc-node-go-comparison-result-v2.8.2",
+    schema_version:   "2.8.2",
+    runner: {
+      name:           "compareConformanceResults",
+      implementation: "node",
+    },
+    input: {
+      fixture_index:  "conformance/v2.7/fixture-index.json",
+    },
+    result:           finalResult,
+    fixtures_total:   rows.length,
+    fixtures_passed:  passed.length,
+    fixtures_failed:  failed.length + errored.length + incomplete.length,
+    comparisons,
+    errors,
+  };
+}
+
+// ── Exit code mapping ────────────────────────────────────────────────────────
+function finalResultAndExit(rows) {
+  const failed     = rows.filter(r => r.comparison === COMPARE_FAIL);
+  const errored    = rows.filter(r => r.comparison === COMPARE_ERROR);
+  const incomplete = rows.filter(r => r.comparison === COMPARE_INCOMPLETE);
+
+  if (errored.length > 0)                           return { result: COMPARE_ERROR,      exitCode: 2 };
+  if (incomplete.length > 0 && failed.length === 0) return { result: COMPARE_INCOMPLETE, exitCode: 3 };
+  if (failed.length > 0)                            return { result: COMPARE_FAIL,       exitCode: 1 };
+  return                                                   { result: COMPARE_PASS,       exitCode: 0 };
+}
+
 // ── Main ─────────────────────────────────────────────────────────────────────
 function main() {
-  printHeader();
+  const jsonMode = process.argv.includes("--json");
 
   const index    = loadFixtureIndex();
   const fixtures = index.fixtures ?? [];
 
   if (!fixtures.length) {
-    console.error("ERROR: fixture index contains no fixtures.");
+    if (jsonMode) {
+      process.stdout.write(JSON.stringify({ error: "fixture index contains no fixtures" }, null, 2) + "\n");
+    } else {
+      console.error("ERROR: fixture index contains no fixtures.");
+    }
     process.exit(2);
   }
 
-  console.log(`Running ${fixtures.length} fixture(s)...\n`);
-
   const rows = fixtures.map(compareFixture);
+  const { result: finalResult, exitCode } = finalResultAndExit(rows);
 
+  if (jsonMode) {
+    const report = buildJsonReport(rows, finalResult);
+    process.stdout.write(JSON.stringify(report, null, 2) + "\n");
+    process.exit(exitCode);
+  }
+
+  // ── Human-readable output ─────────────────────────────────────────────────
+  printHeader();
+  console.log(`Running ${fixtures.length} fixture(s)...\n`);
   printTable(rows);
 
+  const passed     = rows.filter(r => r.comparison === COMPARE_PASS);
   const failed     = rows.filter(r => r.comparison === COMPARE_FAIL);
   const errored    = rows.filter(r => r.comparison === COMPARE_ERROR);
   const incomplete = rows.filter(r => r.comparison === COMPARE_INCOMPLETE);
-  const passed     = rows.filter(r => r.comparison === COMPARE_PASS);
 
   console.log(`\nResults: ${passed.length} COMPARE_PASS  |  ${failed.length} COMPARE_FAIL  |  ${errored.length} COMPARE_ERROR  |  ${incomplete.length} COMPARE_INCOMPLETE`);
-
-  if (errored.length > 0) {
-    console.log("\nFinal result: COMPARE_ERROR");
-    process.exit(2);
-  }
-  if (incomplete.length > 0 && failed.length === 0) {
-    console.log("\nFinal result: COMPARE_INCOMPLETE");
-    process.exit(3);
-  }
-  if (failed.length > 0) {
-    console.log("\nFinal result: COMPARE_FAIL");
-    process.exit(1);
-  }
-
-  console.log("\nFinal result: COMPARE_PASS");
-  process.exit(0);
+  console.log(`\nFinal result: ${finalResult}`);
+  process.exit(exitCode);
 }
 
 main();

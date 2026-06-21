@@ -64,28 +64,41 @@ See `node-go-result-comparison-draft.md` §6–§8 for the full field tables.
 
 ---
 
-## Runner (v2.8.1 — implemented)
+## Runner (v2.8.2 — current)
+
+Human-readable table (v2.8.2 — improved formatting):
 
 ```sh
 node scripts/compareConformanceResults.js
-# or via vscCli:
 npm run vsc -- compare:fixtures
 ```
 
-Expected output:
+Machine-readable JSON output (v2.8.2 — new):
+
+```sh
+node scripts/compareConformanceResults.js --json
+npm run vsc -- compare:fixtures --json
 ```
-pass-basic             PASS    PASS    0    0    COMPARE_PASS
-fail-checksum-mismatch FAIL    FAIL    1    1    COMPARE_PASS
-error-malformed-manifest ERROR  ERROR  2    2    COMPARE_PASS
+
+The `--json` mode emits only valid JSON to stdout (no mixed output). Intended for automation and future CI usage. Profile: `vsc-node-go-comparison-result-v2.8.2`.
+
+Expected human-readable output:
+```
+fixture_id                       expected   actual     exp_exit   act_exit   comparison
+pass-basic                       PASS       PASS       0          0          COMPARE_PASS
+fail-checksum-mismatch           FAIL       FAIL       1          1          COMPARE_PASS
+error-malformed-manifest         ERROR      ERROR      2          2          COMPARE_PASS
 
 Final result: COMPARE_PASS
 ```
 
 Exit codes: 0 = COMPARE_PASS, 1 = COMPARE_FAIL, 2 = COMPARE_ERROR, 3 = COMPARE_INCOMPLETE.
 
+Comparison semantics are unchanged from v2.8/v2.8.1.
+
 ## Future Node Adapter
 
-The v2.8.2 runner will:
+The v2.8.2 runner currently compares Go verifier output only. The v2.8.3/v2.9 runner will:
 
 1. Read `conformance/v2.7/fixture-index.json`.
 2. Run `go run ./cmd/vsc-go verify-bundle --json <path>` for each fixture.
