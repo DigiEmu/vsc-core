@@ -258,6 +258,14 @@ VSC imported the external proof claim.
 VSC proved identity or attribution through the external reference.
 ```
 
+## Validation notes
+
+For the distinction between reference-shape validation and external artifact validation, see:
+
+[`docs/interop/EXTERNAL_REFERENCE_VALIDATION_NOTES.md`](EXTERNAL_REFERENCE_VALIDATION_NOTES.md)
+
+These notes do not implement verifier behavior.
+
 ## Examples
 
 Example JSON files using this draft profile are available in:

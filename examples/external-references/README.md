@@ -58,6 +58,16 @@ These examples are not:
 - proof of compliance
 - proof of truth
 
+## Validation notes
+
+These examples demonstrate schema-shaped external reference pointers.
+
+A well-shaped external reference does not mean the referenced external artifact is valid.
+
+For the distinction between reference-shape validation and external artifact validation, see:
+
+[`docs/interop/EXTERNAL_REFERENCE_VALIDATION_NOTES.md`](../../docs/interop/EXTERNAL_REFERENCE_VALIDATION_NOTES.md)
+
 ## Summary
 
 The examples demonstrate how VSC can reference external context while keeping the VSC proof boundary intact.

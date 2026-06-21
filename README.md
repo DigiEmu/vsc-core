@@ -51,6 +51,8 @@ External reference profile draft: [`docs/interop/EXTERNAL_REFERENCE_PROFILE_DRAF
 
 External reference examples (draft, not production integrations): [`examples/external-references/`](examples/external-references/)
 
+External reference validation notes: [`docs/interop/EXTERNAL_REFERENCE_VALIDATION_NOTES.md`](docs/interop/EXTERNAL_REFERENCE_VALIDATION_NOTES.md). Reference validation is not artifact validation.
+
 ## CI Conformance Check
 
 VSC includes a GitHub Actions workflow for automated conformance validation.
