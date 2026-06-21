@@ -22,6 +22,8 @@ The VSC v2.3 Interop Receipt Profile draft is available in [`docs/vsc-v2-3-inter
 
 The VSC v2.4 Go Core Prototype Preparation draft is available in [`docs/vsc-v2-4-go-core-prototype-preparation.md`](docs/vsc-v2-4-go-core-prototype-preparation.md). It defines the preparation path for a future Go-based VSC verifier while preserving the Node.js v1.x reference implementation.
 
+**Experimental Go verifier prototype (v2.5):** `go run ./cmd/vsc-go verify-bundle <bundle-folder>`. Read-only. Preserves VSC result semantics. Node.js remains the reference implementation.
+
 ---
 
 ## Core Concept
