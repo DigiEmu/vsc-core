@@ -57,6 +57,8 @@ Interop roadmap / pre-v3 planning: [`docs/interop/INTEROP_ROADMAP_PRE_V3.md`](do
 
 External reference shape validation plan: [`docs/interop/EXTERNAL_REFERENCE_SHAPE_VALIDATION_PLAN.md`](docs/interop/EXTERNAL_REFERENCE_SHAPE_VALIDATION_PLAN.md). Planning only. Shape validation checks the reference object, not the external artifact.
 
+External reference fixture plan: [`docs/interop/EXTERNAL_REFERENCE_FIXTURE_PLAN.md`](docs/interop/EXTERNAL_REFERENCE_FIXTURE_PLAN.md). Fixture planning does not implement fixture validation.
+
 ## CI Conformance Check
 
 VSC includes a GitHub Actions workflow for automated conformance validation.

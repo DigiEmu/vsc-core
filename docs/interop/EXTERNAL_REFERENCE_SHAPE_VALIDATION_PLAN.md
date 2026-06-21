@@ -192,6 +192,16 @@ v2.22 does not add:
 - external artifact validation
 - integration-complete claims
 
+## Fixture planning
+
+Candidate future fixture classes are planned in:
+
+[`docs/interop/EXTERNAL_REFERENCE_FIXTURE_PLAN.md`](EXTERNAL_REFERENCE_FIXTURE_PLAN.md)
+
+Fixture planning does not implement fixture validation.
+
+No fixture files are created by that planning document.
+
 ## Summary
 
 This plan prepares future validation work without expanding VSC's proof boundary.

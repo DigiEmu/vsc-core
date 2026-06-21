@@ -139,6 +139,12 @@ Example classes could include:
 
 These examples would test reference-object shape, not external artifact truth.
 
+Candidate fixture classes for future external reference conformance examples are planned in:
+
+[`docs/interop/EXTERNAL_REFERENCE_FIXTURE_PLAN.md`](EXTERNAL_REFERENCE_FIXTURE_PLAN.md)
+
+This is planning only and does not create external reference fixtures.
+
 ## Phase 3 — Optional reporting integration
 
 Status: possible future work.
