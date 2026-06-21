@@ -65,6 +65,8 @@ Partner / reviewer interop brief: [`docs/interop/PARTNER_REVIEWER_INTEROP_BRIEF.
 
 Enterprise review package: [`docs/review/ENTERPRISE_REVIEW_PACKAGE.md`](docs/review/ENTERPRISE_REVIEW_PACKAGE.md). Review package only; not certification. Includes validation commands, expected outputs, key files, and explicit non-claims.
 
+Partner-facing review brief: [`docs/review/PARTNER_REVIEW_BRIEF.md`](docs/review/PARTNER_REVIEW_BRIEF.md). Short PDF/source-friendly entry point; not certification.
+
 ## CI Conformance Check
 
 VSC includes a GitHub Actions workflow for automated conformance validation.

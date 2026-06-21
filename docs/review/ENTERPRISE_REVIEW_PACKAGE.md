@@ -381,6 +381,16 @@ Open risks:
 Recommended next steps:
 ```
 
+## Partner-facing brief
+
+A compact partner-facing review brief is available in:
+
+[`docs/review/PARTNER_REVIEW_BRIEF.md`](PARTNER_REVIEW_BRIEF.md)
+
+It is designed as a short entry point or PDF source.
+
+It is not certification.
+
 ## Summary
 
 VSC Core 2.x is structured for technical and governance review.
