@@ -24,6 +24,8 @@ The VSC v2.4 Go Core Prototype Preparation draft is available in [`docs/vsc-v2-4
 
 **Experimental Go verifier prototype (v2.5):** `go run ./cmd/vsc-go verify-bundle <bundle-folder>`. Read-only. Preserves VSC result semantics. Node.js remains the reference implementation.
 
+The VSC v2.6 Machine-readable Verification Result Schema draft is available in [`docs/vsc-v2-6-machine-readable-verification-result-schema-draft.md`](docs/vsc-v2-6-machine-readable-verification-result-schema-draft.md). It defines a stable JSON result surface for future Go `--json` output, conformance comparisons, APIs, and interop receipts.
+
 ---
 
 ## Core Concept
