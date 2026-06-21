@@ -64,9 +64,28 @@ See `node-go-result-comparison-draft.md` §6–§8 for the full field tables.
 
 ---
 
-## Future Runner
+## Runner (v2.8.1 — implemented)
 
-The v2.8.1 runner will:
+```sh
+node scripts/compareConformanceResults.js
+# or via vscCli:
+npm run vsc -- compare:fixtures
+```
+
+Expected output:
+```
+pass-basic             PASS    PASS    0    0    COMPARE_PASS
+fail-checksum-mismatch FAIL    FAIL    1    1    COMPARE_PASS
+error-malformed-manifest ERROR  ERROR  2    2    COMPARE_PASS
+
+Final result: COMPARE_PASS
+```
+
+Exit codes: 0 = COMPARE_PASS, 1 = COMPARE_FAIL, 2 = COMPARE_ERROR, 3 = COMPARE_INCOMPLETE.
+
+## Future Node Adapter
+
+The v2.8.2 runner will:
 
 1. Read `conformance/v2.7/fixture-index.json`.
 2. Run `go run ./cmd/vsc-go verify-bundle --json <path>` for each fixture.

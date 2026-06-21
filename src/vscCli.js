@@ -135,6 +135,10 @@ Commands:
       Run the complete VSC evidence handoff flow end-to-end:
       Export evidence bundle → verify → ZIP → print summary.
 
+  compare:fixtures
+      Run the v2.8.1 conformance comparison runner.
+      Compares Go verifier --json output against v2.7 fixture expected results.
+
   help
       Print this help text.
 
@@ -359,6 +363,14 @@ Use: npm run vsc -- restore-delta <base-token.json> <delta-token.json>
     // Thin orchestration layer: delegates all evidence logic to existing scripts.
     // Fail-closed: demoEvidenceFlow.js stops on any failing step.
     run("scripts/demoEvidenceFlow.js");
+    break;
+  }
+
+  // ── compare:fixtures ──────────────────────────────────────────────────────
+  case "compare:fixtures": {
+    // v2.8.1 conformance comparison runner.
+    // Reads v2.7 fixture index and compares Go verifier --json output against expected results.
+    run("scripts/compareConformanceResults.js");
     break;
   }
 
