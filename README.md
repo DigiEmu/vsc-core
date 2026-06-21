@@ -1,5 +1,7 @@
 # VSC — Versioned State Commit
 
+[![VSC Conformance](https://github.com/DigiEmu/vsc-core/actions/workflows/vsc-conformance.yml/badge.svg)](https://github.com/DigiEmu/vsc-core/actions/workflows/vsc-conformance.yml)
+
 **v1.18 — Evidence Flow Demo**
 
 Research prototype / proof-of-concept. Not production-ready.
