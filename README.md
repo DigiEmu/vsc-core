@@ -55,6 +55,8 @@ External reference validation notes: [`docs/interop/EXTERNAL_REFERENCE_VALIDATIO
 
 Interop roadmap / pre-v3 planning: [`docs/interop/INTEROP_ROADMAP_PRE_V3.md`](docs/interop/INTEROP_ROADMAP_PRE_V3.md). Planning only; does not start v3.0 or implement external reference validation.
 
+External reference shape validation plan: [`docs/interop/EXTERNAL_REFERENCE_SHAPE_VALIDATION_PLAN.md`](docs/interop/EXTERNAL_REFERENCE_SHAPE_VALIDATION_PLAN.md). Planning only. Shape validation checks the reference object, not the external artifact.
+
 ## CI Conformance Check
 
 VSC includes a GitHub Actions workflow for automated conformance validation.

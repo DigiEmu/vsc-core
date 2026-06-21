@@ -195,6 +195,14 @@ CLARIXO provides responsibility / attribution context.
 
 VSC should not silently take responsibility for external proof domains.
 
+## Shape validation plan
+
+Candidate reference-shape validation cases are documented in:
+
+[`docs/interop/EXTERNAL_REFERENCE_SHAPE_VALIDATION_PLAN.md`](EXTERNAL_REFERENCE_SHAPE_VALIDATION_PLAN.md)
+
+This plan is planning only and does not implement verifier behavior.
+
 ## v3.0 gate
 
 A move toward v3.0 should only be considered if the following are stable:

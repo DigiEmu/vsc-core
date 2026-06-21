@@ -181,6 +181,16 @@ Any future validation must preserve the distinction:
 Reference validation is not artifact validation.
 ```
 
+## Shape validation plan
+
+Candidate future shape-validation cases are documented in:
+
+[`docs/interop/EXTERNAL_REFERENCE_SHAPE_VALIDATION_PLAN.md`](EXTERNAL_REFERENCE_SHAPE_VALIDATION_PLAN.md)
+
+Shape validation checks the reference object, not the external artifact.
+
+This is planning only and does not implement validation behavior.
+
 ## Roadmap
 
 For staged pre-v3 planning, see:
