@@ -62,7 +62,7 @@ function die(msg) {
 
 function printHelp() {
   console.log(`
-VSC — Versioned State Commit CLI  (v1.17)
+VSC — Versioned State Commit CLI  (v1.18)
 ──────────────────────────────────────────
 Usage:  npm run vsc -- <command> [args]
 
@@ -130,6 +130,10 @@ Commands:
   zip-bundle <bundle-folder>
       Create a portable .zip file from an evidence bundle folder.
       Outputs to output/zips/ with the bundle name as the filename.
+
+  demo:evidence-flow
+      Run the complete VSC evidence handoff flow end-to-end:
+      Export evidence bundle → verify → ZIP → print summary.
 
   help
       Print this help text.
@@ -347,6 +351,14 @@ Use: npm run vsc -- restore-delta <base-token.json> <delta-token.json>
     // Source bundle immutability is guaranteed by zipEvidenceBundle.js —
     // this routing passes the path through unchanged.
     run("scripts/zipEvidenceBundle.js", [zipBundlePath]);
+    break;
+  }
+
+  // ── demo:evidence-flow ────────────────────────────────────────────────────
+  case "demo:evidence-flow": {
+    // Thin orchestration layer: delegates all evidence logic to existing scripts.
+    // Fail-closed: demoEvidenceFlow.js stops on any failing step.
+    run("scripts/demoEvidenceFlow.js");
     break;
   }
 

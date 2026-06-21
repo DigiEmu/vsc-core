@@ -1,6 +1,6 @@
 # VSC — Versioned State Commit
 
-**v1.17 — ZIP Bundle Export**
+**v1.18 — Evidence Flow Demo**
 
 Research prototype / proof-of-concept. Not production-ready.
 
@@ -368,6 +368,37 @@ Result:          PASS
 **Note:** The ZIP file is created in `output/zips/` and is not committed to Git (see `.gitignore`).
 
 → [Full ZIP Bundle Export documentation](docs/vsc-v1-17-zip-bundle-export.md)
+
+---
+
+## VSC v1.18 Evidence Flow Demo
+
+VSC v1.18 adds **Evidence Flow Demo** — a single command that runs the complete VSC evidence handoff flow end-to-end.
+
+```bash
+npm run vsc -- demo:evidence-flow
+```
+
+**What it does:**
+- Exports the JSON event evidence bundle (`bundle:json`)
+- Verifies the exported bundle (`verify-bundle`)
+- Packages the bundle as a portable ZIP (`zip-bundle`)
+- Prints a clear final summary with PASS/FAIL
+
+**Expected output:**
+```
+VSC v1.18 — Evidence Flow Demo
+
+  Flow:  Export  →  Verify  →  ZIP  →  Summary
+...
+  Verification result:  PASS
+  ZIP export result:    PASS
+  Final result:         PASS
+```
+
+**This command is an orchestrator.** Evidence logic, checksum binding, manifest integrity, and ZIP creation remain in their respective dedicated scripts. Use `verify-bundle` and `zip-bundle` independently at any time.
+
+→ [Full Evidence Flow Demo documentation](docs/vsc-v1-18-evidence-flow-demo.md)
 
 ---
 
