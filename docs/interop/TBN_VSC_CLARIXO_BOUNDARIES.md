@@ -172,6 +172,15 @@ end-to-end responsibility proof
 complete governance stack
 ```
 
+## External reference profile
+
+For a draft machine-readable structure for external artifact references, see:
+
+[`docs/interop/EXTERNAL_REFERENCE_PROFILE_DRAFT.md`](EXTERNAL_REFERENCE_PROFILE_DRAFT.md)  
+[`schemas/external-reference-profile-v2.18-draft.schema.json`](../../schemas/external-reference-profile-v2.18-draft.schema.json)
+
+This profile defines external references as pointers, not proof imports.
+
 ## Summary
 
 TBN, VSC, and CLARIXO can be complementary layers.

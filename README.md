@@ -47,6 +47,8 @@ VSC can be discussed as part of a broader trust architecture with identity / tru
 
 [`docs/interop/TBN_VSC_CLARIXO_BOUNDARIES.md`](docs/interop/TBN_VSC_CLARIXO_BOUNDARIES.md) — TBN / VSC / CLARIXO safe interoperability boundaries. This document describes reference patterns. It is not an integration-complete claim.
 
+External reference profile draft: [`docs/interop/EXTERNAL_REFERENCE_PROFILE_DRAFT.md`](docs/interop/EXTERNAL_REFERENCE_PROFILE_DRAFT.md) and [`schemas/external-reference-profile-v2.18-draft.schema.json`](schemas/external-reference-profile-v2.18-draft.schema.json). External references are pointers, not proof imports.
+
 ## CI Conformance Check
 
 VSC includes a GitHub Actions workflow for automated conformance validation.

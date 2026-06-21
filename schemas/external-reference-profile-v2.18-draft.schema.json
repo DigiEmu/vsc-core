@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://digiemu.github.io/vsc-core/schemas/external-reference-profile-v2.18-draft.schema.json",
+  "title": "VSC External Reference Profile v2.18 Draft",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "profile",
+    "reference_id",
+    "reference_type",
+    "target_system",
+    "target_artifact_id",
+    "relation",
+    "proof_boundary",
+    "verified_by_vsc"
+  ],
+  "properties": {
+    "profile": {
+      "type": "string",
+      "const": "vsc-external-reference-v2.18-draft"
+    },
+    "reference_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reference_type": {
+      "type": "string",
+      "enum": [
+        "tbn_receipt",
+        "clarixo_record",
+        "external_audit_note",
+        "partner_evidence_record",
+        "other"
+      ]
+    },
+    "target_system": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target_artifact_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target_artifact_hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target_artifact_uri": {
+      "type": "string",
+      "minLength": 1
+    },
+    "issued_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "issuer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "relation": {
+      "type": "string",
+      "enum": [
+        "references_external_trust_context",
+        "references_external_attribution_context",
+        "references_external_audit_context",
+        "references_partner_evidence",
+        "other"
+      ]
+    },
+    "proof_boundary": {
+      "type": "string",
+      "const": "external_reference_only"
+    },
+    "verified_by_vsc": {
+      "type": "boolean",
+      "const": false
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}
