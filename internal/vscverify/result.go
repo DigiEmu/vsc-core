@@ -9,6 +9,16 @@ const (
 
 // ResultClass represents the four VSC verification outcome classes
 // as defined in the v2.0 formal specification (§12).
+//
+// Boundary note:
+//
+//	PASS  = the evidence bundle is internally consistent (state integrity).
+//	        It does not mean the underlying AI decision is true, fair, legal,
+//	        or correct. VSC proves state integrity, not truth.
+//	FAIL  = an integrity or verification mismatch was detected.
+//	        It must not be interpreted as proof of wrongdoing.
+//	ERROR = verification could not complete. Intentionally distinct from FAIL.
+//	PROOF-ONLY = informational; evidence exists but no full verification ran.
 type ResultClass string
 
 const (
@@ -20,7 +30,8 @@ const (
 
 // ExitCode returns the process exit code for a given result class.
 // PASS exits 0; FAIL exits 1; ERROR exits 2; PROOF-ONLY exits 3.
-// Fail-closed: unknown result class exits 1.
+// Fail-closed: unknown result class exits 1 rather than 0 to prevent
+// silent success from an unrecognised state.
 func (r ResultClass) ExitCode() int {
 	switch r {
 	case ResultPASS:
@@ -136,6 +147,11 @@ func intPtr(n int) *int { return &n }
 // ToV26JSON serialises a BundleResult as a v2.6-conformant JSON document.
 // verifierVersion is the CLI version string (e.g. "v2.6.1").
 // input is the InputInfo built by the caller from CLI arguments.
+//
+// The JSON result is the stable machine-readable output intended for CI,
+// partner review, and cross-implementation comparison. The "result" field
+// is the semantic source of truth; raw process exit codes may vary across
+// shells and platforms and should be derived from this field.
 func (r *BundleResult) ToV26JSON(verifierVersion string, input InputInfo) ([]byte, error) {
 	checks := make(map[string]CheckEntry, len(r.Checks))
 	var errs []ErrorEntry

@@ -172,6 +172,9 @@ func VerifyBundle(bundleDir string) BundleResult {
 	}
 
 	// ── Final result ────────────────────────────────────────────────────────────
+	// If no check set a failure or error, the bundle is internally consistent.
+	// PASS means state integrity only — not truth, fairness, legality, or
+	// correctness of the underlying AI decision or any external artifact.
 	if res.Result == "" {
 		res.Result = ResultPASS
 	}

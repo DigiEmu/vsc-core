@@ -17,6 +17,10 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 
 // ── Comparison result classes ────────────────────────────────────────────────
+// COMPARE_PASS means both implementations agree on the expected result class.
+// It does not make any claim about real-world truth, legality, or correctness.
+// COMPARE_FAIL means the implementations disagree; it does not mean wrongdoing.
+// COMPARE_ERROR means the runner itself could not complete a comparison step.
 const COMPARE_PASS       = "COMPARE_PASS";
 const COMPARE_FAIL       = "COMPARE_FAIL";
 const COMPARE_ERROR      = "COMPARE_ERROR";
@@ -74,7 +78,10 @@ function compareFixture(fixture) {
     return { id, comparison: COMPARE_ERROR, reason: `go verifier spawn error: ${run.spawnError}` };
   }
 
-  // Parse JSON output from Go verifier.
+  // The JSON result field is the semantic source of truth for comparison.
+  // Raw process exit codes can vary across shells and platforms (e.g. `go run`
+  // on Windows exits 1 for any non-zero child, collapsing multi-value codes).
+  // We parse the JSON and derive the canonical exit code from the result class.
   let parsed = null;
   try {
     parsed = JSON.parse(run.stdout);
@@ -211,6 +218,8 @@ function buildJsonReport(rows, finalResult) {
 }
 
 // ── Exit code mapping ────────────────────────────────────────────────────────
+// Error and incomplete conditions take precedence over fail so that a runner
+// misconfiguration is not silently reported as a simple fixture failure.
 function finalResultAndExit(rows) {
   const failed     = rows.filter(r => r.comparison === COMPARE_FAIL);
   const errored    = rows.filter(r => r.comparison === COMPARE_ERROR);

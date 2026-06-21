@@ -63,6 +63,9 @@ func runVerifyBundle(args []string) {
 		os.Exit(2)
 	}
 
+	// VerifyBundle is read-only: it never writes to the source bundle.
+	// Scope: VSC state-integrity checks only. The result class (PASS/FAIL/ERROR)
+	// describes bundle integrity, not real-world truth, fairness, or legality.
 	result := vscverify.VerifyBundle(resolved)
 
 	if jsonMode {
@@ -81,7 +84,8 @@ func runVerifyBundle(args []string) {
 		os.Exit(result.Result.ExitCode())
 	}
 
-	// Human-readable output
+	// Human-readable output.
+	// Result is printed after all checks; exit code is derived from result class.
 	fmt.Printf("\nVSC Go Verifier Prototype %s\n", version+" (v2.6 schema)")
 	fmt.Printf("Bundle path: %s\n", resolved)
 	fmt.Println()
