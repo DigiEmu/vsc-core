@@ -53,3 +53,6 @@ output/json-benchmark/
 # Evidence bundles (already covered by output/ but listed explicitly)
 output/bundles/
 output/json-event-bundles/
+
+# Generated showcase artifacts
+showcase/
