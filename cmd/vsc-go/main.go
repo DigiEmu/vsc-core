@@ -8,7 +8,7 @@ import (
 	"github.com/DigiEmu/vsc-core/internal/vscverify"
 )
 
-const version = "v2.5-prototype"
+const version = "v2.6.1"
 
 func main() {
 	args := os.Args[1:]
@@ -66,7 +66,13 @@ func runVerifyBundle(args []string) {
 	result := vscverify.VerifyBundle(resolved)
 
 	if jsonMode {
-		data, err := result.ToJSON()
+		input := vscverify.InputInfo{
+			InputType:    "evidence_bundle_folder",
+			Path:         filepath.ToSlash(bundlePath),
+			ResolvedPath: resolved,
+			ReadOnly:     true,
+		}
+		data, err := result.ToV26JSON(version, input)
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "vsc-go error: cannot serialize result: %v\n", err)
 			os.Exit(2)
@@ -76,7 +82,7 @@ func runVerifyBundle(args []string) {
 	}
 
 	// Human-readable output
-	fmt.Printf("\nVSC Go Verifier Prototype %s\n", version)
+	fmt.Printf("\nVSC Go Verifier Prototype %s\n", version+" (v2.6 schema)")
 	fmt.Printf("Bundle path: %s\n", resolved)
 	fmt.Println()
 
@@ -136,7 +142,8 @@ Commands:
       base token, delta token presence, and manifest.
 
   verify-bundle --json <bundle-folder>
-      Same as verify-bundle but emits machine-readable JSON.
+      Same as verify-bundle but emits v2.6 machine-readable JSON only.
+      --json may appear before or after the bundle path.
 
   help
       Print this help text.
@@ -148,6 +155,7 @@ Examples:
 Notes:
   - Read-only: this verifier never writes to the source bundle.
   - Exit code 0 = PASS; 1 = FAIL; 2 = ERROR; 3 = PROOF-ONLY.
+  - JSON schema: vsc-verification-result-v2.6-draft.
   - Node.js reference implementation: npm run vsc -- verify-bundle <bundle-folder>
 `, version)
 }

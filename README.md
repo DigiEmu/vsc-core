@@ -22,7 +22,7 @@ The VSC v2.3 Interop Receipt Profile draft is available in [`docs/vsc-v2-3-inter
 
 The VSC v2.4 Go Core Prototype Preparation draft is available in [`docs/vsc-v2-4-go-core-prototype-preparation.md`](docs/vsc-v2-4-go-core-prototype-preparation.md). It defines the preparation path for a future Go-based VSC verifier while preserving the Node.js v1.x reference implementation.
 
-**Experimental Go verifier prototype (v2.5):** `go run ./cmd/vsc-go verify-bundle <bundle-folder>`. Read-only. Preserves VSC result semantics. Node.js remains the reference implementation.
+**Experimental Go verifier prototype (v2.6.1):** `go run ./cmd/vsc-go verify-bundle <bundle-folder>`. Read-only. Preserves VSC result semantics. Node.js remains the reference implementation. JSON output: `go run ./cmd/vsc-go verify-bundle --json <bundle-folder>` (follows the VSC v2.6 Machine-readable Verification Result Schema draft).
 
 The VSC v2.6 Machine-readable Verification Result Schema draft is available in [`docs/vsc-v2-6-machine-readable-verification-result-schema-draft.md`](docs/vsc-v2-6-machine-readable-verification-result-schema-draft.md). It defines a stable JSON result surface for future Go `--json` output, conformance comparisons, APIs, and interop receipts.
 

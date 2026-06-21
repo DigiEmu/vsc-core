@@ -27,6 +27,7 @@ var requiredFiles = []string{
 
 // chainToken holds the fields we extract from chain-token.json.
 type chainToken struct {
+	ID            string           `json:"id"`
 	Mode          string           `json:"mode"`
 	BaseTokenID   string           `json:"baseTokenId"`
 	LatestTokenID string           `json:"latestTokenId"`
@@ -48,12 +49,13 @@ func readJSON(path string, dst any) error {
 // VerifyBundle performs a read-only integrity check of an Evidence Bundle.
 //
 // Verification order (mirrors verifyEvidenceBundle.js):
-//   01 Required files
-//   02 Checksum binding  ← must precede token parsing
-//   03 Chain token
-//   04 Base token
-//   05 Delta tokens
-//   06 Manifest
+//
+//	01 Required files
+//	02 Checksum binding  ← must precede token parsing
+//	03 Chain token
+//	04 Base token
+//	05 Delta tokens
+//	06 Manifest
 //
 // Returns a BundleResult with per-check outcomes and a final result class.
 func VerifyBundle(bundleDir string) BundleResult {
@@ -102,6 +104,8 @@ func VerifyBundle(bundleDir string) BundleResult {
 	// Checksums must be verified before token files are trusted (v2.2 §8).
 	verified, total, csErrs, csErr := VerifyChecksums(bundleDir)
 	res.Diag.ChecksumsVerified = verified
+	res.Diag.ChecksumsExpected = total
+	res.BundleMeta.ChecksumCount = total
 	if csErr != nil {
 		errOut("checksums", csErr.Error())
 	} else if len(csErrs) > 0 {
@@ -120,6 +124,11 @@ func VerifyBundle(bundleDir string) BundleResult {
 		errOut("chain_token", err.Error())
 		return res // cannot proceed without chain token
 	}
+	// Populate bundle metadata from the authoritative chain token.
+	res.BundleMeta.ChainTokenID = ct.ID
+	res.BundleMeta.BaseTokenID = ct.BaseTokenID
+	res.BundleMeta.LatestTokenID = ct.LatestTokenID
+	res.BundleMeta.DeltaCount = len(ct.Steps)
 	if ct.BaseTokenID == "" || ct.LatestTokenID == "" {
 		fail("chain_token", "missing baseTokenId or latestTokenId")
 	} else {
@@ -139,6 +148,7 @@ func VerifyBundle(bundleDir string) BundleResult {
 	expected := len(ct.Steps)
 	found := checkDeltaTokens(deltaDir, expected)
 	res.Diag.DeltaTokensFound = found
+	res.Diag.DeltaTokensExpected = expected
 	if found < expected {
 		fail("delta_tokens", fmt.Sprintf("%d/%d found", found, expected))
 	} else {
@@ -151,6 +161,14 @@ func VerifyBundle(bundleDir string) BundleResult {
 		errOut("manifest", err.Error())
 	} else {
 		add("manifest", true, "")
+		// Derive bundle type from manifest or from presence of JSON event artifacts.
+		if bt, ok := manifest["bundle_type"].(string); ok && bt != "" {
+			res.BundleMeta.BundleType = bt
+		} else if fileExists(filepath.Join(bundleDir, "event-schema.json")) {
+			res.BundleMeta.BundleType = "JSON Event Evidence Bundle"
+		} else {
+			res.BundleMeta.BundleType = "Generic Evidence Bundle"
+		}
 	}
 
 	// ── Final result ────────────────────────────────────────────────────────────
