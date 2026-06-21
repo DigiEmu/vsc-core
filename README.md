@@ -13,6 +13,7 @@ Research prototype / proof-of-concept. Not production-ready.
 For plain-language explanations of what VSC proves, what it does not prove, and how to read PASS / FAIL / ERROR results:
 
 - [`docs/non-technical/EXECUTIVE_ONE_PAGER.md`](docs/non-technical/EXECUTIVE_ONE_PAGER.md) — concise partner and governance overview
+- [`docs/non-technical/GOVERNANCE_SCENARIOS.md`](docs/non-technical/GOVERNANCE_SCENARIOS.md) — safe governance scenarios and where VSC fits
 - [`docs/non-technical/VSC_TRUST_OVERVIEW.md`](docs/non-technical/VSC_TRUST_OVERVIEW.md) — what VSC is and what it proves
 - [`docs/non-technical/PASS_FAIL_EXPLAINED.md`](docs/non-technical/PASS_FAIL_EXPLAINED.md) — how to interpret PASS, FAIL, and ERROR
 

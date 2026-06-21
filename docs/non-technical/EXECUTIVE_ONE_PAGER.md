@@ -121,6 +121,10 @@ VSC may support:
 
 These use cases still require appropriate legal, organizational, and domain-specific review.
 
+For a more detailed set of safe governance scenarios, see:
+
+[`docs/non-technical/GOVERNANCE_SCENARIOS.md`](GOVERNANCE_SCENARIOS.md)
+
 ## Why it matters
 
 VSC helps move AI decision review from fragile logs toward portable evidence.
