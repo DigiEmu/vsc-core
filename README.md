@@ -18,6 +18,8 @@ The VSC v2.1 Canonical Event Model draft is available in [`docs/vsc-v2-1-canonic
 
 The VSC v2.2 Conformance Test Vectors draft is available in [`docs/vsc-v2-2-conformance-test-vectors-draft.md`](docs/vsc-v2-2-conformance-test-vectors-draft.md). It defines the compatibility test surface for future VSC implementations.
 
+The VSC v2.3 Interop Receipt Profile draft is available in [`docs/vsc-v2-3-interop-receipt-profile-draft.md`](docs/vsc-v2-3-interop-receipt-profile-draft.md). It defines how external systems may reference VSC evidence while preserving VSC result semantics and evidence boundaries.
+
 ---
 
 ## Core Concept
