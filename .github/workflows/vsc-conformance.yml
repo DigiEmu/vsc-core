@@ -42,3 +42,16 @@ jobs:
 
       - name: Run full VSC verification
         run: npm run vsc -- verify-all
+
+      - name: Create comparison report
+        shell: bash
+        run: |
+          node -e "const fs = require('fs'); const data = JSON.parse(fs.readFileSync('comparison-result.json', 'utf8')); const lines = []; lines.push('# VSC CI Conformance Report'); lines.push(''); lines.push(\`Result: \${data.result}\`); lines.push(\`Fixtures total: \${data.fixtures_total}\`); lines.push(\`Fixtures passed: \${data.fixtures_passed}\`); lines.push(\`Fixtures failed: \${data.fixtures_failed}\`); lines.push(''); lines.push('## Comparisons'); lines.push(''); lines.push('| Fixture | Expected | Actual | Comparison |'); lines.push('|---|---:|---:|---|'); for (const item of data.comparisons || []) { lines.push(\`| \${item.fixture_id} | \${item.expected_result} | \${item.actual_result} | \${item.comparison} |\`); } fs.writeFileSync('comparison-report.md', lines.join('\n') + '\n');"
+
+      - name: Upload comparison artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: vsc-comparison-artifacts
+          path: |
+            comparison-result.json
+            comparison-report.md
