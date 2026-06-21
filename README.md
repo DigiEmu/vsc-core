@@ -20,6 +20,8 @@ The VSC v2.2 Conformance Test Vectors draft is available in [`docs/vsc-v2-2-conf
 
 The VSC v2.3 Interop Receipt Profile draft is available in [`docs/vsc-v2-3-interop-receipt-profile-draft.md`](docs/vsc-v2-3-interop-receipt-profile-draft.md). It defines how external systems may reference VSC evidence while preserving VSC result semantics and evidence boundaries.
 
+The VSC v2.4 Go Core Prototype Preparation draft is available in [`docs/vsc-v2-4-go-core-prototype-preparation.md`](docs/vsc-v2-4-go-core-prototype-preparation.md). It defines the preparation path for a future Go-based VSC verifier while preserving the Node.js v1.x reference implementation.
+
 ---
 
 ## Core Concept
