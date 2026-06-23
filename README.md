@@ -2,6 +2,12 @@
 
 [![VSC Conformance](https://github.com/DigiEmu/vsc-core/actions/workflows/vsc-conformance.yml/badge.svg)](https://github.com/DigiEmu/vsc-core/actions/workflows/vsc-conformance.yml)
 
+**Review context:** v2.29 review-flow clarification  
+**Implementation baseline:** v1.x evidence-flow prototype with v2.x review, conformance, and interop documentation  
+**Status:** research prototype / proof-of-concept, not production-ready  
+
+VSC verifies state integrity, not real-world truth.
+
 **v1.18 — Evidence Flow Demo**
 
 Research prototype / proof-of-concept. Not production-ready.
