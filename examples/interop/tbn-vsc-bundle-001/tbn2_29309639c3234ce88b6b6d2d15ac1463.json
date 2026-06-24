@@ -1,0 +1,28 @@
+{
+  "schema_version": "tbn-receipt/2.0",
+  "receipt_id": "tbn2_29309639c3234ce88b6b6d2d15ac1463",
+  "key_id": "tbnkey_d9d2b0c3ab2e8aa3",
+  "agent_id": "digiemu.agent.demo.001",
+  "action": "vsc_interop_attestation",
+  "input_hash": "1C3971B7C0456B35767B2A0BE352398CD1ABB31C9603E2A903F982688F346D4C",
+  "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "controls": [
+    {
+      "name": "DigiEmu VSC / Core 2.0 interop sample, manifest-hash profile",
+      "result": "pass",
+      "version": "core-2.0.0",
+      "version_hash": "94f9bd72716dda1a"
+    }
+  ],
+  "timestamp": "2026-06-24T14:52:49.263721+00:00",
+  "prev_hash": "082810b3a23421860149e9e9d4b379690010f6c44e79bfbac59cdd5bb832230e",
+  "chain_index": 741,
+  "receipt_hash": "6650b27cbdc975e5a2fa656e84f280f15c5d6177b6099aabed90293f5aba5118",
+  "algorithm": "RSA-PSS-SHA256",
+  "rfc3161": {
+    "status": "anchored",
+    "tsa": "freetsa.org",
+    "token_sha256": "26f360f205e79b540baf8bd55609d320"
+  },
+  "signature": "53e1a970119559e7638d032a78be1a04773b39888c39b0a1ef4341fccaeb8b1ccd7b569bc780b5fbf2fc0a431c935c42521db3ff49ab90f1f73d1bbd69429fe86ac8b6d8cf19b1c5c32d8b005320b0ff653d297712850416df7d22a58fde23fff9b2e1e9dd9f56df3ce28561d3cc6d72c9f0202d056f15bf2666608dcc607d543a9515f3b9e265c859d66ff261b957404cce5ce6f1d0d96bf707fbd613f288ce90d1ad6ba92567afddd7776708e9a688ac4682b5d2e3db31670e171f05f0c8edca16520f537b334b39e643bc636d422aa10666da2440820363fd41d1e71b580118d847b257158f3e28cc3f583b895a5159e803e9cf6d22681c1a30327ca8ac92"
+}
