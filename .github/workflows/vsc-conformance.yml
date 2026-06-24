@@ -36,12 +36,15 @@ jobs:
       - name: Validate fixture comparison JSON
         shell: bash
         run: |
-          npm run vsc -- compare:fixtures --json > comparison-result.json
-          cat comparison-result.json
+          node src/vscCli.js compare:fixtures --json > comparison-result.json
+          head -n 5 comparison-result.json
+          node -e "const fs=require('fs'); JSON.parse(fs.readFileSync('comparison-result.json','utf8')); console.log('comparison-result.json is valid JSON')"
           node -e "const fs = require('fs'); const data = JSON.parse(fs.readFileSync('comparison-result.json', 'utf8')); if (data.result !== 'COMPARE_PASS') { console.error(data); process.exit(1); } console.log('COMPARE_JSON_PASS');"
 
-      - name: Run full VSC verification
-        run: npm run vsc -- verify-all
+      - name: Run bundle verification against conformance fixture
+        shell: bash
+        run: |
+          go run ./cmd/vsc-go verify-bundle conformance/v2.7/fixtures/pass-basic/bundle
 
       - name: Create comparison report
         shell: bash

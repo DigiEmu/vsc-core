@@ -370,7 +370,8 @@ Use: npm run vsc -- restore-delta <base-token.json> <delta-token.json>
   case "compare:fixtures": {
     // v2.8.1 conformance comparison runner.
     // Reads v2.7 fixture index and compares Go verifier --json output against expected results.
-    run("scripts/compareConformanceResults.js");
+    // Forward remaining args (e.g. --json) so the runner can switch output mode.
+    run("scripts/compareConformanceResults.js", args.slice(1));
     break;
   }
 
