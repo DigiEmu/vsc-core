@@ -119,14 +119,78 @@ if (baselineToken.mode === "FOLDER_RECOVERY") {
     baseFileMap.set(f.relativePath, { hash: f.hash, sizeBytes: f.sizeBytes });
   }
 
-  // Apply the baseline delta's operations to advance to that target state
-  for (const op of (baselineToken.operations || [])) {
-    if (op.op === "DELETE") {
-      baseFileMap.delete(op.relativePath);
-    } else if (op.op === "ADD") {
-      baseFileMap.set(op.relativePath, { hash: op.hash || op.newHash, sizeBytes: op.sizeBytes });
-    } else if (op.op === "MODIFY") {
-      baseFileMap.set(op.relativePath, { hash: op.newHash || op.hash, sizeBytes: op.sizeBytes });
+  // Reconstruct the complete delta lineage from the root recovery token
+  // to the supplied FOLDER_DELTA baseline.
+  const lineage = [];
+  const seenTokenIds = new Set();
+  let cursorToken = baselineToken;
+
+  while (cursorToken.mode === "FOLDER_DELTA") {
+    if (seenTokenIds.has(cursorToken.id)) {
+      console.error(`Delta lineage cycle detected at token "${cursorToken.id}".`);
+      process.exit(1);
+    }
+
+    seenTokenIds.add(cursorToken.id);
+    lineage.push(cursorToken);
+
+    const parentTokenId = cursorToken.fromTokenId || cursorToken.baseline;
+
+    if (parentTokenId === originalBaseTokenId) {
+      break;
+    }
+
+    const mf = fs.existsSync(manifestPath)
+      ? JSON.parse(fs.readFileSync(manifestPath, "utf8"))
+      : [];
+
+    const parentEntry = mf.find(
+      e => e.id === parentTokenId && e.mode === "FOLDER_DELTA"
+    );
+
+    if (!parentEntry) {
+      console.error(`Cannot find parent FOLDER_DELTA token "${parentTokenId}".`);
+      process.exit(1);
+    }
+
+    const parentPath = path.join(outputDir, parentEntry.json);
+
+    if (!fs.existsSync(parentPath)) {
+      console.error(`Parent FOLDER_DELTA token file not found: ${parentPath}`);
+      process.exit(1);
+    }
+
+    cursorToken = JSON.parse(fs.readFileSync(parentPath, "utf8"));
+
+    if (
+      cursorToken.baseTokenId &&
+      cursorToken.baseTokenId !== originalBaseTokenId
+    ) {
+      console.error(
+        `Delta lineage root mismatch: expected "${originalBaseTokenId}", ` +
+        `got "${cursorToken.baseTokenId}".`
+      );
+      process.exit(1);
+    }
+  }
+
+  lineage.reverse();
+
+  for (const lineageToken of lineage) {
+    for (const op of (lineageToken.operations || [])) {
+      if (op.op === "DELETE") {
+        baseFileMap.delete(op.relativePath);
+      } else if (op.op === "ADD") {
+        baseFileMap.set(op.relativePath, {
+          hash: op.hash || op.newHash,
+          sizeBytes: op.sizeBytes
+        });
+      } else if (op.op === "MODIFY") {
+        baseFileMap.set(op.relativePath, {
+          hash: op.newHash || op.hash,
+          sizeBytes: op.sizeBytes
+        });
+      }
     }
   }
 }
