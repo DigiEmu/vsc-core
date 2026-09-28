@@ -1,0 +1,1237 @@
+
+=== CP01 CONTROLLED RECORDS ===
+{
+  "project_code": "MERIDIAN-701",
+  "record_id": "CP01-TARGET-R",
+  "record_type": "retrieval_target",
+  "status": "GREEN",
+  "verification_value": "K11"
+}
+{
+  "record_id": "CP01-RULE-C",
+  "record_type": "constraint",
+  "requested_field": "measurement",
+  "rule": "If the requested measurement is absent from the supplied record, answer exactly UNKNOWN.",
+  "supplied_record": {
+    "asset_id": "ASSET-101",
+    "status": "ACTIVE"
+  }
+}
+{
+  "record_id": "CP01-RULE-X",
+  "record_type": "logical_relation",
+  "relations": [
+    "A1 implies B1",
+    "B1 implies C1",
+    "C1 excludes D1"
+  ],
+  "symbols": {
+    "a": "A1",
+    "b": "B1",
+    "c": "C1",
+    "d": "D1"
+  }
+}
+{
+  "distractors": [
+    {
+      "identifier": "ORBIT-81",
+      "verification_code": "V21"
+    },
+    {
+      "identifier": "ORBIT-801",
+      "verification_code": "V71"
+    },
+    {
+      "identifier": "ORBIT-901",
+      "verification_code": "V71"
+    }
+  ],
+  "record_id": "CP01-TARGET-I",
+  "record_type": "interference_target",
+  "target": {
+    "identifier": "ORBIT-801",
+    "verification_code": "V21"
+  }
+}
+FILLER-CP01-00001: The ledger entry 1 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00002: The inventory entry 2 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00003: The registry entry 3 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00004: The schedule entry 4 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00005: The directory entry 5 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00006: The index entry 6 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00007: The archive entry 7 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00008: The catalogue entry 8 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00009: The ledger entry 9 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00010: The inventory entry 10 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00011: The registry entry 11 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00012: The schedule entry 12 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00013: The directory entry 13 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00014: The index entry 14 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00015: The archive entry 15 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00016: The catalogue entry 16 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00017: The ledger entry 17 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00018: The inventory entry 18 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00019: The registry entry 19 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00020: The schedule entry 20 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00021: The directory entry 21 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00022: The index entry 22 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00023: The archive entry 23 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00024: The catalogue entry 24 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00025: The ledger entry 25 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00026: The inventory entry 26 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00027: The registry entry 27 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00028: The schedule entry 28 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00029: The directory entry 29 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00030: The index entry 30 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00031: The archive entry 31 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00032: The catalogue entry 32 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00033: The ledger entry 33 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00034: The inventory entry 34 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00035: The registry entry 35 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00036: The schedule entry 36 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00037: The directory entry 37 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00038: The index entry 38 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00039: The archive entry 39 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00040: The catalogue entry 40 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00041: The ledger entry 41 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00042: The inventory entry 42 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00043: The registry entry 43 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00044: The schedule entry 44 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00045: The directory entry 45 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00046: The index entry 46 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00047: The archive entry 47 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00048: The catalogue entry 48 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00049: The ledger entry 49 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00050: The inventory entry 50 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00051: The registry entry 51 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00052: The schedule entry 52 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00053: The directory entry 53 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00054: The index entry 54 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00055: The archive entry 55 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00056: The catalogue entry 56 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00057: The ledger entry 57 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00058: The inventory entry 58 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00059: The registry entry 59 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00060: The schedule entry 60 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00061: The directory entry 61 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00062: The index entry 62 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00063: The archive entry 63 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00064: The catalogue entry 64 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00065: The ledger entry 65 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00066: The inventory entry 66 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00067: The registry entry 67 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00068: The schedule entry 68 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00069: The directory entry 69 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00070: The index entry 70 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00071: The archive entry 71 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00072: The catalogue entry 72 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00073: The ledger entry 73 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00074: The inventory entry 74 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00075: The registry entry 75 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00076: The schedule entry 76 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00077: The directory entry 77 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00078: The index entry 78 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00079: The archive entry 79 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00080: The catalogue entry 80 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00081: The ledger entry 81 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP01-00082: The inventory entry 82 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+
+=== CP02 CONTROLLED RECORDS ===
+{
+  "project_code": "MERIDIAN-702",
+  "record_id": "CP02-TARGET-R",
+  "record_type": "retrieval_target",
+  "status": "AMBER",
+  "verification_value": "K12"
+}
+{
+  "record_id": "CP02-RULE-C",
+  "record_type": "constraint",
+  "requested_field": "measurement",
+  "rule": "If the requested measurement is absent from the supplied record, answer exactly UNKNOWN.",
+  "supplied_record": {
+    "asset_id": "ASSET-102",
+    "status": "ACTIVE"
+  }
+}
+{
+  "record_id": "CP02-RULE-X",
+  "record_type": "logical_relation",
+  "relations": [
+    "A2 implies B2",
+    "B2 implies C2",
+    "C2 excludes D2"
+  ],
+  "symbols": {
+    "a": "A2",
+    "b": "B2",
+    "c": "C2",
+    "d": "D2"
+  }
+}
+{
+  "distractors": [
+    {
+      "identifier": "ORBIT-82",
+      "verification_code": "V22"
+    },
+    {
+      "identifier": "ORBIT-802",
+      "verification_code": "V72"
+    },
+    {
+      "identifier": "ORBIT-902",
+      "verification_code": "V72"
+    }
+  ],
+  "record_id": "CP02-TARGET-I",
+  "record_type": "interference_target",
+  "target": {
+    "identifier": "ORBIT-802",
+    "verification_code": "V22"
+  }
+}
+FILLER-CP02-00001: The inventory entry 1 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00002: The registry entry 2 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00003: The schedule entry 3 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00004: The directory entry 4 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00005: The index entry 5 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00006: The archive entry 6 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00007: The catalogue entry 7 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00008: The ledger entry 8 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00009: The inventory entry 9 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00010: The registry entry 10 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00011: The schedule entry 11 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00012: The directory entry 12 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00013: The index entry 13 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00014: The archive entry 14 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00015: The catalogue entry 15 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00016: The ledger entry 16 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00017: The inventory entry 17 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00018: The registry entry 18 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00019: The schedule entry 19 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00020: The directory entry 20 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00021: The index entry 21 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00022: The archive entry 22 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00023: The catalogue entry 23 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00024: The ledger entry 24 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00025: The inventory entry 25 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00026: The registry entry 26 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00027: The schedule entry 27 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00028: The directory entry 28 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00029: The index entry 29 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00030: The archive entry 30 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00031: The catalogue entry 31 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00032: The ledger entry 32 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00033: The inventory entry 33 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00034: The registry entry 34 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00035: The schedule entry 35 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00036: The directory entry 36 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00037: The index entry 37 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00038: The archive entry 38 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00039: The catalogue entry 39 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00040: The ledger entry 40 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00041: The inventory entry 41 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00042: The registry entry 42 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00043: The schedule entry 43 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00044: The directory entry 44 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00045: The index entry 45 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00046: The archive entry 46 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00047: The catalogue entry 47 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00048: The ledger entry 48 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00049: The inventory entry 49 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00050: The registry entry 50 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00051: The schedule entry 51 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00052: The directory entry 52 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00053: The index entry 53 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00054: The archive entry 54 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00055: The catalogue entry 55 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00056: The ledger entry 56 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00057: The inventory entry 57 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00058: The registry entry 58 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00059: The schedule entry 59 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00060: The directory entry 60 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00061: The index entry 61 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00062: The archive entry 62 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00063: The catalogue entry 63 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00064: The ledger entry 64 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00065: The inventory entry 65 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00066: The registry entry 66 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00067: The schedule entry 67 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00068: The directory entry 68 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00069: The index entry 69 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00070: The archive entry 70 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00071: The catalogue entry 71 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00072: The ledger entry 72 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00073: The inventory entry 73 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00074: The registry entry 74 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00075: The schedule entry 75 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00076: The directory entry 76 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00077: The index entry 77 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00078: The archive entry 78 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00079: The catalogue entry 79 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00080: The ledger entry 80 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP02-00081: The inventory entry 81 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+
+=== CP03 CONTROLLED RECORDS ===
+{
+  "project_code": "MERIDIAN-703",
+  "record_id": "CP03-TARGET-R",
+  "record_type": "retrieval_target",
+  "status": "GREEN",
+  "verification_value": "K13"
+}
+{
+  "record_id": "CP03-RULE-C",
+  "record_type": "constraint",
+  "requested_field": "measurement",
+  "rule": "If the requested measurement is absent from the supplied record, answer exactly UNKNOWN.",
+  "supplied_record": {
+    "asset_id": "ASSET-103",
+    "status": "ACTIVE"
+  }
+}
+{
+  "record_id": "CP03-RULE-X",
+  "record_type": "logical_relation",
+  "relations": [
+    "A3 implies B3",
+    "B3 implies C3",
+    "C3 excludes D3"
+  ],
+  "symbols": {
+    "a": "A3",
+    "b": "B3",
+    "c": "C3",
+    "d": "D3"
+  }
+}
+{
+  "distractors": [
+    {
+      "identifier": "ORBIT-83",
+      "verification_code": "V23"
+    },
+    {
+      "identifier": "ORBIT-803",
+      "verification_code": "V73"
+    },
+    {
+      "identifier": "ORBIT-903",
+      "verification_code": "V73"
+    }
+  ],
+  "record_id": "CP03-TARGET-I",
+  "record_type": "interference_target",
+  "target": {
+    "identifier": "ORBIT-803",
+    "verification_code": "V23"
+  }
+}
+FILLER-CP03-00001: The registry entry 1 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00002: The schedule entry 2 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00003: The directory entry 3 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00004: The index entry 4 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00005: The archive entry 5 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00006: The catalogue entry 6 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00007: The ledger entry 7 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00008: The inventory entry 8 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00009: The registry entry 9 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00010: The schedule entry 10 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00011: The directory entry 11 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00012: The index entry 12 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00013: The archive entry 13 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00014: The catalogue entry 14 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00015: The ledger entry 15 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00016: The inventory entry 16 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00017: The registry entry 17 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00018: The schedule entry 18 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00019: The directory entry 19 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00020: The index entry 20 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00021: The archive entry 21 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00022: The catalogue entry 22 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00023: The ledger entry 23 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00024: The inventory entry 24 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00025: The registry entry 25 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00026: The schedule entry 26 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00027: The directory entry 27 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00028: The index entry 28 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00029: The archive entry 29 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00030: The catalogue entry 30 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00031: The ledger entry 31 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00032: The inventory entry 32 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00033: The registry entry 33 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00034: The schedule entry 34 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00035: The directory entry 35 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00036: The index entry 36 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00037: The archive entry 37 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00038: The catalogue entry 38 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00039: The ledger entry 39 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00040: The inventory entry 40 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00041: The registry entry 41 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00042: The schedule entry 42 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00043: The directory entry 43 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00044: The index entry 44 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00045: The archive entry 45 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00046: The catalogue entry 46 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00047: The ledger entry 47 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00048: The inventory entry 48 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00049: The registry entry 49 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00050: The schedule entry 50 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00051: The directory entry 51 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00052: The index entry 52 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00053: The archive entry 53 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00054: The catalogue entry 54 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00055: The ledger entry 55 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00056: The inventory entry 56 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00057: The registry entry 57 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00058: The schedule entry 58 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00059: The directory entry 59 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00060: The index entry 60 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00061: The archive entry 61 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00062: The catalogue entry 62 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00063: The ledger entry 63 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00064: The inventory entry 64 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00065: The registry entry 65 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00066: The schedule entry 66 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00067: The directory entry 67 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00068: The index entry 68 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00069: The archive entry 69 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00070: The catalogue entry 70 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00071: The ledger entry 71 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00072: The inventory entry 72 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00073: The registry entry 73 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00074: The schedule entry 74 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00075: The directory entry 75 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00076: The index entry 76 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00077: The archive entry 77 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00078: The catalogue entry 78 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00079: The ledger entry 79 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00080: The inventory entry 80 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00081: The registry entry 81 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP03-00082: The schedule entry 82 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+
+=== CP04 CONTROLLED RECORDS ===
+{
+  "project_code": "MERIDIAN-704",
+  "record_id": "CP04-TARGET-R",
+  "record_type": "retrieval_target",
+  "status": "AMBER",
+  "verification_value": "K14"
+}
+{
+  "record_id": "CP04-RULE-C",
+  "record_type": "constraint",
+  "requested_field": "measurement",
+  "rule": "If the requested measurement is absent from the supplied record, answer exactly UNKNOWN.",
+  "supplied_record": {
+    "asset_id": "ASSET-104",
+    "status": "ACTIVE"
+  }
+}
+{
+  "record_id": "CP04-RULE-X",
+  "record_type": "logical_relation",
+  "relations": [
+    "A4 implies B4",
+    "B4 implies C4",
+    "C4 excludes D4"
+  ],
+  "symbols": {
+    "a": "A4",
+    "b": "B4",
+    "c": "C4",
+    "d": "D4"
+  }
+}
+{
+  "distractors": [
+    {
+      "identifier": "ORBIT-84",
+      "verification_code": "V24"
+    },
+    {
+      "identifier": "ORBIT-804",
+      "verification_code": "V74"
+    },
+    {
+      "identifier": "ORBIT-904",
+      "verification_code": "V74"
+    }
+  ],
+  "record_id": "CP04-TARGET-I",
+  "record_type": "interference_target",
+  "target": {
+    "identifier": "ORBIT-804",
+    "verification_code": "V24"
+  }
+}
+FILLER-CP04-00001: The schedule entry 1 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00002: The directory entry 2 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00003: The index entry 3 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00004: The archive entry 4 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00005: The catalogue entry 5 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00006: The ledger entry 6 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00007: The inventory entry 7 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00008: The registry entry 8 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00009: The schedule entry 9 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00010: The directory entry 10 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00011: The index entry 11 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00012: The archive entry 12 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00013: The catalogue entry 13 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00014: The ledger entry 14 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00015: The inventory entry 15 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00016: The registry entry 16 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00017: The schedule entry 17 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00018: The directory entry 18 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00019: The index entry 19 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00020: The archive entry 20 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00021: The catalogue entry 21 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00022: The ledger entry 22 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00023: The inventory entry 23 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00024: The registry entry 24 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00025: The schedule entry 25 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00026: The directory entry 26 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00027: The index entry 27 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00028: The archive entry 28 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00029: The catalogue entry 29 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00030: The ledger entry 30 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00031: The inventory entry 31 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00032: The registry entry 32 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00033: The schedule entry 33 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00034: The directory entry 34 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00035: The index entry 35 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00036: The archive entry 36 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00037: The catalogue entry 37 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00038: The ledger entry 38 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00039: The inventory entry 39 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00040: The registry entry 40 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00041: The schedule entry 41 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00042: The directory entry 42 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00043: The index entry 43 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00044: The archive entry 44 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00045: The catalogue entry 45 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00046: The ledger entry 46 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00047: The inventory entry 47 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00048: The registry entry 48 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00049: The schedule entry 49 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00050: The directory entry 50 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00051: The index entry 51 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00052: The archive entry 52 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00053: The catalogue entry 53 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00054: The ledger entry 54 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00055: The inventory entry 55 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00056: The registry entry 56 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00057: The schedule entry 57 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00058: The directory entry 58 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00059: The index entry 59 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00060: The archive entry 60 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00061: The catalogue entry 61 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00062: The ledger entry 62 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00063: The inventory entry 63 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00064: The registry entry 64 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00065: The schedule entry 65 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00066: The directory entry 66 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00067: The index entry 67 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00068: The archive entry 68 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00069: The catalogue entry 69 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00070: The ledger entry 70 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00071: The inventory entry 71 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00072: The registry entry 72 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00073: The schedule entry 73 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00074: The directory entry 74 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00075: The index entry 75 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00076: The archive entry 76 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00077: The catalogue entry 77 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00078: The ledger entry 78 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00079: The inventory entry 79 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00080: The registry entry 80 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP04-00081: The schedule entry 81 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+
+=== CP05 CONTROLLED RECORDS ===
+{
+  "project_code": "MERIDIAN-705",
+  "record_id": "CP05-TARGET-R",
+  "record_type": "retrieval_target",
+  "status": "GREEN",
+  "verification_value": "K15"
+}
+{
+  "record_id": "CP05-RULE-C",
+  "record_type": "constraint",
+  "requested_field": "measurement",
+  "rule": "If the requested measurement is absent from the supplied record, answer exactly UNKNOWN.",
+  "supplied_record": {
+    "asset_id": "ASSET-105",
+    "status": "ACTIVE"
+  }
+}
+{
+  "record_id": "CP05-RULE-X",
+  "record_type": "logical_relation",
+  "relations": [
+    "A5 implies B5",
+    "B5 implies C5",
+    "C5 excludes D5"
+  ],
+  "symbols": {
+    "a": "A5",
+    "b": "B5",
+    "c": "C5",
+    "d": "D5"
+  }
+}
+{
+  "distractors": [
+    {
+      "identifier": "ORBIT-85",
+      "verification_code": "V25"
+    },
+    {
+      "identifier": "ORBIT-805",
+      "verification_code": "V75"
+    },
+    {
+      "identifier": "ORBIT-905",
+      "verification_code": "V75"
+    }
+  ],
+  "record_id": "CP05-TARGET-I",
+  "record_type": "interference_target",
+  "target": {
+    "identifier": "ORBIT-805",
+    "verification_code": "V25"
+  }
+}
+FILLER-CP05-00001: The directory entry 1 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00002: The index entry 2 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00003: The archive entry 3 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00004: The catalogue entry 4 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00005: The ledger entry 5 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00006: The inventory entry 6 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00007: The registry entry 7 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00008: The schedule entry 8 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00009: The directory entry 9 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00010: The index entry 10 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00011: The archive entry 11 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00012: The catalogue entry 12 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00013: The ledger entry 13 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00014: The inventory entry 14 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00015: The registry entry 15 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00016: The schedule entry 16 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00017: The directory entry 17 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00018: The index entry 18 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00019: The archive entry 19 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00020: The catalogue entry 20 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00021: The ledger entry 21 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00022: The inventory entry 22 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00023: The registry entry 23 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00024: The schedule entry 24 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00025: The directory entry 25 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00026: The index entry 26 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00027: The archive entry 27 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00028: The catalogue entry 28 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00029: The ledger entry 29 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00030: The inventory entry 30 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00031: The registry entry 31 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00032: The schedule entry 32 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00033: The directory entry 33 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00034: The index entry 34 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00035: The archive entry 35 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00036: The catalogue entry 36 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00037: The ledger entry 37 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00038: The inventory entry 38 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00039: The registry entry 39 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00040: The schedule entry 40 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00041: The directory entry 41 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00042: The index entry 42 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00043: The archive entry 43 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00044: The catalogue entry 44 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00045: The ledger entry 45 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00046: The inventory entry 46 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00047: The registry entry 47 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00048: The schedule entry 48 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00049: The directory entry 49 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00050: The index entry 50 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00051: The archive entry 51 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00052: The catalogue entry 52 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00053: The ledger entry 53 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00054: The inventory entry 54 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00055: The registry entry 55 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00056: The schedule entry 56 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00057: The directory entry 57 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00058: The index entry 58 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00059: The archive entry 59 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00060: The catalogue entry 60 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00061: The ledger entry 61 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00062: The inventory entry 62 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00063: The registry entry 63 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00064: The schedule entry 64 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00065: The directory entry 65 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00066: The index entry 66 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00067: The archive entry 67 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00068: The catalogue entry 68 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00069: The ledger entry 69 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00070: The inventory entry 70 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00071: The registry entry 71 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00072: The schedule entry 72 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00073: The directory entry 73 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00074: The index entry 74 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00075: The archive entry 75 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00076: The catalogue entry 76 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00077: The ledger entry 77 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00078: The inventory entry 78 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00079: The registry entry 79 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00080: The schedule entry 80 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP05-00081: The directory entry 81 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+
+=== CP06 CONTROLLED RECORDS ===
+{
+  "project_code": "MERIDIAN-706",
+  "record_id": "CP06-TARGET-R",
+  "record_type": "retrieval_target",
+  "status": "AMBER",
+  "verification_value": "K16"
+}
+{
+  "record_id": "CP06-RULE-C",
+  "record_type": "constraint",
+  "requested_field": "measurement",
+  "rule": "If the requested measurement is absent from the supplied record, answer exactly UNKNOWN.",
+  "supplied_record": {
+    "asset_id": "ASSET-106",
+    "status": "ACTIVE"
+  }
+}
+{
+  "record_id": "CP06-RULE-X",
+  "record_type": "logical_relation",
+  "relations": [
+    "A6 implies B6",
+    "B6 implies C6",
+    "C6 excludes D6"
+  ],
+  "symbols": {
+    "a": "A6",
+    "b": "B6",
+    "c": "C6",
+    "d": "D6"
+  }
+}
+{
+  "distractors": [
+    {
+      "identifier": "ORBIT-86",
+      "verification_code": "V26"
+    },
+    {
+      "identifier": "ORBIT-806",
+      "verification_code": "V76"
+    },
+    {
+      "identifier": "ORBIT-906",
+      "verification_code": "V76"
+    }
+  ],
+  "record_id": "CP06-TARGET-I",
+  "record_type": "interference_target",
+  "target": {
+    "identifier": "ORBIT-806",
+    "verification_code": "V26"
+  }
+}
+FILLER-CP06-00001: The index entry 1 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00002: The archive entry 2 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00003: The catalogue entry 3 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00004: The ledger entry 4 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00005: The inventory entry 5 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00006: The registry entry 6 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00007: The schedule entry 7 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00008: The directory entry 8 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00009: The index entry 9 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00010: The archive entry 10 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00011: The catalogue entry 11 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00012: The ledger entry 12 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00013: The inventory entry 13 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00014: The registry entry 14 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00015: The schedule entry 15 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00016: The directory entry 16 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00017: The index entry 17 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00018: The archive entry 18 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00019: The catalogue entry 19 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00020: The ledger entry 20 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00021: The inventory entry 21 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00022: The registry entry 22 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00023: The schedule entry 23 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00024: The directory entry 24 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00025: The index entry 25 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00026: The archive entry 26 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00027: The catalogue entry 27 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00028: The ledger entry 28 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00029: The inventory entry 29 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00030: The registry entry 30 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00031: The schedule entry 31 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00032: The directory entry 32 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00033: The index entry 33 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00034: The archive entry 34 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00035: The catalogue entry 35 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00036: The ledger entry 36 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00037: The inventory entry 37 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00038: The registry entry 38 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00039: The schedule entry 39 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00040: The directory entry 40 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00041: The index entry 41 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00042: The archive entry 42 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00043: The catalogue entry 43 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00044: The ledger entry 44 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00045: The inventory entry 45 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00046: The registry entry 46 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00047: The schedule entry 47 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00048: The directory entry 48 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00049: The index entry 49 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00050: The archive entry 50 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00051: The catalogue entry 51 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00052: The ledger entry 52 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00053: The inventory entry 53 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00054: The registry entry 54 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00055: The schedule entry 55 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00056: The directory entry 56 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00057: The index entry 57 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00058: The archive entry 58 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00059: The catalogue entry 59 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00060: The ledger entry 60 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00061: The inventory entry 61 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00062: The registry entry 62 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00063: The schedule entry 63 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00064: The directory entry 64 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00065: The index entry 65 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00066: The archive entry 66 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00067: The catalogue entry 67 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00068: The ledger entry 68 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00069: The inventory entry 69 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00070: The registry entry 70 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00071: The schedule entry 71 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00072: The directory entry 72 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00073: The index entry 73 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00074: The archive entry 74 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00075: The catalogue entry 75 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00076: The ledger entry 76 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00077: The inventory entry 77 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00078: The registry entry 78 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00079: The schedule entry 79 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00080: The directory entry 80 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00081: The index entry 81 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP06-00082: The archive entry 82 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+
+=== CP07 CONTROLLED RECORDS ===
+{
+  "project_code": "MERIDIAN-707",
+  "record_id": "CP07-TARGET-R",
+  "record_type": "retrieval_target",
+  "status": "GREEN",
+  "verification_value": "K17"
+}
+{
+  "record_id": "CP07-RULE-C",
+  "record_type": "constraint",
+  "requested_field": "measurement",
+  "rule": "If the requested measurement is absent from the supplied record, answer exactly UNKNOWN.",
+  "supplied_record": {
+    "asset_id": "ASSET-107",
+    "status": "ACTIVE"
+  }
+}
+{
+  "record_id": "CP07-RULE-X",
+  "record_type": "logical_relation",
+  "relations": [
+    "A7 implies B7",
+    "B7 implies C7",
+    "C7 excludes D7"
+  ],
+  "symbols": {
+    "a": "A7",
+    "b": "B7",
+    "c": "C7",
+    "d": "D7"
+  }
+}
+{
+  "distractors": [
+    {
+      "identifier": "ORBIT-87",
+      "verification_code": "V27"
+    },
+    {
+      "identifier": "ORBIT-807",
+      "verification_code": "V77"
+    },
+    {
+      "identifier": "ORBIT-907",
+      "verification_code": "V77"
+    }
+  ],
+  "record_id": "CP07-TARGET-I",
+  "record_type": "interference_target",
+  "target": {
+    "identifier": "ORBIT-807",
+    "verification_code": "V27"
+  }
+}
+FILLER-CP07-00001: The archive entry 1 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00002: The catalogue entry 2 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00003: The ledger entry 3 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00004: The inventory entry 4 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00005: The registry entry 5 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00006: The schedule entry 6 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00007: The directory entry 7 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00008: The index entry 8 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00009: The archive entry 9 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00010: The catalogue entry 10 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00011: The ledger entry 11 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00012: The inventory entry 12 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00013: The registry entry 13 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00014: The schedule entry 14 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00015: The directory entry 15 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00016: The index entry 16 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00017: The archive entry 17 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00018: The catalogue entry 18 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00019: The ledger entry 19 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00020: The inventory entry 20 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00021: The registry entry 21 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00022: The schedule entry 22 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00023: The directory entry 23 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00024: The index entry 24 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00025: The archive entry 25 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00026: The catalogue entry 26 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00027: The ledger entry 27 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00028: The inventory entry 28 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00029: The registry entry 29 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00030: The schedule entry 30 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00031: The directory entry 31 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00032: The index entry 32 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00033: The archive entry 33 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00034: The catalogue entry 34 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00035: The ledger entry 35 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00036: The inventory entry 36 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00037: The registry entry 37 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00038: The schedule entry 38 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00039: The directory entry 39 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00040: The index entry 40 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00041: The archive entry 41 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00042: The catalogue entry 42 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00043: The ledger entry 43 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00044: The inventory entry 44 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00045: The registry entry 45 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00046: The schedule entry 46 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00047: The directory entry 47 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00048: The index entry 48 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00049: The archive entry 49 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00050: The catalogue entry 50 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00051: The ledger entry 51 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00052: The inventory entry 52 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00053: The registry entry 53 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00054: The schedule entry 54 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00055: The directory entry 55 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00056: The index entry 56 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00057: The archive entry 57 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00058: The catalogue entry 58 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00059: The ledger entry 59 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00060: The inventory entry 60 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00061: The registry entry 61 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00062: The schedule entry 62 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00063: The directory entry 63 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00064: The index entry 64 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00065: The archive entry 65 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00066: The catalogue entry 66 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00067: The ledger entry 67 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00068: The inventory entry 68 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00069: The registry entry 69 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00070: The schedule entry 70 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00071: The directory entry 71 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00072: The index entry 72 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00073: The archive entry 73 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00074: The catalogue entry 74 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00075: The ledger entry 75 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00076: The inventory entry 76 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00077: The registry entry 77 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00078: The schedule entry 78 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00079: The directory entry 79 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00080: The index entry 80 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP07-00081: The archive entry 81 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+
+=== CP08 CONTROLLED RECORDS ===
+{
+  "project_code": "MERIDIAN-708",
+  "record_id": "CP08-TARGET-R",
+  "record_type": "retrieval_target",
+  "status": "AMBER",
+  "verification_value": "K18"
+}
+{
+  "record_id": "CP08-RULE-C",
+  "record_type": "constraint",
+  "requested_field": "measurement",
+  "rule": "If the requested measurement is absent from the supplied record, answer exactly UNKNOWN.",
+  "supplied_record": {
+    "asset_id": "ASSET-108",
+    "status": "ACTIVE"
+  }
+}
+{
+  "record_id": "CP08-RULE-X",
+  "record_type": "logical_relation",
+  "relations": [
+    "A8 implies B8",
+    "B8 implies C8",
+    "C8 excludes D8"
+  ],
+  "symbols": {
+    "a": "A8",
+    "b": "B8",
+    "c": "C8",
+    "d": "D8"
+  }
+}
+{
+  "distractors": [
+    {
+      "identifier": "ORBIT-88",
+      "verification_code": "V28"
+    },
+    {
+      "identifier": "ORBIT-808",
+      "verification_code": "V78"
+    },
+    {
+      "identifier": "ORBIT-908",
+      "verification_code": "V78"
+    }
+  ],
+  "record_id": "CP08-TARGET-I",
+  "record_type": "interference_target",
+  "target": {
+    "identifier": "ORBIT-808",
+    "verification_code": "V28"
+  }
+}
+FILLER-CP08-00001: The catalogue entry 1 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00002: The ledger entry 2 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00003: The inventory entry 3 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00004: The registry entry 4 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00005: The schedule entry 5 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00006: The directory entry 6 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00007: The index entry 7 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00008: The archive entry 8 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00009: The catalogue entry 9 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00010: The ledger entry 10 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00011: The inventory entry 11 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00012: The registry entry 12 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00013: The schedule entry 13 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00014: The directory entry 14 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00015: The index entry 15 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00016: The archive entry 16 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00017: The catalogue entry 17 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00018: The ledger entry 18 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00019: The inventory entry 19 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00020: The registry entry 20 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00021: The schedule entry 21 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00022: The directory entry 22 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00023: The index entry 23 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00024: The archive entry 24 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00025: The catalogue entry 25 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00026: The ledger entry 26 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00027: The inventory entry 27 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00028: The registry entry 28 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00029: The schedule entry 29 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00030: The directory entry 30 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00031: The index entry 31 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00032: The archive entry 32 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00033: The catalogue entry 33 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00034: The ledger entry 34 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00035: The inventory entry 35 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00036: The registry entry 36 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00037: The schedule entry 37 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00038: The directory entry 38 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00039: The index entry 39 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00040: The archive entry 40 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00041: The catalogue entry 41 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00042: The ledger entry 42 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00043: The inventory entry 43 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00044: The registry entry 44 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00045: The schedule entry 45 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00046: The directory entry 46 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00047: The index entry 47 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00048: The archive entry 48 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00049: The catalogue entry 49 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00050: The ledger entry 50 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00051: The inventory entry 51 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00052: The registry entry 52 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00053: The schedule entry 53 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00054: The directory entry 54 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00055: The index entry 55 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00056: The archive entry 56 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00057: The catalogue entry 57 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00058: The ledger entry 58 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00059: The inventory entry 59 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00060: The registry entry 60 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00061: The schedule entry 61 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00062: The directory entry 62 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00063: The index entry 63 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00064: The archive entry 64 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00065: The catalogue entry 65 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00066: The ledger entry 66 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00067: The inventory entry 67 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00068: The registry entry 68 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00069: The schedule entry 69 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00070: The directory entry 70 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00071: The index entry 71 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00072: The archive entry 72 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00073: The catalogue entry 73 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00074: The ledger entry 74 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00075: The inventory entry 75 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00076: The registry entry 76 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00077: The schedule entry 77 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00078: The directory entry 78 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00079: The index entry 79 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00080: The archive entry 80 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP08-00081: The catalogue entry 81 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+
+=== CP09 CONTROLLED RECORDS ===
+{
+  "project_code": "MERIDIAN-709",
+  "record_id": "CP09-TARGET-R",
+  "record_type": "retrieval_target",
+  "status": "GREEN",
+  "verification_value": "K19"
+}
+{
+  "record_id": "CP09-RULE-C",
+  "record_type": "constraint",
+  "requested_field": "measurement",
+  "rule": "If the requested measurement is absent from the supplied record, answer exactly UNKNOWN.",
+  "supplied_record": {
+    "asset_id": "ASSET-109",
+    "status": "ACTIVE"
+  }
+}
+{
+  "record_id": "CP09-RULE-X",
+  "record_type": "logical_relation",
+  "relations": [
+    "A9 implies B9",
+    "B9 implies C9",
+    "C9 excludes D9"
+  ],
+  "symbols": {
+    "a": "A9",
+    "b": "B9",
+    "c": "C9",
+    "d": "D9"
+  }
+}
+{
+  "distractors": [
+    {
+      "identifier": "ORBIT-89",
+      "verification_code": "V29"
+    },
+    {
+      "identifier": "ORBIT-809",
+      "verification_code": "V79"
+    },
+    {
+      "identifier": "ORBIT-909",
+      "verification_code": "V79"
+    }
+  ],
+  "record_id": "CP09-TARGET-I",
+  "record_type": "interference_target",
+  "target": {
+    "identifier": "ORBIT-809",
+    "verification_code": "V29"
+  }
+}
+FILLER-CP09-00001: The ledger entry 1 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00002: The inventory entry 2 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00003: The registry entry 3 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00004: The schedule entry 4 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00005: The directory entry 5 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00006: The index entry 6 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00007: The archive entry 7 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00008: The catalogue entry 8 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00009: The ledger entry 9 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00010: The inventory entry 10 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00011: The registry entry 11 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00012: The schedule entry 12 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00013: The directory entry 13 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00014: The index entry 14 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00015: The archive entry 15 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00016: The catalogue entry 16 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00017: The ledger entry 17 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00018: The inventory entry 18 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00019: The registry entry 19 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00020: The schedule entry 20 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00021: The directory entry 21 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00022: The index entry 22 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00023: The archive entry 23 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00024: The catalogue entry 24 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00025: The ledger entry 25 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00026: The inventory entry 26 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00027: The registry entry 27 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00028: The schedule entry 28 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00029: The directory entry 29 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00030: The index entry 30 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00031: The archive entry 31 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00032: The catalogue entry 32 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00033: The ledger entry 33 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00034: The inventory entry 34 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00035: The registry entry 35 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00036: The schedule entry 36 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00037: The directory entry 37 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00038: The index entry 38 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00039: The archive entry 39 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00040: The catalogue entry 40 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00041: The ledger entry 41 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00042: The inventory entry 42 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00043: The registry entry 43 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00044: The schedule entry 44 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00045: The directory entry 45 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00046: The index entry 46 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00047: The archive entry 47 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00048: The catalogue entry 48 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00049: The ledger entry 49 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00050: The inventory entry 50 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00051: The registry entry 51 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00052: The schedule entry 52 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00053: The directory entry 53 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00054: The index entry 54 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00055: The archive entry 55 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00056: The catalogue entry 56 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00057: The ledger entry 57 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00058: The inventory entry 58 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00059: The registry entry 59 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00060: The schedule entry 60 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00061: The directory entry 61 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00062: The index entry 62 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00063: The archive entry 63 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00064: The catalogue entry 64 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00065: The ledger entry 65 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00066: The inventory entry 66 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00067: The registry entry 67 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00068: The schedule entry 68 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00069: The directory entry 69 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00070: The index entry 70 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00071: The archive entry 71 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00072: The catalogue entry 72 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00073: The ledger entry 73 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00074: The inventory entry 74 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00075: The registry entry 75 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00076: The schedule entry 76 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00077: The directory entry 77 was indexed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00078: The index entry 78 was catalogued during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00079: The archive entry 79 was recorded during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00080: The catalogue entry 80 was sorted during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00081: The ledger entry 81 was stored during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.
+FILLER-CP09-00082: The inventory entry 82 was reviewed during routine documentation. This neutral record exists only to provide deterministic context growth. It contains no experimental instruction and establishes no evaluation rule.

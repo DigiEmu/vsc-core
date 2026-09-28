@@ -1,0 +1,12 @@
+{
+  "checkpoint_count": 10,
+  "context_block_count": 40,
+  "experiment_id": "ANT_ALYOSHA_VSC_001",
+  "files": {
+    "answer-key.json": "f7c2051cfde988decd5cc1c190a0a4fc0e20bc7e104f2890701e8f5d5d94e610",
+    "context-blocks.json": "17ad02a4a34fa33ef84e8dea50bbc7182db90c9e55aa3ba2e30d762b61d58c68",
+    "probes.json": "e2cc359d0d6fbc9b45962ab0b8a718bc4c9777dcaf2251e76d01506b888f8f3e"
+  },
+  "generator_version": "0.1",
+  "primary_probe_count": 40
+}

@@ -1,0 +1,242 @@
+[
+  {
+    "expected_answer": "ANSWER=K11",
+    "probe_id": "CP01-R1",
+    "scoring_type": "exact",
+    "source_record_id": "CP01-TARGET-R"
+  },
+  {
+    "expected_answer": "ANSWER=UNKNOWN",
+    "probe_id": "CP01-C1",
+    "scoring_type": "exact",
+    "source_record_id": "CP01-RULE-C"
+  },
+  {
+    "expected_answer": "ANSWER=FALSE",
+    "probe_id": "CP01-X1",
+    "scoring_type": "exact",
+    "source_record_id": "CP01-RULE-X"
+  },
+  {
+    "expected_answer": "ANSWER=ORBIT-801",
+    "probe_id": "CP01-I1",
+    "scoring_type": "exact",
+    "source_record_id": "CP01-TARGET-I"
+  },
+  {
+    "expected_answer": "ANSWER=K12",
+    "probe_id": "CP02-R1",
+    "scoring_type": "exact",
+    "source_record_id": "CP02-TARGET-R"
+  },
+  {
+    "expected_answer": "ANSWER=UNKNOWN",
+    "probe_id": "CP02-C1",
+    "scoring_type": "exact",
+    "source_record_id": "CP02-RULE-C"
+  },
+  {
+    "expected_answer": "ANSWER=FALSE",
+    "probe_id": "CP02-X1",
+    "scoring_type": "exact",
+    "source_record_id": "CP02-RULE-X"
+  },
+  {
+    "expected_answer": "ANSWER=ORBIT-802",
+    "probe_id": "CP02-I1",
+    "scoring_type": "exact",
+    "source_record_id": "CP02-TARGET-I"
+  },
+  {
+    "expected_answer": "ANSWER=K13",
+    "probe_id": "CP03-R1",
+    "scoring_type": "exact",
+    "source_record_id": "CP03-TARGET-R"
+  },
+  {
+    "expected_answer": "ANSWER=UNKNOWN",
+    "probe_id": "CP03-C1",
+    "scoring_type": "exact",
+    "source_record_id": "CP03-RULE-C"
+  },
+  {
+    "expected_answer": "ANSWER=FALSE",
+    "probe_id": "CP03-X1",
+    "scoring_type": "exact",
+    "source_record_id": "CP03-RULE-X"
+  },
+  {
+    "expected_answer": "ANSWER=ORBIT-803",
+    "probe_id": "CP03-I1",
+    "scoring_type": "exact",
+    "source_record_id": "CP03-TARGET-I"
+  },
+  {
+    "expected_answer": "ANSWER=K14",
+    "probe_id": "CP04-R1",
+    "scoring_type": "exact",
+    "source_record_id": "CP04-TARGET-R"
+  },
+  {
+    "expected_answer": "ANSWER=UNKNOWN",
+    "probe_id": "CP04-C1",
+    "scoring_type": "exact",
+    "source_record_id": "CP04-RULE-C"
+  },
+  {
+    "expected_answer": "ANSWER=FALSE",
+    "probe_id": "CP04-X1",
+    "scoring_type": "exact",
+    "source_record_id": "CP04-RULE-X"
+  },
+  {
+    "expected_answer": "ANSWER=ORBIT-804",
+    "probe_id": "CP04-I1",
+    "scoring_type": "exact",
+    "source_record_id": "CP04-TARGET-I"
+  },
+  {
+    "expected_answer": "ANSWER=K15",
+    "probe_id": "CP05-R1",
+    "scoring_type": "exact",
+    "source_record_id": "CP05-TARGET-R"
+  },
+  {
+    "expected_answer": "ANSWER=UNKNOWN",
+    "probe_id": "CP05-C1",
+    "scoring_type": "exact",
+    "source_record_id": "CP05-RULE-C"
+  },
+  {
+    "expected_answer": "ANSWER=FALSE",
+    "probe_id": "CP05-X1",
+    "scoring_type": "exact",
+    "source_record_id": "CP05-RULE-X"
+  },
+  {
+    "expected_answer": "ANSWER=ORBIT-805",
+    "probe_id": "CP05-I1",
+    "scoring_type": "exact",
+    "source_record_id": "CP05-TARGET-I"
+  },
+  {
+    "expected_answer": "ANSWER=K16",
+    "probe_id": "CP06-R1",
+    "scoring_type": "exact",
+    "source_record_id": "CP06-TARGET-R"
+  },
+  {
+    "expected_answer": "ANSWER=UNKNOWN",
+    "probe_id": "CP06-C1",
+    "scoring_type": "exact",
+    "source_record_id": "CP06-RULE-C"
+  },
+  {
+    "expected_answer": "ANSWER=FALSE",
+    "probe_id": "CP06-X1",
+    "scoring_type": "exact",
+    "source_record_id": "CP06-RULE-X"
+  },
+  {
+    "expected_answer": "ANSWER=ORBIT-806",
+    "probe_id": "CP06-I1",
+    "scoring_type": "exact",
+    "source_record_id": "CP06-TARGET-I"
+  },
+  {
+    "expected_answer": "ANSWER=K17",
+    "probe_id": "CP07-R1",
+    "scoring_type": "exact",
+    "source_record_id": "CP07-TARGET-R"
+  },
+  {
+    "expected_answer": "ANSWER=UNKNOWN",
+    "probe_id": "CP07-C1",
+    "scoring_type": "exact",
+    "source_record_id": "CP07-RULE-C"
+  },
+  {
+    "expected_answer": "ANSWER=FALSE",
+    "probe_id": "CP07-X1",
+    "scoring_type": "exact",
+    "source_record_id": "CP07-RULE-X"
+  },
+  {
+    "expected_answer": "ANSWER=ORBIT-807",
+    "probe_id": "CP07-I1",
+    "scoring_type": "exact",
+    "source_record_id": "CP07-TARGET-I"
+  },
+  {
+    "expected_answer": "ANSWER=K18",
+    "probe_id": "CP08-R1",
+    "scoring_type": "exact",
+    "source_record_id": "CP08-TARGET-R"
+  },
+  {
+    "expected_answer": "ANSWER=UNKNOWN",
+    "probe_id": "CP08-C1",
+    "scoring_type": "exact",
+    "source_record_id": "CP08-RULE-C"
+  },
+  {
+    "expected_answer": "ANSWER=FALSE",
+    "probe_id": "CP08-X1",
+    "scoring_type": "exact",
+    "source_record_id": "CP08-RULE-X"
+  },
+  {
+    "expected_answer": "ANSWER=ORBIT-808",
+    "probe_id": "CP08-I1",
+    "scoring_type": "exact",
+    "source_record_id": "CP08-TARGET-I"
+  },
+  {
+    "expected_answer": "ANSWER=K19",
+    "probe_id": "CP09-R1",
+    "scoring_type": "exact",
+    "source_record_id": "CP09-TARGET-R"
+  },
+  {
+    "expected_answer": "ANSWER=UNKNOWN",
+    "probe_id": "CP09-C1",
+    "scoring_type": "exact",
+    "source_record_id": "CP09-RULE-C"
+  },
+  {
+    "expected_answer": "ANSWER=FALSE",
+    "probe_id": "CP09-X1",
+    "scoring_type": "exact",
+    "source_record_id": "CP09-RULE-X"
+  },
+  {
+    "expected_answer": "ANSWER=ORBIT-809",
+    "probe_id": "CP09-I1",
+    "scoring_type": "exact",
+    "source_record_id": "CP09-TARGET-I"
+  },
+  {
+    "expected_answer": "ANSWER=K20",
+    "probe_id": "CP10-R1",
+    "scoring_type": "exact",
+    "source_record_id": "CP10-TARGET-R"
+  },
+  {
+    "expected_answer": "ANSWER=UNKNOWN",
+    "probe_id": "CP10-C1",
+    "scoring_type": "exact",
+    "source_record_id": "CP10-RULE-C"
+  },
+  {
+    "expected_answer": "ANSWER=FALSE",
+    "probe_id": "CP10-X1",
+    "scoring_type": "exact",
+    "source_record_id": "CP10-RULE-X"
+  },
+  {
+    "expected_answer": "ANSWER=ORBIT-810",
+    "probe_id": "CP10-I1",
+    "scoring_type": "exact",
+    "source_record_id": "CP10-TARGET-I"
+  }
+]

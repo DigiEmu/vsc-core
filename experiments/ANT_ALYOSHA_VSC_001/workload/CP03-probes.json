@@ -1,0 +1,38 @@
+[
+  {
+    "checkpoint_id": "CP03",
+    "probe_id": "CP03-R1",
+    "probe_type": "retrieval",
+    "prompt": "Return only ANSWER=<value>. What is the verification_value for MERIDIAN-703?",
+    "scoring_type": "exact",
+    "sha256": "091b54e2e36ac1a64682e1f5ed1ad654e0025eab828a80fb6702b4dab4ed54a5",
+    "source_record_id": "CP03-TARGET-R"
+  },
+  {
+    "checkpoint_id": "CP03",
+    "probe_id": "CP03-C1",
+    "probe_type": "constraint",
+    "prompt": "Return only ANSWER=<value>. What is the measurement for ASSET-103?",
+    "scoring_type": "exact",
+    "sha256": "4b534913535d942d66e17a29d7ac23fa4522dcf5e2d9c6f038500fb9a6a9e15a",
+    "source_record_id": "CP03-RULE-C"
+  },
+  {
+    "checkpoint_id": "CP03",
+    "probe_id": "CP03-X1",
+    "probe_type": "logic",
+    "prompt": "Return only ANSWER=TRUE or ANSWER=FALSE. Given the frozen relations, can C3 and D3 both hold?",
+    "scoring_type": "exact",
+    "sha256": "816332a58603fe0ec2df007979c9e2a4c9d411933cca9b60671f6056c2ad0857",
+    "source_record_id": "CP03-RULE-X"
+  },
+  {
+    "checkpoint_id": "CP03",
+    "probe_id": "CP03-I1",
+    "probe_type": "interference",
+    "prompt": "Return only ANSWER=<identifier>. Which identifier is the designated interference target?",
+    "scoring_type": "exact",
+    "sha256": "34e26a19d862676820bcdaffa5daccb57dfabfd9e6b6255ce930a05d137790d3",
+    "source_record_id": "CP03-TARGET-I"
+  }
+]

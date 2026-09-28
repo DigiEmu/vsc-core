@@ -1,0 +1,38 @@
+[
+  {
+    "checkpoint_id": "CP08",
+    "probe_id": "CP08-R1",
+    "probe_type": "retrieval",
+    "prompt": "Return only ANSWER=<value>. What is the verification_value for MERIDIAN-708?",
+    "scoring_type": "exact",
+    "sha256": "fe14088e78ff19c92bb93ff581905c72d527fb9686e373bb8f932594b9a621e1",
+    "source_record_id": "CP08-TARGET-R"
+  },
+  {
+    "checkpoint_id": "CP08",
+    "probe_id": "CP08-C1",
+    "probe_type": "constraint",
+    "prompt": "Return only ANSWER=<value>. What is the measurement for ASSET-108?",
+    "scoring_type": "exact",
+    "sha256": "35cffbcfc997665600fdffe178a7aabec077373798bc5302c9398be283430de8",
+    "source_record_id": "CP08-RULE-C"
+  },
+  {
+    "checkpoint_id": "CP08",
+    "probe_id": "CP08-X1",
+    "probe_type": "logic",
+    "prompt": "Return only ANSWER=TRUE or ANSWER=FALSE. Given the frozen relations, can C8 and D8 both hold?",
+    "scoring_type": "exact",
+    "sha256": "9716948f49e9dcb60bb54858da494c896c592709ffe85a7014e2dc4b3c2b91ea",
+    "source_record_id": "CP08-RULE-X"
+  },
+  {
+    "checkpoint_id": "CP08",
+    "probe_id": "CP08-I1",
+    "probe_type": "interference",
+    "prompt": "Return only ANSWER=<identifier>. Which identifier is the designated interference target?",
+    "scoring_type": "exact",
+    "sha256": "23c91b54369fceb25599e410424ad580d4ff920c19c58ac075730da4a7e84f2c",
+    "source_record_id": "CP08-TARGET-I"
+  }
+]

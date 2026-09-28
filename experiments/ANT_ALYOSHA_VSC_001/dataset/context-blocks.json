@@ -1,0 +1,782 @@
+[
+  {
+    "block_id": "CP01-TARGET-R",
+    "block_type": "retrieval_target",
+    "checkpoint_id": "CP01",
+    "content": {
+      "project_code": "MERIDIAN-701",
+      "record_id": "CP01-TARGET-R",
+      "record_type": "retrieval_target",
+      "status": "GREEN",
+      "verification_value": "K11"
+    },
+    "sha256": "05c309b7bf4e95d1d597c17c4f8ff64a756154f921b8c8f80261094a6ad86bea"
+  },
+  {
+    "block_id": "CP01-RULE-C",
+    "block_type": "constraint",
+    "checkpoint_id": "CP01",
+    "content": {
+      "record_id": "CP01-RULE-C",
+      "record_type": "constraint",
+      "requested_field": "measurement",
+      "rule": "If the requested measurement is absent from the supplied record, answer exactly UNKNOWN.",
+      "supplied_record": {
+        "asset_id": "ASSET-101",
+        "status": "ACTIVE"
+      }
+    },
+    "sha256": "f70fa412821ad91e4ac689890e7b83c4c066d5bff0f3a49a6b866feda035d36a"
+  },
+  {
+    "block_id": "CP01-RULE-X",
+    "block_type": "logical_relation",
+    "checkpoint_id": "CP01",
+    "content": {
+      "record_id": "CP01-RULE-X",
+      "record_type": "logical_relation",
+      "relations": [
+        "A1 implies B1",
+        "B1 implies C1",
+        "C1 excludes D1"
+      ],
+      "symbols": {
+        "a": "A1",
+        "b": "B1",
+        "c": "C1",
+        "d": "D1"
+      }
+    },
+    "sha256": "7213dbeae9c837c2aeaeb74cd7add8074af0b5b1c1a8715261e81eb797a5e496"
+  },
+  {
+    "block_id": "CP01-TARGET-I",
+    "block_type": "interference_target",
+    "checkpoint_id": "CP01",
+    "content": {
+      "distractors": [
+        {
+          "identifier": "ORBIT-81",
+          "verification_code": "V21"
+        },
+        {
+          "identifier": "ORBIT-801",
+          "verification_code": "V71"
+        },
+        {
+          "identifier": "ORBIT-901",
+          "verification_code": "V71"
+        }
+      ],
+      "record_id": "CP01-TARGET-I",
+      "record_type": "interference_target",
+      "target": {
+        "identifier": "ORBIT-801",
+        "verification_code": "V21"
+      }
+    },
+    "sha256": "76dda8415b595b09416d452114a89258bf75f0c6f6da7b564e27a74b60131f07"
+  },
+  {
+    "block_id": "CP02-TARGET-R",
+    "block_type": "retrieval_target",
+    "checkpoint_id": "CP02",
+    "content": {
+      "project_code": "MERIDIAN-702",
+      "record_id": "CP02-TARGET-R",
+      "record_type": "retrieval_target",
+      "status": "AMBER",
+      "verification_value": "K12"
+    },
+    "sha256": "a09cda60d59e42815471bdc41fee231cc3f67058a785b6bbe431e2b687c5fb93"
+  },
+  {
+    "block_id": "CP02-RULE-C",
+    "block_type": "constraint",
+    "checkpoint_id": "CP02",
+    "content": {
+      "record_id": "CP02-RULE-C",
+      "record_type": "constraint",
+      "requested_field": "measurement",
+      "rule": "If the requested measurement is absent from the supplied record, answer exactly UNKNOWN.",
+      "supplied_record": {
+        "asset_id": "ASSET-102",
+        "status": "ACTIVE"
+      }
+    },
+    "sha256": "22cf69024b00e04db230b46b724b6f3093b315e703a634f5e3b0857cf7638189"
+  },
+  {
+    "block_id": "CP02-RULE-X",
+    "block_type": "logical_relation",
+    "checkpoint_id": "CP02",
+    "content": {
+      "record_id": "CP02-RULE-X",
+      "record_type": "logical_relation",
+      "relations": [
+        "A2 implies B2",
+        "B2 implies C2",
+        "C2 excludes D2"
+      ],
+      "symbols": {
+        "a": "A2",
+        "b": "B2",
+        "c": "C2",
+        "d": "D2"
+      }
+    },
+    "sha256": "12b871c93540f5335898d7d701e0029cf2c1854640aef654848efca622ab5e6b"
+  },
+  {
+    "block_id": "CP02-TARGET-I",
+    "block_type": "interference_target",
+    "checkpoint_id": "CP02",
+    "content": {
+      "distractors": [
+        {
+          "identifier": "ORBIT-82",
+          "verification_code": "V22"
+        },
+        {
+          "identifier": "ORBIT-802",
+          "verification_code": "V72"
+        },
+        {
+          "identifier": "ORBIT-902",
+          "verification_code": "V72"
+        }
+      ],
+      "record_id": "CP02-TARGET-I",
+      "record_type": "interference_target",
+      "target": {
+        "identifier": "ORBIT-802",
+        "verification_code": "V22"
+      }
+    },
+    "sha256": "e1c843b273292f2ccf2c415db392f8547b812193456db8eb7301e67b291ca91f"
+  },
+  {
+    "block_id": "CP03-TARGET-R",
+    "block_type": "retrieval_target",
+    "checkpoint_id": "CP03",
+    "content": {
+      "project_code": "MERIDIAN-703",
+      "record_id": "CP03-TARGET-R",
+      "record_type": "retrieval_target",
+      "status": "GREEN",
+      "verification_value": "K13"
+    },
+    "sha256": "d65ac1d580ef6956f85286dfac3dc57d0d8e7eccbbdefd01784e67a7011b80e2"
+  },
+  {
+    "block_id": "CP03-RULE-C",
+    "block_type": "constraint",
+    "checkpoint_id": "CP03",
+    "content": {
+      "record_id": "CP03-RULE-C",
+      "record_type": "constraint",
+      "requested_field": "measurement",
+      "rule": "If the requested measurement is absent from the supplied record, answer exactly UNKNOWN.",
+      "supplied_record": {
+        "asset_id": "ASSET-103",
+        "status": "ACTIVE"
+      }
+    },
+    "sha256": "e5fd5321d97a1878c172c5221f64b636eee4e28d886c4b57b7055366c973e561"
+  },
+  {
+    "block_id": "CP03-RULE-X",
+    "block_type": "logical_relation",
+    "checkpoint_id": "CP03",
+    "content": {
+      "record_id": "CP03-RULE-X",
+      "record_type": "logical_relation",
+      "relations": [
+        "A3 implies B3",
+        "B3 implies C3",
+        "C3 excludes D3"
+      ],
+      "symbols": {
+        "a": "A3",
+        "b": "B3",
+        "c": "C3",
+        "d": "D3"
+      }
+    },
+    "sha256": "103dbb2254e68e3de308bce38416e92fe1d1b6af07143616adc0974b2a75b839"
+  },
+  {
+    "block_id": "CP03-TARGET-I",
+    "block_type": "interference_target",
+    "checkpoint_id": "CP03",
+    "content": {
+      "distractors": [
+        {
+          "identifier": "ORBIT-83",
+          "verification_code": "V23"
+        },
+        {
+          "identifier": "ORBIT-803",
+          "verification_code": "V73"
+        },
+        {
+          "identifier": "ORBIT-903",
+          "verification_code": "V73"
+        }
+      ],
+      "record_id": "CP03-TARGET-I",
+      "record_type": "interference_target",
+      "target": {
+        "identifier": "ORBIT-803",
+        "verification_code": "V23"
+      }
+    },
+    "sha256": "f350fd309367bed2a8a61be142cf5c7c8c99c1b6ac2283df8892baff5dfdba94"
+  },
+  {
+    "block_id": "CP04-TARGET-R",
+    "block_type": "retrieval_target",
+    "checkpoint_id": "CP04",
+    "content": {
+      "project_code": "MERIDIAN-704",
+      "record_id": "CP04-TARGET-R",
+      "record_type": "retrieval_target",
+      "status": "AMBER",
+      "verification_value": "K14"
+    },
+    "sha256": "0d9d11a50affda03c426a470840f209f06a70ba4a0800ab26688c8723778e80d"
+  },
+  {
+    "block_id": "CP04-RULE-C",
+    "block_type": "constraint",
+    "checkpoint_id": "CP04",
+    "content": {
+      "record_id": "CP04-RULE-C",
+      "record_type": "constraint",
+      "requested_field": "measurement",
+      "rule": "If the requested measurement is absent from the supplied record, answer exactly UNKNOWN.",
+      "supplied_record": {
+        "asset_id": "ASSET-104",
+        "status": "ACTIVE"
+      }
+    },
+    "sha256": "dde40f75fed454b8640768b30ac83d13089a20a1a3a7c78d09c878736ad0ecfa"
+  },
+  {
+    "block_id": "CP04-RULE-X",
+    "block_type": "logical_relation",
+    "checkpoint_id": "CP04",
+    "content": {
+      "record_id": "CP04-RULE-X",
+      "record_type": "logical_relation",
+      "relations": [
+        "A4 implies B4",
+        "B4 implies C4",
+        "C4 excludes D4"
+      ],
+      "symbols": {
+        "a": "A4",
+        "b": "B4",
+        "c": "C4",
+        "d": "D4"
+      }
+    },
+    "sha256": "68f5abfa5b250162f8aabd2400b2d324fe14c91e6b1c622122ba32dcd77cd4fd"
+  },
+  {
+    "block_id": "CP04-TARGET-I",
+    "block_type": "interference_target",
+    "checkpoint_id": "CP04",
+    "content": {
+      "distractors": [
+        {
+          "identifier": "ORBIT-84",
+          "verification_code": "V24"
+        },
+        {
+          "identifier": "ORBIT-804",
+          "verification_code": "V74"
+        },
+        {
+          "identifier": "ORBIT-904",
+          "verification_code": "V74"
+        }
+      ],
+      "record_id": "CP04-TARGET-I",
+      "record_type": "interference_target",
+      "target": {
+        "identifier": "ORBIT-804",
+        "verification_code": "V24"
+      }
+    },
+    "sha256": "78edf6e0472f2db5f4311d507be0133bdd23ba309858eb9a1a58b11360bd7912"
+  },
+  {
+    "block_id": "CP05-TARGET-R",
+    "block_type": "retrieval_target",
+    "checkpoint_id": "CP05",
+    "content": {
+      "project_code": "MERIDIAN-705",
+      "record_id": "CP05-TARGET-R",
+      "record_type": "retrieval_target",
+      "status": "GREEN",
+      "verification_value": "K15"
+    },
+    "sha256": "1fca53414c33fb62c6d905a6259485671010fcd37535258888a944aa2212c1a2"
+  },
+  {
+    "block_id": "CP05-RULE-C",
+    "block_type": "constraint",
+    "checkpoint_id": "CP05",
+    "content": {
+      "record_id": "CP05-RULE-C",
+      "record_type": "constraint",
+      "requested_field": "measurement",
+      "rule": "If the requested measurement is absent from the supplied record, answer exactly UNKNOWN.",
+      "supplied_record": {
+        "asset_id": "ASSET-105",
+        "status": "ACTIVE"
+      }
+    },
+    "sha256": "bbd224b259058f89458df155fcc0d0c3457f40d7328ca731ef51b2f3a541113e"
+  },
+  {
+    "block_id": "CP05-RULE-X",
+    "block_type": "logical_relation",
+    "checkpoint_id": "CP05",
+    "content": {
+      "record_id": "CP05-RULE-X",
+      "record_type": "logical_relation",
+      "relations": [
+        "A5 implies B5",
+        "B5 implies C5",
+        "C5 excludes D5"
+      ],
+      "symbols": {
+        "a": "A5",
+        "b": "B5",
+        "c": "C5",
+        "d": "D5"
+      }
+    },
+    "sha256": "3e7915af47b4f0927b146e208c84a20c7a8dcdb21a81978d30dab2e1dc531a0a"
+  },
+  {
+    "block_id": "CP05-TARGET-I",
+    "block_type": "interference_target",
+    "checkpoint_id": "CP05",
+    "content": {
+      "distractors": [
+        {
+          "identifier": "ORBIT-85",
+          "verification_code": "V25"
+        },
+        {
+          "identifier": "ORBIT-805",
+          "verification_code": "V75"
+        },
+        {
+          "identifier": "ORBIT-905",
+          "verification_code": "V75"
+        }
+      ],
+      "record_id": "CP05-TARGET-I",
+      "record_type": "interference_target",
+      "target": {
+        "identifier": "ORBIT-805",
+        "verification_code": "V25"
+      }
+    },
+    "sha256": "77ae06beb80980d6fec6ca1503f6bc00a0b0fe84c86c38e86a9a1a22d3fc8d4c"
+  },
+  {
+    "block_id": "CP06-TARGET-R",
+    "block_type": "retrieval_target",
+    "checkpoint_id": "CP06",
+    "content": {
+      "project_code": "MERIDIAN-706",
+      "record_id": "CP06-TARGET-R",
+      "record_type": "retrieval_target",
+      "status": "AMBER",
+      "verification_value": "K16"
+    },
+    "sha256": "4d4ceb92122a4b0d04a492f5ba1026fcb938b5ae8fd583cd0d8b2575a2c4178a"
+  },
+  {
+    "block_id": "CP06-RULE-C",
+    "block_type": "constraint",
+    "checkpoint_id": "CP06",
+    "content": {
+      "record_id": "CP06-RULE-C",
+      "record_type": "constraint",
+      "requested_field": "measurement",
+      "rule": "If the requested measurement is absent from the supplied record, answer exactly UNKNOWN.",
+      "supplied_record": {
+        "asset_id": "ASSET-106",
+        "status": "ACTIVE"
+      }
+    },
+    "sha256": "f48397fe8e70ccb446da844cf8bcdd0b4ede7aa0530636cfdb568463426e469a"
+  },
+  {
+    "block_id": "CP06-RULE-X",
+    "block_type": "logical_relation",
+    "checkpoint_id": "CP06",
+    "content": {
+      "record_id": "CP06-RULE-X",
+      "record_type": "logical_relation",
+      "relations": [
+        "A6 implies B6",
+        "B6 implies C6",
+        "C6 excludes D6"
+      ],
+      "symbols": {
+        "a": "A6",
+        "b": "B6",
+        "c": "C6",
+        "d": "D6"
+      }
+    },
+    "sha256": "41c62247f8157b4c7938fbd916d579a3601e5c3138c3ca17e0900f89b0523643"
+  },
+  {
+    "block_id": "CP06-TARGET-I",
+    "block_type": "interference_target",
+    "checkpoint_id": "CP06",
+    "content": {
+      "distractors": [
+        {
+          "identifier": "ORBIT-86",
+          "verification_code": "V26"
+        },
+        {
+          "identifier": "ORBIT-806",
+          "verification_code": "V76"
+        },
+        {
+          "identifier": "ORBIT-906",
+          "verification_code": "V76"
+        }
+      ],
+      "record_id": "CP06-TARGET-I",
+      "record_type": "interference_target",
+      "target": {
+        "identifier": "ORBIT-806",
+        "verification_code": "V26"
+      }
+    },
+    "sha256": "068ebd9e2a737850d55715e2b5a7b90287ad160d1364a24770ae8f42c8cc17d3"
+  },
+  {
+    "block_id": "CP07-TARGET-R",
+    "block_type": "retrieval_target",
+    "checkpoint_id": "CP07",
+    "content": {
+      "project_code": "MERIDIAN-707",
+      "record_id": "CP07-TARGET-R",
+      "record_type": "retrieval_target",
+      "status": "GREEN",
+      "verification_value": "K17"
+    },
+    "sha256": "034da229508db41b868a711f126bbf95d459fb7e1fcf516ed8ac9eb0db3ba5c1"
+  },
+  {
+    "block_id": "CP07-RULE-C",
+    "block_type": "constraint",
+    "checkpoint_id": "CP07",
+    "content": {
+      "record_id": "CP07-RULE-C",
+      "record_type": "constraint",
+      "requested_field": "measurement",
+      "rule": "If the requested measurement is absent from the supplied record, answer exactly UNKNOWN.",
+      "supplied_record": {
+        "asset_id": "ASSET-107",
+        "status": "ACTIVE"
+      }
+    },
+    "sha256": "5fdc5884600c6969fcac7071e082b4df4be3097950ede807bacfce8a7c816a29"
+  },
+  {
+    "block_id": "CP07-RULE-X",
+    "block_type": "logical_relation",
+    "checkpoint_id": "CP07",
+    "content": {
+      "record_id": "CP07-RULE-X",
+      "record_type": "logical_relation",
+      "relations": [
+        "A7 implies B7",
+        "B7 implies C7",
+        "C7 excludes D7"
+      ],
+      "symbols": {
+        "a": "A7",
+        "b": "B7",
+        "c": "C7",
+        "d": "D7"
+      }
+    },
+    "sha256": "9224c0f0515684e8f9c5eb7fe726260ac3cb435ab9a73e1898c7af19aa1ed300"
+  },
+  {
+    "block_id": "CP07-TARGET-I",
+    "block_type": "interference_target",
+    "checkpoint_id": "CP07",
+    "content": {
+      "distractors": [
+        {
+          "identifier": "ORBIT-87",
+          "verification_code": "V27"
+        },
+        {
+          "identifier": "ORBIT-807",
+          "verification_code": "V77"
+        },
+        {
+          "identifier": "ORBIT-907",
+          "verification_code": "V77"
+        }
+      ],
+      "record_id": "CP07-TARGET-I",
+      "record_type": "interference_target",
+      "target": {
+        "identifier": "ORBIT-807",
+        "verification_code": "V27"
+      }
+    },
+    "sha256": "52e8e1040f72368c89c8485514764ea96fd044bb3c466e0e6dbbef516bfa3413"
+  },
+  {
+    "block_id": "CP08-TARGET-R",
+    "block_type": "retrieval_target",
+    "checkpoint_id": "CP08",
+    "content": {
+      "project_code": "MERIDIAN-708",
+      "record_id": "CP08-TARGET-R",
+      "record_type": "retrieval_target",
+      "status": "AMBER",
+      "verification_value": "K18"
+    },
+    "sha256": "83511628c5cff94e9d4fbc8e996c1b7e30ec2221029887f4dc65ca659b8676d0"
+  },
+  {
+    "block_id": "CP08-RULE-C",
+    "block_type": "constraint",
+    "checkpoint_id": "CP08",
+    "content": {
+      "record_id": "CP08-RULE-C",
+      "record_type": "constraint",
+      "requested_field": "measurement",
+      "rule": "If the requested measurement is absent from the supplied record, answer exactly UNKNOWN.",
+      "supplied_record": {
+        "asset_id": "ASSET-108",
+        "status": "ACTIVE"
+      }
+    },
+    "sha256": "4ba65c5dc9efffa44cdd64bb9465ffca20bb9055933f5e30cd7381e0d7afa494"
+  },
+  {
+    "block_id": "CP08-RULE-X",
+    "block_type": "logical_relation",
+    "checkpoint_id": "CP08",
+    "content": {
+      "record_id": "CP08-RULE-X",
+      "record_type": "logical_relation",
+      "relations": [
+        "A8 implies B8",
+        "B8 implies C8",
+        "C8 excludes D8"
+      ],
+      "symbols": {
+        "a": "A8",
+        "b": "B8",
+        "c": "C8",
+        "d": "D8"
+      }
+    },
+    "sha256": "eae416c42cf5a4edcfae4556d95dfeafe019faa6647326bb8c4732caac2fdd25"
+  },
+  {
+    "block_id": "CP08-TARGET-I",
+    "block_type": "interference_target",
+    "checkpoint_id": "CP08",
+    "content": {
+      "distractors": [
+        {
+          "identifier": "ORBIT-88",
+          "verification_code": "V28"
+        },
+        {
+          "identifier": "ORBIT-808",
+          "verification_code": "V78"
+        },
+        {
+          "identifier": "ORBIT-908",
+          "verification_code": "V78"
+        }
+      ],
+      "record_id": "CP08-TARGET-I",
+      "record_type": "interference_target",
+      "target": {
+        "identifier": "ORBIT-808",
+        "verification_code": "V28"
+      }
+    },
+    "sha256": "1d74c9c456b05d0be2c0e54b71e0f53e33413ac0bfc66cbc84c44cf8ed939e0c"
+  },
+  {
+    "block_id": "CP09-TARGET-R",
+    "block_type": "retrieval_target",
+    "checkpoint_id": "CP09",
+    "content": {
+      "project_code": "MERIDIAN-709",
+      "record_id": "CP09-TARGET-R",
+      "record_type": "retrieval_target",
+      "status": "GREEN",
+      "verification_value": "K19"
+    },
+    "sha256": "023fd77dc68ab70b63db5c006782029adeef33bf40d0c04482154a224532315f"
+  },
+  {
+    "block_id": "CP09-RULE-C",
+    "block_type": "constraint",
+    "checkpoint_id": "CP09",
+    "content": {
+      "record_id": "CP09-RULE-C",
+      "record_type": "constraint",
+      "requested_field": "measurement",
+      "rule": "If the requested measurement is absent from the supplied record, answer exactly UNKNOWN.",
+      "supplied_record": {
+        "asset_id": "ASSET-109",
+        "status": "ACTIVE"
+      }
+    },
+    "sha256": "fb1f9aa2aa5b67774ecde288082cba6075ad345878312ca0c6b76e03ace90cfb"
+  },
+  {
+    "block_id": "CP09-RULE-X",
+    "block_type": "logical_relation",
+    "checkpoint_id": "CP09",
+    "content": {
+      "record_id": "CP09-RULE-X",
+      "record_type": "logical_relation",
+      "relations": [
+        "A9 implies B9",
+        "B9 implies C9",
+        "C9 excludes D9"
+      ],
+      "symbols": {
+        "a": "A9",
+        "b": "B9",
+        "c": "C9",
+        "d": "D9"
+      }
+    },
+    "sha256": "7af905bf6431535c5b364ee706eb5489bf4417527d5e9af673750fca3f014151"
+  },
+  {
+    "block_id": "CP09-TARGET-I",
+    "block_type": "interference_target",
+    "checkpoint_id": "CP09",
+    "content": {
+      "distractors": [
+        {
+          "identifier": "ORBIT-89",
+          "verification_code": "V29"
+        },
+        {
+          "identifier": "ORBIT-809",
+          "verification_code": "V79"
+        },
+        {
+          "identifier": "ORBIT-909",
+          "verification_code": "V79"
+        }
+      ],
+      "record_id": "CP09-TARGET-I",
+      "record_type": "interference_target",
+      "target": {
+        "identifier": "ORBIT-809",
+        "verification_code": "V29"
+      }
+    },
+    "sha256": "f1e4b6557a983533c79b290223da4e8142e58bbcad7c715fbb717f023db9bca4"
+  },
+  {
+    "block_id": "CP10-TARGET-R",
+    "block_type": "retrieval_target",
+    "checkpoint_id": "CP10",
+    "content": {
+      "project_code": "MERIDIAN-710",
+      "record_id": "CP10-TARGET-R",
+      "record_type": "retrieval_target",
+      "status": "AMBER",
+      "verification_value": "K20"
+    },
+    "sha256": "2d9f75bfa633fb2801f4068adf3a1a9c86b9a8d0a362d2d62ecd76658d6094bd"
+  },
+  {
+    "block_id": "CP10-RULE-C",
+    "block_type": "constraint",
+    "checkpoint_id": "CP10",
+    "content": {
+      "record_id": "CP10-RULE-C",
+      "record_type": "constraint",
+      "requested_field": "measurement",
+      "rule": "If the requested measurement is absent from the supplied record, answer exactly UNKNOWN.",
+      "supplied_record": {
+        "asset_id": "ASSET-110",
+        "status": "ACTIVE"
+      }
+    },
+    "sha256": "7ad2bb5e75557dc008b721c22b94414532956d93450c0c60054787e4ddab447d"
+  },
+  {
+    "block_id": "CP10-RULE-X",
+    "block_type": "logical_relation",
+    "checkpoint_id": "CP10",
+    "content": {
+      "record_id": "CP10-RULE-X",
+      "record_type": "logical_relation",
+      "relations": [
+        "A10 implies B10",
+        "B10 implies C10",
+        "C10 excludes D10"
+      ],
+      "symbols": {
+        "a": "A10",
+        "b": "B10",
+        "c": "C10",
+        "d": "D10"
+      }
+    },
+    "sha256": "cb11b4b354c26dcfe23edcc114d2eabcf0384b762f0cbeb52c3ba8b25b6597a5"
+  },
+  {
+    "block_id": "CP10-TARGET-I",
+    "block_type": "interference_target",
+    "checkpoint_id": "CP10",
+    "content": {
+      "distractors": [
+        {
+          "identifier": "ORBIT-90",
+          "verification_code": "V30"
+        },
+        {
+          "identifier": "ORBIT-810",
+          "verification_code": "V80"
+        },
+        {
+          "identifier": "ORBIT-910",
+          "verification_code": "V80"
+        }
+      ],
+      "record_id": "CP10-TARGET-I",
+      "record_type": "interference_target",
+      "target": {
+        "identifier": "ORBIT-810",
+        "verification_code": "V30"
+      }
+    },
+    "sha256": "7b59319681b0b2eed8c3d14e88531209a8ec085ccdb37cc9c258562c18e354d9"
+  }
+]

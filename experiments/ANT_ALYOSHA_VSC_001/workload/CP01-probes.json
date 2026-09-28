@@ -1,0 +1,38 @@
+[
+  {
+    "checkpoint_id": "CP01",
+    "probe_id": "CP01-R1",
+    "probe_type": "retrieval",
+    "prompt": "Return only ANSWER=<value>. What is the verification_value for MERIDIAN-701?",
+    "scoring_type": "exact",
+    "sha256": "dfec2aa70ee714d82687e18c2b9a741bf13d57d2cbef87ba5d123ac5f29a23cc",
+    "source_record_id": "CP01-TARGET-R"
+  },
+  {
+    "checkpoint_id": "CP01",
+    "probe_id": "CP01-C1",
+    "probe_type": "constraint",
+    "prompt": "Return only ANSWER=<value>. What is the measurement for ASSET-101?",
+    "scoring_type": "exact",
+    "sha256": "d1ffc50b980d8c40e8c85c7272f5719e29d2f83895c95ae80bcf3c55298d4934",
+    "source_record_id": "CP01-RULE-C"
+  },
+  {
+    "checkpoint_id": "CP01",
+    "probe_id": "CP01-X1",
+    "probe_type": "logic",
+    "prompt": "Return only ANSWER=TRUE or ANSWER=FALSE. Given the frozen relations, can C1 and D1 both hold?",
+    "scoring_type": "exact",
+    "sha256": "0229ea02e609645401c593bdccd432533deb3c0467c27968241413f4898f095c",
+    "source_record_id": "CP01-RULE-X"
+  },
+  {
+    "checkpoint_id": "CP01",
+    "probe_id": "CP01-I1",
+    "probe_type": "interference",
+    "prompt": "Return only ANSWER=<identifier>. Which identifier is the designated interference target?",
+    "scoring_type": "exact",
+    "sha256": "a766f2c3d008c0601dc38f87bb4b9781a0f40ff44366b7fc3dadd3ba5d8b6b6e",
+    "source_record_id": "CP01-TARGET-I"
+  }
+]

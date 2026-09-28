@@ -1,0 +1,38 @@
+[
+  {
+    "checkpoint_id": "CP06",
+    "probe_id": "CP06-R1",
+    "probe_type": "retrieval",
+    "prompt": "Return only ANSWER=<value>. What is the verification_value for MERIDIAN-706?",
+    "scoring_type": "exact",
+    "sha256": "971e1052c673d818643b8a07ec9ec451c05e30faf719e70446c21b9d76856069",
+    "source_record_id": "CP06-TARGET-R"
+  },
+  {
+    "checkpoint_id": "CP06",
+    "probe_id": "CP06-C1",
+    "probe_type": "constraint",
+    "prompt": "Return only ANSWER=<value>. What is the measurement for ASSET-106?",
+    "scoring_type": "exact",
+    "sha256": "f5ada535ec25f7344a8673a743503f3529a967700636c7c6d2776897a0e1fe6b",
+    "source_record_id": "CP06-RULE-C"
+  },
+  {
+    "checkpoint_id": "CP06",
+    "probe_id": "CP06-X1",
+    "probe_type": "logic",
+    "prompt": "Return only ANSWER=TRUE or ANSWER=FALSE. Given the frozen relations, can C6 and D6 both hold?",
+    "scoring_type": "exact",
+    "sha256": "10a943b22f5729666bbfc91b0a619cf6db4b6e70c8a24af4a32d1c4bc74c5795",
+    "source_record_id": "CP06-RULE-X"
+  },
+  {
+    "checkpoint_id": "CP06",
+    "probe_id": "CP06-I1",
+    "probe_type": "interference",
+    "prompt": "Return only ANSWER=<identifier>. Which identifier is the designated interference target?",
+    "scoring_type": "exact",
+    "sha256": "e0e107f2f792cff75a53e39646470d9795839686800b11071597f2d032be2482",
+    "source_record_id": "CP06-TARGET-I"
+  }
+]

@@ -1,0 +1,109 @@
+{
+  "actual_runtime_token_measurement_required": true,
+  "construction": "cumulative deterministic text workload",
+  "exact_token_count_claimed": false,
+  "experiment_id": "ANT_ALYOSHA_VSC_001",
+  "stages": [
+    {
+      "checkpoint_id": "CP01",
+      "context_file": "CP01-context.txt",
+      "context_sha256": "cee2708937d412e2d7ba3096042f8de0b7630cb9210127eb08f10011dd78f03f",
+      "deterministic_character_count": 20145,
+      "intended_context_target": "~5k tokens (approximate target only)",
+      "primary_probe_count": 4,
+      "probe_file": "CP01-probes.json",
+      "probe_sha256": "005005d51bf9e9cf3fe2bfa99eb3dc34d5bb817ed52a79ce65c0a791e2e04ceb"
+    },
+    {
+      "checkpoint_id": "CP02",
+      "context_file": "CP02-context.txt",
+      "context_sha256": "dfeba56c1ec576cd0a8229b46f0fb92744bcd2438a593825d63421e744920136",
+      "deterministic_character_count": 40064,
+      "intended_context_target": "~10k tokens (approximate target only)",
+      "primary_probe_count": 4,
+      "probe_file": "CP02-probes.json",
+      "probe_sha256": "cae9e1cde08cecd6b359d40510c9a481994c9360d940ec7b95951915f64bc358"
+    },
+    {
+      "checkpoint_id": "CP03",
+      "context_file": "CP03-context.txt",
+      "context_sha256": "9e7c0229c6d06b69b6ce5986467fb9df868a931ecb8b673ee6ea5192c1941b18",
+      "deterministic_character_count": 60210,
+      "intended_context_target": "~15k tokens (approximate target only)",
+      "primary_probe_count": 4,
+      "probe_file": "CP03-probes.json",
+      "probe_sha256": "5ab88a0a0c36b33c7c7a7b206518f1eca9602fd208897d4a0e4996793033ee26"
+    },
+    {
+      "checkpoint_id": "CP04",
+      "context_file": "CP04-context.txt",
+      "context_sha256": "4479692153b2717298bb8e244d238c8a419126af80541ca41e91c7639ca46894",
+      "deterministic_character_count": 80128,
+      "intended_context_target": "~20k tokens (approximate target only)",
+      "primary_probe_count": 4,
+      "probe_file": "CP04-probes.json",
+      "probe_sha256": "d4bfd69e68d05069d3633a3cbe9a0c490c00b20447afc28c985871fcdc6c0aff"
+    },
+    {
+      "checkpoint_id": "CP05",
+      "context_file": "CP05-context.txt",
+      "context_sha256": "e5d6f2bba9ea4e7c18475547afee88a8297fed4a9d473327b8cff76292059343",
+      "deterministic_character_count": 100042,
+      "intended_context_target": "~25k tokens (approximate target only)",
+      "primary_probe_count": 4,
+      "probe_file": "CP05-probes.json",
+      "probe_sha256": "6753c7e46d0e5959139d432b5b47027ea34571088a6e9ba42aae8e998a9ea2c2"
+    },
+    {
+      "checkpoint_id": "CP06",
+      "context_file": "CP06-context.txt",
+      "context_sha256": "df38fb4e82fe24b35fc838a5fa77a2ce347c7e4857b3aa300f74d205275dfafb",
+      "deterministic_character_count": 120189,
+      "intended_context_target": "~30k tokens (approximate target only)",
+      "primary_probe_count": 4,
+      "probe_file": "CP06-probes.json",
+      "probe_sha256": "2d0859e1eaf5219d2cda44048436390d4b0ea43fc46843d07a5b60e95bccc095"
+    },
+    {
+      "checkpoint_id": "CP07",
+      "context_file": "CP07-context.txt",
+      "context_sha256": "7ab42b7f7eb67ad19d2eb4509755b2fe4b11e6ab0147fe067055866a59ca07a0",
+      "deterministic_character_count": 140101,
+      "intended_context_target": "~35k tokens (approximate target only)",
+      "primary_probe_count": 4,
+      "probe_file": "CP07-probes.json",
+      "probe_sha256": "01f926aa2d93addceaabfb4af77057525c64d5555a1a9c1a92a823d407c56125"
+    },
+    {
+      "checkpoint_id": "CP08",
+      "context_file": "CP08-context.txt",
+      "context_sha256": "f9fae48829985f59efc88dc6c4ce9efd757412fcf3714a56c45e00548b382806",
+      "deterministic_character_count": 160020,
+      "intended_context_target": "~40k tokens (approximate target only)",
+      "primary_probe_count": 4,
+      "probe_file": "CP08-probes.json",
+      "probe_sha256": "e3023dbf38af3c62b9039145d83e6a46a8405be5969bedb3dccaff708f0c0ffa"
+    },
+    {
+      "checkpoint_id": "CP09",
+      "context_file": "CP09-context.txt",
+      "context_sha256": "1267108edc2d92616f393e9381121609a55c11e1666c8306353a91b5ed8df918",
+      "deterministic_character_count": 180165,
+      "intended_context_target": "~45k tokens (approximate target only)",
+      "primary_probe_count": 4,
+      "probe_file": "CP09-probes.json",
+      "probe_sha256": "a19a1b17a4fc417c43f4f53c5c419de3a2b7808b098d71a53ef5ec6a0c217c70"
+    },
+    {
+      "checkpoint_id": "CP10",
+      "context_file": "CP10-context.txt",
+      "context_sha256": "bab3f80750edb4a7a8cec246d54ef6b1109091a1ca0fb729d9e897e5fef38bc3",
+      "deterministic_character_count": 200094,
+      "intended_context_target": "~50k tokens (approximate target only)",
+      "primary_probe_count": 4,
+      "probe_file": "CP10-probes.json",
+      "probe_sha256": "2bd0fb85a3cb0324428357f85f2654acbc8e3a207a43ae2a9596c197357c569a"
+    }
+  ],
+  "workload_version": "0.1"
+}

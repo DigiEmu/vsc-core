@@ -1,0 +1,38 @@
+[
+  {
+    "checkpoint_id": "CP10",
+    "probe_id": "CP10-R1",
+    "probe_type": "retrieval",
+    "prompt": "Return only ANSWER=<value>. What is the verification_value for MERIDIAN-710?",
+    "scoring_type": "exact",
+    "sha256": "5b3249490af0a26c173b6cc9ee3c020e1a20150bb8fa7f6355240ffbd1a7f0f2",
+    "source_record_id": "CP10-TARGET-R"
+  },
+  {
+    "checkpoint_id": "CP10",
+    "probe_id": "CP10-C1",
+    "probe_type": "constraint",
+    "prompt": "Return only ANSWER=<value>. What is the measurement for ASSET-110?",
+    "scoring_type": "exact",
+    "sha256": "948717adb14af54104289cab37755fce0bcaae81360dbe3141f6a4872512e6ad",
+    "source_record_id": "CP10-RULE-C"
+  },
+  {
+    "checkpoint_id": "CP10",
+    "probe_id": "CP10-X1",
+    "probe_type": "logic",
+    "prompt": "Return only ANSWER=TRUE or ANSWER=FALSE. Given the frozen relations, can C10 and D10 both hold?",
+    "scoring_type": "exact",
+    "sha256": "6f047257cc38e1a2e84a8cfa98c26ceda421080adead6182eff4569cf1f9fca3",
+    "source_record_id": "CP10-RULE-X"
+  },
+  {
+    "checkpoint_id": "CP10",
+    "probe_id": "CP10-I1",
+    "probe_type": "interference",
+    "prompt": "Return only ANSWER=<identifier>. Which identifier is the designated interference target?",
+    "scoring_type": "exact",
+    "sha256": "b873bdac3b4ee14f4c604acf34dc5b5ca3f2c3cbd496024a93998734936b672e",
+    "source_record_id": "CP10-TARGET-I"
+  }
+]
