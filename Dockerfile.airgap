@@ -1,0 +1,21 @@
+FROM node:20-alpine
+
+LABEL name="vsc-airgap-eval" \
+      version="v0.1" \
+      description="VSC Air-Gapped Evaluation Runner — file-in/file-out only"
+
+WORKDIR /app
+
+# Copy only the files required by the offline runner.
+COPY src/encodeText.js /app/src/encodeText.js
+COPY src/decodeText.js /app/src/decodeText.js
+COPY src/verify.js /app/src/verify.js
+COPY cmd/vsc-airgap/main.mjs /app/cmd/vsc-airgap/main.mjs
+COPY cmd/vsc-airgap/vsc-airgap /usr/local/bin/vsc-airgap
+
+RUN chmod +x /usr/local/bin/vsc-airgap
+
+# No network is used at runtime; this is enforced by the operator with --network none.
+# No HTTP server, no Ollama client, no telemetry.
+
+ENTRYPOINT ["vsc-airgap"]

@@ -1,0 +1,9 @@
+# Exclude all files from the Docker build context by default.
+*
+
+# Include only the runtime files required by vsc-airgap.
+!src/encodeText.js
+!src/decodeText.js
+!src/verify.js
+!cmd/vsc-airgap/main.mjs
+!cmd/vsc-airgap/vsc-airgap

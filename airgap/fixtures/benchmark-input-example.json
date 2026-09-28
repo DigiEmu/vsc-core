@@ -1,0 +1,11 @@
+{
+  "run_id": "airgap-demo-001",
+  "message": "DETERMINISTIC RECONSTRUCTION ALLOWS INDEPENDENT VERIFICATION OF AI OUTPUTS.",
+  "type": "TEXT",
+  "config": {
+    "model": "qwen3:30b",
+    "temperature": 0.6,
+    "seed": 15,
+    "num_ctx": 61501
+  }
+}
