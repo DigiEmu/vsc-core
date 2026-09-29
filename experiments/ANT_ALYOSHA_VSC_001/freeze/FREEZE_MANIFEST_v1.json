@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "experiment_id": "ANT_ALYOSHA_VSC_001",
+  "freeze_date": "2026-09-29",
+  "freeze_state": "PRE_EXECUTION_FROZEN",
+  "pre_freeze_commit": "c026197",
+  "experimental_results_evaluated": false,
+  "dataset_sha256": "e9847a1f0af54bc79afe19e624951e8b24f8faa76de7851203e5b5223829e2d1",
+  "workload_sha256": "04f90cfc56327476aa564f804efbb90fc481f62bae0333ddd021ebd1dfe4b20a",
+  "files": [
+    {
+      "path": "./experiments/ANT_ALYOSHA_VSC_001/ANT_ALYOSHA_VSC_001_PROTOCOL_DRAFT.md",
+      "sha256": "bf4f2bf751b685e06dc263c4406abea3c95d7b84d2fe335f36f340354499fc48"
+    },
+    {
+      "path": "./experiments/ANT_ALYOSHA_VSC_001/ANT_ALYOSHA_VSC_001_SCORING_DRAFT.md",
+      "sha256": "cefb0a27bceb248efa323a707a8ebd87c7544ecba5ba90b33d8693d5375dcdc1"
+    },
+    {
+      "path": "./experiments/ANT_ALYOSHA_VSC_001/ANT_ALYOSHA_VSC_001_DATASET_SPEC_DRAFT.md",
+      "sha256": "79c7e0364d7b4ace084d1f7340d29f72fdd6e08d7f0dacbdc7dd68f4d2aba86c"
+    },
+    {
+      "path": "./experiments/ANT_ALYOSHA_VSC_001/dataset/DATASET_SHA256.txt",
+      "sha256": "f4da8ef8ee7742b6daac3bcc48d43c8d0cdb6aa1dc2a60d285dc613c773119cb"
+    },
+    {
+      "path": "./experiments/ANT_ALYOSHA_VSC_001/dataset/answer-key.json",
+      "sha256": "f7c2051cfde988decd5cc1c190a0a4fc0e20bc7e104f2890701e8f5d5d94e610"
+    },
+    {
+      "path": "./experiments/ANT_ALYOSHA_VSC_001/dataset/context-blocks.json",
+      "sha256": "17ad02a4a34fa33ef84e8dea50bbc7182db90c9e55aa3ba2e30d762b61d58c68"
+    },
+    {
+      "path": "./experiments/ANT_ALYOSHA_VSC_001/dataset/dataset-manifest.json",
+      "sha256": "0137ce2770dd589acd2fa525ce2b87974ec6a4101ae07eed146b1e82b372ad2f"
+    },
+    {
+      "path": "./experiments/ANT_ALYOSHA_VSC_001/dataset/probes.json",
+      "sha256": "e2cc359d0d6fbc9b45962ab0b8a718bc4c9777dcaf2251e76d01506b888f8f3e"
+    },
+    {
+      "path": "./experiments/ANT_ALYOSHA_VSC_001/workload/WORKLOAD_SHA256.txt",
+      "sha256": "b8e0c819cc1fea653485b15d5c5d087f97972926619b9de70634fe8bea5ef82c"
+    },
+    {
+      "path": "./experiments/ANT_ALYOSHA_VSC_001/workload/workload-manifest.json",
+      "sha256": "8e56b95695fc3e5758035f04ca273db2a61079cef4dcdc0ffabff4c831a80ccd"
+    },
+    {
+      "path": "./experiments/ANT_ALYOSHA_VSC_001/freeze/PROTOCOL_FREEZE_v1.md",
+      "sha256": "9c5d11b529ffa6688649cc086d8e9db74854e0a71ed81900b113f7cdf91db7a9"
+    },
+    {
+      "path": "./experiments/ANT_ALYOSHA_VSC_001/freeze/RUNTIME_IDENTITY_v1.json",
+      "sha256": "07e0a906b62afa4746d394907bd3d26ebf095f7707440e1177329daefa8c9eb3"
+    },
+    {
+      "path": "./experiments/ANT_ALYOSHA_VSC_001/freeze/TELEMETRY_SCHEMA_v1.json",
+      "sha256": "1e098700180b3e83051f850498443c10564418debee2a9e398c16bb870349986"
+    }
+  ]
+}

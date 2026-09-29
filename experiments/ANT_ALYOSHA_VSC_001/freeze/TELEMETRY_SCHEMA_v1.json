@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ANT Alyosha VSC Experiment 001 Telemetry Event",
+  "type": "object",
+  "required": [
+    "experiment_id",
+    "condition_id",
+    "checkpoint_id",
+    "sequence_index"
+  ],
+  "properties": {
+    "experiment_id": {
+      "const": "ANT_ALYOSHA_VSC_001"
+    },
+    "condition_id": {
+      "enum": ["CONDITION_A", "CONDITION_B"]
+    },
+    "checkpoint_id": {
+      "pattern": "^CP(0[1-9]|10)$"
+    },
+    "sequence_index": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "token_id": {
+      "type": ["integer", "null"]
+    },
+    "token_text": {
+      "type": ["string", "null"]
+    },
+    "baseline_logit": {
+      "type": ["number", "null"]
+    },
+    "post_ant_logit": {
+      "type": ["number", "null"]
+    },
+    "baseline_probability": {
+      "type": ["number", "null"]
+    },
+    "post_ant_probability": {
+      "type": ["number", "null"]
+    },
+    "deviation": {
+      "type": ["number", "null"]
+    },
+    "ant_deviation_flag": {
+      "type": ["boolean", "string", "null"]
+    }
+  },
+  "additionalProperties": true,
+  "description": "Exploratory ANT telemetry only. These fields do not determine primary VSC R1/C1/X1/I1 scores."
+}
