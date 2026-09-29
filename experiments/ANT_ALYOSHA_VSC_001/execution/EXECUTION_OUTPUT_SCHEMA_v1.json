@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ANT Alyosha VSC Experiment 001 Primary Execution Record",
+  "type": "object",
+  "required": [
+    "experiment_id",
+    "condition_id",
+    "checkpoint_id",
+    "probe_id",
+    "model_tag",
+    "model_digest",
+    "seed",
+    "temperature",
+    "configured_context_tokens",
+    "actual_context_tokens",
+    "raw_response",
+    "sequence_index"
+  ],
+  "properties": {
+    "experiment_id": {
+      "const": "ANT_ALYOSHA_VSC_001"
+    },
+    "condition_id": {
+      "enum": [
+        "CONDITION_A",
+        "CONDITION_B"
+      ]
+    },
+    "checkpoint_id": {
+      "pattern": "^CP(0[1-9]|10)$"
+    },
+    "probe_id": {
+      "pattern": "^CP(0[1-9]|10)-(R1|C1|X1|I1)$"
+    },
+    "model_tag": {
+      "const": "qwen3.6:35b"
+    },
+    "model_digest": {
+      "const": "096fdbd02fe6"
+    },
+    "quantization": {
+      "type": "string"
+    },
+    "runtime_version": {
+      "type": ["string", "null"]
+    },
+    "seed": {
+      "const": 15
+    },
+    "temperature": {
+      "const": 0.55
+    },
+    "configured_context_tokens": {
+      "const": 50000
+    },
+    "actual_context_tokens": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "raw_response": {
+      "type": "string"
+    },
+    "sequence_index": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "timestamp": {
+      "type": ["string", "null"]
+    },
+    "input_context_sha256": {
+      "type": ["string", "null"],
+      "pattern": "^[a-fA-F0-9]{64}$"
+    },
+    "input_probe_sha256": {
+      "type": ["string", "null"],
+      "pattern": "^[a-fA-F0-9]{64}$"
+    }
+  },
+  "additionalProperties": true
+}
